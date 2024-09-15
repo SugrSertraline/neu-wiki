@@ -12,13 +12,13 @@
             
         </div>
         <div class="hidden md:block">
-            <n-button v-for="item in buttons" :key="item.id" quaternary>
+            <n-button v-for="item in buttons" :key="item.id" quaternary @click="routerTo(item.value)">
                 {{ item.label }}
             </n-button>
         </div>
         <div class="block md:hidden">
-            <n-popselect :options="buttons" trigger="click">
-                <n-button quaternary><n-icon size="20"><MenuIcon/></n-icon></n-button>
+            <n-popselect @update:value="routerTo" :options="buttons" trigger="click">
+                <n-button quaternary  ><n-icon size="20"><MenuIcon/></n-icon></n-button>
             </n-popselect>
         </div>
     </div>
@@ -38,12 +38,11 @@ const routerTo = (url:string)=>{
 interface ButtonItem {
     id: number,
     label: string,
-    url: string,
     value:string
 }
 const buttons: ButtonItem[] = [
-    { id: 1, label: '首页',value:'index', url: '' },
-    { id: 2, label: '阅读',value:'read',  url: '' },
-    { id: 3, label: '关于我们',value:'about',  url: '' }
+    { id: 1, label: '首页',value:'/'},
+    { id: 2, label: '阅读',value:'/read' },
+    { id: 3, label: '投稿专区',value:'/' }
 ]
 </script>

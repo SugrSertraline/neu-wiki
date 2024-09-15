@@ -9,12 +9,25 @@ const router = createRouter({
       path: '/',
       name: 'index',
       component: IndexView,
+      meta:{
+        title:'首页'
+      }
     }, {
       path: '/read',
       name: 'read',
       component: ReadView,
+      meta:{
+        title:'阅读'
+      }
     },
   ]
 })
-
+router.beforeEach((to, from, next) => {
+  if(to.meta.title){
+    window.document.title = 'NEU百科全书 | '+<string>to.meta.title;
+  }else{
+     window.document.title = 'NEU百科全书';
+  }
+  next();
+});
 export default router
