@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import IndexView from '@/views/IndexView.vue';
 import ReadView from '@/views/ReadView.vue';
 
 const router = createRouter({
@@ -8,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'index',
-      component: IndexView,
+      component: import('@/views/IndexView.vue'),
       meta:{
         title:'首页'
       }
@@ -18,7 +17,19 @@ const router = createRouter({
       component: ReadView,
       meta:{
         title:'阅读'
-      }
+      },
+      children:[
+        {
+          path:'',
+          name:'default',
+          component: import('@/views/read/DeveloperGreetingView.vue')
+        },
+        {
+          path:'developer_greeting',
+          name:'developer_greeting',
+          component: import('@/views/read/DeveloperGreetingView.vue')
+        }
+      ]
     },
   ]
 })
