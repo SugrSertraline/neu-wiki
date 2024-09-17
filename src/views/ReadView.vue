@@ -12,25 +12,26 @@
       </n-icon>
     </n-float-button>
     <n-float-button @click="scrollToTop">
-      <n-icon >
+      <n-icon>
         <ChevronUpSharp />
       </n-icon>
     </n-float-button>
   </n-float-button-group>
+
+  <div class="flex min-h-screen justify-center">
+    <div class="fixed top-16 left-0 w-64">
+      <MenuComponent :data="config.menu_data" />
+    </div>
+    <div class="w-full ml-64">
+      <router-view />
+    </div>
+  </div>
+
   <!-- 中间整体的布局，一个layout，带有一个sider，作用是目录 -->
   <n-layout has-sider>
 
 
-    <n-layout-sider class="hidden xl:block" bordered content-style="padding: 24px;">
-      <MenuComponent :data="config.menu_data" />
-    </n-layout-sider>
 
-
-    <n-layout-content content-style="padding: 24px;">
-      <n-layout has-sider content-style="padding: 24px;">
-        <router-view />
-      </n-layout>
-    </n-layout-content>
 
   </n-layout>
   <n-divider />
@@ -72,14 +73,14 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
-import { MenuSharp,ChevronUpSharp} from '@vicons/ionicons5';
+import { MenuSharp, ChevronUpSharp } from '@vicons/ionicons5';
 import MenuComponent from '../components/MenuComponent.vue';
 import { h } from 'vue';
 import { NIcon, type LayoutInst } from 'naive-ui';
 import { RouterLink } from 'vue-router';
 
-const scrollToTop = ()=>{
-  window.scrollTo(0,0);
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
 }
 const renderLinkItem = (label: string, key: string, path: string) => {
   return {

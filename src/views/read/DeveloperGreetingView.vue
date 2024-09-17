@@ -1,6 +1,5 @@
 <template>
 
-    <n-layout-content :native-scrollbar="false">
         <div class="mx-8 lg:mx-16">
             <div>
                 <n-h2>声明式渲染：Vue 基于标准 HTML 拓展了一套模板语法，使得我们可以声明式地描述最终输出的 HTML 和 JavaScript 状态之间的关系。
@@ -29,8 +28,7 @@
             </div>
             
         </div>
-    </n-layout-content>
-    <n-layout-sider class="hidden lg:block">
+
         <n-anchor affix listen-to=".document-scroll-container" :trigger-top="24" :top="88" style="z-index: 1"
             :bound="24" :show-rail="false">
             <n-anchor-link title="演示" href="#演示">
@@ -60,7 +58,6 @@
                 </div>
             </div>
         </div>
-    </n-layout-sider>
 
 
 </template>
