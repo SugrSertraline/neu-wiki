@@ -27,13 +27,7 @@
     </div>
   </div>
 
-  <!-- 中间整体的布局，一个layout，带有一个sider，作用是目录 -->
-  <n-layout has-sider>
 
-
-
-
-  </n-layout>
   <n-divider />
   <div class="w-full flex flex-col justify-center items-center">
     <div class="w-full px-8 flex justify-center items-center">
