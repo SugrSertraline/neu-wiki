@@ -5,31 +5,41 @@
       <MenuComponent :data="config.menu_data" />
     </n-drawer-content>
   </n-drawer>
-  <n-float-button-group class="z-10" shape="square" position="absolute" :right="30" :bottom="30">
-    <n-float-button class="block lg:hidden" @click="config.if_drawer = true">
-      <n-icon>
-        <MenuSharp />
-      </n-icon>
-    </n-float-button>
-    <n-float-button @click="scrollToTop">
-      <n-icon>
-        <ChevronUpSharp />
-      </n-icon>
-    </n-float-button>
-  </n-float-button-group>
 
-  <div class="flex min-h-screen justify-center">
-    <div class="fixed top-16 left-0 w-64">
+  <div class="w-fit bg-white shadow-md fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
+    <div class="p-4 h-full overflow-y-auto">
       <MenuComponent :data="config.menu_data" />
-    </div>
-    <div class="w-full ml-64">
-      <router-view />
     </div>
   </div>
 
+  <div class="flex-1 p-8 overflow-y-auto mt-8 md:ml-64 md:mr-64">
+    <button class="md:hidden mb-4 text-gray-600 hover:text-gray-800">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <router-view />
+  </div>
 
-  <n-divider />
-  <div class="w-full flex flex-col justify-center items-center">
+  <div
+    class="w-64 bg-white shadow-md fixed right-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
+   <div class="p-4">
+    <n-anchor :trigger-top="24" :top="88" style="z-index: 1" :bound="24" :show-rail="false">
+      <n-anchor-link title="演示" href="#演示">
+        <n-anchor-link title="基础22用法" href="#test" />
+        <n-anchor-link title="忽略22间隔" href="#ignore-gap.vue" />
+        <n-anchor-link title="固定" href="#affix.vue" />
+        <n-anchor-link title="滚动到" href="#scrollto.vue" />
+      </n-anchor-link>
+      <n-anchor-link title="API" href="#API" />
+    </n-anchor>
+   </div>
+  </div>
+
+
+
+
+  <!-- <div class="w-full flex flex-col justify-center items-center">
     <div class="w-full px-8 flex justify-center items-center">
       您认为此篇文章的内容如何？
       <n-button type="tertiary" class="mx-2">
@@ -62,12 +72,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
-import { MenuSharp, ChevronUpSharp } from '@vicons/ionicons5';
 import MenuComponent from '../components/MenuComponent.vue';
 import { h } from 'vue';
 import { NIcon, type LayoutInst } from 'naive-ui';
@@ -155,8 +165,17 @@ const config = ref({
             label: '竞赛',
             key: 'competitions',
           }, {
-            label: '选调生',
+            label: '选调2生',
             key: 'selected_trainee',
+          }, {
+            label: '选调生',
+            key: 'select3ed_trainee',
+          }, {
+            label: '选123调2生',
+            key: 'select2ed_trainee',
+          }, {
+            label: '选213调生',
+            key: 'sele2cted_trainee',
           }
         ]
       },
