@@ -2,7 +2,7 @@
     <div class="bg-white flex w-full px-12 md:px-36 lg:px-48 h-16 items-center">
         <div @click="routerTo('/')" class="flex items-center cursor-pointer">
             <n-icon size="20">
-                <BookIcon />
+                <book />
             </n-icon>
             <div class="text-l font-semibold text-gray-600 m-2">
                 NEU-Wiki
@@ -18,15 +18,15 @@
         </div>
         <div class="block md:hidden">
             <n-popselect @update:value="routerTo" :options="buttons" trigger="click">
-                <n-button quaternary  ><n-icon size="20"><MenuIcon/></n-icon></n-button>
+                <n-button quaternary  ><n-icon size="20"><menu/></n-icon></n-button>
             </n-popselect>
         </div>
     </div>
 </template>
 <script setup lang="ts">
-import BookIcon from './icons/BookIcon.vue';
-import MenuIcon from './icons/MenuIcon.vue';
 
+import book from '@/assets/icons/book.svg'
+import menu from '@/assets/icons/menu.svg'
 import { useRouter } from 'vue-router';
 const router = useRouter()
 
