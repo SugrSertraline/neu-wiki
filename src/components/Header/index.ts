@@ -1,3 +1,3 @@
-import HeaderComponent from "./HeaderComponent.vue";
+import Header from "./HeaderComponent.vue";
 
-export {HeaderComponent}
+export {Header}

@@ -1,5 +1,3 @@
 <template>
-    2
-</template>
-<script lang="ts" setup>
-</script>
+    当前内容还在来的路上~
+ </template>

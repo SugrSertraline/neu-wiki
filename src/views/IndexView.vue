@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col items-center justify-center">
+    <div class="w-full flex flex-col items-center justify-center mt-16">
 
 
 
@@ -40,8 +40,9 @@
                 <n-image class="w-64 lg:w-full flex justify-center" width="400" src="/index_image.png" />
             </div>
         </div>
-        <div  class=" px-12 w-5/6 box-border flex flex-col lg:flex-row justify-around align-bottom" >
-            <div class="flex-1 w-full lg:w-1/3 p-8 m-2 flex flex-col rounded-lg bg-gray-100" v-for="i in config.description_list" :key="i.title">
+        <div class=" px-12 w-5/6 box-border flex flex-col lg:flex-row justify-around align-bottom">
+            <div class="flex-1 w-full lg:w-1/3 p-8 m-2 flex flex-col rounded-lg bg-gray-100"
+                v-for="i in config.description_list" :key="i.title">
                 <!-- 标题的图标 -->
                 <div class="m-4">
                     <n-icon size="50">
@@ -65,13 +66,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import BubbleTeaIcon from '@/components/icons/BubbleTeaIcon.vue';
-import HotDogIcon from '@/components/icons/HotDogIcon.vue';
-import ColaIcon from '@/components/icons/ColaIcon.vue';
+import BubbleTeaIcon from '@/assets/icons/BubbleTeaIcon.vue';
+import HotDogIcon from '@/assets/icons/HotDogIcon.vue';
+import ColaIcon from '@/assets/icons/ColaIcon.vue';
 
 const router = useRouter();
 const config = ref({
-    description_list:[
+    description_list: [
         {
             icon: HotDogIcon,
             title: '更新日志',

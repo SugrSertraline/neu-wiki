@@ -9,5 +9,4 @@
 
 const props = defineProps(['data'])
 
-
 </script>
