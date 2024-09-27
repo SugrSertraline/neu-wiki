@@ -85,7 +85,6 @@ router.beforeEach((to, from, next) => {
   }else{
      window.document.title = 'NEU百科全书';
   };
-  console.log(to.name);
   PAGE_CONFIG.forEach((group)=>{
     group.children.forEach((item)=>{
       if(item.name==to.name){

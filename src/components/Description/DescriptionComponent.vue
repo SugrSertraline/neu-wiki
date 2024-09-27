@@ -1,5 +1,5 @@
 <template>
-<div class="text-lg my-2">
+<div class=" text-base my-4">
     <slot/>
 </div>
 

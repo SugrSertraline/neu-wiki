@@ -7,16 +7,16 @@
   </n-drawer>
 
   <div
-    class="w-64 hidden lg:block bg-white shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
-    <div class="p-4 h-full overflow-y-auto">
+    class="w-100 hidden bg-gray-50 lg:block shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0  ">
+    <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
       <MenuComponent :data="readPageConfig.menu_data" />
     </div>
   </div>
 
-  <div class="flex-1 overflow-hidden px-16 pt-8 lg:ml-64 xl:mx-64">
+  <div class="flex-1 overflow-hidden px-16 pt-8 lg:ml-100 xl:mx-100">
 
-    <!-- <div class="flex-1 fixed left-64 right-0 top-16 bottom-0 overflow-y-auto"> -->
 
+      <!-- 当页面变为lg以下时的头部菜单按钮 -->
     <div class="w-full z-30 bg-white lg:hidden flex fixed top-16 left-0 h-12 border-y">
       <div class="h-full flex items-center ml-8 cursor-pointer" @click="readPageConfig.if_drawer = true">
         <n-button type="quaternary"><template #icon>
@@ -27,7 +27,6 @@
         <div class="mx-2">
           菜单
         </div>
-
       </div>
       <div class="flex-1"></div>
       <div class="h-full flex items-center mr-8  cursor-pointer"
@@ -44,6 +43,9 @@
 
       </div>
     </div>
+
+
+    <!-- 页面的标题和内容 -->
     <div class="mt-8 lg:mt-0">
       <div class="flex flex-col lg:flex-row items-center">
         <div class="text-4xl font-bold text-gray-800 mx-4 ">
@@ -57,20 +59,24 @@
         </div>
       </div>
       <n-divider />
-      <router-view />
+      <div class="xl:px-8 2xl:px-20 pb-10">
+        <router-view />
+      </div>
     </div>
   </div>
 
   <div
-    class="w-60 hidden xl:block bg-white fixed right-5 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
+    class="w-100 hidden xl:block bg-white fixed right-5 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4">
-      <n-anchor :show-rail="true" :show-background="true">
+      <div class="font-bold m-2">
+        当前页面内容
+      </div>
+      <n-anchor :ignore-gap="true" :show-rail="true" :show-background="true">
         <n-anchor-link v-for="item in readPageConfig.anchor_data" :key="item.href" :title="item.title"
           :href="item.href" />
       </n-anchor>
     </div>
   </div>
-
 
 
 
@@ -112,14 +118,15 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, h, inject, type Ref } from 'vue';
+import { onMounted, ref, h, inject, type Ref, watch } from 'vue';
 import MenuComponent from '../components/MenuComponent.vue';
 import { NIcon, type LayoutInst } from 'naive-ui';
-import { RouterLink } from 'vue-router';
+import { onBeforeRouteLeave, useRoute, RouterLink } from 'vue-router';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { PAGE_CONFIG } from '@/config/PageConfig';
 import { usePageInfoStore } from '@/stores/PageInfoStore';
 const pageInfoStore = usePageInfoStore();
+const route = useRoute();
 const contentRef: any = inject('content_ref');
 const renderLinkItem = (label: string, key: string, path: string) => {
   return {
@@ -153,18 +160,18 @@ const readPageConfig: Ref<ReadPageConfig> = ref({
 
 })
 
-const updateAnchorData = (selector: string) => {
-  const selected_element = document.querySelectorAll(selector);
-  readPageConfig.value.anchor_data.splice(0, readPageConfig.value.anchor_data.length)
-  selected_element.forEach((h1) => {
-    const id: string = h1.getAttribute('id') ?? 'Default';
-    const href: string = `#${id}`;
-    const title = h1.textContent?.trim() ?? '默认标题';
-    readPageConfig.value.anchor_data.push({
-      href: href,
-      title: title
+const updateAnchorData = (to: string) => {
+  console.log(to);
+  readPageConfig.value.anchor_data.splice(0, readPageConfig.value.anchor_data.length);
+  PAGE_CONFIG.forEach((group_item) => {
+    group_item.children.forEach((item) => {
+      if (item.url == to) {
+        item.sections?.forEach((section) => {
+          readPageConfig.value.anchor_data.push(section);
+        })
+      }
     })
-  });
+  })
 };
 
 const updateMenuData = () => {
@@ -172,7 +179,7 @@ const updateMenuData = () => {
   PAGE_CONFIG.forEach((group_item) => {
     let pages: any[] = [];
     group_item.children.forEach((item) => {
-      pages.push(renderLinkItem(item.title,item.name,item.url));
+      pages.push(renderLinkItem(item.title, item.name, item.url));
     })
     readPageConfig.value.menu_data.push({
       label: group_item.title,
@@ -181,14 +188,19 @@ const updateMenuData = () => {
     })
 
   })
-}
+};
+
 
 onMounted(() => {
-  updateAnchorData('.n-h1');
+  updateAnchorData(route.path);
   updateMenuData();
 })
 
-
-
-
+watch(() => route.path, (newPath, oldPath) => {
+  // 确保路径发生变化
+  if (newPath !== oldPath) {
+    updateMenuData();
+    updateAnchorData(newPath);
+  }
+});   
 </script>

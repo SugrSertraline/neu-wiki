@@ -5,11 +5,10 @@
     </Description>
     <Description>
         如果你有想要分享的内容，或者是对网站提出建议，可以加入QQ群：2152012727
-
     </Description>
 
     <div class="w-full flex justify-center">
-        <n-image width="400" src="/public/NEU-WIKI群聊二维码.png" />
+        <n-image width="400" src="/NEU-WIKI群聊二维码.png" />
     </div>
 
 </template>

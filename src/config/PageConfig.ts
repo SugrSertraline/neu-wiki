@@ -29,7 +29,19 @@ export const PAGE_CONFIG = [
             {
                 name:'medical_reimbursement',
                 title:'医疗与报销',
-                url:'/read/medical_reimbursement'
+                url:'/read/medical_reimbursement',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、校内就医'
+                    },{
+                        href:'#title2',
+                        title:'二、校外就医'
+                    },{
+                        href:'#title3',
+                        title:'三、其他内容'
+                    },
+                ]
             },{
                 name:'campus_card_service',
                 title:'校园卡业务',
@@ -46,11 +58,32 @@ export const PAGE_CONFIG = [
             {
                 name:'basic_academic_info',
                 title:'基础学业信息',
-                url:'/read/basic_academic_info'
+                url:'/read/basic_academic_info',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、学分'
+                    },{
+                        href:'#title2',
+                        title:'二、成绩'
+                    },{
+                        href:'#title3',
+                        title:'三、GPA'
+                    },
+                ]
             },{
                 name:'computer_based_exam_guide',
                 title:'机考指南',
-                url:'/read/computer_based_exam_guide'
+                url:'/read/computer_based_exam_guide',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、考试流程'
+                    },{
+                        href:'#title2',
+                        title:'二、注意事项'
+                    }
+                ]
             },{
                 name:'recommendation_exemption',
                 title:'推免（保研）',
