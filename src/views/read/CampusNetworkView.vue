@@ -26,7 +26,7 @@
         在运营商网络或在学校外需要访问校园网内资源时，可以使用VPN连接。对于常用网址，可以直接使用浏览器登录<n-a   href="https://webvpn.neu.edu.cn/">WebVPN</n-a>连接；对于WebVPN中没有收录的网站，可以安装OpenVPN等软件进行连接，具体请看信网办<n-a href="http://xwb.neu.edu.cn/2023/0716/c6133a233647/page.htm">OpenVPN使用手册</n-a>
     </Description>
 </Section>
-<Section id="title3" title="收费标准">
+<Section id="title3" title="三、收费标准">
 <Description>
     校园网为按流量计费网络，对于校园内网站（如学校官网、学院网站、教务系统等）、全网IPv6上传下载和校园外IPv4上传免流，对于校园外IPv4下载按流量分段计费，按自然月结算，规则为：
 </Description>
@@ -49,14 +49,14 @@
 总量80G以上，超出80G部分20元基础上额外收取流量费用1元/G。
 </Description>
 </Section>
-<Section id="title4" title="进阶使用">
+<Section id="title4" title="四、进阶使用">
     <n-h2>在线电视</n-h2>
     <Description>
         校园网环境下可以在线观看有线电视节目直播，直播网站<n-a href="https://hdtv.neu6.edu.cn/">HDTV</n-a>，观看免流量。
 
     </Description>
     <n-h2>
-       P下载
+       PT下载
     </n-h2>
     <Description>
         PT下载是BT下载的特例，为特定用户才可使用的私有BT下载。CERNET上有很多学校或学生运营的PT服务器，一般限制高校用户才能注册使用，里面资源较公网BT站点更丰富且支持免流下载。常用的PT站点有东北大学<n-a href="http://bt.neu6.edu.cn/">六维空间</n-a>、天津大学<n-a href="https://www.tjupt.org/">北洋园PT</n-a>、西安交通大学<n-a href="https://ipv6.njtech.edu.cn/links.html">南洋</n-a>等，可以凭学校邮箱直接注册使用。使用PT需要遵守站点考核规定，尽量满足上传量/做种时间要求，避免账号停用。

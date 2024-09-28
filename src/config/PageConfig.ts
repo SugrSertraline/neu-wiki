@@ -45,11 +45,44 @@ export const PAGE_CONFIG = [
             },{
                 name:'campus_card_service',
                 title:'校园卡业务',
-                url:'/read/campus_card_service'
+                url:'/read/campus_card_service',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、校园卡简介'
+                    },{
+                        href:'#title2',
+                        title:'二、校园卡补办'
+                    },{
+                        href:'#title3',
+                        title:'三、圈存与充值'
+                    },{
+                        href:'#title4',
+                        title:'四、消费限额与余额查询'
+                    },{
+                        href:'#title5',
+                        title:'五、二维码快捷支付'
+                    },
+                ]
             },{
                 name:'campus_network',
                 title:'校园网',
-                url:'/read/campus_network'
+                url:'/read/campus_network',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、基本情况'
+                    },{
+                        href:'#title2',
+                        title:'二、连接方式'
+                    },{
+                        href:'#title4',
+                        title:'三、收费标准'
+                    },{
+                        href:'#title5',
+                        title:'四、进阶使用'
+                    },
+                ]
             }
         ]
     },{
@@ -87,19 +120,61 @@ export const PAGE_CONFIG = [
             },{
                 name:'recommendation_exemption',
                 title:'推免（保研）',
-                url:'/read/recommendation_exemption'
+                url:'/read/recommendation_exemption',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、保研简介'
+                    },{
+                        href:'#title2',
+                        title:'二、学业成绩保研'
+                    },{
+                        href:'#title3',
+                        title:'三、辅导员保研'
+                    },{
+                        href:'#title4',
+                        title:'四、支教保研'
+                    },{
+                        href:'#title5',
+                        title:'五、工程硕博保研'
+                    }
+                ]
             },{
                 name:'general_courses',
                 title:'公共课',
-                url:'/read/general_courses'
+                url:'/read/general_courses',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、高等数学'
+                    }
+                ]
             },{
                 name:'competitions',
                 title:'竞赛',
-                url:'/read/competitions'
+                url:'/read/competitions',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、部分竞赛时间线'
+                    }, {
+                        href:'#title2',
+                        title:'二、相关信息发布渠道'
+                    },{
+                        href:'#title3',
+                        title:'三、结合大创参加竞赛'
+                    }
+                ]
             },{
                 name:'selected_trainee',
                 title:'选调',
-                url:'/read/selected_trainee'
+                url:'/read/selected_trainee',
+                sections:[
+                    {
+                        href:'#title1',
+                        title:'一、辽宁定向选调'
+                    }
+                ]
             }
         ]
     }
