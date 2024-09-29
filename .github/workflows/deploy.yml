@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "disk.tar.gz"
-          target: "/home/ubuntu/neu/disk-new.tar.gz"
+          target: "/home/ubuntu/neu/"
 
       - name: Execute remote commands
         uses: appleboy/ssh-action@v0.1.2
@@ -44,8 +44,10 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/ubuntu/neu
-            tar -xzf disk-new.tar.gz -C disk-new
-            rm -f disk-new.tar.gz
+            rm -rf disk-new
+            mkdir disk-new
+            tar -xzf disk.tar.gz -C disk-new
+            rm -f disk.tar.gz
             rm -rf disk-back
             mv disk disk-back
             mv disk-new disk
