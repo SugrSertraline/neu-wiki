@@ -1,21 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { usePageInfoStore } from '@/stores/PageInfoStore';
-
+import IndexView from '@/views/IndexView.vue';
+import ReadView from '@/views/ReadView.vue';
+import DeveloperGreetingView from '@/views/read/DeveloperGreetingView.vue';
+import MedicalReimbursementView from '@/views/read/MedicalReimbursementView.vue';
+import CampusCardServiceView from '@/views/read/CampusCardServiceView.vue';
+import CampusNetworkView from '@/views/read/CampusNetworkView.vue'
+import BasicAcademicInfoView from '@/views/read/BasicAcademicInfoView.vue';
+import ComputerBasedExamGuideView from '@/views/read/ComputerBasedExamGuideView.vue';
+import RecommendationExemptionView from '@/views/read/RecommendationExemptionView.vue';
+import GeneralCoursesView from '@/views/read/GeneralCoursesView.vue';
+import CompetitionsView from '@/views/read/CompetitionsView.vue';
+import SelectedTraineeView from '@/views/read/SelectedTraineeView.vue';
 import { PAGE_CONFIG } from '@/config/PageConfig';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'index',
-      component: import('@/views/IndexView.vue'),
+      component: IndexView,
       meta:{
         title:'首页'
       }
     }, {
       path: '/read',
       name: 'read',
-      component: import('@/views/ReadView.vue'),
+      component: ReadView,
       meta:{
         title:'阅读'
       },
@@ -27,52 +39,52 @@ const router = createRouter({
         {
           path:'developer_greeting',
           name:'developer_greeting',
-          component: import('@/views/read/DeveloperGreetingView.vue')
+          component:DeveloperGreetingView
         },
         {
           path:'medical_reimbursement',
           name:'medical_reimbursement',
-          component:import('@/views/read/MedicalReimbursementView.vue')
+          component:MedicalReimbursementView
         },
         {
           path:'campus_card_service',
           name:'campus_card_service',
-          component:import('@/views/read/CampusCardServiceView.vue')
+          component:CampusCardServiceView
         },
         {
           path:'campus_network',
           name:'campus_network',
-          component:import('@/views/read/CampusNetworkView.vue')
+          component:CampusNetworkView
         },
         {
           path:'basic_academic_info',
           name:'basic_academic_info',
-          component:import('@/views/read/BasicAcademicInfoView.vue')
+          component:BasicAcademicInfoView
         },
         {
           path:'computer_based_exam_guide',
           name:'computer_based_exam_guide',
-          component:import('@/views/read/ComputerBasedExamGuideView.vue')
+          component:ComputerBasedExamGuideView
         },
         {
           path:'recommendation_exemption',
           name:'recommendation_exemption',
-          component:import('@/views/read/RecommendationExemptionView.vue')
+          component:RecommendationExemptionView
         },
         {
           path:'general_courses',
           name:'general_courses',
-          component:import('@/views/read/GeneralCoursesView.vue')
+          component:GeneralCoursesView
         },
         {
           path:'competitions',
           name:'competitions',
-          component:import('@/views/read/CompetitionsView.vue')
+          component:CompetitionsView
         },
         {
           path:'selected_trainee',
           name:'selected_trainee',
-          component:import('@/views/read/SelectedTraineeView.vue')
+          component:SelectedTraineeView
         }
       ]
     },
