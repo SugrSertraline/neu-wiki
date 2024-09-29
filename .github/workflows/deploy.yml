@@ -48,7 +48,7 @@ jobs:
             mkdir disk-new
             tar -xzf disk.tar.gz -C disk-new
             rm -f disk.tar.gz
-            rm -rf disk-back
-            mv disk disk-back
-            mv disk-new disk
+            rm -rf dist-back
+            mv dist dist-back
+            mv disk-new dist
             sudo nginx -s reload
