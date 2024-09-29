@@ -8,7 +8,7 @@
     </Description>
 
     <div class="w-full flex justify-center">
-        <n-image width="400" src="/NEU-WIKI群聊二维码.png" />
+        <n-image width="400" src="/qq_group.png" />
     </div>
 
 </template>
