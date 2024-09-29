@@ -5,7 +5,8 @@ export const PAGE_CONFIG = [
             {
                 name:'developer_greeting',
                 title:'开发者寄语',
-                url:'/read/developer_greeting'
+                url:'/read/developer_greeting',
+                sections:[  ]
             }
         ]
     },
