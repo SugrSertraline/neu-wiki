@@ -12,7 +12,7 @@
                 <!-- 标题文字 -->
                 <div
                     class="text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start lg:text-5xl font-bold text-green-900">
-                    NEU百科全书
+                    NEU百科
                 </div>
 
                 <!-- 标题下面的次级标题 -->
