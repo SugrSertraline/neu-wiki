@@ -32,7 +32,7 @@
       <div class="h-full flex items-center mr-8  cursor-pointer"
         @click="contentRef?.scrollTo({ top: 0, behavior: 'smooth' })">
         <div class="mx-2">
-          回到顶部
+          回到顶部测试
         </div>
         <n-button type="quaternary"><template #icon>
             <n-icon>
