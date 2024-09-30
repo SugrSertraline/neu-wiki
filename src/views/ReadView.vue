@@ -1,24 +1,22 @@
 <template>
   <!-- 侧边导航栏，当页面小于lg时，用来展示的drawer -->
-  <n-drawer :default-width="300" v-model:show="readPageConfig.if_drawer" placement="left">
+  <n-drawer :default-width="300" v-model:show="configuration.if_drawer" placement="left">
     <n-drawer-content title="目录">
-      <MenuComponent :data="readPageConfig.menu_data" />
+      <SideMenu :data="configuration.menu_data" />
     </n-drawer-content>
   </n-drawer>
 
   <div
     class="w-100 hidden bg-gray-50 lg:block shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0  ">
     <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
-      <MenuComponent :data="readPageConfig.menu_data" />
+      <SideMenu :data="configuration.menu_data" />
     </div>
   </div>
 
   <div class="flex-1 overflow-hidden px-16 pt-8 lg:ml-100 xl:mx-100">
-
-
       <!-- 当页面变为lg以下时的头部菜单按钮 -->
     <div class="w-full z-30 bg-white lg:hidden flex fixed top-16 left-0 h-12 border-y">
-      <div class="h-full flex items-center ml-8 cursor-pointer" @click="readPageConfig.if_drawer = true">
+      <div class="h-full flex items-center ml-8 cursor-pointer" @click="configuration.if_drawer = true">
         <n-button type="quaternary"><template #icon>
             <n-icon>
               <MenuOutline />
@@ -49,18 +47,18 @@
     <div class="mt-8 lg:mt-0">
       <div class="flex flex-col lg:flex-row items-center">
         <div class="text-4xl font-bold text-gray-800 mx-4 ">
-          {{ pageInfoStore.page_info.title }}
+         {{ configuration.page_data?.title }}
         </div>
         <div class="flex-1">
 
         </div>
         <div class="text-xl">
-          更新截止于{{ pageInfoStore.page_info.last_update }}
+          更新截止于{{ configuration.page_data?.last_update }}
         </div>
       </div>
       <n-divider />
       <div class="xl:px-8 2xl:px-20 pb-10">
-        <router-view />
+        {{ configuration.page_data }}
       </div>
     </div>
   </div>
@@ -72,7 +70,7 @@
         当前页面内容
       </div>
       <n-anchor :ignore-gap="true" :show-rail="true" :show-background="true">
-        <n-anchor-link v-for="item in readPageConfig.anchor_data" :key="item.href" :title="item.title"
+        <n-anchor-link v-for="item in configuration.anchor_data" :key="item.href" :title="item.title"
           :href="item.href" />
       </n-anchor>
     </div>
@@ -118,89 +116,60 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, h, inject, type Ref, watch } from 'vue';
-import MenuComponent from '../components/MenuComponent.vue';
-import { NIcon, type LayoutInst } from 'naive-ui';
-import { onBeforeRouteLeave, useRoute, RouterLink } from 'vue-router';
+import {  ref, inject, type Ref, onMounted} from 'vue';
+import { SideMenu } from '@/components/SideMenu';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
-import { PAGE_CONFIG } from '@/config/PageConfig';
-import { usePageInfoStore } from '@/stores/PageInfoStore';
-const pageInfoStore = usePageInfoStore();
-const route = useRoute();
-const contentRef: any = inject('content_ref');
-const renderLinkItem = (label: string, key: string, path: string) => {
-  return {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            path: path
-          }
-        },
-        { default: () => label }
-      ),
-    key: key,
-  }
+import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
+import type { Page } from '@/types/interface';
+
+
+const contentRef: any = inject('contentRef');
+
+
+interface Configuration {
+  if_drawer:boolean,
+  current_page:string,
+ 
+  page_data?:Page,
+  menu_data:any[],
+  anchor_data:any[]
 }
-
-interface ReadPageConfig {
-  if_drawer: boolean;
-  menu_data: any[];
-  anchor_data: any[];
-}
-
-const readPageConfig: Ref<ReadPageConfig> = ref({
-  if_drawer: false,
-  menu_data: [],
-  anchor_data: [{
-    title: '默认标题',
-    href: '#default'
-  }]
-
+const configuration:Ref<Configuration> = ref({
+  if_drawer:false,
+  current_page:'default',
+  menu_data:[],
+  anchor_data:[]
 })
 
-const updateAnchorData = (to: string) => {
-  console.log(to);
-  readPageConfig.value.anchor_data.splice(0, readPageConfig.value.anchor_data.length);
-  PAGE_CONFIG.forEach((group_item) => {
-    group_item.children.forEach((item) => {
-      if (item.url == to) {
-        item.sections?.forEach((section) => {
-          readPageConfig.value.anchor_data.push(section);
+const loadMenuConfig = ()=>{
+  configuration.value.menu_data.splice(0,configuration.value.menu_data.length);
+  PAGE_CONFIG.forEach((group)=>{
+    let pages:any = [];
+    group.pages.forEach((page)=>{
+        pages.push({
+          label:page.title,
+          key:page.name
         })
-      }
+    })
+    configuration.value.menu_data.push({
+      type:'group',
+      label:group.title,
+      key:group.name,
+      children:pages
     })
   })
-};
+}
 
-const updateMenuData = () => {
-  readPageConfig.value.menu_data.splice(0, readPageConfig.value.menu_data.length);
-  PAGE_CONFIG.forEach((group_item) => {
-    let pages: any[] = [];
-    group_item.children.forEach((item) => {
-      pages.push(renderLinkItem(item.title, item.name, item.url));
-    })
-    readPageConfig.value.menu_data.push({
-      label: group_item.title,
-      type: 'group',
-      children: pages
-    })
-
-  })
-};
+const loadPageConfig = (name?:string)=>{
+  configuration.value.page_data = getPageByName(name);
+}
 
 
-onMounted(() => {
-  updateAnchorData(route.path);
-  updateMenuData();
-})
 
-watch(() => route.path, (newPath, oldPath) => {
-  // 确保路径发生变化
-  if (newPath !== oldPath) {
-    updateMenuData();
-    updateAnchorData(newPath);
-  }
-});   
+
+onMounted(()=>{
+  loadMenuConfig();
+  loadPageConfig();
+}
+)
 </script>

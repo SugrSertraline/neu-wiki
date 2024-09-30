@@ -7,6 +7,6 @@
 
 <script lang="ts" setup>
 
-const props = defineProps(['data'])
+const props = defineProps(['data']);
 
 </script>
