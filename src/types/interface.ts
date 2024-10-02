@@ -3,7 +3,6 @@ import { NWComponent } from "./enum"
 
 
 interface NWDescription{
-    subsection?:string,
     type:NWComponent.NWDescription,
     data:string
 }
@@ -24,18 +23,37 @@ interface NWTips{
     data:string
 }
 
-export type Content = NWDescription|NWImage|NWList|NWTips;
+interface Contributor{
+    name:string,
+    src:string,
+    qq?:string,
+    phone?:string
+}
+interface NWContributors{
+    type:NWComponent.NWContributors,
+    contributors:Contributor[]
+}
+
+
+export type Content = NWDescription|NWImage|NWList|NWTips|NWContributors;
+
+export interface SubSection{
+    title:string|undefined,
+    contents:Content[]
+}
 
 export interface Section {
     title: string|undefined,
-    contents: Content[]
+    subsections: SubSection[]
 }
+
+
 export interface Page {
     title: string,
     last_update: string,
     name: string,
-    description?: string
-    sections: Section[]
+    description: string|undefined
+    sections: Section[],
 }
 export interface Group {
     title: string,

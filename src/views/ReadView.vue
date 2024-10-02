@@ -6,14 +6,16 @@
     </n-drawer-content>
   </n-drawer>
 
+
+  <!-- sm,md,lg,xl,2xl -->
   <div
-    class="w-100 hidden bg-gray-50 lg:block shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0  ">
+    class="w-64 hidden bg-gray-50 lg:block xl:w-100  shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
       <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </div>
   </div>
 
-  <div class="flex-1 overflow-hidden px-16 pt-8 lg:ml-100 xl:mx-100">
+  <div class="flex-1 overflow-hidden px-4 md:px-8 lg:px-12 pt-8 lg:ml-64 xl:ml-100 2xl:mx-100">
     <!-- 当页面变为lg以下时的头部菜单按钮 -->
     <div class="w-full z-30 bg-white lg:hidden flex fixed top-16 left-0 h-12 border-y">
       <div class="h-full flex items-center ml-8 cursor-pointer" @click="configuration.if_drawer = true">
@@ -57,24 +59,26 @@
         </div>
       </div>
       <n-divider />
-      <div class="xl:px-8 2xl:px-20 pb-10">
+      <div class="xl:px-8 2xl:px-20 pb-2">
         <component v-if="configuration.page_data?.description" :is="dynamicComponent({
           type: NWComponent.NWDescription,
           data: configuration.page_data.description
         })"></component>
-        <NWSection v-for="(section, index) in configuration.page_data?.sections" :key="index" :id="'section' + index"
-          :title="calPageSection(index, section.title)">
-          <template v-for="(content, index) in section.contents" :key="index">
-            <component :is="dynamicComponent(content)"></component>
-          </template>
+        <NWSection level="1" v-for="(section, section_index) in configuration.page_data?.sections" :key="section_index"
+          :id="'section' + section_index" :title="calPageSection(section.title, 1, section_index)">
+          <NWSection v-for="(subsection, subsection_index) in section.subsections" :key="subsection_index" level="2"
+            :title="calPageSection(subsection.title, 2, (subsection_index - calUntitleSubsection(section, subsection_index)))">
+            <template v-for="(content, content_index) in subsection.contents" :key="content_index">
+              <component :is="dynamicComponent(content)"></component>
+            </template>
+          </NWSection>
         </NWSection>
       </div>
-
     </div>
   </div>
 
   <div
-    class="w-100 hidden xl:block bg-white fixed right-5 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
+    class="w-100 hidden 2xl:block bg-white fixed right-5 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4">
       <div class="font-bold m-2">
         当前页面内容
@@ -83,7 +87,6 @@
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
           <n-anchor-link v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
-
       </n-anchor>
     </div>
   </div>
@@ -128,16 +131,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, inject, type Ref, onMounted, h, watch } from 'vue';
+import { ref, inject, type Ref, onMounted, h, watch, computed } from 'vue';
 import { SideMenu } from '@/components/SideMenu';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
-import type { Content, Page } from '@/types/interface';
+import type { Content, Page, Section, SubSection } from '@/types/interface';
 import { NWDescription, NWSection, NWImage, NWList, NWTips } from '@/components';
-import { numberToChinese } from '@/utils/utils';
+import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import type { MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
 import router from '@/router';
+import { NWContributors } from '@/components/NWContributor';
 const contentRef: any = inject('contentRef');
 
 
@@ -156,6 +160,8 @@ const configuration: Ref<Configuration> = ref({
 });
 
 const handleMenuChange = (key: string, item: MenuOption) => {
+  configuration.value.if_drawer=false;
+  setCookie('page', key, 7);
   configuration.value.current_page = key;
 }
 
@@ -179,23 +185,35 @@ const loadMenuConfig = () => {
 }
 
 const loadPageConfig = (name?: string) => {
+  if (name) {
+    configuration.value.current_page = name;
+  }
   configuration.value.page_data = getPageByName(name);
 }
 
+const calUntitleSubsection = (section: Section, index: number): number => {
+  let sum: number = 0;
+  for (let i = 0; i < index; i++) {
+    if (section.subsections[i].title == undefined) {
+      sum++;
+    }
+  }
+  return sum;
+}
 
-const calPageSection = (index: number, title: string | undefined): string | undefined => {
-  return title == undefined ? undefined : numberToChinese(index + 1) + '、' + title;
+const calPageSection = (title: string | undefined, level: number, index: number): string | undefined => {
+  if (level == 1) {
+    return title == undefined ? undefined : numberToChinese(index + 1) + '、' + title;
+  }
+  else {
+    return title == undefined ? undefined : index + 1 + '. ' + title;
+  }
 }
 
 const dynamicComponent = (content: Content) => {
-
-
-
-
   switch (content.type) {
     case 'NWDescription':
       return h(NWDescription, {
-        subsection: content.subsection,
         data: content.data
       });
     case 'NWImage':
@@ -214,6 +232,10 @@ const dynamicComponent = (content: Content) => {
         case: content.case,
         data: content.data
       })
+    case 'NWContributors':
+      return h(NWContributors,{
+        data:content.contributors
+      })
   }
 }
 
@@ -228,11 +250,17 @@ watch(configuration, (newValue, oldValue) => {
 
   // 使用replace方法更新路由，不添加历史记录
   router.replace({ path: newPath });
-  loadPageConfig(newValue.current_page=='default'?undefined:newValue.current_page);
+  loadPageConfig(newValue.current_page == 'default' ? undefined : newValue.current_page);
 }, { deep: true });
+
+
+
+
 onMounted(() => {
   loadMenuConfig();
-  loadPageConfig();
+  loadPageConfig(getCookie('page'));
+
+
 }
 )
 </script>
