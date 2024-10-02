@@ -29,8 +29,7 @@
         </div>
       </div>
       <div class="flex-1"></div>
-      <div class="h-full flex items-center mr-8  cursor-pointer"
-        @click="contentRef?.scrollTo({ top: 0, behavior: 'smooth' })">
+      <div class="h-full flex items-center mr-8  cursor-pointer" @click="scrollTo(0)">
         <div class="mx-2">
           回到顶部
         </div>
@@ -59,7 +58,11 @@
         </div>
       </div>
       <n-divider />
-      <div class="xl:px-8 2xl:px-20 pb-2">
+      <n-result v-if="configuration.current_page == undefined" status="404" title="404 网站地址错误" description="不要瞎走凹">
+
+      </n-result>
+
+      <div v-else class="xl:px-8 2xl:px-20 pb-2">
         <component v-if="configuration.page_data?.description" :is="dynamicComponent({
           type: NWComponent.NWDescription,
           data: configuration.page_data.description
@@ -73,6 +76,29 @@
             </template>
           </NWSection>
         </NWSection>
+        <!-- <div class="w-full flex flex-col justify-center items-center">
+          <div class="w-full px-8 text-base flex justify-center items-center">
+            您认为此篇文章的内容如何？
+            <n-button secondary type="success" class="mx-2 w-32">
+              <template #icon>
+                <n-icon>
+                  <ThumbsUpRegular />
+                </n-icon>
+              </template>
+              推荐
+            </n-button>
+            <n-button secondary type="warning" class="mx-2 w-32">
+              <template #icon>
+                <n-icon>
+                  <ThumbsDownRegular />
+                </n-icon>
+              </template>
+              不推荐
+            </n-button>
+          </div>
+          <NWCommit/>
+
+        </div> -->
       </div>
     </div>
   </div>
@@ -93,62 +119,31 @@
 
 
 
-  <!-- <div class="w-full flex flex-col justify-center items-center">
-    <div class="w-full px-8 flex justify-center items-center">
-      您认为此篇文章的内容如何？
-      <n-button type="tertiary" class="mx-2">
-        推荐
-      </n-button>
-      <n-button type="tertiary">
-        不推荐
-      </n-button>
-    </div>
 
-    <div class="w-5/6 flex flex-col items-center">
-
-      <div class="w-5/6 lg:w-2/3 text-xl font-bold">
-        建议反馈
-      </div>
-      <div class="my-2 w-full flex justify-center ">
-        <div class="w-5/6 lg:w-2/3">
-          <n-input type="textarea" placeholder="请输入您的建议和意见，如需投稿请选择“投稿专区”。" />
-          <div class="flex mt-2 justify-between items-center">
-            <div class="flex-1 flex flex-col justify-center items-center border mr-2 rounded">
-              <n-upload action="https://www.mocky.io/v2/5e4bafc63100007100d8b70f">
-                <n-button size="small" class="mt-2 ml-2">上传文件</n-button>
-                未选择任何文件
-              </n-upload>
-            </div>
-            <div>
-              <n-button size="large">确认</n-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
 </template>
 
 <script lang="ts" setup>
-import { ref, inject, type Ref, onMounted, h, watch, computed } from 'vue';
+import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
 import { SideMenu } from '@/components/SideMenu';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
+import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
 import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
-import { NWDescription, NWSection, NWImage, NWList, NWTips } from '@/components';
+import { NWDescription, NWSection, NWImage, NWList, NWTips, NWContributors,NWCommit } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import type { MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
 import router from '@/router';
-import { NWContributors } from '@/components/NWContributor';
-const contentRef: any = inject('contentRef');
+import { useRoute } from 'vue-router';
 
+const contentRef: any = inject('contentRef');
+const route = useRoute();
 
 
 interface Configuration {
   if_drawer: boolean,
-  current_page: string,
+  current_page: string | undefined,
 
   page_data?: Page,
   menu_data: any[],
@@ -160,7 +155,7 @@ const configuration: Ref<Configuration> = ref({
 });
 
 const handleMenuChange = (key: string, item: MenuOption) => {
-  configuration.value.if_drawer=false;
+  configuration.value.if_drawer = false;
   setCookie('page', key, 7);
   configuration.value.current_page = key;
 }
@@ -185,10 +180,13 @@ const loadMenuConfig = () => {
 }
 
 const loadPageConfig = (name?: string) => {
+
+  const page = getPageByName(name);
   if (name) {
-    configuration.value.current_page = name;
+    configuration.value.current_page = page ? name : undefined;
   }
-  configuration.value.page_data = getPageByName(name);
+  configuration.value.page_data = page;
+
 }
 
 const calUntitleSubsection = (section: Section, index: number): number => {
@@ -233,15 +231,15 @@ const dynamicComponent = (content: Content) => {
         data: content.data
       })
     case 'NWContributors':
-      return h(NWContributors,{
-        data:content.contributors
+      return h(NWContributors, {
+        data: content.contributors
       })
   }
 }
 
 
 
-watch(configuration, (newValue, oldValue) => {
+watch(() => configuration.value.current_page, (newValue, oldValue) => {
   // 获取当前路由的完整路径
   const fullPath = router.currentRoute.value.fullPath;
 
@@ -250,17 +248,32 @@ watch(configuration, (newValue, oldValue) => {
 
   // 使用replace方法更新路由，不添加历史记录
   router.replace({ path: newPath });
-  loadPageConfig(newValue.current_page == 'default' ? undefined : newValue.current_page);
+
+  scrollTo(0);
+  // 加载页面配置
+
+  loadPageConfig(newValue);
+
 }, { deep: true });
 
 
+const scrollTo = (distance: number) => {
+  nextTick(() => {
+    if (contentRef.value) {
+      contentRef.value.scrollTo({ top: distance, behavior: 'smooth' });
+    }
+  });
+};
 
 
 onMounted(() => {
   loadMenuConfig();
-  loadPageConfig(getCookie('page'));
-
-
+  if (route.params.page) {
+    let page = Array.isArray(route.params.page) ? route.params.id[0] : route.params.page;
+    loadPageConfig(page);
+  } else {
+    loadPageConfig(getCookie('page'));
+  }
 }
 )
 </script>

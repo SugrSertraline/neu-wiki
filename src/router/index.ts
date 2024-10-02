@@ -13,7 +13,7 @@ const router = createRouter({
         title:'首页'
       }
     }, {
-      path: '/read',
+      path: '/read/:page?',
       name: 'read',
       component: ReadView,
       meta:{
