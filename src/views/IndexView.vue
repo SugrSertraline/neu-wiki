@@ -16,7 +16,7 @@
                 </div>
 
                 <!-- 标题下面的次级标题 -->
-                <div class="text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start 
+                <div class="mx-8 text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start 
             lg:text-start lg:text-5xl lg:leading-tight font-bold text-gray-900">
                     为NEUer们提供的简单、快捷的校园信息查询
                 </div>
@@ -40,12 +40,12 @@
                 <n-image class="w-64 lg:w-full flex justify-center" width="400" src="/index_image.png" />
             </div>
         </div>
-        <div class=" px-12 w-5/6 box-border flex flex-col lg:flex-row justify-around align-bottom">
+        <div class=" px-2 md:px-12 w-5/6 box-border flex flex-col lg:flex-row justify-around align-bottom">
             <div class="flex-1 w-full lg:w-1/3 p-8 m-2 flex flex-col rounded-lg bg-gray-100"
                 v-for="i in config.description_list" :key="i.title">
                 <!-- 标题的图标 -->
                 <div class="m-4">
-                    <n-icon size="50">
+                    <n-icon size="30">
                         <component :is="i.icon">
                         </component>
                     </n-icon>
