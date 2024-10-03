@@ -67,6 +67,7 @@
           type: NWComponent.NWDescription,
           data: configuration.page_data.description
         })"></component>
+
         <NWSection level="1" v-for="(section, section_index) in configuration.page_data?.sections" :key="section_index"
           :id="'section' + section_index" :title="calPageSection(section.title, 1, section_index)">
           <NWSection v-for="(subsection, subsection_index) in section.subsections" :key="subsection_index" level="2"
@@ -109,9 +110,9 @@
       <div class="font-bold m-2">
         当前页面内容
       </div>
-      <n-anchor :show-rail="true" :show-background="true">
+      <n-anchor :offset-target="() => contentRef">
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
-          <n-anchor-link v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
+          <n-anchor-link  v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
       </n-anchor>
     </div>
@@ -130,7 +131,7 @@ import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
 import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
-import { NWDescription, NWSection, NWImage, NWList, NWTips, NWContributors,NWCommit } from '@/components';
+import { NWDescription, NWSection, NWImage, NWList, NWTips, NWContributors, NWCommit } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import type { MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
