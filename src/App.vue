@@ -7,6 +7,8 @@ provide('contentRef', contentRef);
 </script>
 
 <template>
+    <n-notification-provider>
+      <n-message-provider>
   <n-layout position="absolute">
     <n-layout-header>
       <div class="shadow hover:shadow-lg duration-200 fixed top-0 left-0 right-0 z-20">
@@ -17,7 +19,8 @@ provide('contentRef', contentRef);
       <router-view/>
     </n-layout>
   </n-layout> 
-
+</n-message-provider>
+</n-notification-provider>
 </template>
 
 <style scoped></style>

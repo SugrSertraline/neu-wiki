@@ -77,7 +77,7 @@
             </template>
           </NWSection>
         </NWSection>
-        <!-- <div class="w-full flex flex-col justify-center items-center">
+        <div class="w-full flex flex-col justify-center items-center">
           <div class="w-full px-8 text-base flex justify-center items-center">
             您认为此篇文章的内容如何？
             <n-button secondary type="success" class="mx-2 w-32">
@@ -99,7 +99,7 @@
           </div>
           <NWCommit/>
 
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
