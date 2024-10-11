@@ -1,14 +1,14 @@
 <template>
-    <div class="py-2" :id="id" >
+    <div :id="id">
         <div class="my-2">
-        <div v-if="title" :class="title_classes">
-            {{ title }}
+            <div v-if="title" :class="title_classes">
+                {{ title }}
+            </div>
+            <slot />
+            <n-divider v-if="level == 1" />
         </div>
-        <slot />
-        <n-divider v-if="level == 1" />
     </div>
-    </div>
-   
+
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue';
