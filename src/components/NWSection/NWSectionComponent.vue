@@ -9,10 +9,12 @@
         </div>
     </div>
 
+
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue';
 const props = defineProps(['title', 'id', 'level']);
+
 const title_classes = computed(() => {
     return {
         'text-xl': props.level == 1,
