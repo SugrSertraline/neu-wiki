@@ -87,7 +87,7 @@ export const PAGE_CONFIG: Group[] = [
                                     contributors:[
                                         {
                                             name: "苏璃",
-                                            src: "suli.jpg"
+                                            src: "/suli.jpg"
                                         }
                                     ]
                                 }]
@@ -277,7 +277,7 @@ export const PAGE_CONFIG: Group[] = [
                                             src: "https://avatars.githubusercontent.com/u/73032687"
                                         },{
                                             name: "苏璃",
-                                            src: "suli.jpg"
+                                            src: "/suli.jpg"
                                         }
                                     ]
                                 }]
