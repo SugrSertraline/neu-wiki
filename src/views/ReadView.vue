@@ -2,7 +2,7 @@
   <!-- 侧边导航栏，当页面小于lg时，用来展示的drawer -->
   <n-drawer :default-width="300" v-model:show="configuration.if_drawer" placement="left">
     <n-drawer-content title="目录">
-      <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
+      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </n-drawer-content>
   </n-drawer>
 
@@ -11,7 +11,7 @@
   <div
     class="w-64 hidden bg-gray-50 lg:block xl:w-100  shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
-      <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
+      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </div>
   </div>
 
@@ -110,7 +110,7 @@
       <div class="font-bold m-2">
         当前页面内容
       </div>
-      <n-anchor :offset-target="() => contentRef">
+      <n-anchor :ignore-gap="true" :bound="100" :offset-target="() => contentRef">
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
           <n-anchor-link  v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
@@ -126,7 +126,7 @@
 
 <script lang="ts" setup>
 import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
-import { SideMenu } from '@/components/SideMenu';
+import { NWSideMenu } from '@/components';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
 import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';

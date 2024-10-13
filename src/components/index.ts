@@ -1,5 +1,5 @@
-export * from './Header';
-export * from './SideMenu';
+export * from './NWHeader';
+export * from './NWSideMenu';
 export * from './NWDescription';
 export * from './NWSection';
 export * from './NWImage';
