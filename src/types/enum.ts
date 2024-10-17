@@ -3,5 +3,8 @@ export enum NWComponent{
     NWImage='NWImage',
     NWList='NWList',
     NWTips='NWTips',
-    NWContributors='NWContributors'
+    NWContributors='NWContributors',
+    NWPersonalIntro='NWPersonalIntro',
+    NWDialogue='NWDialogue',
+    NWMotto='NWMotto'
 }

@@ -27,6 +27,85 @@ export const PAGE_CONFIG: Group[] = [
                 }
             ]
         }]
+    }, {
+        title: "访谈专栏",
+        name: "Interview",
+        pages: [
+            {
+                title: "对话24届宋经纬同学",
+                last_update: "2024年10月17日",
+                name: "SongJingWei",
+                description: undefined,
+                sections: [
+                    {
+                        title: undefined,
+                        subsections: [
+                            {
+                                title: undefined,
+                                contents: [
+                                    {
+                                        type:NWComponent.NWPersonalIntro,
+                                        name: '宋经纬',
+                                        avatarUrl: 'https://avatars.githubusercontent.com/u/103640865?v=4',
+                                        college: '软件学院',
+                                        grade: '2024届',
+                                        major: '软件工程',
+                                        graduation: '香港大学计算机工程专业 HKU-NLP',
+                                        introduction: 'NEUSOFT的UU来香港可以找我',
+                                        achievements: ['GPA3.95','雅思7(6)','GRE334','微信小程序应用开发赛国家二等奖','IMCM一等奖','东北大学优秀毕业生','东北大学优秀毕业设计','各种奖学金10余次'],
+                                        qq: '2015713717',
+                                        wechat: 'SPr1nG_7',
+                                        github: 'https://github.com/5SSjw',
+                                        email: 's2015713717@gmail.com'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'你选择留学国家和学校的主要考虑因素是什么？',
+                                        a:'学制短、宽松的科研环境。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'在申请留学过程中，你遇到的最大挑战是什么？',
+                                        a:'我申请比较顺利，基本没有遇到大的挑战。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'相比于国内升学/就业等，你为什么选择留学？',
+                                        a:'由于我保研排名比较靠后，难以进入国内较好的实验室，所以选择学制更短的英港新地区读研究生。如果就业学制短是很大的优势；如果做科研这边学业压力不大，也可以自行联系老师做RA、读博。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'在申请留学的过程中，你是如何准备语言考试的？',
+                                        a:'主要还是背单词和刷题，背单词一定要背你考试对应的词库。语言考试的应试技巧很重要，需要找到适合自己的技巧以及持续刷题保持手感。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'你认为留学适合哪些同学？',
+                                        a:'首先家庭支持的，因为毕竟大家读全日制的研究生，大部分经济来源还是家庭。画像大概可以分为：科研成果、学业优异出国深造；保研边缘、考研、找工作等同时做两手准备；不想考研但想读研究生提升学历。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'你认为留学的辅导咨询机构有没有必要报名？',
+                                        a:'对于找中介这个问题，我保持中立。一方面是我认为东北大学的学生完全有能力自己搜索信息、完成文书以及投递。但是可能有同学在做两手准备，所以找中介可能会省去一部分时间成本，可以获取一些数据支持。但一定要仔细鉴别服务是否过关，未必大机构申请结果就好。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'你选择留学时，是如何考虑目标学校在软件工程领域的研究实力和课程设置的？',
+                                        a:'首先是看学校的认可度，比如一些企业招人的目标院校以及最终名单里学生的来源。至于研究实力，我个人认为如果打算研究，老板或者实验室的实力更重要一些。课程设置的话，直接去官网看项目的课程包含哪些即可，可以上别的平台看看课程评价如何，适合自己的就是最好的（混个毕业、学真本事、做研究）。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'你在本科阶段参与过哪些软件工程相关的项目或研究，对于申请留学有什么具体帮助？',
+                                        a:'之前参加过两段大创、一段科研，还有若干比赛。具体帮助很难讲，因为这些都是锦上添花的东西，无法量化，但是技多不压身。不过如果没有产出，科研经历会大打折扣。所以建议做科研一定要有产出，如果有顶会更好，顶会或者顶刊是可以产生实质性帮助的，是你进入好的实验室或者读博的敲门砖。'
+                                    },{
+                                        type:NWComponent.NWDialogue,
+                                        q:'你对软件学院的学生在准备留学申请时有哪些建议，特别是在个人项目和研究经验方面？',
+                                        a:'早点确定未来的发展方向比较重要，因为大部分的项目找工作和做科研是难以兼容的，所以尽可能早地确定好未来的发展路径。无论科研还是做研究都要趁早，可以从联系本校的老师开始，等有一点成果后可以尝试套磁外校的老师。越往后走connection越重要，如果没法保证质量，那就先把数量搞上来。'
+                                    },{
+
+                                        type:NWComponent.NWMotto,
+                                        message:'攀登者的步履，从来都是静默的。',
+                                        author:'宋经纬'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
     , {
         title: '生活出行',
@@ -77,14 +156,14 @@ export const PAGE_CONFIG: Group[] = [
                                 }]
                             }
                         ]
-                    },{
+                    }, {
                         title: '关键内容贡献者',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWContributors,
-                                    contributors:[
+                                    type: NWComponent.NWContributors,
+                                    contributors: [
                                         {
                                             name: "苏璃",
                                             src: "/suli.jpg"
@@ -220,13 +299,13 @@ export const PAGE_CONFIG: Group[] = [
                                         data: "目前，除公共浴池需要使用实体卡片外，其余场所的消费均可使用二维码快捷支付，学校刷卡机支持的二维码有智慧东大e码通、微信支付、支付宝支付三类码。"
                                     }
                                 ]
-                            },{
+                            }, {
                                 title: '智慧东大e码通',
                                 contents: [{
                                     type: NWComponent.NWDescription,
                                     data: "各大应用市场搜索下载“智慧东大”，使用学号和统一身份认证密码登录，点击下部导航栏中间的“e码通”即可使用e码通二维码支付，支付默认使用校园卡余额。"
                                 }]
-                            },{
+                            }, {
                                 title: '微信支付',
                                 contents: [{
                                     type: NWComponent.NWDescription,
@@ -247,7 +326,7 @@ export const PAGE_CONFIG: Group[] = [
                                     type: NWComponent.NWDescription,
                                     data: "进入微信企业号后，可以直接使用微信支付二维码在刷卡机上支付，支付资金渠道以微信显示为准（不使用校园卡余额）。"
                                 }]
-                            },{
+                            }, {
                                 title: "支付宝支付",
                                 contents: [{
                                     type: NWComponent.NWDescription,
@@ -264,18 +343,18 @@ export const PAGE_CONFIG: Group[] = [
                             }
                         ]
 
-                    },{
+                    }, {
                         title: '关键内容贡献者',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWContributors,
-                                    contributors:[
+                                    type: NWComponent.NWContributors,
+                                    contributors: [
                                         {
                                             name: "Techy-Wu",
                                             src: "https://avatars.githubusercontent.com/u/73032687"
-                                        },{
+                                        }, {
                                             name: "苏璃",
                                             src: "/suli.jpg"
                                         }
@@ -360,14 +439,14 @@ export const PAGE_CONFIG: Group[] = [
                                 }]
                             },
                         ]
-                    },{
+                    }, {
                         title: '关键内容贡献者',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWContributors,
-                                    contributors:[
+                                    type: NWComponent.NWContributors,
+                                    contributors: [
                                         {
                                             name: "Techy-Wu",
                                             src: "https://avatars.githubusercontent.com/u/73032687"
@@ -401,7 +480,7 @@ export const PAGE_CONFIG: Group[] = [
                                 type: NWComponent.NWDescription,
                                 data: '另推荐乘坐灯塔至沈阳的长途客车，具体时刻表可参考微信公众号“灯塔至沈阳客车信息平台”，本线路北行可前往南塔客运站或五爱客运站，南行可前往灯塔市，并可直接衔接转乘前往辽阳的客运班线。本线在四环路以内区段与394路完全重合，可作为394的替代品。'
                             }]
-                        },{
+                        }, {
                             title: '地铁',
                             contents: [{
                                 type: NWComponent.NWList,
@@ -415,7 +494,7 @@ export const PAGE_CONFIG: Group[] = [
                                 case: 'info',
                                 data: '这里建议尝试手机的NFC或者钱包功能，目前来说大部分旗舰机都有该功能，大家可以自行查看相应手机的办卡攻略。如果是大一新生需要频繁使用，建议办理盛京通，如果想要办理一个全国各地都可以使用的，可以使用北京互通卡，也叫市政交通一卡通。使用NFC功能的好处是便捷，例如华为手机，只需要摁两下开机键即可唤起，并贴一下机器就可以完成消费。'
                             },]
-                        },{
+                        }, {
                             title: '有轨电车',
                             contents: [{
                                 type: NWComponent.NWDescription,
@@ -435,19 +514,19 @@ export const PAGE_CONFIG: Group[] = [
                                 type: NWComponent.NWDescription,
                                 data: '有轨电车出行需要使用沈阳有轨电车小程序，绑定乘车码，上车刷一次下车刷一次，在快要到达你下车站点时刷就可以。也可以刷交通卡，或者是使用之前推荐的手机NFC功能都可以。'
                             }]
-                        },{
+                        }, {
                             title: '打车',
                             contents: [{
                                 type: NWComponent.NWDescription,
                                 data: '这就是简单粗暴的出行方式了，只要有钱就可以打车，但是打车也是有选择的，作者目前使用过滴滴、高德和花小猪，这些平台都有一个特点，就是长时间不用会很便宜，抛去这个因素的话花小猪打车会更便宜。如果是三四个人出门建议就可以打车了，没有必要坐公交，因为人均下来其实并没有贵太多。出门时建议每个人用各自的打车软件先比较价格，然后再打车。'
                             }]
-                        },{
+                        }, {
                             title: '火车',
                             contents: [{
                                 type: NWComponent.NWDescription,
                                 data: '这种出行方式适合出远门（指到沈阳北站以及相邻市），大家可以在12306订购相应的火车票，并按照时间到达火车站即可，前往沈阳南站可以乘坐139路公交车、地铁四号线或者打车。这里提示一下，乘坐地铁到达沈阳南站后，可以选择**乘坐无障碍电梯**到达检票平台，会节省很多时间。如果你不想带身份证，在检票时可以在12306搜索临时身份证并刷脸领取，并走人工通道；在检票时用12306的检票码即可。'
                             }]
-                        },{
+                        }, {
                             title: '乘坐校车中转',
                             contents: [{
                                 type: NWComponent.NWDescription,
@@ -469,14 +548,14 @@ export const PAGE_CONFIG: Group[] = [
                             }]
                         }
                     ]
-                },{
+                }, {
                     title: '关键内容贡献者',
                     subsections: [
                         {
                             title: undefined,
                             contents: [{
-                                type:NWComponent.NWContributors,
-                                contributors:[
+                                type: NWComponent.NWContributors,
+                                contributors: [
                                     {
                                         name: "南惊希露",
                                         src: "https://b0.bdstatic.com/0df6c8c7f109aa7b67e7cb15e6f8d025.jpg@h_1280"
@@ -706,13 +785,13 @@ export const PAGE_CONFIG: Group[] = [
                                     type: NWComponent.NWDescription,
                                     data: "学校和企业一起联培，注重实践能力，培养能打工的学生。一般来说，工程硕博都是专硕，在学校和企业都各有一个导师，在研一的时候和正常学生一样，在学校完成所学课程。研二研三的时候会去企业打工，每月可能会有一点微薄薪资，不过不是一直待在企业，而是半工半学。毕业的时候没有就业限制。"
                                 }]
-                            },{
+                            }, {
                                 title: '联培企业',
                                 contents: [{
                                     type: NWComponent.NWDescription,
                                     data: "一般来说，企业会和学校的某些学院达成协议，像东大软件是和宝武公司合作。可能其他学院合作的企业不同。像中山大学的部分学院还会跟华为有合作，所以企业不是固定的。另外有些企业让你打工的时候，实际上还是偏向于科研性质的，成果物要以论文形式发布。"
                                 }]
-                            },{
+                            }, {
                                 title: '推免方式',
                                 contents: [{
                                     type: NWComponent.NWDescription,
@@ -724,7 +803,7 @@ export const PAGE_CONFIG: Group[] = [
                                     type: NWComponent.NWDescription,
                                     data: "没有正常推免资格。东大20级学生推免的时候，工程硕博名额和其他推免名额不冲突（包括行政推免、支教保研之类的），是额外补充的名额，但是走这个只能留本校了"
                                 }]
-                            },{
+                            }, {
                                 title: '性价比与适用人群',
                                 contents: [{
                                     type: NWComponent.NWDescription,
@@ -736,14 +815,14 @@ export const PAGE_CONFIG: Group[] = [
                             }
                         ]
 
-                    },{
+                    }, {
                         title: '关键内容贡献者',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWContributors,
-                                    contributors:[
+                                    type: NWComponent.NWContributors,
+                                    contributors: [
                                         {
                                             name: "小明",
                                             src: "/xiaoming.jpg"
@@ -865,14 +944,14 @@ export const PAGE_CONFIG: Group[] = [
                                 ]
                             }
                         ]
-                    },{
+                    }, {
                         title: '关键内容贡献者',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWContributors,
-                                    contributors:[
+                                    type: NWComponent.NWContributors,
+                                    contributors: [
                                         {
                                             name: "小明",
                                             src: "/xiaoqi.jpg"

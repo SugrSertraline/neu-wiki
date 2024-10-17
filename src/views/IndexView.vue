@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col items-center justify-center mt-16">
 
         <!-- 左侧介绍文字+右侧图片的容器，使用flex布局 -->
-        <div class="w-5/6 ">
+        <div class="w-5/6">
             <div class="flex flex-col lg:flex-row items-center">
                 <!-- 左侧文字部分，如果lg尺寸，将order修改为1-->
                 <div class="flex-1 order-2 lg:order-1">
@@ -86,7 +86,7 @@ const config = ref({
         {
             icon: BubbleTeaIcon,
             title: '联系我们',
-            content: '网站作者的手机号为19282438246，有任何建议意见可以随时给我发短信'
+            content: '网站交流QQ群2152012727，可以加入我们共同开发与创作'
         }
     ]
 });

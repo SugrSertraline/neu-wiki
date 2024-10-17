@@ -1,10 +1,6 @@
 <template>
   <NWPersonalIntro :user="userProfile"></NWPersonalIntro>
   <NWDialogue
-      v-for="(dialogue, index) in dialogues"
-      :key="index"
-      :question="dialogue.question"
-      :answer="dialogue.answer"
     />
     <test :message="farewellMessage"
       :author="intervieweeName"
