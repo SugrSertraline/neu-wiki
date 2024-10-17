@@ -1,17 +1,21 @@
 <template>
+
+  <!-- sm,md,lg,xl,2xl 为断点的不同大小-->
+
   <!-- 侧边导航栏，当页面小于lg时，用来展示的drawer -->
   <n-drawer :default-width="300" v-model:show="configuration.if_drawer" placement="left">
     <n-drawer-content title="目录">
-      <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
+      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange"
+        :data="configuration.menu_data" />
     </n-drawer-content>
   </n-drawer>
 
 
-  <!-- sm,md,lg,xl,2xl -->
   <div
-    class="w-64 hidden bg-gray-50 lg:block xl:w-100  shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
+    class="w-64 hidden bg-gray-50 lg:block xl:w-100 shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
-      <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
+      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange"
+        :data="configuration.menu_data" />
     </div>
   </div>
 
@@ -39,7 +43,6 @@
             </n-icon>
           </template>
         </n-button>
-
       </div>
     </div>
 
@@ -67,6 +70,7 @@
           type: NWComponent.NWDescription,
           data: configuration.page_data.description
         })"></component>
+
         <NWSection level="1" v-for="(section, section_index) in configuration.page_data?.sections" :key="section_index"
           :id="'section' + section_index" :title="calPageSection(section.title, 1, section_index)">
           <NWSection v-for="(subsection, subsection_index) in section.subsections" :key="subsection_index" level="2"
@@ -96,8 +100,7 @@
               不推荐
             </n-button>
           </div>
-          <NWCommit/>
-
+          <NWCommit />
         </div> -->
       </div>
     </div>
@@ -109,7 +112,7 @@
       <div class="font-bold m-2">
         当前页面内容
       </div>
-      <n-anchor :show-rail="true" :show-background="true">
+      <n-anchor :ignore-gap="true" :bound="100" :offset-target="() => contentRef">
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
           <n-anchor-link v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
@@ -125,17 +128,17 @@
 
 <script lang="ts" setup>
 import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
-import { SideMenu } from '@/components/SideMenu';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
 import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
-import { NWDescription, NWSection, NWImage, NWList, NWTips, NWContributors,NWCommit } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWContributors, NWCommit, NWPersonalIntro, NWDialogue } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import type { MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
 import router from '@/router';
 import { useRoute } from 'vue-router';
+import NWMotto from '@/components/NWMotto/NWMotto.vue';
 
 const contentRef: any = inject('contentRef');
 const route = useRoute();
@@ -234,7 +237,37 @@ const dynamicComponent = (content: Content) => {
       return h(NWContributors, {
         data: content.contributors
       })
+    case 'NWPersonalIntro':
+      return h(NWPersonalIntro, {
+        user: {
+          name: content.name,
+          avatarUrl: content.avatarUrl,
+          college: content.college,
+          grade: content.grade,
+          major: content.major,
+          graduation: content.graduation,
+          introduction: content.introduction,
+          achievements: content.achievements,
+          qq: content.qq,
+          wechat: content.wechat,
+          github: content.github,
+          email: content.email
+        }
+      })
+      case 'NWDialogue':
+    return h(NWDialogue,{
+      qa:{
+        q:content.q,
+        a:content.a
+      }
+    })
+    case 'NWMotto':
+      return h(NWMotto,{
+        message:content.message,
+        author:content.author
+      })
   }
+  
 }
 
 

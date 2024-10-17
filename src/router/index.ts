@@ -19,7 +19,11 @@ const router = createRouter({
       meta:{
         title:'阅读'
       }
-    },
+    },{
+      path:'/test',
+      name:'test',
+      component:()=>import('@/views/TestView.vue')
+    }
   ]
 })
 

@@ -1,7 +1,6 @@
 <template>
     <div class="text-base my-4">
        <div v-html="html_string"></div>
-
     </div>
 
 </template>
