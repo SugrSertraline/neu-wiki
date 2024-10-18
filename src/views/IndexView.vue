@@ -96,4 +96,27 @@ const routerTo = (url: string) => {
 }
 
 
+
+import { onMounted } from 'vue';
+
+declare global {
+  interface Window {
+    _hmt?: string[];
+  }
+}
+
+onMounted(() => {
+  // 使用 window 对象来声明 _hmt，确保它在全局作用域中是可访问的
+  const _hmt: string[] = window._hmt || [];
+  
+  (function() {
+    const hm: HTMLScriptElement = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?e03d1197ba7abe7aa689977cff58c39a";
+    const s: HTMLScriptElement | null = document.getElementsByTagName("script")[0] as HTMLScriptElement | null;
+    if (s) {
+      s.parentNode?.insertBefore(hm, s);
+    }
+  })();
+});
+
 </script>
