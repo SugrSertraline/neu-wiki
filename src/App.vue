@@ -5,6 +5,22 @@ import type { LayoutInst } from 'naive-ui';
 const contentRef = ref<LayoutInst | null>(null);
 provide('contentRef', contentRef);
 </script>
+
+<script setup>
+import { onMounted } from 'vue'
+onMounted(()=>{
+   var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e03d1197ba7abe7aa689977cff58c39a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+          })();
+})
+
+
+</script>
+
 <template>
   <n-notification-provider>
     <n-message-provider>
