@@ -4,22 +4,32 @@ import { NWHeader } from './components';
 import type { LayoutInst } from 'naive-ui';
 const contentRef = ref<LayoutInst | null>(null);
 provide('contentRef', contentRef);
+
+import { onMounted } from 'vue';
+
+declare global {
+  interface Window {
+    _hmt?: string[];
+  }
+}
+
+onMounted(() => {
+  // 使用 window 对象来声明 _hmt，确保它在全局作用域中是可访问的
+  const _hmt: string[] = window._hmt || [];
+  
+  (function() {
+    const hm: HTMLScriptElement = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?e03d1197ba7abe7aa689977cff58c39a";
+    const s: HTMLScriptElement | null = document.getElementsByTagName("script")[0] as HTMLScriptElement | null;
+    if (s) {
+      s.parentNode?.insertBefore(hm, s);
+    }
+  })();
+});
+
 </script>
 
-<script setup>
-import { onMounted } from 'vue'
-onMounted(()=>{
-   var _hmt = _hmt || [];
-          (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?e03d1197ba7abe7aa689977cff58c39a";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-          })();
-})
 
-
-</script>
 
 <template>
   <n-notification-provider>
