@@ -15,21 +15,27 @@
             <n-button v-for="item in buttons" :key="item.id" quaternary @click="routerTo(item.value)">
                 {{ item.label }}
             </n-button>
+            <n-button  quaternary @click="copyUrl">
+                分享
+            </n-button>
         </div>
         <div class="block md:hidden">
             <n-popselect @update:value="routerTo" :options="buttons" trigger="click">
                 <n-button quaternary  ><n-icon size="20"><MenuIcon/></n-icon></n-button>
             </n-popselect>
+            <n-button quaternary  @click="copyUrl"><n-icon size="20"><ShareIcon/></n-icon></n-button>
+
         </div>
     </div>
 </template>
 <script setup lang="ts">
 
-import BookIcon from '@/assets/icons/BookIcon.vue';
-import MenuIcon from '@/assets/icons/MenuIcon.vue';
-import { useRouter } from 'vue-router';
-const router = useRouter()
 
+import { BookIcon,MenuIcon,ShareIcon } from '@/assets';
+import { useRouter } from 'vue-router';
+import { useMessage } from 'naive-ui';
+const router = useRouter();
+const message = useMessage();
 const routerTo = (url:string)=>{
     
     router.push({
@@ -37,6 +43,19 @@ const routerTo = (url:string)=>{
     });
 }
 
+const copyUrl = async ()=>{
+      try {
+        // 获取当前页面的URL
+        const url = window.location.href;
+        // 将URL复制到剪贴板
+        await navigator.clipboard.writeText(url);
+        // 提示用户链接已复制
+        message.success('链接已复制到剪贴板')
+      } catch (err) {
+        message.warning(`无法复制链接:${err}`);
+      }
+    
+}
 
 interface ButtonItem {
     id: number,

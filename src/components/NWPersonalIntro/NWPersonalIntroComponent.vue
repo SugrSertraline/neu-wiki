@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="px-4 py-4">
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid  place-items-center grid-cols-1 gap-4 md:grid-cols-2">
           <div v-if="user.qq" class="flex items-center">
             <n-icon size="20" class="text-blue-500 mr-2">
               <Qq />

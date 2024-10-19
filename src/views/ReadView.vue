@@ -189,7 +189,7 @@ const loadPageConfig = (name?: string) => {
     configuration.value.current_page = page ? name : undefined;
   }
   configuration.value.page_data = page;
-
+  window.history.replaceState(null, '',`${route.fullPath}/${name}`);
 }
 
 const calUntitleSubsection = (section: Section, index: number): number => {
