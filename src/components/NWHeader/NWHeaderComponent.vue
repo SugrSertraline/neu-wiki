@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white flex w-full px-12 md:px-12 lg:px-24 xl:px-36 2xl:px-48 h-16 items-center">
+    <div class="bg-white flex w-full px-2 md:px-12 lg:px-24 xl:px-36 2xl:px-48 h-16 items-center">
         <div @click="routerTo('/')" class="flex items-center cursor-pointer">
             <n-icon size="20">
                 <BookIcon />
