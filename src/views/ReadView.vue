@@ -214,7 +214,9 @@ const loadPageConfig = (name?: string) => {
       console.log('URL already matches the /read/name pattern, skipping history.replaceState');
     } else {
       // 如果 URL 不符合 /read/name 的格式，更新为符合格式的 URL
-      window.history.replaceState(null, '', `/${name.startsWith('read/') ? name : 'read/' + name}`);
+      if(name){
+        window.history.replaceState(null, '', `/${name.startsWith('read/') ? name : 'read/' + name}`);
+      }
       console.log('URL did not match the /read/name pattern, updated URL');
     }
   } else {
