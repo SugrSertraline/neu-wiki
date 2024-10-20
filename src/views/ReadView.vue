@@ -182,16 +182,47 @@ const loadMenuConfig = () => {
   })
 }
 
-const loadPageConfig = (name?: string) => {
+// const loadPageConfig = (name?: string) => {
 
+//   const page = getPageByName(name);
+//   if (name) {
+//     configuration.value.current_page = page ? name : undefined;
+//   }
+//   configuration.value.page_data = page;
+//   console.log(route.fullPath);
+//   window.history.replaceState(null, '',`${route.fullPath}/${name}`);
+// }
+const loadPageConfig = (name?: string) => {
   const page = getPageByName(name);
+
   if (name) {
     configuration.value.current_page = page ? name : undefined;
   }
   configuration.value.page_data = page;
-  window.history.replaceState(null, '',`${route.fullPath}/${name}`);
-}
 
+  // 获取当前路由的 fullPath
+  const fullPath = route.fullPath;
+
+  // 检查 fullPath 是否以 /read/ 开头
+  if (fullPath.startsWith('/read/')) {
+    // 如果已经以 /read/ 开头，检查是否符合 /read/name 的格式
+    const readPathRegex = /\/read\/([^\/]+)$/;
+    const match = fullPath.match(readPathRegex);
+
+    if (match && match[1] === name) {
+      // 如果 URL 已经符合 /read/name 的格式，不执行 window.history.replaceState
+      console.log('URL already matches the /read/name pattern, skipping history.replaceState');
+    } else {
+      // 如果 URL 不符合 /read/name 的格式，更新为符合格式的 URL
+      window.history.replaceState(null, '', `/${name.startsWith('read/') ? name : 'read/' + name}`);
+      console.log('URL did not match the /read/name pattern, updated URL');
+    }
+  } else {
+    // 如果不以 /read/ 开头，直接更新为符合格式的 URL
+    window.history.replaceState(null, '', `/read/${name}`);
+    console.log('URL did not start with /read/, updated URL');
+  }
+};
 const calUntitleSubsection = (section: Section, index: number): number => {
   let sum: number = 0;
   for (let i = 0; i < index; i++) {
