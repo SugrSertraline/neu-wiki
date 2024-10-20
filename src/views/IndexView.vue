@@ -66,9 +66,7 @@ lg:text-start lg:text-5xl lg:leading-tight font-bold text-gray-900">
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import BubbleTeaIcon from '@/assets/icons/BubbleTeaIcon.vue';
-import HotDogIcon from '@/assets/icons/HotDogIcon.vue';
-import ColaIcon from '@/assets/icons/ColaIcon.vue';
+import { BubbleTeaIcon,HotDogIcon,ColaIcon} from '@/assets/icons';
 
 const router = useRouter();
 const config = ref({
