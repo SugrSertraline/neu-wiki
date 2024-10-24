@@ -14,8 +14,7 @@
                     </div>
 
                     <!-- 标题下面的次级标题 -->
-                    <div class="mx-2 text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start 
-lg:text-start lg:text-5xl lg:leading-tight font-bold text-gray-900">
+                    <div class="mx-2 text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start lg:text-start lg:text-5xl lg:leading-tight font-bold text-gray-900">
                         为NEUer们提供的简单、快捷的校园信息查询
                     </div>
 
@@ -73,18 +72,18 @@ const config = ref({
     description_list: [
         {
             icon: HotDogIcon,
-            title: '更新日志',
-            content: '网站技术进行了重构，将原本的纯阅读型网站修改为能够进行交互的网站'
+            title: '网站公告',
+            content: '网站技术进行了重构，将原本的纯阅读型网站修改为能够进行交互的网站，页面内容均为学长学姐总结的经验，由于每年更新不及时可能存在不同步的情况，所以仅供参考。'
         },
         {
             icon: ColaIcon,
             title: '网站简介',
-            content: '给NEUer们包括吃喝玩乐、出行、水电网费等多方面的攻略和建议'
+            content: '给NEUer提供在校园内衣食住行吃喝玩乐的相关内容，其中访谈内容包括不同去向的学长学姐的访谈记录，具有较强的主观性；其他内容为客观属性，可供大家阅读。'
         },
         {
             icon: BubbleTeaIcon,
             title: '联系我们',
-            content: '网站交流QQ群2152012727，可以加入我们共同开发与创作'
+            content: '网站交流QQ群2152012727，我们希望愿意为同学们付出，让Neuer少走弯路的同学加入我们，共同创作，继续丰富网站内容。'
         }
     ]
 });

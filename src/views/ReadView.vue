@@ -68,7 +68,7 @@
       <div v-else class="xl:px-8 2xl:px-20 pb-2">
         <component v-if="configuration.page_data?.description" :is="dynamicComponent({
           type: NWComponent.NWDescription,
-          data: configuration.page_data.description
+          text: configuration.page_data.description
         })"></component>
 
         <NWSection level="1" v-for="(section, section_index) in configuration.page_data?.sections" :key="section_index"
@@ -79,6 +79,16 @@
               <component :is="dynamicComponent(content)"></component>
             </template>
           </NWSection>
+        </NWSection>
+        <NWSection v-if="configuration.page_data.contributors" level="1"
+          :id="'section' + configuration.page_data.sections.length"
+          :title="calPageSection('关键内容贡献者', 1, configuration.page_data.sections.length)">
+          <div class="w-full flex flex-col md:flex-row justify-start flex-wrap my-4 ">
+            <div v-for="(contributor, index) in configuration.page_data.contributors" :key="index"
+              class="h-48 w-full md:w-1/2 p-2 box-border">
+              <NWContributor :name="contributor.name" :avatar_url="contributor.avatar_url"></NWContributor>
+            </div>
+          </div>
         </NWSection>
         <!-- <div class="w-full flex flex-col justify-center items-center">
           <div class="w-full px-8 text-base flex justify-center items-center">
@@ -132,7 +142,7 @@ import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
 import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWContributors, NWCommit, NWPersonalIntro, NWDialogue } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWContributor } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import type { MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -147,13 +157,21 @@ const route = useRoute();
 interface Configuration {
   if_drawer: boolean,
   current_page: string | undefined,
-
-  page_data?: Page,
+  page_data: Page,
   menu_data: any[],
 }
+
 const configuration: Ref<Configuration> = ref({
   if_drawer: false,
   current_page: 'default',
+  page_data: {
+    title: 'default',
+    last_update: '2024年1月1日',
+    name: 'default',
+    description: undefined,
+    sections: [],
+    contributors: undefined
+  },
   menu_data: [],
 });
 
@@ -182,47 +200,41 @@ const loadMenuConfig = () => {
   })
 }
 
-// const loadPageConfig = (name?: string) => {
 
-//   const page = getPageByName(name);
-//   if (name) {
-//     configuration.value.current_page = page ? name : undefined;
-//   }
-//   configuration.value.page_data = page;
-//   console.log(route.fullPath);
-//   window.history.replaceState(null, '',`${route.fullPath}/${name}`);
-// }
 const loadPageConfig = (name?: string) => {
+
   const page = getPageByName(name);
+  if (page) {
 
-  if (name) {
-    configuration.value.current_page = page ? name : undefined;
-  }
-  configuration.value.page_data = page;
-
-  // 获取当前路由的 fullPath
-  const fullPath = route.fullPath;
-
-  // 检查 fullPath 是否以 /read/ 开头
-  if (fullPath.startsWith('/read/')) {
-    // 如果已经以 /read/ 开头，检查是否符合 /read/name 的格式
-    const readPathRegex = /\/read\/([^\/]+)$/;
-    const match = fullPath.match(readPathRegex);
-
-    if (match && match[1] === name) {
-      // 如果 URL 已经符合 /read/name 的格式，不执行 window.history.replaceState
-      console.log('URL already matches the /read/name pattern, skipping history.replaceState');
-    } else {
-      // 如果 URL 不符合 /read/name 的格式，更新为符合格式的 URL
-      if(name){
-        window.history.replaceState(null, '', `/${name.startsWith('read/') ? name : 'read/' + name}`);
-      }
-      console.log('URL did not match the /read/name pattern, updated URL');
+    if (name) {
+      configuration.value.current_page = page ? name : undefined;
     }
-  } else {
-    // 如果不以 /read/ 开头，直接更新为符合格式的 URL
-    window.history.replaceState(null, '', `/read/${name}`);
-    console.log('URL did not start with /read/, updated URL');
+    configuration.value.page_data = page;
+
+    // 获取当前路由的 fullPath
+    const fullPath = route.fullPath;
+
+    // 检查 fullPath 是否以 /read/ 开头
+    if (fullPath.startsWith('/read/')) {
+      // 如果已经以 /read/ 开头，检查是否符合 /read/name 的格式
+      const readPathRegex = /\/read\/([^\/]+)$/;
+      const match = fullPath.match(readPathRegex);
+
+      if (match && match[1] === name) {
+        // 如果 URL 已经符合 /read/name 的格式，不执行 window.history.replaceState
+        console.log('URL already matches the /read/name pattern, skipping history.replaceState');
+      } else {
+        // 如果 URL 不符合 /read/name 的格式，更新为符合格式的 URL
+        if (name) {
+          window.history.replaceState(null, '', `/${name.startsWith('read/') ? name : 'read/' + name}`);
+        }
+        console.log('URL did not match the /read/name pattern, updated URL');
+      }
+    } else {
+      // 如果不以 /read/ 开头，直接更新为符合格式的 URL
+      window.history.replaceState(null, '', `/read/${name}`);
+      console.log('URL did not start with /read/, updated URL');
+    }
   }
 };
 const calUntitleSubsection = (section: Section, index: number): number => {
@@ -248,7 +260,7 @@ const dynamicComponent = (content: Content) => {
   switch (content.type) {
     case 'NWDescription':
       return h(NWDescription, {
-        data: content.data
+        text: content.text
       });
     case 'NWImage':
       return h(NWImage, {
@@ -265,10 +277,6 @@ const dynamicComponent = (content: Content) => {
         title: content.title,
         case: content.case,
         data: content.data
-      })
-    case 'NWContributors':
-      return h(NWContributors, {
-        data: content.contributors
       })
     case 'NWPersonalIntro':
       return h(NWPersonalIntro, {
@@ -287,20 +295,20 @@ const dynamicComponent = (content: Content) => {
           email: content.email
         }
       })
-      case 'NWDialogue':
-    return h(NWDialogue,{
-      qa:{
-        q:content.q,
-        a:content.a
-      }
-    })
+    case 'NWDialogue':
+      return h(NWDialogue, {
+        qa: {
+          q: content.q,
+          a: content.a
+        }
+      })
     case 'NWMotto':
-      return h(NWMotto,{
-        message:content.message,
-        author:content.author
+      return h(NWMotto, {
+        message: content.message,
+        author: content.author
       })
   }
-  
+
 }
 
 

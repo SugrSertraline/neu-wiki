@@ -4,7 +4,7 @@ import { NWComponent } from "./enum"
 
 interface NWDescription{
     type:NWComponent.NWDescription,
-    data:string
+    text:string
 }
 interface NWImage{
     type:NWComponent.NWImage,
@@ -45,21 +45,18 @@ interface NWPersonalIntro{
 
 interface Contributor{
     name:string,
-    src:string,
-    qq?:string,
-    phone?:string
+    avatar_url:string,
+    qq:string|undefined,
+    phone:string|undefined
 }
-interface NWContributors{
-    type:NWComponent.NWContributors,
-    contributors:Contributor[]
-}
+
 interface NWMotto{
     type:NWComponent.NWMotto,
     message: string,
     author: string
 }
 
-export type Content = NWDescription|NWImage|NWList|NWTips|NWContributors|NWPersonalIntro|NWDialogue|NWMotto;
+export type Content = NWDescription|NWImage|NWList|NWTips|NWPersonalIntro|NWDialogue|NWMotto;
 
 export interface SubSection{
     title:string|undefined,
@@ -71,13 +68,13 @@ export interface Section {
     subsections: SubSection[]
 }
 
-
 export interface Page {
     title: string,
     last_update: string,
     name: string,
     description: string|undefined
     sections: Section[],
+    contributors:Contributor[]|undefined
 }
 export interface Group {
     title: string,

@@ -1,2 +1,2 @@
-import NWContributors from "./NWContributorsComponent.vue";
-export {NWContributors}
+import NWContributor from "./NWContributorComponent.vue";
+export {NWContributor}

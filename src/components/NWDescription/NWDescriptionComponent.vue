@@ -7,6 +7,12 @@
 <script setup lang="ts">
 import { stringToHtml } from '@/utils/utils';
 import { computed } from 'vue';
-const props = defineProps(['data']);
-const html_string = computed(() =>stringToHtml(props.data));
+const props = defineProps({
+    text:String
+});
+const html_string = computed(() =>{
+    if(props.text){
+        return stringToHtml(props.text);
+    }
+});
 </script>
