@@ -51,7 +51,7 @@ export const PAGE_CONFIG: Group[] = [
                                         college: '软件学院',
                                         grade: '2024届',
                                         major: '软件工程',
-                                        graduation: '香港大学计算机工程专业 HKU-NLP',
+                                        graduation: '香港大学计算机工程专业HKUNLP',
                                         introduction: 'NEUSOFT的UU来香港可以找我',
                                         achievements: ['GPA3.95', '雅思7(6)', 'GRE334', '微信小程序应用开发赛国家二等奖', 'IMCM一等奖', '东北大学优秀毕业生', '东北大学优秀毕业设计', '各种奖学金10余次'],
                                         qq: '2015713717',
@@ -124,7 +124,7 @@ export const PAGE_CONFIG: Group[] = [
                                         college: '信息科学与工程学院',
                                         grade: '2024届',
                                         major: '自动化',
-                                        graduation: '哈尔滨工业大学航天学院攻读研究生',
+                                        graduation: '哈尔滨工业大学航天学院',
                                         introduction: '一个永远行走在追求爱和自由路上的旅行者;作为主演参演国家级舞台剧《能不奋勉乎吾曹》；纪念建党102周年表彰大会暨“讲述-东大人的故事”典型推介会主讲人；作为制片、导演、拍摄、调色完成东北大学信息科学与工程学院2024届毕业MV《再见再见》；大学期间成立“大梦想家”校园摄影工作室完成30+班级的拍摄；东北大学2024届本科生毕业典礼优秀学生代表发言',
                                         achievements: ['篮球摄影', '退役军人', '“四有”优秀士兵奖章', '中国大学生自强之星', '辽宁省优秀毕业生', '“学以立德”金牌', '奖学金6次', '最具影响力毕业生'],
                                         qq: '2775578683',
@@ -184,7 +184,7 @@ export const PAGE_CONFIG: Group[] = [
                                         college: '软件学院',
                                         grade: '2024届',
                                         major: '软件工程',
-                                        graduation: '中国科学技术大学信息科学技术学院 USTC-LDS',
+                                        graduation: '中国科学技术大学信息科学技术学院USTCLDS',
                                         introduction: '本科期间，获得“国家奖学金”，"东北大学优秀学生标兵"在内等12项奖学金及荣誉称号，校长奖章提名。于管道缺陷检测，药物疗效预测，心电监测，多模态内容生成等领域开展科研探索。发表1篇SCI论文（Top刊）,1篇EI论文（一作），1篇SCI论文同行评审中（一作，Top刊），1篇专利，2篇软件著作权。参与创新创业竞赛获得6项高星级国家级奖项及十余项省级一等奖奖项，包括“互联网+”大学生创新创业大赛全国银奖，国际大学生数学建模竞赛特等奖提名（前2%），TRIZ杯创新方法大赛全国第七名，“挑战杯”大学生创业计划竞赛省级金奖等。作为班长，所在班级获评“东北大学优秀班集体标兵”。以软件学院创新特长第一推免至中国科学技术大学LDS实验室。 ',
                                         achievements: ['国家奖学金', '奖学金荣誉称号12项', '论文产出', '竞赛国奖6项', 'GPA 3.99'],
                                         qq: '543842342',
@@ -281,6 +281,77 @@ export const PAGE_CONFIG: Group[] = [
                                         type: NWComponent.NWMotto,
                                         message: '白山黑水，纸短情长。一叶浮萍归大海，人生何处不相逢。',
                                         author: '刘函睿'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                contributors: undefined
+            }, {
+                title: "24届陈柏锦同学",
+                last_update: "2024年10月255日",
+                name: "ChenBoJin",
+                description: undefined,
+                sections: [
+                    {
+                        title: undefined,
+                        subsections: [
+                            {
+                                title: undefined,
+                                contents: [
+                                    {
+                                        type: NWComponent.NWPersonalIntro,
+                                        name: '刘函睿',
+                                        avatarUrl: '/chenbojin.png',
+                                        college: '软件学院',
+                                        grade: '2024届',
+                                        major: '软件工程',
+                                        graduation: '北京大学软件与微电子学院软件工程专业',
+                                        introduction: 'NEUSOFT的UU来软微可以找我',
+                                        achievements: ['GPA3.0', 'Rank后20%', '无竞赛', '无项目'],
+                                        wechat: 'chendade9578',
+                                        email:'dade@stu.pku.edu.cn'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '你决定考研的初衷是什么？是什么激发了你对北大软微学院的兴趣？',
+                                        a: '初衷：本科太混了，想读个研究生沉淀一下。兴趣：北大这个title，对本科非清非北的学生来说诱惑力极大，从小接受到的教育中就体现了清北独一档的存在，在相对受教育程度较低的小镇长辈眼中，更是被夸大了几倍。本科过于摆烂的生活，加上高考发挥的不是相对顺利，所以当你了解到软微后，发现自己也有机会到达时，种种因素的叠加，让软微的吸引力更是被扩大了许多。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '备考期间，您是如何平衡学习、休息和娱乐的时间的？',
+                                        a: '心中有了信念之后，制定了以3-5天为时间单位的计划表，尽最大努力去实现这个计划表。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '您在选择考研资料时有什么特别的偏好或推荐？',
+                                        a: '政治：腿姐全套，腿姐的强化班和模拟班，苍盾上刷模拟题的选择题。英语：B站的田翰博up主，翻译唐静，刘琦的新题型，作文Fiona（B站up）。数一：张宇全家桶，概率论方浩，线面积分周洋鑫，王谱的微分算子，真题推荐李艳芳系列，模拟题张八张四。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '您有没有遇到过学习瓶颈期，是如何调整心态继续前行的？',
+                                        a: '10-11月的时候模拟题的分数并不理想，但是那个时候报名已经结束了，只能每天坚持刷题总结，到了12月情况突然好起来了'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '备考过程中，有没有遇到过特别有效的学习方法或技巧？',
+                                        a: '复习回顾，最好每天晚上花一点时间回顾今天所学的内容。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '北大软微学院的复试有哪些特点，需要提前做哪些准备？',
+                                        a: '比较随机，当然有项目和论文是比较占优势的。'
+                                    },  {
+                                        type: NWComponent.NWDialogue,
+                                        q: '您是如何获取考研信息和最新动态的？',
+                                        a: '知乎刷软微的经验贴，然后加入一些软微的考研交流群。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '您对即将参加考研的学弟学妹有什么寄语或建议？',
+                                        a: '加油去冲刺自己心仪的院校吧，考研这个过程本身就值得让人回味。'
+                                    },{
+                                        type: NWComponent.NWDialogue,
+                                        q: '如果可以回到考研前的某个时刻，您会给自己哪些建议或提醒？',
+                                        a: '回到最开始的那个节点，我会建议自己尽量每天都要坚持学习，前期不要太过懈怠。'
+                                    },{
+                                        type: NWComponent.NWMotto,
+                                        message: '当你老了，回顾一生，就会发觉 : 什么时候出国读书、什么时候决定做第一份职业、何时选定了对象而恋爱、什么时候结婚，其实都是命运的巨变。只是当时站在三岔路口，还以为是生命中普通的一天。',
+                                        author: '陈柏锦'
                                     }
                                 ]
                             }
