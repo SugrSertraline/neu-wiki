@@ -302,7 +302,7 @@ export const PAGE_CONFIG: Group[] = [
                                 contents: [
                                     {
                                         type: NWComponent.NWPersonalIntro,
-                                        name: '刘函睿',
+                                        name: '陈柏锦',
                                         avatarUrl: '/chenbojin.png',
                                         college: '软件学院',
                                         grade: '2024届',
