@@ -4,5 +4,10 @@
 </div>
 </template>
 <script setup lang="ts">
-const props = defineProps(['width','src'])
+
+interface Props {
+    width:number,
+    src:String
+}
+defineProps<Props>();
 </script>
