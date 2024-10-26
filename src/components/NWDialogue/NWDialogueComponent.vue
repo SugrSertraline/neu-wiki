@@ -2,11 +2,12 @@
     <n-card  class="my-2 w-full  mx-auto max-w-3xl bg-gray-100">
       <div class="text-center">
         <h2 class="text-2xl font-bold text-primary-600 font-question underline">
-          {{ qa.q }}
+          {{ q }}
         </h2>
-        <p class="text-lg text-gray-700 font-answer">
-          {{ qa.a }}
-        </p>
+        
+        <div class="text-lg text-gray-700 font-answer">
+          <NWDescription :text="a"></NWDescription>
+        </div>
       </div>
     </n-card>
 </template>
@@ -14,14 +15,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NCard, NDivider } from 'naive-ui'
+import { NWDescription } from '../NWDescription';
 
-interface QA {
-  q: string;
-  a: string;
-}
 
 const props = defineProps<{
-  qa:QA
+  q: string,
+  a: string;
 }>();
 
 </script>

@@ -51,7 +51,7 @@ export function numberToChinese(num: number): string {
     html = html.replace(/\[(.*?)\]\((.*?)\)/g, (match, p1, p2) => {
         return `<a href="${p2}" style="color: rgb(54, 173, 106);" target="_blank">${p1}</a>`;
     });
-    html = html.replace(/\\/g, '\n');
+    html = html.replace(/\\/g, '<br/>');
     // 返回HTML字符串
     return html;
   }

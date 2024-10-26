@@ -296,10 +296,8 @@ const dynamicComponent = (content: Content) => {
       })
     case 'NWDialogue':
       return h(NWDialogue, {
-        qa: {
           q: content.q,
           a: content.a
-        }
       })
     case 'NWMotto':
       return h(NWMotto, {
