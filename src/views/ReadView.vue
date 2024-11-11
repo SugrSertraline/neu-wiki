@@ -139,7 +139,7 @@
 import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
-import { getPageByName, PAGE_CONFIG } from '@/config/PageConfig';
+import { getPageByName, PAGE_CONFIG,formatPageURLs } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWContributor } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
@@ -338,6 +338,7 @@ const scrollTo = (distance: number) => {
 
 
 onMounted(() => {
+
   loadMenuConfig();
   if (route.params.page) {
     let page = Array.isArray(route.params.page) ? route.params.id[0] : route.params.page;

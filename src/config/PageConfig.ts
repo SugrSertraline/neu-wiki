@@ -1237,3 +1237,23 @@ export const getPageByName = (name: string = "DeveloperGreeting"): Page | undefi
     return foundGroup?.pages.find(page => page.name === name) || undefined;
 
 }
+export const formatPageURLs =  (): string[] => {
+    // 创建一个数组来存储格式化后的URL
+    const formattedURLs: string[] = [];
+
+    // 遍历group中的pages数组
+    PAGE_CONFIG.forEach((item)=>{
+        console.log('2222');
+        item.pages.forEach((page) => {
+            // 检查page对象是否有title和name属性
+            if (page.title && page.name) {
+                console.log(page.title);
+                // 格式化URL并添加到数组中
+                formattedURLs.push(`${page.title}：https://neu.sugrsertraline.cn/read/${page.name}`);
+            }
+        });
+    })
+
+    // 返回包含所有格式化URL的数组
+    return formattedURLs;
+}
