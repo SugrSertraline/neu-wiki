@@ -40,9 +40,11 @@ onMounted(() => {
             <NWHeader />
           </div>
         </n-layout-header>
+
         <n-layout position="absolute" style="top: 64px;" ref="contentRef" :native-scrollbar="false">
           <router-view />
         </n-layout>
+
       </n-layout>
     </n-message-provider>
   </n-notification-provider>
