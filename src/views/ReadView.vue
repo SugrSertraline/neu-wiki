@@ -89,9 +89,31 @@
             </div>
           </div>
         </NWSection>
+
+        <!-- <div class="flex items-center justify-between w-full max-w-4xl mx-auto px-4 py-6">
+          <n-button icon-placement="left" secondary strong>
+            <template #icon>
+              <n-icon>
+                <ChevronLeft />
+              </n-icon>
+            </template>
+            +100 元
+          </n-button>
+          <div>
+            当前页面：测测额
+          </div>
+          <n-button icon-placement="right" secondary strong>
+            <template #icon>
+              <n-icon>
+                <ChevronRight />
+              </n-icon>
+            </template>
+            +100 元
+          </n-button>
+        </div> -->
         <div class="flex justify-center">
-                <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
-            </div>
+          <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
+        </div>
         <!-- <div class="w-full flex flex-col justify-center items-center">
           <div class="w-full px-8 text-base flex justify-center items-center">
             您认为此篇文章的内容如何？
@@ -124,7 +146,7 @@
       <div class="font-bold m-2">
         当前页面内容
       </div>
-      <n-anchor :ignore-gap="true"  :offset-target="() => contentRef">
+      <n-anchor :ignore-gap="true" :offset-target="() => contentRef">
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
           <n-anchor-link v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
@@ -141,8 +163,8 @@
 <script lang="ts" setup>
 import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
-import { ThumbsUpRegular, ThumbsDownRegular } from '@vicons/fa';
-import { getPageByName, PAGE_CONFIG,formatPageURLs } from '@/config/PageConfig';
+import { ThumbsUpRegular, ThumbsDownRegular,ChevronLeft,ChevronRight } from '@vicons/fa';
+import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWContributor } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
@@ -182,6 +204,9 @@ const handleMenuChange = (key: string, item: MenuOption) => {
   setCookie('page', key, 7);
   configuration.value.current_page = key;
 }
+
+
+
 
 const loadMenuConfig = () => {
   configuration.value.menu_data.splice(0, configuration.value.menu_data.length);
@@ -299,8 +324,8 @@ const dynamicComponent = (content: Content) => {
       })
     case 'NWDialogue':
       return h(NWDialogue, {
-          q: content.q,
-          a: content.a
+        q: content.q,
+        a: content.a
       })
     case 'NWMotto':
       return h(NWMotto, {

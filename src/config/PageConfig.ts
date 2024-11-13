@@ -1257,3 +1257,55 @@ export const formatPageURLs =  (): string[] => {
     // 返回包含所有格式化URL的数组
     return formattedURLs;
 }
+export function findAdjacentPageInGroups(currentPageName: string, direction: 'next' | 'prev' = 'prev'): string | 'start' | 'end' {
+    let groups: Group[] = PAGE_CONFIG;
+
+    // 辅助函数，用于在单个group内查找相邻页面的name
+    function findAdjacentInGroup(group: Group, pageName: string, dir: 'next' | 'prev'): string | 'start' | 'end' {
+        const pageIndex = group.pages.findIndex(page => page.name === pageName);
+        if (pageIndex === -1) return 'end';
+
+        const pages = group.pages;
+        if (dir === 'next') {
+            if (pageIndex + 1 < pages.length) return pages[pageIndex + 1].name;
+            return 'end';
+        } else {
+            if (pageIndex > 0) return pages[pageIndex - 1].name;
+            return 'start';
+        }
+    }
+
+    let currentIndex = -1;
+    let currentGroupIndex = -1;
+
+    // 找到当前页面及其所在组的索引
+    for (let i = 0; i < groups.length; i++) {
+        const group = groups[i];
+        currentIndex = group.pages.findIndex(page => page.name === currentPageName);
+        if (currentIndex !== -1) {
+            currentGroupIndex = i;
+            break;
+        }
+    }
+
+    // 如果没有找到页面，返回'end'
+    if (currentGroupIndex === -1) return 'end';
+
+    // 查找当前组内的相邻页面
+    let adjacentPageName = findAdjacentInGroup(groups[currentGroupIndex], currentPageName, direction);
+
+    // 如果direction是'next'且当前页面是组内最后一个，或者direction是'prev'且当前页面是组内第一个
+    if ((direction === 'next' && currentIndex === groups[currentGroupIndex].pages.length - 1) ||
+        (direction === 'prev' && currentIndex === 0)) {
+        // 检查是否有下一个组或上一个组
+        if (direction === 'next' && currentGroupIndex < groups.length - 1) {
+            // 返回下一个组的第一个页面的name
+            adjacentPageName = groups[currentGroupIndex + 1].pages[0].name;
+        } else if (direction === 'prev' && currentGroupIndex > 0) {
+            // 返回上一个组的最后一个页面的name
+            adjacentPageName = groups[currentGroupIndex - 1].pages[groups[currentGroupIndex - 1].pages.length - 1].name;
+        }
+    }
+
+    return adjacentPageName;
+}
