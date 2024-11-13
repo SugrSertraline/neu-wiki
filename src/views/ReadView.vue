@@ -90,27 +90,28 @@
           </div>
         </NWSection>
 
-        <!-- <div class="flex items-center justify-between w-full max-w-4xl mx-auto px-4 py-6">
-          <n-button icon-placement="left" secondary strong>
+        <div class="flex items-center justify-between w-full max-w-4xl  mx-auto px-4 py-6">
+          <n-button class="w-1/2  md:w-1/3 mr-2" @click="changePageByButton('pre')" icon-placement="left" secondary strong :disabled="findAdjacentPageInGroups(configuration.current_page)=='start'">
             <template #icon>
               <n-icon>
                 <ChevronLeft />
               </n-icon>
             </template>
-            +100 元
+            {{  findAdjacentPageInGroups(configuration.current_page)=='start'?"当前是第一页":getPageByName(findAdjacentPageInGroups(configuration.current_page))?.title }}
           </n-button>
-          <div>
-            当前页面：测测额
+            
+          <div class="hidden lg:block">
+            {{ getPageByName(configuration.current_page)?.title }}
           </div>
-          <n-button icon-placement="right" secondary strong>
+          <n-button class="w-1/2  md:w-1/3" @click="changePageByButton('next')" icon-placement="right" secondary strong :disabled="findAdjacentPageInGroups(configuration.current_page,'next' )=='end'">
             <template #icon>
               <n-icon>
                 <ChevronRight />
               </n-icon>
             </template>
-            +100 元
+            {{  findAdjacentPageInGroups(configuration.current_page,'next')=='end'?"当前是最后页":getPageByName(findAdjacentPageInGroups(configuration.current_page,'next'))?.title }}
           </n-button>
-        </div> -->
+        </div>
         <div class="flex justify-center">
           <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
         </div>
@@ -168,11 +169,12 @@ import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } 
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWContributor } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
-import type { MenuOption } from 'naive-ui';
+import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
 import router from '@/router';
 import { useRoute } from 'vue-router';
 import NWMotto from '@/components/NWMotto/NWMotto.vue';
+const message = useMessage();
 
 const contentRef: any = inject('contentRef');
 const route = useRoute();
@@ -364,6 +366,21 @@ const scrollTo = (distance: number) => {
   });
 };
 
+const changePageByButton = (direction:string):void=>{
+  if(configuration.value.current_page==undefined)
+  return;
+  if(direction=='pre'){
+    if(findAdjacentPageInGroups(configuration.value.current_page)=='start'){
+      message.success('当前是第一页！');
+    }
+    configuration.value.current_page = findAdjacentPageInGroups(configuration.value.current_page);
+  }else{
+    if(findAdjacentPageInGroups(configuration.value.current_page)=='end'){
+      message.success('当前是最后一页！');
+    }
+    configuration.value.current_page = findAdjacentPageInGroups(configuration.value.current_page,"next");
+  }
+}
 
 onMounted(() => {
 
@@ -372,7 +389,7 @@ onMounted(() => {
     let page = Array.isArray(route.params.page) ? route.params.id[0] : route.params.page;
     loadPageConfig(page);
   } else {
-    loadPageConfig(getCookie('page'));
+    configuration.value.current_page=getCookie('page');
   }
 }
 )
