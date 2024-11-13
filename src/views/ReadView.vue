@@ -389,7 +389,11 @@ onMounted(() => {
     let page = Array.isArray(route.params.page) ? route.params.id[0] : route.params.page;
     loadPageConfig(page);
   } else {
-    configuration.value.current_page=getCookie('page');
+    if(getCookie('page')){
+      configuration.value.current_page=getCookie('page');
+    }else{
+      configuration.value.current_page='DeveloperGreeting';
+    }
   }
 }
 )
