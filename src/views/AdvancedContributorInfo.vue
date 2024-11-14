@@ -1,5 +1,5 @@
 <template>
-  <n-card class="contributor-card" :bordered="false" :class="{ 'bg-gradient-to-br': isHighlighted }">
+  <n-card class="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out h-full hover:shadow-xl hover:-translate-y-1" :bordered="false">
     <div class="flex flex-col h-full">
       <div class="flex items-center mb-4">
         <n-avatar
@@ -9,45 +9,39 @@
           class="border-4 border-white shadow-lg"
         />
         <div class="ml-4">
-          <h3 class="text-xl font-bold">{{ contributor.username }}</h3>
+          <h3 class="text-xl font-bold text-gray-800">{{ contributor.username }}</h3>
           <n-tag :type="contributionTypeColor" class="mt-1">
             {{ contributor.contributionType }}
           </n-tag>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 mb-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <div>
-          <h4 class="text-sm font-semibold mb-1">贡献内容</h4>
-          <p class="text-sm">{{ contributor.contribution }}</p>
+          <h4 class="text-sm font-semibold mb-1 text-gray-700">贡献内容</h4>
+          <p class="text-sm text-gray-600">{{ contributor.contribution }}</p>
         </div>
         <div>
-          <h4 class="text-sm font-semibold mb-1">个人简介</h4>
-          <p class="text-sm">{{ contributor.bio }}</p>
+          <h4 class="text-sm font-semibold mb-1 text-gray-700">个人简介</h4>
+          <p class="text-sm text-gray-600">{{ contributor.bio }}</p>
         </div>
       </div>
 
       <div class="mt-auto">
-        <h4 class="text-sm font-semibold mb-2">联系方式</h4>
-        <div class="flex flex-wrap gap-2">
-          <n-button v-if="contributor.qq" size="tiny" @click="copyContact('qq')">
-            <template #icon>
-              <i-mdi-qqchat class="mr-1" />
-            </template>
-            QQ
-          </n-button>
-          <n-button v-if="contributor.wechat" size="tiny" @click="copyContact('wechat')">
-            <template #icon>
-              <i-mdi-wechat class="mr-1" />
-            </template>
-            微信
-          </n-button>
-          <n-button v-if="contributor.email" size="tiny" @click="copyContact('email')">
-            <template #icon>
-              <i-mdi-email class="mr-1" />
-            </template>
-            邮箱
-          </n-button>
+        <h4 class="text-sm font-semibold mb-2 text-gray-700">联系方式</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+          <div v-if="contributor.qq" class="flex items-center">
+            <i-mdi-qqchat class="mr-2 text-blue-500" />
+            <span>QQ: {{ contributor.qq }}</span>
+          </div>
+          <div v-if="contributor.wechat" class="flex items-center">
+            <i-mdi-wechat class="mr-2 text-green-500" />
+            <span>微信: {{ contributor.wechat }}</span>
+          </div>
+          <div v-if="contributor.email" class="flex items-center">
+            <i-mdi-email class="mr-2 text-red-500" />
+            <span>邮箱: {{ contributor.email }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -56,8 +50,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { NCard, NAvatar, NTag, NButton } from 'naive-ui'
-import { useMessage } from 'naive-ui'
+import { NCard, NAvatar, NTag } from 'naive-ui'
 
 interface Contributor {
   username: string
@@ -68,53 +61,13 @@ interface Contributor {
   qq?: string
   wechat?: string
   email?: string
-  isHighlighted?: boolean
 }
 
 const props = defineProps<{
   contributor: Contributor
 }>()
 
-const message = useMessage()
-
 const contributionTypeColor = computed(() => {
   return props.contributor.contributionType === '代码开发' ? 'info' : 'success'
 })
-
-const isHighlighted = computed(() => props.contributor.isHighlighted || false)
-
-const copyContact = (type: 'qq' | 'wechat' | 'email') => {
-  const contact = props.contributor[type]
-  if (contact) {
-    navigator.clipboard.writeText(contact).then(() => {
-      message.success(`已复制${type === 'qq' ? 'QQ' : type === 'wechat' ? '微信' : '邮箱'}`)
-    })
-  }
-}
 </script>
-
-<style scoped>
-.contributor-card {
-  @apply bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300 ease-in-out h-full;
-}
-
-.contributor-card:hover {
-  @apply shadow-xl transform -translate-y-1;
-}
-
-.bg-gradient-to-br {
-  @apply from-blue-100 to-purple-100;
-}
-
-.contributor-card h3 {
-  @apply text-gray-800;
-}
-
-.contributor-card h4 {
-  @apply text-gray-700;
-}
-
-.contributor-card p {
-  @apply text-gray-600;
-}
-</style>
