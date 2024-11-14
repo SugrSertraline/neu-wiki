@@ -8,4 +8,5 @@ export * from './NWTips';
 export * from './NWCommit';
 export * from './NWPersonalIntro';
 export * from './NWDialogue';
-export * from './NWMotto'
+export * from './NWMotto';
+export * from './NWContributor'

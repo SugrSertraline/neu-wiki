@@ -22,6 +22,19 @@ interface NWTips{
     case:'default' | 'info' | 'success' | 'warning' | 'error',
     data:string
 }
+
+
+interface NWContributor{
+    type:NWComponent.NWContributor,
+    username: string,
+    avatar: string,
+    contributionType: string,
+    contribution: string,
+    bio: string,
+    qq?: string,
+    wechat?: string,
+    email?: string
+}
 interface NWDialogue{
     type:NWComponent.NWDialogue,
     q:string,
@@ -43,12 +56,6 @@ interface NWPersonalIntro{
     email?: string
 }
 
-interface Contributor{
-    name:string,
-    avatar_url:string,
-    qq:string|undefined,
-    phone:string|undefined
-}
 
 interface NWMotto{
     type:NWComponent.NWMotto,
@@ -68,13 +75,20 @@ export interface Section {
     subsections: SubSection[]
 }
 
+
+interface PageContributor{
+    name:string,
+    avatar_url:string,
+    qq:string|undefined,
+    phone:string|undefined
+}
 export interface Page {
     title: string,
     last_update: string,
     name: string,
     description: string|undefined
     sections: Section[],
-    contributors:Contributor[]|undefined
+    contributors:PageContributor[]|undefined
 }
 export interface Group {
     title: string,
