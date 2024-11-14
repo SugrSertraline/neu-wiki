@@ -35,7 +35,7 @@
 
                 <!-- 右侧的图片 -->
                 <div class="flex-1 order-1 lg:order-2 ">
-                    <n-image class="w-64 lg:w-full flex justify-center" width="400" src="http://img.neuwiki.top/image/index_image.png" />
+                    <n-image class="w-64 lg:w-full flex justify-center" width="400" src="/index_image.png" />
                 </div>
             </div>
             <div class="w-full flex flex-col lg:flex-row justify-around align-bottom">
