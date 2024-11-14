@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 py-8">
     <h2 class="text-3xl font-bold text-center mb-8">我们的贡献者</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <AdvancedContributorInfo
+      <NWContributor
         v-for="contributor in contributors"
         :key="contributor.username"
         :contributor="contributor"
@@ -13,8 +13,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import AdvancedContributorInfo from './AdvancedContributorInfo.vue'
-
+import { NWContributor } from '@/components';
 const contributors = ref([
   {
     username: '张三',
@@ -25,7 +24,6 @@ const contributors = ref([
     qq: '123456789',
     wechat: 'zhangsan_dev',
     email: 'zhangsan@example.com',
-    isHighlighted: true
   },
   {
     username: '李四',
