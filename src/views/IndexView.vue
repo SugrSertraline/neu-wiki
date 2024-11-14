@@ -14,7 +14,8 @@
                     </div>
 
                     <!-- 标题下面的次级标题 -->
-                    <div class="mx-2 text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start lg:text-start lg:text-5xl lg:leading-tight font-bold text-gray-900">
+                    <div
+                        class="mx-2 text-3xl text-center flex flex-col items-center md:text-4xl lg:items-start lg:text-start lg:text-5xl lg:leading-tight font-bold text-gray-900">
                         为NEUer们提供的简单、快捷的校园信息查询
                     </div>
 
@@ -35,6 +36,7 @@
                 <!-- 右侧的图片 -->
                 <div class="flex-1 order-1 lg:order-2 ">
                     <n-image class="w-64 lg:w-full flex justify-center" width="400" src="/index_image.png" />
+                  
                 </div>
             </div>
             <div class="w-full flex flex-col lg:flex-row justify-around align-bottom">
@@ -57,6 +59,9 @@
                     </div>
                 </div>
             </div>
+            <div class="flex justify-center">
+                <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
+            </div>
         </div>
 
     </div>
@@ -65,7 +70,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { BubbleTeaIcon,HotDogIcon,ColaIcon} from '@/assets/icons';
+import { BubbleTeaIcon, HotDogIcon, ColaIcon } from '@/assets/icons';
 
 const router = useRouter();
 const config = ref({
