@@ -19,7 +19,7 @@ export const PAGE_CONFIG: Group[] = [
                             {
                                 type: NWComponent.NWImage,
                                 width: 300,
-                                src: 'http://img.neuwiki.top/image/qq_group.png'
+                                src: '/qq_group.png'
                             }
                         ]
                     }
@@ -120,7 +120,7 @@ export const PAGE_CONFIG: Group[] = [
                                     {
                                         type: NWComponent.NWPersonalIntro,
                                         name: '刘嘉伟',
-                                        avatarUrl: 'http://img.neuwiki.top/image/liujiawei.png',
+                                        avatarUrl: '/liujiawei.png',
                                         college: '信息科学与工程学院',
                                         grade: '2024届',
                                         major: '自动化',
@@ -180,7 +180,7 @@ export const PAGE_CONFIG: Group[] = [
                                     {
                                         type: NWComponent.NWPersonalIntro,
                                         name: '邱俊翔',
-                                        avatarUrl: 'http://img.neuwiki.top/image/qiujunxiang.png',
+                                        avatarUrl: '/qiujunxiang.png',
                                         college: '软件学院',
                                         grade: '2024届',
                                         major: '软件工程',
@@ -244,7 +244,7 @@ export const PAGE_CONFIG: Group[] = [
                                     {
                                         type: NWComponent.NWPersonalIntro,
                                         name: '刘函睿',
-                                        avatarUrl: 'http://img.neuwiki.top/image/liuhanrui.png',
+                                        avatarUrl: '/liuhanrui.png',
                                         college: '软件学院',
                                         grade: '2024届',
                                         major: '软件工程',
@@ -303,7 +303,7 @@ export const PAGE_CONFIG: Group[] = [
                                     {
                                         type: NWComponent.NWPersonalIntro,
                                         name: '陈柏锦',
-                                        avatarUrl: 'http://img.neuwiki.top/image/chenbojin.png',
+                                        avatarUrl: '/chenbojin.png',
                                         college: '软件学院',
                                         grade: '2024届',
                                         major: '软件工程',
@@ -416,7 +416,7 @@ export const PAGE_CONFIG: Group[] = [
                 contributors: [
                     {
                         name: "苏璃",
-                        avatar_url: "http://img.neuwiki.top/image/suli.jpg",
+                        avatar_url: "/suli.jpg",
                         qq: undefined,
                         phone: undefined
                     }
@@ -558,7 +558,7 @@ export const PAGE_CONFIG: Group[] = [
                                     text: "（绑定方法搬运自[信网办微信企业号绑定说明](https://pass.neu.edu.cn/portal/wechat/help/wechat-help.html)） 使用微信“扫一扫”功能扫描下面的二维码，进入到验证页面后，输入统一身份认证账号和密码，点击验证，完成身份验证。"
                                 }, {
                                     type: NWComponent.NWImage,
-                                    src: 'http://img.neuwiki.top/image/card_weixin1.png',
+                                    src: '/card_weixin1.png',
                                     width: 200
                                 },
                                 {
@@ -566,7 +566,7 @@ export const PAGE_CONFIG: Group[] = [
                                     text: "[微信绑定码链接](https://wp.neu.edu.cn/tp_wp/wp/accountbind)。页面提示“绑定成功”之后，扫描以下的东北大学微信企业号二维码，成为东北大学微信企业号的成员之一。"
                                 }, {
                                     type: NWComponent.NWImage,
-                                    src: 'http://img.neuwiki.top/image/card_weixin2.png',
+                                    src: '/card_weixin2.png',
                                     width: 300
                                 }, {
                                     type: NWComponent.NWDescription,
@@ -579,7 +579,7 @@ export const PAGE_CONFIG: Group[] = [
                                     text: "扫描下面的小程序码。"
                                 }, {
                                     type: NWComponent.NWImage,
-                                    src: 'http://img.neuwiki.top/image/card_alipay.png',
+                                    src: '/card_alipay.png',
                                     width: 300
                                 },
                                 {
@@ -599,7 +599,7 @@ export const PAGE_CONFIG: Group[] = [
                         phone: undefined
                     }, {
                         name: "苏璃",
-                        avatar_url: "http://img.neuwiki.top/image/suli.jpg",
+                        avatar_url: "/suli.jpg",
                         qq: undefined,
                         phone: undefined
                     }
@@ -733,7 +733,7 @@ export const PAGE_CONFIG: Group[] = [
                             }, {
                                 type: NWComponent.NWImage,
                                 width: 300,
-                                src: 'http://img.neuwiki.top/image/Tramway.png'
+                                src: '/Tramway.png'
                             }, {
                                 type: NWComponent.NWDescription,
                                 text: '其中1号站点为从浑南校区出发的站点，一号线、三号线、四号线均在此乘坐。二、三号站点为从外面回来的站点，如果不知道怎么判断可以看站点等待区的铁轨，行驶方向是靠右侧行驶的。出行的话应该只会选择一号线和四号线。'
@@ -1042,7 +1042,7 @@ export const PAGE_CONFIG: Group[] = [
                 ], contributors: [
                     {
                         name: "小明",
-                        avatar_url: "http://img.neuwiki.top/image/xiaoming.jpg",
+                        avatar_url: "/xiaoming.jpg",
                         qq: undefined,
                         phone: undefined
                     }
@@ -1161,7 +1161,7 @@ export const PAGE_CONFIG: Group[] = [
                 ], contributors: [
                     {
                         name: "小七陪着你",
-                        avatar_url: "http://img.neuwiki.top/image/xiaoqi.jpg",
+                        avatar_url: "/xiaoqi.jpg",
                         qq: undefined,
                         phone: undefined
                     }
