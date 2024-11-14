@@ -82,6 +82,8 @@
         <NWSection v-if="configuration.page_data.contributors" level="1"
           :id="'section' + configuration.page_data.sections.length"
           :title="calPageSection('关键内容贡献者', 1, configuration.page_data.sections.length)">
+
+          <!-- 内容贡献者组件 -->
           <div class="w-full flex flex-col md:flex-row justify-start flex-wrap my-4 ">
             <div v-for="(contributor, index) in configuration.page_data.contributors" :key="index"
               class="h-48 w-full md:w-1/2 p-2 box-border">
@@ -102,30 +104,32 @@
         </NWSection>
 
         <div class="flex items-center justify-between w-full max-w-4xl  mx-auto px-4 py-6">
-          <n-button type="success" class="w-1/2  md:w-1/3 mr-2" @click="changePageByButton('pre')" icon-placement="left" secondary
-            strong :disabled="findAdjacentPageInGroups(configuration.current_page) == 'start'">
+          <n-button type="success" class="w-1/2  md:w-1/3 mr-2" @click="changePageByButton('pre')" icon-placement="left"
+            secondary strong :disabled="findAdjacentPageInGroups(configuration.current_page) == 'start'">
             <template #icon>
               <n-icon>
                 <ChevronLeft />
               </n-icon>
             </template>
             {{
-              findAdjacentPageInGroups(configuration.current_page) == 'start' ? "当前是第一页" : getPageByName(findAdjacentPageInGroups(configuration.current_page))?.title
+              findAdjacentPageInGroups(configuration.current_page) == 'start' ? "当前是第一页" :
+                getPageByName(findAdjacentPageInGroups(configuration.current_page))?.title
             }}
           </n-button>
 
           <div class="hidden lg:block">
             {{ getPageByName(configuration.current_page)?.title }}
           </div>
-          <n-button type="info" class="w-1/2  md:w-1/3" @click="changePageByButton('next')" icon-placement="right" secondary strong
-            :disabled="findAdjacentPageInGroups(configuration.current_page, 'next') == 'end'">
+          <n-button type="info" class="w-1/2  md:w-1/3" @click="changePageByButton('next')" icon-placement="right"
+            secondary strong :disabled="findAdjacentPageInGroups(configuration.current_page, 'next') == 'end'">
             <template #icon>
               <n-icon>
                 <ChevronRight />
               </n-icon>
             </template>
             {{
-              findAdjacentPageInGroups(configuration.current_page, 'next') == 'end' ? "当前是最后页" : getPageByName(findAdjacentPageInGroups(configuration.current_page, 'next'))?.title
+              findAdjacentPageInGroups(configuration.current_page, 'next') == 'end' ? "当前是最后页" :
+                getPageByName(findAdjacentPageInGroups(configuration.current_page, 'next'))?.title
             }}
           </n-button>
         </div>
@@ -167,7 +171,6 @@
       </div>
 
       <n-anchor :bound=100 :ignore-gap="true" :offset-target="() => contentRef">
-
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
           <n-anchor-link v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
