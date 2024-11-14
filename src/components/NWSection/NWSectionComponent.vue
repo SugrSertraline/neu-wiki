@@ -5,7 +5,7 @@
                 {{ title }}
             </div>
             <slot />
-            <n-divider v-if="level == 1" />
+            <n-divider v-if="level == '1'" />
         </div>
     </div>
 
@@ -13,14 +13,21 @@
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue';
+
 const props = defineProps(['title', 'id', 'level']);
+
+interface NWSectionProps{
+    title:string|undefined,
+    id?:string,
+    level:string
+}
 
 const title_classes = computed(() => {
     return {
-        'text-xl': props.level == 1,
+        'text-xl': props.level == '1',
         'font-bold': true,
-        'text-gray-800': props.level == 2,
-        'text-lg': props.level == 2
+        'text-gray-800': props.level == '2',
+        'text-lg': props.level == '2'
     }
 })
 </script>

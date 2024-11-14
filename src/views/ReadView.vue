@@ -148,7 +148,9 @@
       <div class="font-bold m-2">
         当前页面内容
       </div>
-      <n-anchor :ignore-gap="true" :offset-target="() => contentRef">
+
+      <n-anchor :bound=100 :ignore-gap="true"  :offset-target="() => contentRef">
+
         <template v-for="(item, index) in configuration.page_data?.sections" :key="index">
           <n-anchor-link v-if="item.title" :title="(index + 1) + '.' + item.title" :href="'#section' + index" />
         </template>
