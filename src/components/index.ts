@@ -5,7 +5,6 @@ export * from './NWSection';
 export * from './NWImage';
 export * from './NWList';
 export * from './NWTips';
-export * from './NWContributor';
 export * from './NWCommit';
 export * from './NWPersonalIntro';
 export * from './NWDialogue';
