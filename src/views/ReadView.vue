@@ -112,11 +112,9 @@
             {{  findAdjacentPageInGroups(configuration.current_page,'next')=='end'?"当前是最后页":getPageByName(findAdjacentPageInGroups(configuration.current_page,'next'))?.title }}
           </n-button>
         </div>
-        <div class="flex justify-center">
-          <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
-        </div>
-        <!-- <div class="w-full flex flex-col justify-center items-center">
-          <div class="w-full px-8 text-base flex justify-center items-center">
+       
+        <div class="w-full flex flex-col justify-center items-center">
+          <!-- <div class="w-full px-8 text-base flex justify-center items-center">
             您认为此篇文章的内容如何？
             <n-button secondary type="success" class="mx-2 w-32">
               <template #icon>
@@ -134,9 +132,12 @@
               </template>
               不推荐
             </n-button>
-          </div>
-          <NWCommit />
-        </div> -->
+          </div> -->
+          <!-- <NWCommit /> -->
+        </div>
+        <div class="flex justify-center">
+          <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
+        </div>
       </div>
     </div>
   </div>
