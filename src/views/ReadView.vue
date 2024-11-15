@@ -79,7 +79,7 @@
             </template>
           </NWSection>
         </NWSection>
-        <NWSection v-if="configuration.page_data.contributors" level="1"
+        <NWSection v-if="configuration.page_data.contributors.length!=0" level="1"
           :id="'section' + configuration.page_data.sections.length"
           :title="calPageSection('关键内容贡献者', 1, configuration.page_data.sections.length)">
 
@@ -188,19 +188,24 @@
 import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular, ChevronLeft, ChevronRight } from '@vicons/fa';
+
+
 import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue } from '@/components';
+
+
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue ,NWMotto} from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
 import router from '@/router';
 import { useRoute } from 'vue-router';
-import NWMotto from '@/components/NWMotto/NWMotto.vue';
-const message = useMessage();
 
-const contentRef: any = inject('contentRef');
+const message = useMessage();
 const route = useRoute();
+
+// 获取滚动轴所在的容器
+const contentRef: any = inject('contentRef');
 
 
 interface Configuration {
@@ -219,7 +224,7 @@ const configuration: Ref<Configuration> = ref({
     name: 'default',
     description: undefined,
     sections: [],
-    contributors: undefined
+    contributors: []
   },
   menu_data: [],
 });
@@ -257,7 +262,6 @@ const loadPageConfig = (name?: string) => {
 
   const page = getPageByName(name);
   if (page) {
-
     if (name) {
       configuration.value.current_page = page ? name : undefined;
     }
@@ -289,6 +293,8 @@ const loadPageConfig = (name?: string) => {
     }
   }
 };
+
+
 const calUntitleSubsection = (section: Section, index: number): number => {
   let sum: number = 0;
   for (let i = 0; i < index; i++) {
@@ -307,6 +313,8 @@ const calPageSection = (title: string | undefined, level: number, index: number)
     return title == undefined ? undefined : index + 1 + '. ' + title;
   }
 }
+
+
 
 const dynamicComponent = (content: Content) => {
   switch (content.type) {

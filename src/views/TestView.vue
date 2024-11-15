@@ -19,7 +19,7 @@ const contributors = ref([
     username: '张三',
     avatar: 'https://example.com/avatar1.jpg',
     contributionType: '代码开发',
-    contribution: '实现了用户认证功能和数据可视化模块',
+    contribution: '实现了用户认证功能和数据可视化模实现了用户认证功能和数据可视化模块实现了用户认证功能和数据可视化模块实现了用户认证功能和数据可视化模块实现了用户认证功能和数据可视化模块块',
     bio: '全栈开发者，热爱开源项目，专注于Web应用开发。',
     qq: '123456789',
     wechat: 'zhangsan_dev',

@@ -26,7 +26,7 @@ export const PAGE_CONFIG: Group[] = [
                     ]
                 }
             ],
-            contributors: undefined
+            contributors: []
         }]
     }, {
         title: "访谈专栏",
@@ -104,7 +104,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "24届刘嘉伟同学",
                 last_update: "2024年10月17日",
@@ -164,7 +164,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "24届邱俊翔同学",
                 last_update: "2024年10月22日",
@@ -228,7 +228,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "24届刘函睿同学",
                 last_update: "2024年10月23日",
@@ -287,7 +287,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "24届陈柏锦同学",
                 last_update: "2024年10月25日",
@@ -358,7 +358,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }
         ]
     }
@@ -416,9 +416,7 @@ export const PAGE_CONFIG: Group[] = [
                 contributors: [
                     {
                         name: "苏璃",
-                        avatar_url: "/suli.jpg",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "/suli.jpg"
                     }
                 ]
             }, {
@@ -594,14 +592,10 @@ export const PAGE_CONFIG: Group[] = [
                 contributors: [
                     {
                         name: "Techy-Wu",
-                        avatar_url: "https://avatars.githubusercontent.com/u/73032687",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "https://avatars.githubusercontent.com/u/73032687"
                     }, {
                         name: "苏璃",
-                        avatar_url: "/suli.jpg",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "/suli.jpg"
                     }
                 ]
             }, {
@@ -683,9 +677,7 @@ export const PAGE_CONFIG: Group[] = [
                 ], contributors: [
                     {
                         name: "Techy-Wu",
-                        avatar_url: "https://avatars.githubusercontent.com/u/73032687",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "https://avatars.githubusercontent.com/u/73032687"
                     }
                 ]
             }, {
@@ -782,9 +774,7 @@ export const PAGE_CONFIG: Group[] = [
                 }], contributors: [
                     {
                         name: "南惊希露",
-                        avatar_url: "https://b0.bdstatic.com/0df6c8c7f109aa7b67e7cb15e6f8d025.jpg@h_1280",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "https://b0.bdstatic.com/0df6c8c7f109aa7b67e7cb15e6f8d025.jpg@h_1280"
                     }
                 ]
             }
@@ -855,7 +845,7 @@ export const PAGE_CONFIG: Group[] = [
                         }]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "机考指南",
                 last_update: "2024年9月22日",
@@ -940,7 +930,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "推免（保研）",
                 last_update: "2024年9月22日",
@@ -1048,9 +1038,7 @@ export const PAGE_CONFIG: Group[] = [
                 ], contributors: [
                     {
                         name: "小明",
-                        avatar_url: "/xiaoming.jpg",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "/xiaoming.jpg"
                     }
                 ]
             }, {
@@ -1088,7 +1076,7 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: undefined
+                contributors: []
             }, {
                 title: "选调",
                 last_update: "2024年9月22日",
@@ -1167,9 +1155,7 @@ export const PAGE_CONFIG: Group[] = [
                 ], contributors: [
                     {
                         name: "小七陪着你",
-                        avatar_url: "/xiaoqi.jpg",
-                        qq: undefined,
-                        phone: undefined
+                        avatar_url: "/xiaoqi.jpg"
                     }
                 ]
 
@@ -1230,7 +1216,7 @@ export const PAGE_CONFIG: Group[] = [
                         }
                     ]
                 }],
-                contributors: undefined
+                contributors: []
             }
         ]
     }

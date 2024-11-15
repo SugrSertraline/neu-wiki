@@ -1,4 +1,3 @@
-import { NWTips } from "@/components"
 import { NWComponent } from "./enum"
 
 
@@ -22,7 +21,6 @@ interface NWTips{
     case:'default' | 'info' | 'success' | 'warning' | 'error',
     data:string
 }
-
 
 interface NWContributor{
     type:NWComponent.NWContributor,
@@ -56,7 +54,6 @@ interface NWPersonalIntro{
     email?: string
 }
 
-
 interface NWMotto{
     type:NWComponent.NWMotto,
     message: string,
@@ -75,12 +72,9 @@ export interface Section {
     subsections: SubSection[]
 }
 
-
 interface PageContributor{
     name:string,
-    avatar_url:string,
-    qq:string|undefined,
-    phone:string|undefined
+    avatar_url:string
 }
 export interface Page {
     title: string,
@@ -88,7 +82,7 @@ export interface Page {
     name: string,
     description: string|undefined
     sections: Section[],
-    contributors:PageContributor[]|undefined
+    contributors:PageContributor[]
 }
 export interface Group {
     title: string,
