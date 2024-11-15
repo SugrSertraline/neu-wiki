@@ -1248,13 +1248,12 @@ export const formatPageURLs =  (): string[] => {
     const formattedURLs: string[] = [];
     // 遍历group中的pages数组
     PAGE_CONFIG.forEach((item)=>{
-        console.log('2222');
         item.pages.forEach((page) => {
             // 检查page对象是否有title和name属性
             if (page.title && page.name) {
                 console.log(page.title);
                 // 格式化URL并添加到数组中
-                formattedURLs.push(`${page.title}：https://neu.sugrsertraline.cn/read/${page.name}`);
+                formattedURLs.push(`${page.title}：https://neuwiki.top/read/${page.name}`);
             }
         });
     })
