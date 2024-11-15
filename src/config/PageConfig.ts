@@ -1246,7 +1246,6 @@ export const getPageByName = (name: string = "DeveloperGreeting"): Page | undefi
 export const formatPageURLs =  (): string[] => {
     // 创建一个数组来存储格式化后的URL
     const formattedURLs: string[] = [];
-
     // 遍历group中的pages数组
     PAGE_CONFIG.forEach((item)=>{
         console.log('2222');
