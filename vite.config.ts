@@ -8,8 +8,12 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    host: '0.0.0.0', // 监听所有地址
-    port: 3000,      // 你可以选择任何未被占用的端口
+   proxy: {
+      '/api': {
+        target: 'https://neuwiki.top', // 目标服务器
+        changeOrigin: true,            // 修改请求头中的 Origin 字段，避免跨域
+      }
+    }
   },
   plugins: [
     vue(),

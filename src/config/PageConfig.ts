@@ -1,6 +1,5 @@
 import { NWComponent } from "@/types/enum";
 import type { Group, Page } from "@/types/interface";
-
 export const PAGE_CONFIG: Group[] = [
     {
         title: '写在前面',

@@ -79,7 +79,7 @@
             </template>
           </NWSection>
         </NWSection>
-        <NWSection v-if="configuration.page_data.contributors.length!=0" level="1"
+        <NWSection v-if="configuration.page_data.contributors.length != 0" level="1"
           :id="'section' + configuration.page_data.sections.length"
           :title="calPageSection('关键内容贡献者', 1, configuration.page_data.sections.length)">
 
@@ -154,7 +154,7 @@
               不推荐
             </n-button>
           </div> -->
-          <!-- <NWCommit /> -->
+          <NWCommit :commits="commits" v-model="commit_content" @buttonClick="handleAddCommit" />
         </div>
         <div class="flex justify-center">
           <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2024023870号-2</a>
@@ -194,12 +194,14 @@ import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } 
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 
 
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue ,NWMotto} from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
 import router from '@/router';
 import { useRoute } from 'vue-router';
+import { readApi } from '@/api/readApi';
+import type { Commit } from '@/components/NWCommit/NWCommitComponent.vue';
 
 const message = useMessage();
 const route = useRoute();
@@ -256,16 +258,31 @@ const loadMenuConfig = () => {
     })
   })
 }
+const commit_content = ref('');  // 评论的内容
 
+const commits = ref<any[]>([]);
 
-const loadPageConfig = (name?: string) => {
+const loadCommits = async () => {
+  if (!configuration.value.current_page)
+    return;
+  const temp_commits: Commit[] = await readApi.getCommit(configuration.value.current_page);
+  commits.value.splice(0, commits.value.length);
+  temp_commits.forEach(temp_commit => commits.value.push({
+    id: temp_commit.id,
+    content: temp_commit.content,
+    time: temp_commit.time
+  }))
+}
+const loadPageConfig = async (name?: string) => {
 
   const page = getPageByName(name);
+  if (!name) {
+    return
+  }
   if (page) {
-    if (name) {
-      configuration.value.current_page = page ? name : undefined;
-    }
+    configuration.value.current_page = page ? name : undefined;
     configuration.value.page_data = page;
+    await loadCommits();
 
     // 获取当前路由的 fullPath
     const fullPath = route.fullPath;
@@ -374,18 +391,13 @@ const dynamicComponent = (content: Content) => {
 watch(() => configuration.value.current_page, (newValue, oldValue) => {
   // 获取当前路由的完整路径
   const fullPath = router.currentRoute.value.fullPath;
-
   // 使用正则表达式移除URL中的hash部分
   const newPath = fullPath.replace(/#.*$/, '');
-
   // 使用replace方法更新路由，不添加历史记录
   router.replace({ path: newPath });
-
   scrollTo(0);
   // 加载页面配置
-
   loadPageConfig(newValue);
-
 }, { deep: true });
 
 
@@ -396,6 +408,14 @@ const scrollTo = (distance: number) => {
     }
   });
 };
+
+const handleAddCommit = () => {
+  if (!configuration.value.current_page)
+    return;
+  const mes = readApi.addCommit(configuration.value.current_page, commit_content.value);
+  console.log(mes);
+  loadCommits();
+}
 
 const changePageByButton = (direction: string): void => {
   if (configuration.value.current_page == undefined)
@@ -414,7 +434,6 @@ const changePageByButton = (direction: string): void => {
 }
 
 onMounted(() => {
-
   loadMenuConfig();
   if (route.params.page) {
     let page = Array.isArray(route.params.page) ? route.params.id[0] : route.params.page;
@@ -428,4 +447,6 @@ onMounted(() => {
   }
 }
 )
+
+
 </script>
