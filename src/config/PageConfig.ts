@@ -26,7 +26,89 @@ export const PAGE_CONFIG: Group[] = [
                 }
             ],
             contributors: []
-        }]
+        }, {
+            title: "待补充内容",
+            last_update: "2024年11月16日",
+            name: "ProblemsRank",
+            description: "这里展示目前网站急缺的内容，如果大家有能力可以动动小手贡献一下！",
+            sections: [
+                {
+                    title: undefined,
+                    subsections: [
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWProblemsRank,
+                                    problems: [
+                                        { description: "各个学院攻略", urgency: 5 },
+                                        { description: "创新创业保研、国防科工", urgency: 5 },
+                                        { description: "医疗报销等日常", urgency: 2 },
+                                        { description: "贡献者功能", urgency: 2 },
+                                        { description: "考试真题", urgency: 4 },
+                                    ]
+
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            contributors: []
+        }, {
+            title: "我们的贡献者",
+            last_update: "2024年11月16日",
+            name: "SiteContributors",
+            description: "欢迎来到“我们的贡献者”页面，这里是对网站的开发人员和内容贡献人员的感谢。每一天，我们的网站都能够持续更新和进步，都离不开这些才华横溢的开发者和内容创作者们的辛勤投入。感谢你们，让我们不断完善。",
+            sections: [
+                {
+                    title: undefined,
+                    subsections: [
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWSiteContributors,
+                                    site_sitecontributors: [
+                                        {
+                                            username: "SugrSertraline",
+                                            avatar: "https://avatars.githubusercontent.com/u/117089348?v=4",
+                                            contributionType: "网站开发",
+                                            contribution: "网站整体的策划、开发工作。",
+                                            bio: "软件20级本科生、24级研究生。",
+                                            qq: '2451305814',
+                                            wechat: '15714149025',
+                                            email: undefined
+                                        }, {
+                                            username: "aning",
+                                            avatar: "/aning.jpg",
+                                            contributionType: "网站开发",
+                                            contribution: "网站后端开发、部署。",
+                                            bio: "软件20级本科生、24级研究生。",
+                                            qq: undefined,
+                                            wechat: undefined,
+                                            email: "aninganing147@gmail.com"
+                                        }
+                                        , {
+                                            username: "好锦鲤",
+                                            avatar: "/haojinli.jpg",
+                                            contributionType: "内容完善",
+                                            contribution: "“校车”相关内容",
+                                            bio: "计算机2021级本科，2025级硕士。",
+                                            qq: undefined,
+                                            wechat: undefined,
+                                            email: undefined
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            contributors: []
+        }
+        ]
     }, {
         title: "访谈专栏",
         name: "Interview",
@@ -310,7 +392,7 @@ export const PAGE_CONFIG: Group[] = [
                                         introduction: 'NEUSOFT的UU来软微可以找我',
                                         achievements: ['GPA3.0', 'Rank后20%', '无竞赛', '无项目'],
                                         wechat: 'chendade9578',
-                                        email:'dade@stu.pku.edu.cn'
+                                        email: 'dade@stu.pku.edu.cn'
                                     }, {
                                         type: NWComponent.NWDialogue,
                                         q: '你决定考研的初衷是什么？是什么激发了你对北大软微学院的兴趣？',
@@ -335,7 +417,7 @@ export const PAGE_CONFIG: Group[] = [
                                         type: NWComponent.NWDialogue,
                                         q: '北大软微学院的复试有哪些特点，需要提前做哪些准备？',
                                         a: '比较随机，当然有项目和论文是比较占优势的。'
-                                    },  {
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '您是如何获取考研信息和最新动态的？',
                                         a: '知乎刷软微的经验贴，然后加入一些软微的考研交流群。'
@@ -343,11 +425,11 @@ export const PAGE_CONFIG: Group[] = [
                                         type: NWComponent.NWDialogue,
                                         q: '您对即将参加考研的学弟学妹有什么寄语或建议？',
                                         a: '加油去冲刺自己心仪的院校吧，考研这个过程本身就值得让人回味。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '如果可以回到考研前的某个时刻，您会给自己哪些建议或提醒？',
                                         a: '回到最开始的那个节点，我会建议自己尽量每天都要坚持学习，前期不要太过懈怠。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWMotto,
                                         message: '当你老了，回顾一生，就会发觉 : 什么时候出国读书、什么时候决定做第一份职业、何时选定了对象而恋爱、什么时候结婚，其实都是命运的巨变。只是当时站在三岔路口，还以为是生命中普通的一天。',
                                         author: '陈柏锦'
@@ -776,6 +858,92 @@ export const PAGE_CONFIG: Group[] = [
                         avatar_url: "https://b0.bdstatic.com/0df6c8c7f109aa7b67e7cb15e6f8d025.jpg@h_1280"
                     }
                 ]
+            }, {
+                title: "校车",
+                last_update: "2024年11月16日",
+                name: "SchoolBus",
+                description: "校车用于往返南湖校区与浑南校区。",
+                sections: [
+                    {
+                        title: "预约与乘坐方式",
+                        subsections: [{
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWDescription,
+                                    text: '如果有意在第二天乘坐校车，可以在意向班次**发车前12小时之前预约**。\\**预约者**在发车正点前，可优先于未预约者上车。上车时需在**刷码机（一个银白色的方形卡机）**扫描智慧东大一码通核销预约记录，无需刷学生卡。\\**未预约者**自行排成一队。若车上还有空位，则未预约者按照排队顺序在**刷卡机（一个黑色的长条卡机）**刷学生卡上车（不是智慧东大一码通）。学生卡若因各种原因（包括卡片失效、余额不足等）无法扣款，建议先借用其他同学的学生卡代付款，上车后向TA转账。'
+                                },
+                                {
+                                    type: NWComponent.NWList,
+                                    order: true,
+                                    data: ["打开智慧东大APP", "点击下方导航栏“应用”", "点击“学生班车预约”，注意不是“校车”", "上下滚动，可以看到“学生班车-南湖”和“学生班车-浑南”，后面的地点是**你的出发点**，如果你从浑南出发，应该选择“学生班车-浑南”", "预约时间为近两天，选择预约和时段，支付即可"]
+                                },
+                                {
+                                    type: NWComponent.NWTips,
+                                    title: "注意",
+                                    case: "warning",
+                                    data: "若过发车正点（迟到哪怕五秒都不行，刷码机刷不上）仍未核销预约记录，则预约失效，预约者需同未预约者排队刷学生卡上车。"
+                                }
+                            ]
+                        }]
+                    },
+                    {
+                        title: "发车时间",
+                        subsections: [
+                            {
+                                title: undefined,
+                                contents: [{
+                                    type: NWComponent.NWDescription,
+                                    text: '平峰时段到达另一校区的时间需35-45分钟，高峰时段通常需50-60分钟，极端情况可能超过60分钟，请同学们合理安排时间。'
+                                }]
+                            },
+                            {
+                                title: "浑南校区",
+                                contents: [
+                                    {
+                                        type: NWComponent.NWDescription,
+                                        text: "浑南校区的发车时间时间如下："
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['8:00', '13:30', '17:30']
+                                    }
+                                ]
+                            }, {
+                                title: "南湖校区",
+                                contents: [
+                                    {
+                                        type: NWComponent.NWDescription,
+                                        text: "南湖校区的发车时间时间如下："
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['11:30', '16:30', '21:10']
+                                    }
+                                ]
+                            }]
+                    },{
+                        title: "注意事项",
+                        subsections: [{
+                            title: undefined,
+                            contents: [
+                                {
+                                    type:NWComponent.NWList,
+                                    order:false,
+                                    data:[
+                                        '由于刷卡机不联网，因此如果现场给学生卡充值，刷卡机将不能及时收到充值数据。因此余额不足时需借用其他同学学生卡代刷。','不要携带无封口的饮料（如豆浆、奶茶、咖啡等）上车，若在车上打泼将会很难收拾。','预约者不要踩点核销预约记录，若过点则预约记录无法核销，故若仍需上车则参照未预约者刷卡上车。','若乘车人数已达上限，请未能上车的同学改乘其他交通工具。','若有其他情况，请以车管、司机、学生助理的指挥为准。'
+                                    ]
+                                }
+                            ]
+                        }]
+                    }
+                ],
+                contributors: [
+                    {
+                        name: "好锦鲤",
+                        avatar_url: "/haojinli.jpg"
+                    }
+                ]
             }
         ]
 
@@ -896,10 +1064,10 @@ export const PAGE_CONFIG: Group[] = [
                                     {
                                         type: NWComponent.NWDescription,
                                         text: "带鞋套（如果不嫌弃的话可以去垃圾桶翻一下，有很多）、学生证（用于出现突发状况验证身份），草稿纸上不要有任何字迹。"
-                                    },  {
+                                    }, {
                                         type: NWComponent.NWDescription,
                                         text: "如果在考试的过程中，你所使用的电脑出现问题可以换另一台机器继续考试，每次考试并不是强制绑定电脑，所以还请同学们碰到这种情况不要太过惊慌。"
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDescription,
                                         text: "如果出现突发状况，无法按时参加考试，请在预约人数较少的场次前往考场和助理说明情况，安排备用座。如果考场预约满了，需要等别人考试结束后你才能使用，但是你的答题时间会相应减少，你和前一个人的**答题时间总和为90分钟或100分钟**。"
                                     }, {
@@ -1228,11 +1396,11 @@ export const getPageByName = (name: string = "DeveloperGreeting"): Page | undefi
     return foundGroup?.pages.find(page => page.name === name) || undefined;
 
 }
-export const formatPageURLs =  (): string[] => {
+export const formatPageURLs = (): string[] => {
     // 创建一个数组来存储格式化后的URL
     const formattedURLs: string[] = [];
     // 遍历group中的pages数组
-    PAGE_CONFIG.forEach((item)=>{
+    PAGE_CONFIG.forEach((item) => {
         item.pages.forEach((page) => {
             // 检查page对象是否有title和name属性
             if (page.title && page.name) {

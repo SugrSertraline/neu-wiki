@@ -96,7 +96,7 @@
                   {{ contributor.name }}
                 </div>
                 <div class="text-gray-600">
-                  本业内容贡献者
+                  本页内容贡献者
                 </div>
               </div>
             </div>
@@ -194,7 +194,7 @@ import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } 
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 
 
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -382,6 +382,14 @@ const dynamicComponent = (content: Content) => {
         message: content.message,
         author: content.author
       })
+    case 'NWProblemsRank':
+      return h(NWProblemsRank,{
+        problems:content.problems
+      })
+      case 'NWSiteContributors':
+        return h(NWSiteContributors,{
+          site_contributors:content.site_sitecontributors
+        })
   }
 
 }

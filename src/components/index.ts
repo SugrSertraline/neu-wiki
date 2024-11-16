@@ -9,4 +9,5 @@ export * from './NWCommit';
 export * from './NWPersonalIntro';
 export * from './NWDialogue';
 export * from './NWMotto';
-export * from './NWContributor'
+export * from './NWSiteContributors';
+export * from './NWProblemsRank';
