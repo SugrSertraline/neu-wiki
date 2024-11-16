@@ -7,7 +7,7 @@
         @focus="openSearch"
         @keyup.enter="performSearch"
         autosize
-        class="w-8 sm:w-32"
+        class="w-24 sm:w-32"
       >
         <template #prefix>
           <n-icon :component="SearchOutline" />

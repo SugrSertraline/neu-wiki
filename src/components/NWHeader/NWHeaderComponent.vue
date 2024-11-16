@@ -8,72 +8,69 @@
                 NEU-Wiki
             </div>
         </div>
-        <NWSearch/>
+        <NWSearch />
         <div class="flex-1">
-            
+
         </div>
         <div class="hidden md:block">
-            <n-button v-for="item in buttons" :key="item.id" quaternary @click="routerTo(item.value)">
+            <n-button v-for="(item, index) in buttons" :key="index" quaternary @click="item.handler">
                 {{ item.label }}
-            </n-button>
-            <n-button  quaternary @click="copyUrl">
-                分享
-            </n-button>
-            <n-button quaternary @click="openLink('https://docs.qq.com/form/page/DSUZ1Wk1LR0hicmdu')">
-                建议或投稿
             </n-button>
         </div>
         <div class="block md:hidden">
-            <n-popselect @update:value="routerTo" :options="buttons" trigger="click">
-                <n-button quaternary  ><n-icon size="20"><MenuIcon/></n-icon></n-button>
-                
+            <n-popselect @update:value="handleUpdate" :options="buttons" trigger="click">
+                <n-button quaternary><n-icon size="20">
+                        <MenuIcon />
+                    </n-icon></n-button>
             </n-popselect>
-            <n-button quaternary  @click="copyUrl"><n-icon size="20"><ShareIcon/></n-icon></n-button>
-            <n-button quaternary @click="openLink('https://docs.qq.com/form/page/DSUZ1Wk1LR0hicmdu')">
-                <n-icon size="20"><AdviceIcon/></n-icon>
-            </n-button>
         </div>
     </div>
 </template>
 <script setup lang="ts">
 
-import {BookIcon,MenuIcon,AdviceIcon,ShareIcon} from '@/assets/icons'
+import { BookIcon, MenuIcon, AdviceIcon, ShareIcon } from '@/assets/icons'
 import { useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
 import { NWSearch } from '../NWSearch';
 const router = useRouter();
 const message = useMessage();
-const routerTo = (url:string)=>{
+const routerTo = (url: string) => {
     router.push({
-        path:url
+        path: url
     });
 }
 
-const copyUrl = async ()=>{
-      try {
+const copyUrl = async () => {
+    try {
         // 获取当前页面的URL
         const url = window.location.href;
         // 将URL复制到剪贴板
         await navigator.clipboard.writeText(url);
         // 提示用户链接已复制
         message.success('链接已复制到剪贴板')
-      } catch (err) {
+    } catch (err) {
         message.warning(`无法复制链接:${err}`);
-      }
-    
+    }
+
+}
+const handleUpdate = (value:any,option:ButtonItem)=>{
+    option.handler();
 }
 
 interface ButtonItem {
-    id: number,
     label: string,
-    value:string
+    url:string|undefined
+    value: string ,
+    handler: () => void;
 }
 const buttons: ButtonItem[] = [
-    { id: 1, label: '首页',value:'/'},
-    { id: 2, label: '阅读',value:'/read' }
+    { label: '首页', url: '/',value:'index', handler: () => routerTo('/') },
+    { label: '阅读', url: '/read',value:'read',  handler: () => routerTo('/read') },
+    { label: '分享', url: undefined,value:'share',  handler: () => copyUrl() },
+    { label: '投稿或建议', url: undefined,value:'advice',  handler: () => openLink('https://docs.qq.com/form/page/DSUZ1Wk1LR0hicmdu') }
 ]
 
-function openLink(link:string): void {
-  window.open(link, '_blank');
+function openLink(link: string): void {
+    window.open(link, '_blank');
 }
 </script>
