@@ -12,7 +12,6 @@
         </n-input>
       </n-input-group>
     </div>
-{{internalCommits}}
     <div class="comments-list">
       <n-list v-if="internalCommits.length > 0">
         <n-list-item v-for="comment in internalCommits" :key="comment.id">

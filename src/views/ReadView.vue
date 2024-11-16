@@ -413,7 +413,8 @@ const handleAddCommit = () => {
   if (!configuration.value.current_page)
     return;
   const mes = readApi.addCommit(configuration.value.current_page, commit_content.value);
-  console.log(mes);
+  commit_content.value = '';
+  message.success('评论将在审核结束后展示！');
   loadCommits();
 }
 
