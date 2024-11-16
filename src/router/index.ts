@@ -32,6 +32,13 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.name === 'read') {
+    const newPage = to.params.page
+  }
+  
+  next()
+})
 
 
 export default router

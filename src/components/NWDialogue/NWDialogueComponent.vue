@@ -1,7 +1,7 @@
 <template>
     <n-card  class="my-2 w-full  mx-auto max-w-3xl bg-gray-100">
       <div class="text-center">
-        <h2 class="text-2xl font-bold text-primary-600 font-question underline">
+        <h2 class="text-2xl font-bold text-primary-600 font-question ">
           {{ q }}
         </h2>
         

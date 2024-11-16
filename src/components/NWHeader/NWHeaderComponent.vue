@@ -8,6 +8,7 @@
                 NEU-Wiki
             </div>
         </div>
+        <NWSearch/>
         <div class="flex-1">
             
         </div>
@@ -39,10 +40,10 @@
 import {BookIcon,MenuIcon,AdviceIcon,ShareIcon} from '@/assets/icons'
 import { useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
+import { NWSearch } from '../NWSearch';
 const router = useRouter();
 const message = useMessage();
 const routerTo = (url:string)=>{
-    
     router.push({
         path:url
     });

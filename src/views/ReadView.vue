@@ -20,7 +20,7 @@
 
   <div class="flex-1 overflow-hidden px-4 md:px-8 lg:px-12 pt-8 lg:ml-64 xl:ml-100 2xl:mx-100">
     <!-- 当页面变为lg以下时的头部菜单按钮 -->
-    <div class="w-full z-30 bg-white lg:hidden flex fixed top-16 left-0 h-12 border-y">
+    <div class="w-full z-10 bg-white lg:hidden flex fixed top-16 left-0 h-12 border-y">
       <div class="h-full flex items-center ml-8 cursor-pointer" @click="configuration.if_drawer = true">
         <n-button type="quaternary"><template #icon>
             <n-icon>

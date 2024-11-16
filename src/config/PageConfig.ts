@@ -1466,3 +1466,165 @@ export function findAdjacentPageInGroups(currentPageName: string, direction: 'ne
 
     return adjacentPageName;
 }
+/**
+ * 在 Group[] 中搜索所有字符串字段，返回匹配结果及其上下文
+ * @param groups 要搜索的 group 数组
+ * @param keyword 搜索关键词
+ * @returns 匹配结果数组
+ */
+export function searchInGroups(groups: any[], keyword: string) {
+    const results: any[] = [];
+    const regex = new RegExp(keyword, 'i'); // 忽略大小写模糊搜索
+  
+    // 遍历所有 Group
+    groups.forEach(group => {
+      group.pages.forEach((page: any) => {
+        // 搜索 Page 层级
+        searchInPage(page, regex, results);
+      });
+    });
+  
+    return results;
+  }
+  
+  /**
+   * 搜索 Page
+   */
+  function searchInPage(page: any, regex: RegExp, results: any[]) {
+    // 搜索 Page 的 title 和 description
+    searchInString(page.title, 'Page Title', page, regex, results);
+    searchInString(page.description, 'Page Description', page, regex, results);
+  
+    page.sections.forEach((section: any) => {
+      // 搜索 Section
+      searchInString(section.title, 'Section Title', page, regex, results);
+  
+      section.subsections.forEach((subsection: any) => {
+        // 搜索 SubSection
+        searchInString(subsection.title, 'SubSection Title', page, regex, results);
+  
+        subsection.contents.forEach((content: any) => {
+          searchInContent(content, page, section, subsection, regex, results);
+        });
+      });
+    });
+  }
+  
+  /**
+   * 搜索 Content
+   */
+  function searchInContent(
+    content: any,
+    page: any,
+    section: any,
+    subsection: any,
+    regex: RegExp,
+    results: any[]
+  ) {
+    switch (content.type) {
+      case 'NWDescription':
+        searchInString(content.text, 'NWDescription', page, regex, results, section, subsection);
+        break;
+      case 'NWImage':
+        searchInString(content.src, 'NWImage src', page, regex, results, section, subsection);
+        break;
+      case 'NWList':
+        content.data.forEach((item: string) => {
+          searchInString(item, 'NWList Item', page, regex, results, section, subsection);
+        });
+        break;
+      case 'NWTips':
+        searchInString(content.title, 'NWTips Title', page, regex, results, section, subsection);
+        searchInString(content.data, 'NWTips Data', page, regex, results, section, subsection);
+        break;
+      case 'NWDialogue':
+        searchInString(content.q, 'NWDialogue Question', page, regex, results, section, subsection);
+        searchInString(content.a, 'NWDialogue Answer', page, regex, results, section, subsection);
+        break;
+      case 'NWPersonalIntro':
+        searchInString(content.name, 'NWPersonalIntro Name', page, regex, results, section, subsection);
+        searchInString(content.introduction, 'NWPersonalIntro Introduction', page, regex, results, section, subsection);
+        (content.achievements || []).forEach((achievement: string) => {
+          searchInString(achievement, 'NWPersonalIntro Achievement', page, regex, results, section, subsection);
+        });
+        break;
+      case 'NWMotto':
+        searchInString(content.message, 'NWMotto Message', page, regex, results, section, subsection);
+        break;
+      case 'NWProblemsRank':
+        content.problems.forEach((problem: any) => {
+          searchInString(problem.description, 'NWProblemsRank Problem Description', page, regex, results, section, subsection);
+        });
+        break;
+      case 'NWSiteContributors':
+        content.site_sitecontributors.forEach((contributor: any) => {
+          searchInString(contributor.username, 'NWSiteContributors Username', page, regex, results, section, subsection);
+          searchInString(contributor.bio, 'NWSiteContributors Bio', page, regex, results, section, subsection);
+        });
+        break;
+      default:
+        break;
+    }
+  }
+  
+  /**
+   * 搜索字符串并保存结果
+   */
+  function searchInString(
+    text: string | undefined,
+    foundInType: string,
+    page: any,
+    regex: RegExp,
+    results: any[],
+    section?: any,
+    subsection?: any
+  ) {
+    if (!text) return;
+  
+    const match = text.match(regex);
+    if (match) {
+      const startIdx = Math.max(0, match.index! - 20);
+      const endIdx = Math.min(text.length, match.index! + match[0].length + 20);
+      const snippet = `...${text.slice(startIdx, endIdx)}...`;
+  
+      results.push({
+        pageTitle: page.title,
+        pageName:page.name,
+        sectionTitle: section?.title,
+        subSectionTitle: subsection?.title,
+        foundInType,
+        snippet
+      });
+    }
+  }
+  
+  // 使用示例
+  const groups = [
+    {
+      title: 'Group 1',
+      pages: [
+        {
+          title: 'Page 1',
+          last_update: '2024-11-16',
+          name: 'Introduction',
+          description: 'This is a sample page about coding.',
+          sections: [
+            {
+              title: 'Section A',
+              subsections: [
+                {
+                  title: 'SubSection A1',
+                  contents: [
+                    { type: 'NWDescription', text: 'This is a detailed description about TypeScript.' },
+                    { type: 'NWTips', title: 'Tip 1', case: 'info', data: 'Always use type annotations.' }
+                  ]
+                }
+              ]
+            }
+          ],
+          contributors: []
+        }
+      ]
+    }
+  ];
+  
