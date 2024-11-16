@@ -64,7 +64,6 @@
         </div>
 
     </div>
-    <n-button @click="testFun">测试</n-button>
 </template>
 
 <script setup lang="ts">
@@ -74,11 +73,7 @@ import { BubbleTeaIcon, HotDogIcon, ColaIcon } from '@/assets/icons';
 import { PAGE_CONFIG, searchInGroups } from '@/config/PageConfig';
 
 
-const testFun = ()=>{
-    const searchResults = searchInGroups(PAGE_CONFIG, '我申请比较');
-    console.log(searchResults);
-    
-}
+
 const router = useRouter();
 const config = ref({
     description_list: [
