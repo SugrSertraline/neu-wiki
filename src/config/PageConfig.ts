@@ -440,6 +440,79 @@ export const PAGE_CONFIG: Group[] = [
                     }
                 ],
                 contributors: []
+            },{
+                title: "24届王汉彬同学",
+                last_update: "2024年11月16日",
+                name: "WangHanBin",
+                description: undefined,
+                sections: [
+                    {
+                        title: undefined,
+                        subsections: [{
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWPersonalIntro,
+                                    name: '王汉彬',
+                                    avatarUrl: '/wanghanbin.png',
+                                    college: '软件学院',
+                                    grade: '2024届',
+                                    major: '软件工程',
+                                    graduation: '北京大学软件工程国家工程研究中心',
+                                    introduction: 'GPA rk3，综排rk1，曾获国家奖学金等奖学金。曾在NEUIR、THUNLP、ModelBest（面壁智能）和上海人工智能实验室科研实习。我的研究兴趣包括代码智能和LLM推理。',
+                                    achievements: ['一作ACL2024', '一作ICML2024', '一作TOIS', '投稿NAACL2025','投稿ICLR2025','投稿CVPR2025'],
+                                    qq:'1115685184'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您是如何在本科阶段就取得如此丰硕的研究成果的？能否分享一下您的经验和方法？',
+                                    a: '大胆尝试科研实习，坚持不懈，找强导强组实习。另外最重要的一点是自己需要努力，功夫不负有心人。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '保研到北大，您认为自己的优势在哪里？',
+                                    a: '科研优势，申请时候几乎面得所有课题组都对我的科研非常感兴趣。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '在保研过程中，您遇到了哪些挑战？是如何克服的？',
+                                    a: '机考，没克服，个别学校学院需要，pku的机考正常水平之上就行。'
+                                }, 
+                                {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您在北大研究生阶段的研究方向是什么？为什么选择这个方向？',
+                                    a: '自然语言处理，申请时候做了一年多，不想换方向，还要学新的东西，申请的时候就只申请研究方向非常match的老师。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您对未来在学术领域的职业规划有何设想？',
+                                    a: '多发paper。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您如何看待本科生参与科研的重要性？',
+                                    a: '相比于科研，我觉得绩点可能更重要，科研锦上添花。有余力的话可以多参与参与，科研经历不在多，把做的东西真正弄明白才是王道'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您在本科阶段参加过哪些课外活动？这些活动对您的成长有哪些帮助？',
+                                    a: '班级，年级会的一些活动，使自己更勇敢，更自信，不怯场。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您是如何在本科阶段找到并确定自己的研究兴趣的？',
+                                    a: '这个东西可能做着做着就喜欢了，大模型出来之前我这个方向都要死了，大模型出来之后又火了。对于科研项目不能算是有兴趣也不能算是没有兴趣的话，就先做着，慢慢发现。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '对于希望本科阶段发表论文的同学，您有哪些建议？',
+                                    a: '看好你，加油。'
+                                }, {
+                                    type: NWComponent.NWDialogue,
+                                    q: '您在北大有哪些期待？希望在这里实现什么样的成就？',
+                                    a: '好好学习，天天向上！'
+                                },{
+                                    type: NWComponent.NWMotto,
+                                    message: '知足常乐！',
+                                    author: '王汉彬'
+                                }
+                            ]
+                        }]
+                    }
+                ],
+                contributors: []
             }
         ]
     }
