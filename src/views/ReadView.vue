@@ -190,11 +190,11 @@ import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular, ChevronLeft, ChevronRight } from '@vicons/fa';
 
 
-import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } from '@/config/PageConfig';
+import { getPageByName, PAGE_CONFIG,  findAdjacentPageInGroups } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 
 
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition, NWLinkList } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -394,6 +394,8 @@ const dynamicComponent = (content: Content) => {
           return h(NWCompetition,{
             competition:content.competition
           })
+          case 'NWLinkList':
+            return h(NWLinkList)
   }
 
 }

@@ -87,7 +87,18 @@ interface NWCompetition{
     type:NWComponent.NWCompetition
     competition:Competition
 }
-export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition;
+
+
+
+export interface LinkListItem {
+    text: string
+    link: string
+  }
+
+export interface NWLinkList{
+    type:NWComponent.NWLinkList,
+}
+export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList;
 
 export interface SubSection {
     title: string | undefined,

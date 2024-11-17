@@ -1,5 +1,5 @@
 import { NWComponent } from "@/types/enum";
-import type { Group, Page } from "@/types/interface";
+import type { Group, LinkListItem, Page } from "@/types/interface";
 export const PAGE_CONFIG: Group[] = [
     {
         title: '写在前面',
@@ -108,6 +108,27 @@ export const PAGE_CONFIG: Group[] = [
                                             email: undefined
                                         }
                                     ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            contributors: []
+        },{
+            title: "链接汇总",
+            last_update: "2024年11月17日",
+            name: "AllLink",
+            description: '这里收录了网站的所有链接，大家可以快速查看并且分享。',
+            sections: [
+                {
+                    title: undefined,
+                    subsections: [
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type:NWComponent.NWLinkList,
                                 }
                             ]
                         }
@@ -1509,9 +1530,9 @@ export const getPageByName = (name: string = "DeveloperGreeting"): Page | undefi
     return foundGroup?.pages.find(page => page.name === name) || undefined;
 
 }
-export const formatPageURLs = (): string[] => {
+export const getPageURLs = (): LinkListItem[] => {
     // 创建一个数组来存储格式化后的URL
-    const formattedURLs: string[] = [];
+    const pageURLs: LinkListItem[] = [];
     // 遍历group中的pages数组
     PAGE_CONFIG.forEach((item) => {
         item.pages.forEach((page) => {
@@ -1519,13 +1540,17 @@ export const formatPageURLs = (): string[] => {
             if (page.title && page.name) {
                 console.log(page.title);
                 // 格式化URL并添加到数组中
-                formattedURLs.push(`${page.title}：https://neuwiki.top/read/${page.name}`);
+                pageURLs.push({
+                    text:page.title,
+                    link:`https://neuwiki.top/read/${page.name}`
+                });
+
             }
         });
     })
 
     // 返回包含所有格式化URL的数组
-    return formattedURLs;
+    return pageURLs;
 }
 export function findAdjacentPageInGroups(currentPageName: string, direction: 'next' | 'prev' = 'prev'): string | 'start' | 'end' {
     let groups: Group[] = PAGE_CONFIG;
@@ -1711,33 +1736,4 @@ export function searchInGroups(groups: any[], keyword: string) {
     }
   }
   
-  // 使用示例
-  const groups = [
-    {
-      title: 'Group 1',
-      pages: [
-        {
-          title: 'Page 1',
-          last_update: '2024-11-16',
-          name: 'Introduction',
-          description: 'This is a sample page about coding.',
-          sections: [
-            {
-              title: 'Section A',
-              subsections: [
-                {
-                  title: 'SubSection A1',
-                  contents: [
-                    { type: 'NWDescription', text: 'This is a detailed description about TypeScript.' },
-                    { type: 'NWTips', title: 'Tip 1', case: 'info', data: 'Always use type annotations.' }
-                  ]
-                }
-              ]
-            }
-          ],
-          contributors: []
-        }
-      ]
-    }
-  ];
   
