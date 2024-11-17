@@ -106,6 +106,15 @@ export const PAGE_CONFIG: Group[] = [
                                             qq: '1181449555',
                                             wechat: '18670082653',
                                             email: undefined
+                                        },{
+                                            username: "小明",
+                                            avatar: "https://image.neuwiki.top/image/xiaoming.jpg",
+                                            contributionType: "内容与开发",
+                                            contribution: "工程硕博”保研、项目开发",
+                                            bio: "软件20级本科生、24级研究生。",
+                                            qq: '1294892474',
+                                            wechat: '15565828536',
+                                            email: undefined
                                         }
                                     ]
                                 }
