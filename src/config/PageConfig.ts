@@ -81,22 +81,30 @@ export const PAGE_CONFIG: Group[] = [
                                             email: undefined
                                         }, {
                                             username: "aning",
-                                            avatar: "/aning.jpg",
+                                            avatar: "https://image.neuwiki.top/image/aning.jpg",
                                             contributionType: "网站开发",
                                             contribution: "网站后端开发、部署。",
                                             bio: "软件20级本科生、24级研究生。",
                                             qq: undefined,
                                             wechat: undefined,
                                             email: "aninganing147@gmail.com"
-                                        }
-                                        , {
+                                        },{
                                             username: "好锦鲤",
-                                            avatar: "/haojinli.jpg",
+                                            avatar: "https://image.neuwiki.top/image/haojinli.jpg",
                                             contributionType: "内容完善",
                                             contribution: "“校车”相关内容",
                                             bio: "计算机2021级本科，2025级硕士。",
                                             qq: undefined,
                                             wechat: undefined,
+                                            email: undefined
+                                        },{
+                                            username: "苏璃",
+                                            avatar: "https://image.neuwiki.top/image/suli.jpg",
+                                            contributionType: "内容完善",
+                                            contribution: "校园生活等方面内容的完善",
+                                            bio: "电科23级本科生，努力考研中。",
+                                            qq: '1181449555',
+                                            wechat: '18670082653',
                                             email: undefined
                                         }
                                     ]
