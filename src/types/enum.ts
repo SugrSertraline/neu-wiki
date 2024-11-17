@@ -7,5 +7,6 @@ export enum NWComponent{
     NWDialogue='NWDialogue',
     NWMotto='NWMotto',
     NWSiteContributors='NWSiteContributors',
-    NWProblemsRank='NWProblemsRank'
+    NWProblemsRank='NWProblemsRank',
+    NWCompetition='NWCompetition'
 }

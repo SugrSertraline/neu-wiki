@@ -1317,7 +1317,39 @@ export const PAGE_CONFIG: Group[] = [
                     }
                 ],
                 contributors: []
-            }, {
+            },{
+                title: "竞赛",
+                last_update: "2024年11月17日",
+                name: "Competition",
+                description: '这里给大家介绍了有哪些竞赛、适合什么专业与学院以及参加竞赛要注意的内容',
+                sections: [
+                    {
+                        title: '竞赛时间线',
+                        subsections: [
+                            {
+                                title: '一月',
+                                contents: [
+                                    {
+                                        type:NWComponent.NWCompetition,
+                                        competition:{
+                                            name: "美国大学生数学建模竞赛",
+                                            period: "上旬",
+                                            description: "美国大学生数学建模竞赛（MCM/ICM），简称“美赛”，由美国数学及其应用联合会主办，是最高的国际性数学建模竞赛，也是世界范围内最具影响力的数学建模竞赛，一般也指数学建模竞赛。注意要三人组队。",
+                                            suitableColleges: ['软件学院','计算机学院','信息学院','理学院'],
+                                            tags: ['算法','大数据','创新']
+                                        }
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'竞赛内容还在完善，如果大家也有了解可以投稿或者直接联系群主~'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                contributors: []
+            },
+             {
                 title: "选调",
                 last_update: "2024年9月22日",
                 name: "SelectedAssignment",

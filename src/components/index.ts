@@ -11,3 +11,4 @@ export * from './NWDialogue';
 export * from './NWMotto';
 export * from './NWSiteContributors';
 export * from './NWProblemsRank';
+export * from './NWCompetition'

@@ -194,7 +194,7 @@ import { getPageByName, PAGE_CONFIG, formatPageURLs, findAdjacentPageInGroups } 
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 
 
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -390,6 +390,10 @@ const dynamicComponent = (content: Content) => {
         return h(NWSiteContributors,{
           site_contributors:content.site_sitecontributors
         })
+        case 'NWCompetition':
+          return h(NWCompetition,{
+            competition:content.competition
+          })
   }
 
 }

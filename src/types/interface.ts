@@ -74,7 +74,20 @@ interface NWSiteContributors{
     site_sitecontributors:SiteContributor[]
 }
 
-export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors;
+
+export interface Competition {
+    name: string
+    period: '上旬' | '中旬' | '下旬'
+    description: string
+    suitableColleges: string[]
+    tags: string[]
+  }
+
+interface NWCompetition{
+    type:NWComponent.NWCompetition
+    competition:Competition
+}
+export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition;
 
 export interface SubSection {
     title: string | undefined,
