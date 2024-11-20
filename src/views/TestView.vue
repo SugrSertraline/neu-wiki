@@ -1,14 +1,18 @@
 <template>
-  <NWLinkList
-    title="常用链接"
-    :items="[
-      { text: '百度', link: 'https://www.baidu.com' },
-      { text: '谷歌', link: 'https://www.google.com' },
-      { text: 'GitHub', link: 'https://github.com' },
-    ]"
-  />
+    <NWClubIntro
+      :name="clubName"
+      :logo="clubLogo"
+      :description="clubDescription"
+      :qqGroup="clubQqGroup"
+    />
 </template>
 
-<script setup lang="ts">
-import { NWLinkList } from '@/components';
+<script setup>
+import { NWClubIntro } from '@/components';
+import { ref } from 'vue';
+
+const clubName = ref('Vue.js爱好者俱乐部');
+const clubLogo = ref('path/to/your/logo.png');
+const clubDescription = ref('这里是Vue.js爱好者的聚集地，欢迎加入交流。');
+const clubQqGroup = ref('123456789');
 </script>
