@@ -9,5 +9,6 @@ export enum NWComponent{
     NWSiteContributors='NWSiteContributors',
     NWProblemsRank='NWProblemsRank',
     NWCompetition='NWCompetition',
-    NWLinkList='NWLinkList'
+    NWLinkList='NWLinkList',
+    NWClubIntro='NWClubIntro'
 }

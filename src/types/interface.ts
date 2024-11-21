@@ -98,7 +98,20 @@ export interface LinkListItem {
 export interface NWLinkList{
     type:NWComponent.NWLinkList,
 }
-export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList;
+export interface ClubProps {
+    name: string
+    logo: string
+    description: string
+    qqGroup: string,
+    imageUrl:string
+  }
+  interface NWClubIntro{
+    type:NWComponent.NWClubIntro,
+    club:ClubProps
+  }
+
+
+export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList|NWClubIntro;
 
 export interface SubSection {
     title: string | undefined,

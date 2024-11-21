@@ -190,11 +190,11 @@ import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
 import { ThumbsUpRegular, ThumbsDownRegular, ChevronLeft, ChevronRight } from '@vicons/fa';
 
 
-import { getPageByName, PAGE_CONFIG,  findAdjacentPageInGroups } from '@/config/PageConfig';
+import { getPageByName, PAGE_CONFIG, findAdjacentPageInGroups } from '@/config/PageConfig';
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 
 
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition, NWLinkList } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -383,19 +383,24 @@ const dynamicComponent = (content: Content) => {
         author: content.author
       })
     case 'NWProblemsRank':
-      return h(NWProblemsRank,{
-        problems:content.problems
+      return h(NWProblemsRank, {
+        problems: content.problems
       })
-      case 'NWSiteContributors':
-        return h(NWSiteContributors,{
-          site_contributors:content.site_sitecontributors
-        })
-        case 'NWCompetition':
-          return h(NWCompetition,{
-            competition:content.competition
-          })
-          case 'NWLinkList':
-            return h(NWLinkList)
+    case 'NWSiteContributors':
+      return h(NWSiteContributors, {
+        site_contributors: content.site_sitecontributors
+      })
+    case 'NWCompetition':
+      return h(NWCompetition, {
+        competition: content.competition
+      })
+    case 'NWLinkList':
+      return h(NWLinkList)
+
+    case 'NWClubIntro':
+      return h(NWClubIntro, {
+        ClubProps:content.club
+      })
   }
 
 }
