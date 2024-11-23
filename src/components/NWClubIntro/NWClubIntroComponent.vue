@@ -9,9 +9,10 @@
     <div
       class="flex flex-col sm:flex-row items-center justify-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
       <div class="flex flex-col justify-center items-center">
-        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="100" class="flex-shrink-0" />
+        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="100" class="flex-shrink-0" round />
 
-        <n-button type="primary" @click="showPreview" class="mt-2 rounded-md transition-colors duration-300">
+        <n-button v-if="ClubProps.imageUrl" type="primary" @click="showPreview"
+          class="mt-2 rounded-md transition-colors duration-300">
           二维码
           <template #icon>
             <n-icon>
@@ -25,14 +26,25 @@
           {{ ClubProps.name }}
         </h2>
 
-        <p class="text-gray-600 mb-2 text-center sm:text-left">
-          {{ ClubProps.description }}
+        <p  class="text-gray-600 mb-2 text-center sm:text-left">
+         
+          <div v-if="ClubProps.description.length!=0">
+            {{ ClubProps.description }}
+          </div>
+          <div v-else>
+            简介正在来的路上
+          </div>
         </p>
-        <div class="flex justify-center sm:justify-start items-center space-x-2 text-gray-700">
-          <n-icon size="16">
-            <Qq />
-          </n-icon>
-          <span>QQ群：{{ ClubProps.qqGroup }}</span>
+       
+        <div class="flex justify-center sm:justify-start items-center space-x-2">
+          <n-button tertiary type="default" @click="copyText(ClubProps.qqGroup)">
+            <template #icon>
+              <n-icon>
+                <Qq />
+              </n-icon>
+            </template>
+            QQ群：{{ ClubProps.qqGroup }}
+          </n-button>
         </div>
       </div>
     </div>
@@ -40,12 +52,13 @@
 </template>
 
 <script setup lang="ts">
-import { NAvatar, NIcon } from 'naive-ui'
+import { NAvatar, NIcon, useMessage } from 'naive-ui'
 import { Qq } from '@vicons/fa';
 import { QrCode } from '@vicons/ionicons5'
 import type { ClubProps } from '@/types/interface';
 import { NButton, NModal } from 'naive-ui'
 import { ref } from 'vue';
+const message = useMessage();
 
 
 const props = defineProps<{
@@ -57,5 +70,15 @@ const isPreviewVisible = ref(false)
 
 const showPreview = () => {
   isPreviewVisible.value = true
+}
+const copyText = async (text: string) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    message.success('链接已复制到剪贴板')
+
+  } catch (err) {
+    message.error('复制失败')
+
+  }
 }
 </script>

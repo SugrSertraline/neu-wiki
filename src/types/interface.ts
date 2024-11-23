@@ -103,7 +103,7 @@ export interface ClubProps {
     logo: string
     description: string
     qqGroup: string,
-    imageUrl:string
+    imageUrl:string|undefined
   }
   interface NWClubIntro{
     type:NWComponent.NWClubIntro,

@@ -76,9 +76,9 @@ export const PAGE_CONFIG: Group[] = [
                                             contributionType: "网站开发",
                                             contribution: "网站整体的策划、开发工作。",
                                             bio: "软件20级本科生、24级研究生。",
-                                            qq: '2451305814',
-                                            wechat: '15714149025',
-                                            email: undefined
+                                            qq: undefined,
+                                            wechat: undefined,
+                                            email: "sugrsertraline@gmail.com"
                                         }, {
                                             username: "aning",
                                             avatar: "https://image.neuwiki.top/image/aning.jpg",
@@ -148,6 +148,213 @@ export const PAGE_CONFIG: Group[] = [
         }
         ]
     },{
+        title: "群聊汇总",
+        name: "Groups",
+        pages: [
+            {
+                title: "校内群聊",
+                last_update: "2024年11月23日",
+                name: "ChatGroups",
+                description: '这里汇总了校内的群聊，大家可以快速检索。',
+                sections: [
+                    {
+                        title: '闲置二手',
+                        subsections: [
+                            {
+                                title: undefined,
+                                contents: [
+                                    {
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: '闲易(浑南一舍限定)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "726429983",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: '闲易(八九十新二舍)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "760703712",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·闲易⑤(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "674052870",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·闲易④(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "658497316",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·闲易②(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "796471371",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·闲易(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "748582637",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·闲易⑥(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "672096362",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·闲易③(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "213647985",
+                                            imageUrl: undefined
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },{
+                        title: '生活互助',
+                        subsections: [
+                            {
+                                title: undefined,
+                                contents: [
+                                    {
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·租房er互助群',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "809396718",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·逛吃沈阳',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "365298908",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·(仅可)拼车/失物招领①',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "642261754",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·(仅可)拼车/失物招领②',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "608580708",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·健康互助群',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "364610094",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·旅游搭子',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "660130891",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·留校er(勿代课)',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "600956042",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·好剧推荐',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "768316750",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: '东大2023级交流互助群（勿代课）',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "654165985",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: '东大2024级交流互助群',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "280912500",
+                                            imageUrl: undefined
+                                        }
+                                    },{
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: 'NEU·考研er',
+                                            description: '',
+                                            logo: '/jiaoyouqiang.jpg',
+                                            qqGroup: "296343321",
+                                            imageUrl: undefined
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                contributors: []
+            }
+        ]
+    },
+    {
         title: "社团信息",
         name: "Club",
         pages: [
