@@ -353,69 +353,69 @@ export const PAGE_CONFIG: Group[] = [
                 contributors: []
             }
         ]
-    },
-    {
-        title: "社团信息",
-        name: "Club",
-        pages: [
-            {
-                title: "东北大学轮舞轮滑社",
-                last_update: "2024年11月20日",
-                name: "WheelDanceRollerSkatingClub",
-                description: undefined,
-                sections: [{
-                    title: undefined,
-                    subsections: []
-                }],
-                contributors: []
-            },{
-                title: "东北大学剑道社",
-                last_update: "2024年11月20日",
-                name: "KendoClub",
-                description: undefined,
-                sections: [{
-                    title: undefined,
-                    subsections: [
-                        {
-                            title: undefined,
-                            contents: [{
-                                type:NWComponent.NWClubIntro,
-                                club:{
-                                    name:'东北大学剑道社',
-                                    logo:'',
-                                    description:'本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
-                                    qqGroup:'964473553',
-                                    imageUrl:'/jiandao_qq.jpg'
-                                }
-                            },
-                        {
-                            type:NWComponent.NWImage,
-                            width:800,
-                            src:'/jiandao1.jpg'
-                        },{
-                            type:NWComponent.NWImage,
-                            width:800,
-                            src:'/jiandao2.jpg'
-                        },{
-                            type:NWComponent.NWImage,
-                            width:800,
-                            src:'/jiandao3.jpg'
-                        },{
-                            type:NWComponent.NWImage,
-                            width:800,
-                            src:'/jiandao4.jpg'
-                        },{
-                            type:NWComponent.NWImage,
-                            width:800,
-                            src:'/jiandao5.jpg'
-                        }]
-                        }
-                    ]
-                }],
-                contributors: []
-            }
-        ]
-    } 
+    }
+    // ,{
+    //     title: "社团信息",
+    //     name: "Club",
+    //     pages: [
+    //         {
+    //             title: "东北大学轮舞轮滑社",
+    //             last_update: "2024年11月20日",
+    //             name: "WheelDanceRollerSkatingClub",
+    //             description: undefined,
+    //             sections: [{
+    //                 title: undefined,
+    //                 subsections: []
+    //             }],
+    //             contributors: []
+    //         },{
+    //             title: "东北大学剑道社",
+    //             last_update: "2024年11月20日",
+    //             name: "KendoClub",
+    //             description: undefined,
+    //             sections: [{
+    //                 title: undefined,
+    //                 subsections: [
+    //                     {
+    //                         title: undefined,
+    //                         contents: [{
+    //                             type:NWComponent.NWClubIntro,
+    //                             club:{
+    //                                 name:'东北大学剑道社',
+    //                                 logo:'',
+    //                                 description:'本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
+    //                                 qqGroup:'964473553',
+    //                                 imageUrl:'/jiandao_qq.jpg'
+    //                             }
+    //                         },
+    //                     {
+    //                         type:NWComponent.NWImage,
+    //                         width:800,
+    //                         src:'/jiandao1.jpg'
+    //                     },{
+    //                         type:NWComponent.NWImage,
+    //                         width:800,
+    //                         src:'/jiandao2.jpg'
+    //                     },{
+    //                         type:NWComponent.NWImage,
+    //                         width:800,
+    //                         src:'/jiandao3.jpg'
+    //                     },{
+    //                         type:NWComponent.NWImage,
+    //                         width:800,
+    //                         src:'/jiandao4.jpg'
+    //                     },{
+    //                         type:NWComponent.NWImage,
+    //                         width:800,
+    //                         src:'/jiandao5.jpg'
+    //                     }]
+    //                     }
+    //                 ]
+    //             }],
+    //             contributors: []
+    //         }
+    //     ]
+    // } 
     ,{
         title: "访谈专栏",
         name: "Interview",
