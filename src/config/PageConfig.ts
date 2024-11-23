@@ -433,7 +433,7 @@ export const PAGE_CONFIG: Group[] = [
                                             logo: "/neulogo.png",
                                             description: "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。",
                                             qqGroup: "589721067",
-                                            imageUrl: 'dongdafeiniao.jpg'
+                                            imageUrl: '/dongdafeiniao.jpg'
                                         }
                                     }
                                 ]
