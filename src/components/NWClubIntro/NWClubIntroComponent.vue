@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 p-4 sm:p-6 md:p-8 rounded-lg m-8">
+  <div class="bg-gray-50 sm:p-2 md:p-8 rounded-lg m-8">
 
 
     <n-modal v-model:show="isPreviewVisible" :mask-closable="true" preset="card"
@@ -7,9 +7,9 @@
       <img :src="ClubProps.imageUrl" alt="Preview Image" class="max-w-full max-h-[80vh] object-contain" @click.stop />
     </n-modal>
     <div
-      class="flex flex-col sm:flex-row items-center justify-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+      class="flex flex-col sm:flex-row items-center justify-center p-2 sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
       <div class="flex flex-col justify-center items-center">
-        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="100" class="flex-shrink-0" round />
+        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="80" class="flex-shrink-0" round />
 
         <n-button v-if="ClubProps.imageUrl" type="primary" @click="showPreview"
           class="mt-2 rounded-md transition-colors duration-300">

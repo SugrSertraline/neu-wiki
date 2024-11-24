@@ -1,8 +1,18 @@
-# NEU百科指南（NEU-WIKI）
 
-## 一、简介
+<img src="https://image.neuwiki.top/image/logobook.png" style="display: block; margin-left: auto; margin-right: auto;"/>
+<h1 style="text-align: center;margin-top:10px">NEU百科指南</h1>
 
-该项目名为NEU百科指南（NEU-WIKI），项目使用vue3+ts+vueRouter+naiveUI+tailwindcss，通过填写config路径下的PageConfig.ts文件进行页面的渲染配置，该项目具有如下特点。
+# Introduction
+
+NEU百科指南（NEU-WIKI）是东北大学的一个信息集成平台，它受到了**上海交大生存手册**的启发。为了解决同学们因信息不对称和渠道不畅而面临的诸多挑战，包括对困难学生政策、机考等重要信息的不了解，我与团队成员共同开发了这个网站。我们的目标是提供一个集中的信息资源，帮助学生更好地了解和利用校园资源，从而更顺利地应对学习和生活中的各种挑战。通过NEU-WIKI，我们希望能够缩小信息差距，让每位学生都能轻松获取他们所需的信息。
+
+# Features
+
+## Tech
+
+项目使用Vue3+Typescript+VueRouter+NaiveUI+Tailwindcss。
+
+## Components
 
 - 自定义组件：结合naiveUI组件，在其基础上扩展了除了相应的个人介绍等组件。
 - 配置文件渲染：页面的内容是使用component标签进行动态渲染，配置文件为config路径下的PageConfig.ts文件。

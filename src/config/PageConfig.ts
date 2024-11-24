@@ -2008,6 +2008,10 @@ export function searchInGroups(groups: any[], keyword: string) {
           searchInString(contributor.bio, 'NWSiteContributors Bio', page, regex, results, section, subsection);
         });
         break;
+      case NWComponent.NWClubIntro:
+        searchInString(content.club.description, 'NWSiteContributors Username', page, regex, results, section, subsection);
+        searchInString(content.club.name, 'NWSiteContributors Username', page, regex, results, section, subsection);
+        break;
       default:
         break;
     }
