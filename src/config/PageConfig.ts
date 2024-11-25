@@ -168,7 +168,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: '闲易(浑南一舍限定)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "726429983",
                                             imageUrl: undefined
                                         }
@@ -177,7 +177,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: '闲易(八九十新二舍)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "760703712",
                                             imageUrl: undefined
                                         }
@@ -186,7 +186,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·闲易⑤(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "674052870",
                                             imageUrl: undefined
                                         }
@@ -195,7 +195,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·闲易④(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "658497316",
                                             imageUrl: undefined
                                         }
@@ -204,7 +204,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·闲易②(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "796471371",
                                             imageUrl: undefined
                                         }
@@ -213,7 +213,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·闲易(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "748582637",
                                             imageUrl: undefined
                                         }
@@ -222,7 +222,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·闲易⑥(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "672096362",
                                             imageUrl: undefined
                                         }
@@ -231,7 +231,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·闲易③(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "213647985",
                                             imageUrl: undefined
                                         }
@@ -250,7 +250,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·租房er互助群',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "809396718",
                                             imageUrl: undefined
                                         }
@@ -259,7 +259,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·逛吃沈阳',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "365298908",
                                             imageUrl: undefined
                                         }
@@ -268,7 +268,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·(仅可)拼车/失物招领①',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "642261754",
                                             imageUrl: undefined
                                         }
@@ -277,7 +277,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·(仅可)拼车/失物招领②',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "608580708",
                                             imageUrl: undefined
                                         }
@@ -286,7 +286,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·健康互助群',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "364610094",
                                             imageUrl: undefined
                                         }
@@ -295,7 +295,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·旅游搭子',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "660130891",
                                             imageUrl: undefined
                                         }
@@ -304,7 +304,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·留校er(勿代课)',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "600956042",
                                             imageUrl: undefined
                                         }
@@ -313,7 +313,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·好剧推荐',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "768316750",
                                             imageUrl: undefined
                                         }
@@ -322,7 +322,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: '东大2023级交流互助群（勿代课）',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "654165985",
                                             imageUrl: undefined
                                         }
@@ -331,7 +331,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: '东大2024级交流互助群',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "280912500",
                                             imageUrl: undefined
                                         }
@@ -340,7 +340,7 @@ export const PAGE_CONFIG: Group[] = [
                                         club: {
                                             name: 'NEU·考研er',
                                             description: '',
-                                            logo: '/jiaoyouqiang.jpg',
+                                            logo: 'https://image.neuwiki.top/image/jiaoyouqiang.jpg',
                                             qqGroup: "296343321",
                                             imageUrl: undefined
                                         }
@@ -372,10 +372,10 @@ export const PAGE_CONFIG: Group[] = [
                                 type: NWComponent.NWClubIntro,
                                 club: {
                                     name: '东北大学轮舞轮滑社（浑南）',
-                                    logo: '/neulogo.jpeg',
+                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
                                     description: '本群为东北大学轮舞轮滑社浑南群,浑南的同学请加入此群聊。',
                                     qqGroup: '336861220',
-                                    imageUrl: '/lunwu_hunnan.jpg'
+                                    imageUrl: 'https://image.neuwiki.top/image/lunwu_hunnan.jpg'
                                 }
                             }]
                         }, {
@@ -384,10 +384,10 @@ export const PAGE_CONFIG: Group[] = [
                                 type: NWComponent.NWClubIntro,
                                 club: {
                                     name: '东北大学轮舞轮滑社（南湖）',
-                                    logo: '/neulogo.jpeg',
+                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
                                     description: '本群为东北大学轮舞轮滑社南湖，南湖的同学请加入此群聊',
                                     qqGroup: '773733890',
-                                    imageUrl: '/lunwu_nanhu.jpg'
+                                    imageUrl: 'https://image.neuwiki.top/image/lunwu_nanhu.jpg'
                                 }
                             }]
                         },
@@ -421,10 +421,10 @@ export const PAGE_CONFIG: Group[] = [
                                         type:NWComponent.NWClubIntro,
                                         club:{
                                             name: "东大飞鸟",
-                                            logo: "/neulogo.jpeg",
+                                            logo: "https://image.neuwiki.top/image/neulogo.jpeg",
                                             description: "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。校内同学均可，进群需备注专业学号。",
                                             qqGroup: "589721067",
-                                            imageUrl: undefined
+                                            imageUrl: "https://image.neuwiki.top/image/dongdafeiniao.jpg"
                                         }
                                     }
                                 ]
@@ -448,10 +448,10 @@ export const PAGE_CONFIG: Group[] = [
                                 type: NWComponent.NWClubIntro,
                                 club: {
                                     name: '东北大学剑道社',
-                                    logo: '/neulogo.jpeg',
+                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
                                     description: '本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
                                     qqGroup: '964473553',
-                                    imageUrl: '/jiandao_qq.jpg'
+                                    imageUrl: 'https://image.neuwiki.top/image/jiandao_qq.jpg'
                                 }
                             }]
                         },
@@ -465,19 +465,19 @@ export const PAGE_CONFIG: Group[] = [
                                 type:NWComponent.NWPhotoAlbum,
                                 photos:[
                                     {
-                                        url: "/jiandao1.jpg",
+                                        url: "https://image.neuwiki.top/image/jiandao1.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/jiandao2.jpg",
+                                        url: "https://image.neuwiki.top/image/jiandao2.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/jiandao3.jpg",
+                                        url: "https://image.neuwiki.top/image/jiandao3.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/jiandao4.jpg",
+                                        url: "https://image.neuwiki.top/image/jiandao4.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/jiandao5.jpg",
+                                        url: "https://image.neuwiki.top/image/jiandao5.jpg",
                                         alt: ""
                                     }
                                 ]
@@ -500,10 +500,10 @@ export const PAGE_CONFIG: Group[] = [
                                 type: NWComponent.NWClubIntro,
                                 club: {
                                     name: '东北大学国际标准舞团',
-                                    logo: '/neulogo.jpeg',
+                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
                                     description: '东北大学国际标准舞团属于东北大学团委文化艺术中心的优秀团体，参与东北大学百年校庆文艺晚会、“龙腾新百年”东北大学2024年新年联欢会、东北大学2024年“廿廿不忘，舞影流光”毕业舞会、第二届沈阳时尚体育节暨首届“金叶杯”体育舞蹈国际标准舞公开赛等各类校级、院级活动以及专业国标舞赛事，是一支团结友爱、经验成熟、热爱舞蹈的队伍。',
                                     qqGroup: '964473553',
-                                    imageUrl: '/guobiaowu.jpg'
+                                    imageUrl: 'https://image.neuwiki.top/image/guobiaowu.jpg'
                                 }
                             }]
                         },
@@ -517,34 +517,34 @@ export const PAGE_CONFIG: Group[] = [
                                 type:NWComponent.NWPhotoAlbum,
                                 photos:[
                                     {
-                                        url: "/guobiao1.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao1.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao2.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao2.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao3.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao3.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao4.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao4.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao5.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao5.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao6.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao6.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao7.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao7.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao8.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao8.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao9.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao9.jpg",
                                         alt: ""
                                     }, {
-                                        url: "/guobiao10.jpg",
+                                        url: "https://image.neuwiki.top/image/guobiao10.jpg",
                                         alt: ""
                                     }
                                 ]
