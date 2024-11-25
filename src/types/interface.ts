@@ -110,8 +110,16 @@ export interface ClubProps {
     club:ClubProps
   }
 
+ export   interface PhotoAlbumItem {
+    url: string;
+    alt: string;
+  }  
+interface NWPhotoAlbum{
+    type:NWComponent.NWPhotoAlbum,
+    photos:PhotoAlbumItem[]
+}
 
-export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList|NWClubIntro;
+export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList|NWClubIntro|NWPhotoAlbum;
 
 export interface SubSection {
     title: string | undefined,
