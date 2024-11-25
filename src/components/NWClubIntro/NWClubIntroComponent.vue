@@ -9,8 +9,7 @@
     <div
       class="flex flex-col sm:flex-row items-center justify-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
       <div class="flex flex-col justify-center items-center">
-        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="100" class="flex-shrink-0" round />
-
+        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="100" class="flex-shrink-0 bg-white" round  />
         <n-button v-if="ClubProps.imageUrl" type="primary" @click="showPreview"
           class="mt-2 rounded-md transition-colors duration-300">
           二维码

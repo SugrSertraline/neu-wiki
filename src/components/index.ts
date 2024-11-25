@@ -13,4 +13,5 @@ export * from './NWSiteContributors';
 export * from './NWProblemsRank';
 export * from './NWCompetition';
 export * from './NWClubIntro';
-export * from './NWLinkList'
+export * from './NWLinkList';
+export * from './NWPhotoAlbum'

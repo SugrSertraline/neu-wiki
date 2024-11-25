@@ -10,5 +10,6 @@ export enum NWComponent{
     NWProblemsRank='NWProblemsRank',
     NWCompetition='NWCompetition',
     NWLinkList='NWLinkList',
-    NWClubIntro='NWClubIntro'
+    NWClubIntro='NWClubIntro',
+    NWPhotoAlbum='NWPhotoAlbum'
 }
