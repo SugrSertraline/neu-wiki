@@ -358,66 +358,10 @@ export const PAGE_CONFIG: Group[] = [
         title: "社团信息",
         name: "Club",
         pages: [
-             // {
-            //     title: "东北大学轮舞轮滑社",
-            //     last_update: "2024年11月20日",
-            //     name: "LunWuLunHua",
-            //     description: undefined,
-            //     sections: [{
-            //         title: undefined,
-            //         subsections: []
-            //     }],
-            //     contributors: []
-            // },{
-            //     title: "东北大学剑道社",
-            //     last_update: "2024年11月20日",
-            //     name: "KendoClub",
-            //     description: undefined,
-            //     sections: [{
-            //         title: undefined,
-            //         subsections: [
-            //             {
-            //                 title: undefined,
-            //                 contents: [{
-            //                     type:NWComponent.NWClubIntro,
-            //                     club:{
-            //                         name:'东北大学剑道社',
-            //                         logo:'',
-            //                         description:'本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
-            //                         qqGroup:'964473553',
-            //                         imageUrl:'/jiandao_qq.jpg'
-            //                     }
-            //                 },
-            //             {
-            //                 type:NWComponent.NWImage,
-            //                 width:800,
-            //                 src:'/jiandao1.jpg'
-            //             },{
-            //                 type:NWComponent.NWImage,
-            //                 width:800,
-            //                 src:'/jiandao2.jpg'
-            //             },{
-            //                 type:NWComponent.NWImage,
-            //                 width:800,
-            //                 src:'/jiandao3.jpg'
-            //             },{
-            //                 type:NWComponent.NWImage,
-            //                 width:800,
-            //                 src:'/jiandao4.jpg'
-            //             },{
-            //                 type:NWComponent.NWImage,
-            //                 width:800,
-            //                 src:'/jiandao5.jpg'
-            //             }]
-            //             }
-            //         ]
-            //     }],
-            //     contributors: []
-            // },
             {
-                title: "东大飞鸟",
+                title: "轮舞轮滑社",
                 last_update: "2024年11月23日",
-                name: "DongDaFeiNiao",
+                name: "LunWuLunHua",
                 description: undefined,
                 sections: [{
                     title: '社团简介',
@@ -462,7 +406,36 @@ export const PAGE_CONFIG: Group[] = [
                 }],
                 contributors: []
             },{
-                title: "东北大学剑道社",
+                title: "东大飞鸟",
+                last_update: "2024年11月25日",
+                name: "FeiNiao",
+                description: undefined,
+                sections: [
+                    {
+                        title: '社团简介',
+                        subsections: [
+                            {
+                                title: undefined,
+                                contents: [
+                                    {
+                                        type:NWComponent.NWClubIntro,
+                                        club:{
+                                            name: "东大飞鸟",
+                                            logo: "/neulogo.jpeg",
+                                            description: "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。校内同学均可，进群需备注专业学号。",
+                                            qqGroup: "589721067",
+                                            imageUrl: undefined
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                contributors: []
+            }
+            ,{
+                title: "剑道社",
                 last_update: "2024年11月20日",
                 name: "JianDao",
                 description: undefined,
@@ -514,7 +487,7 @@ export const PAGE_CONFIG: Group[] = [
                 }],
                 contributors: []
             },{
-                title: "东北大学国际标准舞团",
+                title: "国际标准舞团",
                 last_update: "2024年11月20日",
                 name: "GuoJiBiaoZhunWu",
                 description: undefined,
