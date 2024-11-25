@@ -88,7 +88,7 @@ export const PAGE_CONFIG: Group[] = [
                                             qq: undefined,
                                             wechat: undefined,
                                             email: "aninganing147@gmail.com"
-                                        },{
+                                        }, {
                                             username: "好锦鲤",
                                             avatar: "https://image.neuwiki.top/image/haojinli.jpg",
                                             contributionType: "内容完善",
@@ -97,7 +97,7 @@ export const PAGE_CONFIG: Group[] = [
                                             qq: undefined,
                                             wechat: undefined,
                                             email: undefined
-                                        },{
+                                        }, {
                                             username: "苏璃",
                                             avatar: "https://image.neuwiki.top/image/suli.jpg",
                                             contributionType: "内容完善",
@@ -106,7 +106,7 @@ export const PAGE_CONFIG: Group[] = [
                                             qq: '1181449555',
                                             wechat: '18670082653',
                                             email: undefined
-                                        },{
+                                        }, {
                                             username: "小明",
                                             avatar: "https://image.neuwiki.top/image/xiaoming.jpg",
                                             contributionType: "内容与开发",
@@ -124,7 +124,7 @@ export const PAGE_CONFIG: Group[] = [
                 }
             ],
             contributors: []
-        },{
+        }, {
             title: "链接汇总",
             last_update: "2024年11月17日",
             name: "AllLink",
@@ -137,7 +137,7 @@ export const PAGE_CONFIG: Group[] = [
                             title: undefined,
                             contents: [
                                 {
-                                    type:NWComponent.NWLinkList,
+                                    type: NWComponent.NWLinkList,
                                 }
                             ]
                         }
@@ -147,7 +147,7 @@ export const PAGE_CONFIG: Group[] = [
             contributors: []
         }
         ]
-    },{
+    }, {
         title: "群聊汇总",
         name: "Groups",
         pages: [
@@ -164,71 +164,71 @@ export const PAGE_CONFIG: Group[] = [
                                 title: undefined,
                                 contents: [
                                     {
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: '闲易(浑南一舍限定)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "726429983",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: '闲易(八九十新二舍)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "760703712",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·闲易⑤(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "674052870",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·闲易④(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "658497316",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·闲易②(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "796471371",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·闲易(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "748582637",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·闲易⑥(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "672096362",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·闲易③(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
@@ -239,105 +239,105 @@ export const PAGE_CONFIG: Group[] = [
                                 ]
                             }
                         ]
-                    },{
+                    }, {
                         title: '生活互助',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [
                                     {
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·租房er互助群',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "809396718",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·逛吃沈阳',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "365298908",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·(仅可)拼车/失物招领①',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "642261754",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·(仅可)拼车/失物招领②',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "608580708",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·健康互助群',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "364610094",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·旅游搭子',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "660130891",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·留校er(勿代课)',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "600956042",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·好剧推荐',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "768316750",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: '东大2023级交流互助群（勿代课）',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "654165985",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: '东大2024级交流互助群',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
                                             qqGroup: "280912500",
                                             imageUrl: undefined
                                         }
-                                    },{
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
+                                    }, {
+                                        type: NWComponent.NWClubIntro,
+                                        club: {
                                             name: 'NEU·考研er',
                                             description: '',
                                             logo: '/jiaoyouqiang.jpg',
@@ -358,10 +358,10 @@ export const PAGE_CONFIG: Group[] = [
         title: "社团信息",
         name: "Club",
         pages: [
-            // {
+             // {
             //     title: "东北大学轮舞轮滑社",
             //     last_update: "2024年11月20日",
-            //     name: "WheelDanceRollerSkatingClub",
+            //     name: "LunWuLunHua",
             //     description: undefined,
             //     sections: [{
             //         title: undefined,
@@ -419,34 +419,172 @@ export const PAGE_CONFIG: Group[] = [
                 last_update: "2024年11月23日",
                 name: "DongDaFeiNiao",
                 description: undefined,
-                sections: [
-                    {
+                sections: [{
+                    title: '社团简介',
+                    subsections: [
+                        {
+                            title: undefined,
+                            contents: [{
+                                type: NWComponent.NWClubIntro,
+                                club: {
+                                    name: '东北大学轮舞轮滑社（浑南）',
+                                    logo: '/neulogo.jpeg',
+                                    description: '本群为东北大学轮舞轮滑社浑南群,浑南的同学请加入此群聊。',
+                                    qqGroup: '336861220',
+                                    imageUrl: '/lunwu_hunnan.jpg'
+                                }
+                            }]
+                        }, {
+                            title: undefined,
+                            contents: [{
+                                type: NWComponent.NWClubIntro,
+                                club: {
+                                    name: '东北大学轮舞轮滑社（南湖）',
+                                    logo: '/neulogo.jpeg',
+                                    description: '本群为东北大学轮舞轮滑社南湖，南湖的同学请加入此群聊',
+                                    qqGroup: '773733890',
+                                    imageUrl: '/lunwu_nanhu.jpg'
+                                }
+                            }]
+                        },
+                    ]
+                },{
+                    title: '社团介绍',
+                    subsections: [{
                         title: undefined,
-                        subsections: [
+                        contents: [
                             {
-                                title: undefined,
-                                contents: [
+                                type:NWComponent.NWDescription,
+                                text:'我们是一个热爱轮滑和轮舞的团体，定期举办各种活动，包括平滑教学、刷街等。我们的活动不仅局限于日常的练习，还包括大型的刷街活动，如五一北戴河、端午世博园毕业生送别、国庆鸟岛等。这些活动不仅让我们享受轮滑的乐趣，也是我们社交和增进友谊的好机会。\\平时私下约着玩的活动较多，兴趣至上（你甚至可以玩轮滑，bushi），i人天堂，大团体全是熟人氛围超棒，**脱单率极高**（目前已脱单四对）\\无加入条件，也不是必须要有轮滑鞋，兴趣至上，要的是想跟大家一起玩，一起聚餐、熬夜、自由的心境。'
+                            }
+                        ]
+                    }]
+                }],
+                contributors: []
+            },{
+                title: "东北大学剑道社",
+                last_update: "2024年11月20日",
+                name: "JianDao",
+                description: undefined,
+                sections: [{
+                    title: '社团简介',
+                    subsections: [
+                        {
+                            title: undefined,
+                            contents: [{
+                                type: NWComponent.NWClubIntro,
+                                club: {
+                                    name: '东北大学剑道社',
+                                    logo: '/neulogo.jpeg',
+                                    description: '本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
+                                    qqGroup: '964473553',
+                                    imageUrl: '/jiandao_qq.jpg'
+                                }
+                            }]
+                        },
+                    ]
+                },{
+                    title: '社团风采',
+                    subsections: [{
+                        title: undefined,
+                        contents: [
+                            {
+                                type:NWComponent.NWPhotoAlbum,
+                                photos:[
                                     {
-                                        type:NWComponent.NWClubIntro,
-                                        club:{
-                                            name: "东大飞鸟",
-                                            logo: "/neulogo.png",
-                                            description: "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。",
-                                            qqGroup: "589721067",
-                                            imageUrl: '/dongdafeiniao.jpg'
-                                        }
+                                        url: "/jiandao1.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/jiandao2.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/jiandao3.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/jiandao4.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/jiandao5.jpg",
+                                        alt: ""
                                     }
                                 ]
                             }
                         ]
-                    }
-                ],
+                    }]
+                }],
+                contributors: []
+            },{
+                title: "东北大学国际标准舞团",
+                last_update: "2024年11月20日",
+                name: "GuoJiBiaoZhunWu",
+                description: undefined,
+                sections: [{
+                    title: '社团简介',
+                    subsections: [
+                        {
+                            title: undefined,
+                            contents: [{
+                                type: NWComponent.NWClubIntro,
+                                club: {
+                                    name: '东北大学国际标准舞团',
+                                    logo: '/neulogo.jpeg',
+                                    description: '东北大学国际标准舞团属于东北大学团委文化艺术中心的优秀团体，参与东北大学百年校庆文艺晚会、“龙腾新百年”东北大学2024年新年联欢会、东北大学2024年“廿廿不忘，舞影流光”毕业舞会、第二届沈阳时尚体育节暨首届“金叶杯”体育舞蹈国际标准舞公开赛等各类校级、院级活动以及专业国标舞赛事，是一支团结友爱、经验成熟、热爱舞蹈的队伍。',
+                                    qqGroup: '964473553',
+                                    imageUrl: '/guobiaowu.jpg'
+                                }
+                            }]
+                        },
+                    ]
+                },{
+                    title: '社团风采',
+                    subsections: [{
+                        title: undefined,
+                        contents: [
+                            {
+                                type:NWComponent.NWPhotoAlbum,
+                                photos:[
+                                    {
+                                        url: "/guobiao1.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao2.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao3.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao4.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao5.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao6.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao7.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao8.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao9.jpg",
+                                        alt: ""
+                                    }, {
+                                        url: "/guobiao10.jpg",
+                                        alt: ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }]
+                }],
                 contributors: []
             }
 
         ]
-    } 
-    ,{
+    }
+    , {
         title: "访谈专栏",
         name: "Interview",
         pages: [
@@ -777,7 +915,7 @@ export const PAGE_CONFIG: Group[] = [
                     }
                 ],
                 contributors: []
-            },{
+            }, {
                 title: "24届王汉彬同学",
                 last_update: "2024年11月16日",
                 name: "WangHanBin",
@@ -797,8 +935,8 @@ export const PAGE_CONFIG: Group[] = [
                                     major: '软件工程',
                                     graduation: '北京大学软件工程国家工程研究中心',
                                     introduction: 'GPA rk3，综排rk1，曾获国家奖学金等奖学金。曾在NEUIR、THUNLP、ModelBest（面壁智能）和上海人工智能实验室科研实习。我的研究兴趣包括代码智能和LLM推理。',
-                                    achievements: ['一作ACL2024', '一作ICML2024', '一作TOIS', '投稿NAACL2025','投稿ICLR2025','投稿CVPR2025'],
-                                    qq:'1115685184'
+                                    achievements: ['一作ACL2024', '一作ICML2024', '一作TOIS', '投稿NAACL2025', '投稿ICLR2025', '投稿CVPR2025'],
+                                    qq: '1115685184'
                                 }, {
                                     type: NWComponent.NWDialogue,
                                     q: '您是如何在本科阶段就取得如此丰硕的研究成果的？能否分享一下您的经验和方法？',
@@ -811,7 +949,7 @@ export const PAGE_CONFIG: Group[] = [
                                     type: NWComponent.NWDialogue,
                                     q: '在保研过程中，您遇到了哪些挑战？是如何克服的？',
                                     a: '机考，没克服，个别学校学院需要，pku的机考正常水平之上就行。'
-                                }, 
+                                },
                                 {
                                     type: NWComponent.NWDialogue,
                                     q: '您在北大研究生阶段的研究方向是什么？为什么选择这个方向？',
@@ -840,7 +978,7 @@ export const PAGE_CONFIG: Group[] = [
                                     type: NWComponent.NWDialogue,
                                     q: '您在北大有哪些期待？希望在这里实现什么样的成就？',
                                     a: '好好学习，天天向上！'
-                                },{
+                                }, {
                                     type: NWComponent.NWMotto,
                                     message: '知足常乐！',
                                     author: '王汉彬'
@@ -1332,16 +1470,16 @@ export const PAGE_CONFIG: Group[] = [
                                     }
                                 ]
                             }]
-                    },{
+                    }, {
                         title: "注意事项",
                         subsections: [{
                             title: undefined,
                             contents: [
                                 {
-                                    type:NWComponent.NWList,
-                                    order:false,
-                                    data:[
-                                        '由于刷卡机不联网，因此如果现场给学生卡充值，刷卡机将不能及时收到充值数据。因此余额不足时需借用其他同学学生卡代刷。','不要携带无封口的饮料（如豆浆、奶茶、咖啡等）上车，若在车上打泼将会很难收拾。','预约者不要踩点核销预约记录，若过点则预约记录无法核销，故若仍需上车则参照未预约者刷卡上车。','若乘车人数已达上限，请未能上车的同学改乘其他交通工具。','若有其他情况，请以车管、司机、学生助理的指挥为准。'
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: [
+                                        '由于刷卡机不联网，因此如果现场给学生卡充值，刷卡机将不能及时收到充值数据。因此余额不足时需借用其他同学学生卡代刷。', '不要携带无封口的饮料（如豆浆、奶茶、咖啡等）上车，若在车上打泼将会很难收拾。', '预约者不要踩点核销预约记录，若过点则预约记录无法核销，故若仍需上车则参照未预约者刷卡上车。', '若乘车人数已达上限，请未能上车的同学改乘其他交通工具。', '若有其他情况，请以车管、司机、学生助理的指挥为准。'
                                     ]
                                 }
                             ]
@@ -1654,7 +1792,7 @@ export const PAGE_CONFIG: Group[] = [
                     }
                 ],
                 contributors: []
-            },{
+            }, {
                 title: "竞赛",
                 last_update: "2024年11月17日",
                 name: "Competition",
@@ -1667,17 +1805,17 @@ export const PAGE_CONFIG: Group[] = [
                                 title: '一月',
                                 contents: [
                                     {
-                                        type:NWComponent.NWCompetition,
-                                        competition:{
+                                        type: NWComponent.NWCompetition,
+                                        competition: {
                                             name: "美国大学生数学建模竞赛",
                                             period: "上旬",
                                             description: "美国大学生数学建模竞赛（MCM/ICM），简称“美赛”，由美国数学及其应用联合会主办，是最高的国际性数学建模竞赛，也是世界范围内最具影响力的数学建模竞赛，一般也指数学建模竞赛。注意要三人组队。",
-                                            suitableColleges: ['软件学院','计算机学院','信息学院','理学院'],
-                                            tags: ['算法','大数据','创新']
+                                            suitableColleges: ['软件学院', '计算机学院', '信息学院', '理学院'],
+                                            tags: ['算法', '大数据', '创新']
                                         }
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'竞赛内容还在完善，如果大家也有了解可以投稿或者直接联系群主~'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '竞赛内容还在完善，如果大家也有了解可以投稿或者直接联系群主~'
                                     }
                                 ]
                             }
@@ -1686,7 +1824,7 @@ export const PAGE_CONFIG: Group[] = [
                 ],
                 contributors: []
             },
-             {
+            {
                 title: "选调",
                 last_update: "2024年9月22日",
                 name: "SelectedAssignment",
@@ -1849,8 +1987,8 @@ export const getPageURLs = (): LinkListItem[] => {
                 console.log(page.title);
                 // 格式化URL并添加到数组中
                 pageURLs.push({
-                    text:page.title,
-                    link:`https://neuwiki.top/read/${page.name}`
+                    text: page.title,
+                    link: `https://neuwiki.top/read/${page.name}`
                 });
 
             }
@@ -1921,106 +2059,102 @@ export function findAdjacentPageInGroups(currentPageName: string, direction: 'ne
 export function searchInGroups(groups: any[], keyword: string) {
     const results: any[] = [];
     const regex = new RegExp(keyword, 'i'); // 忽略大小写模糊搜索
-  
+
     // 遍历所有 Group
     groups.forEach(group => {
-      group.pages.forEach((page: any) => {
-        // 搜索 Page 层级
-        searchInPage(page, regex, results);
-      });
+        group.pages.forEach((page: any) => {
+            // 搜索 Page 层级
+            searchInPage(page, regex, results);
+        });
     });
-  
+
     return results;
-  }
-  
-  /**
-   * 搜索 Page
-   */
-  function searchInPage(page: any, regex: RegExp, results: any[]) {
+}
+
+/**
+ * 搜索 Page
+ */
+function searchInPage(page: any, regex: RegExp, results: any[]) {
     // 搜索 Page 的 title 和 description
     searchInString(page.title, 'Page Title', page, regex, results);
     searchInString(page.description, 'Page Description', page, regex, results);
-  
+
     page.sections.forEach((section: any) => {
-      // 搜索 Section
-      searchInString(section.title, 'Section Title', page, regex, results);
-  
-      section.subsections.forEach((subsection: any) => {
-        // 搜索 SubSection
-        searchInString(subsection.title, 'SubSection Title', page, regex, results);
-  
-        subsection.contents.forEach((content: any) => {
-          searchInContent(content, page, section, subsection, regex, results);
+        // 搜索 Section
+        searchInString(section.title, 'Section Title', page, regex, results);
+
+        section.subsections.forEach((subsection: any) => {
+            // 搜索 SubSection
+            searchInString(subsection.title, 'SubSection Title', page, regex, results);
+
+            subsection.contents.forEach((content: any) => {
+                searchInContent(content, page, section, subsection, regex, results);
+            });
         });
-      });
     });
-  }
-  
-  /**
-   * 搜索 Content
-   */
-  function searchInContent(
+}
+
+/**
+ * 搜索 Content
+ */
+function searchInContent(
     content: any,
     page: any,
     section: any,
     subsection: any,
     regex: RegExp,
     results: any[]
-  ) {
+) {
     switch (content.type) {
-      case 'NWDescription':
-        searchInString(content.text, 'NWDescription', page, regex, results, section, subsection);
-        break;
-      case 'NWImage':
-        searchInString(content.src, 'NWImage src', page, regex, results, section, subsection);
-        break;
-      case 'NWList':
-        content.data.forEach((item: string) => {
-          searchInString(item, 'NWList Item', page, regex, results, section, subsection);
-        });
-        break;
-      case 'NWTips':
-        searchInString(content.title, 'NWTips Title', page, regex, results, section, subsection);
-        searchInString(content.data, 'NWTips Data', page, regex, results, section, subsection);
-        break;
-      case 'NWDialogue':
-        searchInString(content.q, 'NWDialogue Question', page, regex, results, section, subsection);
-        searchInString(content.a, 'NWDialogue Answer', page, regex, results, section, subsection);
-        break;
-      case 'NWPersonalIntro':
-        searchInString(content.name, 'NWPersonalIntro Name', page, regex, results, section, subsection);
-        searchInString(content.introduction, 'NWPersonalIntro Introduction', page, regex, results, section, subsection);
-        (content.achievements || []).forEach((achievement: string) => {
-          searchInString(achievement, 'NWPersonalIntro Achievement', page, regex, results, section, subsection);
-        });
-        break;
-      case 'NWMotto':
-        searchInString(content.message, 'NWMotto Message', page, regex, results, section, subsection);
-        break;
-      case 'NWProblemsRank':
-        content.problems.forEach((problem: any) => {
-          searchInString(problem.description, 'NWProblemsRank Problem Description', page, regex, results, section, subsection);
-        });
-        break;
-      case 'NWSiteContributors':
-        content.site_sitecontributors.forEach((contributor: any) => {
-          searchInString(contributor.username, 'NWSiteContributors Username', page, regex, results, section, subsection);
-          searchInString(contributor.bio, 'NWSiteContributors Bio', page, regex, results, section, subsection);
-        });
-        break;
-      case NWComponent.NWClubIntro:
-        searchInString(content.club.description, 'NWSiteContributors Username', page, regex, results, section, subsection);
-        searchInString(content.club.name, 'NWSiteContributors Username', page, regex, results, section, subsection);
-        break;
-      default:
-        break;
+        case 'NWDescription':
+            searchInString(content.text, 'NWDescription', page, regex, results, section, subsection);
+            break;
+        case 'NWImage':
+            searchInString(content.src, 'NWImage src', page, regex, results, section, subsection);
+            break;
+        case 'NWList':
+            content.data.forEach((item: string) => {
+                searchInString(item, 'NWList Item', page, regex, results, section, subsection);
+            });
+            break;
+        case 'NWTips':
+            searchInString(content.title, 'NWTips Title', page, regex, results, section, subsection);
+            searchInString(content.data, 'NWTips Data', page, regex, results, section, subsection);
+            break;
+        case 'NWDialogue':
+            searchInString(content.q, 'NWDialogue Question', page, regex, results, section, subsection);
+            searchInString(content.a, 'NWDialogue Answer', page, regex, results, section, subsection);
+            break;
+        case 'NWPersonalIntro':
+            searchInString(content.name, 'NWPersonalIntro Name', page, regex, results, section, subsection);
+            searchInString(content.introduction, 'NWPersonalIntro Introduction', page, regex, results, section, subsection);
+            (content.achievements || []).forEach((achievement: string) => {
+                searchInString(achievement, 'NWPersonalIntro Achievement', page, regex, results, section, subsection);
+            });
+            break;
+        case 'NWMotto':
+            searchInString(content.message, 'NWMotto Message', page, regex, results, section, subsection);
+            break;
+        case 'NWProblemsRank':
+            content.problems.forEach((problem: any) => {
+                searchInString(problem.description, 'NWProblemsRank Problem Description', page, regex, results, section, subsection);
+            });
+            break;
+        case 'NWSiteContributors':
+            content.site_sitecontributors.forEach((contributor: any) => {
+                searchInString(contributor.username, 'NWSiteContributors Username', page, regex, results, section, subsection);
+                searchInString(contributor.bio, 'NWSiteContributors Bio', page, regex, results, section, subsection);
+            });
+            break;
+        default:
+            break;
     }
-  }
-  
-  /**
-   * 搜索字符串并保存结果
-   */
-  function searchInString(
+}
+
+/**
+ * 搜索字符串并保存结果
+ */
+function searchInString(
     text: string | undefined,
     foundInType: string,
     page: any,
@@ -2028,24 +2162,24 @@ export function searchInGroups(groups: any[], keyword: string) {
     results: any[],
     section?: any,
     subsection?: any
-  ) {
+) {
     if (!text) return;
-  
+
     const match = text.match(regex);
     if (match) {
-      const startIdx = Math.max(0, match.index! - 20);
-      const endIdx = Math.min(text.length, match.index! + match[0].length + 20);
-      const snippet = `...${text.slice(startIdx, endIdx)}...`;
-  
-      results.push({
-        pageTitle: page.title,
-        pageName:page.name,
-        sectionTitle: section?.title,
-        subSectionTitle: subsection?.title,
-        foundInType,
-        snippet
-      });
+        const startIdx = Math.max(0, match.index! - 20);
+        const endIdx = Math.min(text.length, match.index! + match[0].length + 20);
+        const snippet = `...${text.slice(startIdx, endIdx)}...`;
+
+        results.push({
+            pageTitle: page.title,
+            pageName: page.name,
+            sectionTitle: section?.title,
+            subSectionTitle: subsection?.title,
+            foundInType,
+            snippet
+        });
     }
-  }
-  
-  
+}
+
+

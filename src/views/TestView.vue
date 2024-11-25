@@ -1,18 +1,16 @@
 <template>
-    <NWClubIntro
-      :name="clubName"
-      :logo="clubLogo"
-      :description="clubDescription"
-      :qqGroup="clubQqGroup"
-    />
+  <div class="container mx-auto px-4">
+    <h1 class="text-3xl font-bold mb-6 text-center">My Photo Album</h1>
+    <NWPhotoAlbum :photos="myPhotos" />
+  </div>
 </template>
 
-<script setup>
-import { NWClubIntro } from '@/components';
-import { ref } from 'vue';
-
-const clubName = ref('Vue.js爱好者俱乐部');
-const clubLogo = ref('path/to/your/logo.png');
-const clubDescription = ref('这里是Vue.js爱好者的聚集地，欢迎加入交流。');
-const clubQqGroup = ref('123456789');
+<script setup lang="ts">
+import { NWPhotoAlbum } from '@/components';
+const myPhotos = [
+  { url: '/aning.jpg', alt: 'Mountain landscape' },
+  { url: '/aning.jpg', alt: 'River in forest' },
+  { url: '/aning.jpg', alt: 'Cloudy mountain peaks' },
+  // ... 添加更多照片
+]
 </script>
