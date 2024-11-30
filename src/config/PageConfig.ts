@@ -111,11 +111,29 @@ export const PAGE_CONFIG: Group[] = [
                                             username: "小明",
                                             avatar: "https://image.neuwiki.top/image/xiaoming.jpg",
                                             contributionType: "内容与开发",
-                                            contribution: "工程硕博”保研、项目开发",
+                                            contribution: "“工程硕博”保研、项目开发",
                                             bio: "软件20级本科生、24级研究生。",
                                             qq: '1294892474',
                                             wechat: '15565828536',
                                             email: undefined
+                                        }, {
+                                            username: "Denglin",
+                                            avatar: "https://image.neuwiki.top/image/linke.jpg",
+                                            contributionType: "内容完善",
+                                            contribution: "竞赛保研",
+                                            bio: "计算机20级本科生，折桨大学24级研究生。",
+                                            qq: '980376887',
+                                            wechat: undefined,
+                                            email: undefined
+                                        }, {
+                                            username: "逍遥飘雪",
+                                            avatar: "https://image.neuwiki.top/image/xiaoyaopiaoxue.jpg",
+                                            contributionType: "内容完善",
+                                            contribution: "竞赛保研、机械学院相关内容",
+                                            bio: "机械工程与自动化学院智能制造工程专业21级本科生。",
+                                            qq: undefined,
+                                            wechat: undefined,
+                                            email: 'guo.yunzhe@outlook.com'
                                         }
                                     ]
                                 }
@@ -2095,6 +2113,12 @@ export const PAGE_CONFIG: Group[] = [
                     {
                         name: "小明",
                         avatar_url: "https://image.neuwiki.top/image/xiaoming.jpg"
+                    },{
+                        name: "Denglin",
+                        avatar_url: "https://image.neuwiki.top/image/linke.jpg"
+                    },{
+                        name: "逍遥飘雪",
+                        avatar_url: "https://image.neuwiki.top/image/xiaoyaopiaoxue.jpg"
                     }
                 ]
             }, {
@@ -2390,7 +2414,7 @@ export const PAGE_CONFIG: Group[] = [
                                         type:NWComponent.NWTips,
                                         title:'提示',
                                         case:'info',
-                                        data:'获得转出名额后，仍需获得拟转入学院专业的转入名额，也就是我们俗称的**双选**，你不仅要确保你能从学院转出，也要确定你想要去的学院同意接收你。'
+                                        data:'获得转出名额后，仍需获得拟转入学院专业的转入名额，也就是我们俗称的双选，你不仅要确保你能从学院转出，也要确定你想要去的学院同意接收你。'
                                     }
                                 ]
                             },{
@@ -2477,7 +2501,10 @@ export const PAGE_CONFIG: Group[] = [
                         ]
                     }
                 ],
-                contributors: []
+                contributors: [{
+                    name: "逍遥飘雪",
+                    avatar_url: "https://image.neuwiki.top/image/xiaoyaopiaoxue.jpg"
+                }]
             }
         ]
     }
