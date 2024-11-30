@@ -118,8 +118,16 @@ interface NWPhotoAlbum{
     type:NWComponent.NWPhotoAlbum,
     photos:PhotoAlbumItem[]
 }
-
-export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList|NWClubIntro|NWPhotoAlbum;
+interface NWEquation{
+    type:NWComponent.NWEquation,
+    equation:String
+}
+interface NWTable{
+    type:NWComponent.NWTable,
+    title:String,
+    data:String[][]
+}
+export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto|NWSiteContributors|NWCompetition|NWLinkList|NWClubIntro|NWPhotoAlbum|NWEquation|NWTable;
 
 export interface SubSection {
     title: string | undefined,

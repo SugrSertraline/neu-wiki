@@ -194,7 +194,7 @@ import { getPageByName, PAGE_CONFIG, findAdjacentPageInGroups } from '@/config/P
 import type { Content, Page, Section, SubSection } from '@/types/interface';
 
 
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro, NWPhotoAlbum } from '@/components';
+import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro, NWPhotoAlbum, NWEquation, NWTable } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -399,12 +399,21 @@ const dynamicComponent = (content: Content) => {
 
     case 'NWClubIntro':
       return h(NWClubIntro, {
-        ClubProps:content.club
+        ClubProps: content.club
       })
 
     case 'NWPhotoAlbum':
-      return h(NWPhotoAlbum,{
-        photos:content.photos
+      return h(NWPhotoAlbum, {
+        photos: content.photos
+      })
+    case NWComponent.NWEquation:
+      return h(NWEquation, {
+        equation: content.equation
+      })
+    case NWComponent.NWTable:
+      return h(NWTable, {
+        title:content.title,
+        data:content.data
       })
   }
 

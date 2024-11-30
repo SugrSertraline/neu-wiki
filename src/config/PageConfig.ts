@@ -1754,7 +1754,8 @@ export const PAGE_CONFIG: Group[] = [
                                         data:'在后续阶段需要的所有材料，务必在正式报名阶段提交完整。'
                                     }
                                 ]
-                            },{
+                            },
+                            {
                                 title: '资格审查',
                                 contents: [{
                                     type:NWComponent.NWDescription,
@@ -1793,8 +1794,8 @@ export const PAGE_CONFIG: Group[] = [
                                         type:NWComponent.NWDescription,
                                         text:'在公示最终前，创新创业学院会组织进行综合考核，根据综合考核成绩和专业成绩（与排名和绩点相关）计算综合排名。综合排名成绩的计算方式为：'
                                     },{
-                                        type:NWComponent.NWDescription,
-                                        text:'综合排名成绩=专业成绩（满分70分）+综合考核成绩（满分30分）'
+                                        type:NWComponent.NWEquation,
+                                        equation:'\\text{综合排名成绩} = \\text{专业成绩（满分70分）} +\\text{综合考核成绩（满分30分）}'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'如出现最终“综合排名成绩”相同的情况，则优先考察相应学生“创新能力”，其次考察“专业成绩”，并以此为依据进行排名。\\接下来，分别介绍专业成绩和综合考核成绩的计算方式。'
@@ -1805,9 +1806,164 @@ export const PAGE_CONFIG: Group[] = [
                                         type:NWComponent.NWDescription,
                                         text:'由于创新特长类推免是全校范围竞争，创新创业学院为了避免不同学院之间人数、给分等因素差距过大，设计了一套算法来计算专业成绩。'
                                     },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'\\text{专业成绩} = M + \\frac{\\text{本人绩点} - \\text{专业第50\\%学生绩点} }{\\text{专业第1学生绩点} - \\text{专业第50\\%学生绩点}} × j'
+                                    },{
                                         type:NWComponent.NWDescription,
-                                        text:'今天太累了，写不完了，明天继续写'
+                                        text:'M 为成绩基础分，为当年所有参加创新特长生推免考核学生中的绩点成绩的最低分（70 分制）。'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'j 为加权系数，当年参加创新特长生推免考核的学生涉及N个专业，我们假设：'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'N个专业分别为： A_1，A_2，……，A_N'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'每个专业报名人数为： a_i（i=1，2，……，n）'
                                     },
+                                    {
+                                        type:NWComponent.NWDescription,
+                                        text:'参加创新特长生推免考核的学生绩点采用70分制，我们现在以第N个专业为例，那么该专业中：'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'参加创新特长生推免考核学生的绩点成绩最高分为：P_N'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'参加创新特长生推免考核学生的绩点成绩最低分为：Q_N'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'该专业分数的极差为：R_N=P_N-Q_N'
+                                    },
+                                    {
+                                        type:NWComponent.NWDescription,
+                                        text:'那么j表示当年所有参加创新特长生推免考核学生专业成绩换算中的一个加权求和的系数，具体公式如下：'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'j = \\frac{\\sum_{i=1}^{N}(R_i × a_i)}{\\sum_{i=1}^{N} a_i}'
+                                    }
+                                    ,{
+                                        type:NWComponent.NWDescription,
+                                        text:'以上“专业成绩计算办法”中的各项绩点及“专业成绩”最终计算结果均为小数点后按四舍五入保留四位小数。'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'**综合考核成绩**'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'综合考核成绩包括三个部分：'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'综合考核成绩 = 面试成绩（满分10分）+创新能力成绩（满分15分）+德育成绩（满分5分）'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'**面试成绩**主要内容如下：'
+                                    },{
+                                        type:NWComponent.NWList,
+                                        order:false,
+                                        data:['创新创业学院统一组织面试，并分组进行考核，每组对应5-10名专家考核。','考核内容主要对学生掌握的知识、学术研究能力、创新创业经历等方面进行评价。','参考往年经验，面试考核需要准备ppt。ppt内容主要为自己的创新经历和个人介绍等。']
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'**创新能力成绩**主要内容如下：'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'可以提交1~2项创新创业竞赛、项目国家级（含）以上获奖证明。具体计算方式如下：'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'创新能力成绩 = (a+b - a \\times b) \\times 15'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'其中，a、b 为提交的创新创业类竞赛、项目获奖系数（只提交1项证明时，b=0）。具体系数参考下列各表。'
+                                    },{
+                                        type:NWComponent.NWTable,
+                                        title:'七星级竞赛国家级（国际级）',
+                                        data:[
+                                            ['奖项','系数'],
+                                            ['金、一等奖及以上','1'],
+                                            ['银、二等奖','0.6'],
+                                            ['铜、三等奖','0.5']
+                                        ]
+                                    },{
+                                        type:NWComponent.NWTable,
+                                        title:'六星级竞赛国家级（国际级）',
+                                        data:[
+                                            ['奖项','系数'],
+                                            ['金、一等奖及以上','0.9'],
+                                            ['银、二等奖','0.5'],
+                                            ['铜、三等奖','0.4']
+                                        ]
+                                    },{
+                                        type:NWComponent.NWTable,
+                                        title:'五星级竞赛国家级（国际级）',
+                                        data:[
+                                            ['奖项','系数'],
+                                            ['金、一等奖及以上','0.6'],
+                                            ['银、二等奖','0.4'],
+                                            ['铜、三等奖','0.3']
+                                        ]
+                                    },{
+                                        type:NWComponent.NWTable,
+                                        title:'四星级竞赛国家级（国际级）',
+                                        data:[
+                                            ['奖项','系数'],
+                                            ['金、一等奖及以上','0.3'],
+                                            ['银、二等奖','0.2'],
+                                            ['铜、三等奖','0.1']
+                                        ]
+                                    },{
+                                        type:NWComponent.NWTable,
+                                        title:'三星级竞赛国家级',
+                                        data:[
+                                            ['奖项','系数'],
+                                            ['特等奖','0.5'],
+                                            ['一等奖','0.3']
+                                        ]
+                                    },{
+                                        type:NWComponent.NWTable,
+                                        title:'国家大学生创新创业训练项目',
+                                        data:[
+                                            ['奖项','系数'],
+                                            ['优秀','0.7'],
+                                            ['良好','0.3']
+                                        ]
+                                    },{
+                                        type:NWComponent.NWTips,
+                                        title:'提示',
+                                        case:'info',
+                                        data:'特别的，这里的竞赛可以提交以非主力队员身份参赛的获奖证明，但计分时系数减半。'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'我们来举个例子，假如凭借优秀大创项目参与创新特长类推免（系数0.7），又额外提交了一个不是主力队员的七星级竞赛的二等奖（系数 0.6 / 2），那么创新能力成绩就是：'
+                                    },{
+                                        type:NWComponent.NWEquation,
+                                        equation:'分数  = ( 0.7 + (0.6 / 2) - 0.7 \\times (0.6 / 2)) \\times 15 = 0.79 \\times 15 = 11.85'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'**德育成绩**主要内容如下：'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'德育考察重点基于创新创业教育相关荣誉、校级创新创业校园文化和实践活动奖励进行评价。\\所有具备遴选资格的学生**均可获得**德育**基础分4分**，各项德育加分总和上限为1分。具体加分规则如下：'
+                                    },{
+                                        type:NWComponent.NWList,
+                                        order:false,
+                                        data:['中国青少年创新奖获得者：基础分+1 分','学生创新创业“校长奖章”获得者：基础分+0.7 分','创新创业优秀学生干部获得者：基础分+0.3 分','创新创业校园文化和实践活动校级一等奖为基础分+0.2、校级二等奖为基础分+0.15、校级三等奖为基础分+0.1']
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'其中，创新创业校园文化和实践活动主要包括**大学生创意节、大学生科普节、大学生创业节和“责任、立德、成才”素质拓展训练营中的校级活动**。\\校级创新创业校园文化和实践活动的奖励**最多申报3项**。\\同一作品或同一活动**只能取高计算1次，不得重复计算**；校级创新创业校园文化和实践活动申报的作品或活动不与其它（“创新能力成绩”等）申报内容重复计算；“创新创业优秀学生干部”荣誉只能计算1 次。'
+                                    },{
+                                        type:NWComponent.NWDescription,
+                                        text:'如果在创新创业教育过程出现如下情况，将实施相应处罚制度：'
+                                    },{
+                                        type:NWComponent.NWList,
+                                        order:false,
+                                        data:['在参加创新创业实践活动过程中发生作弊、抄袭等学术不端或造成重大负面影响者，直接取消学生创新特长生推免考核资格','在创新创业教育过程中造成安全事故者，直接取消学生创新特长生推免考核资格','在创新创业教育过程中被安全检查通报（未达到安全事故）者，依据后果严重程度，基础分减0.2~1分']
+                                    }
+                                ]
+                            },{
+                                title: '名单公布',
+                                contents: [
+                                    {
+                                        type:NWComponent.NWDescription,
+                                        text:'在考核结束后的一段时间内，创新创业学院会在官网公示综合排名名单，此时处于名额范围内的同学就可以稳稳拿到名额了。\\在边缘的同学也不要灰心，按照往年经验，出现过学校其他类别名额剩余返给创新特长类的情形，这样会按照名单排序往后递增。\\最后，祝各位学弟学妹们保研之路顺利！'
+                                    }
                                 ]
                             }
                         ]

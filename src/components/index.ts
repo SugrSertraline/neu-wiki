@@ -14,4 +14,6 @@ export * from './NWProblemsRank';
 export * from './NWCompetition';
 export * from './NWClubIntro';
 export * from './NWLinkList';
-export * from './NWPhotoAlbum'
+export * from './NWPhotoAlbum';
+export * from './NWEquation';
+export * from './NWTable'

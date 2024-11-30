@@ -43,18 +43,52 @@ export function numberToChinese(num: number): string {
   }
 
 
-  export function stringToHtml(text:string):string{
-    // 替换加粗文本
-    let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // export function stringToHtml(text:string):string{
+  //   // 替换加粗文本
+  //   let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
+  //   // 替换超链接
+  //   html = html.replace(/\[(.*?)\]\((.*?)\)/g, (match, p1, p2) => {
+  //       return `<a href="${p2}" style="color: rgb(54, 173, 106);" target="_blank">${p1}</a>`;
+  //   });
+  //   html = html.replace(/\\/g, '<br/>');
+  //   // 返回HTML字符串
+  //   return html;
+  // }
+  export function stringToHtml(text: string): string {
+    // 用正则匹配出 $$ 开始 $$ 结束的部分
+    const formulaRegex = /\$\$(.*?)\$\$/g;
+    let formulas: string[] = [];
+    let tempText = text;
+  
+    // 提取公式部分并替换为占位符
+    tempText = tempText.replace(formulaRegex, (match) => {
+      formulas.push(match);  // 保存公式
+      return `{{formula-${formulas.length - 1}}}`;  // 使用占位符替代公式
+    });
+  
+    // 替换加粗文本
+    let html = tempText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  
     // 替换超链接
     html = html.replace(/\[(.*?)\]\((.*?)\)/g, (match, p1, p2) => {
-        return `<a href="${p2}" style="color: rgb(54, 173, 106);" target="_blank">${p1}</a>`;
+      return `<a href="${p2}" style="color: rgb(54, 173, 106); line-height: 16px;" target="_blank">${p1}</a>`;
     });
+    
+  
+    // 替换换行符
     html = html.replace(/\\/g, '<br/>');
-    // 返回HTML字符串
+  
+    // 恢复公式内容到占位符的位置
+    formulas.forEach((formula, index) => {
+      const formulaPlaceholder = `{{formula-${index}}}`;
+      html = html.replace(formulaPlaceholder, formula);  // 恢复公式
+    });
+  
+    // 返回最终的HTML字符串
     return html;
   }
+  
   // cookie.ts
 export function setCookie(name: string, value: string, days: number): void {
   let expires = "";

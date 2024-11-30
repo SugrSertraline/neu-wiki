@@ -1,3 +1,5 @@
+import type { NWTable } from "@/components";
+
 export enum NWComponent{
     NWDescription='NWDescription',
     NWImage='NWImage',
@@ -11,5 +13,7 @@ export enum NWComponent{
     NWCompetition='NWCompetition',
     NWLinkList='NWLinkList',
     NWClubIntro='NWClubIntro',
-    NWPhotoAlbum='NWPhotoAlbum'
+    NWPhotoAlbum='NWPhotoAlbum',
+    NWEquation='NWEquation',
+    NWTable='NWTable'
 }
