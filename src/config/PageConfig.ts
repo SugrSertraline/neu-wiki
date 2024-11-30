@@ -1995,35 +1995,35 @@ export const PAGE_CONFIG: Group[] = [
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154654864.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154654864.png'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'实报名59人的学院分布如下，12个学院中，排名前三的是机械工程与自动化学院、信息科学与工程学院、计算机科学与工程学院，分别为21、8、6，占总体35%、13%、10%。'
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154728276.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154728276.png'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'各竞赛人数分布如下。'
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154748231.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154748231.png'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'按照学院分类如下。'
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154810115.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154810115.png'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'各专业报名等级与竞赛等级分布如下。'
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154815417.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154815417.png'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'**结果分析**'
@@ -2033,14 +2033,14 @@ export const PAGE_CONFIG: Group[] = [
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154823190.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154823190.png'
                                     },{
                                         type:NWComponent.NWDescription,
                                         text:'没有六星国家一等奖保研成功的人中2位为双五星并有0.35、0.5的德育加分。双五星以下保研成功（名额递补）2人。'
                                     },{
                                         type:NWComponent.NWImage,
                                         width:600,
-                                        src:'/image-20240917154827133.png'
+                                        src:'/https://image.neuwiki.top/image/image-20240917154827133.png'
                                     }
                                 ]
                             }
@@ -2410,7 +2410,7 @@ export const PAGE_CONFIG: Group[] = [
                                 title: undefined,
                                 contents: [{
                                     type:NWComponent.NWDescription,
-                                    text:'推免文件可以参考[机械工程与自动化学院推荐 2021 级优秀应届本科毕业生免试攻读研究生工作实施细则](/da4defb8-d84c-bf01-830f-d07629397c52.pdf)。\\推荐使用[机械学院保研计算器](https://www.momofish.top/app/JXBY/)。整体共分加权平均学生成绩、创新能力、综合素质测评、面试四项。'
+                                    text:'推免文件可以参考[机械工程与自动化学院推荐 2021 级优秀应届本科毕业生免试攻读研究生工作实施细则](https://image.neuwiki.top/file/da4defb8-d84c-bf01-830f-d07629397c52.pdf)。\\推荐使用[机械学院保研计算器](https://www.momofish.top/app/JXBY/)。整体共分加权平均学生成绩、创新能力、综合素质测评、面试四项。'
                                 },{
                                     type:NWComponent.NWTable,
                                     title:'分数占比',
