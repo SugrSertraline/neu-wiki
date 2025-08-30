@@ -67,7 +67,6 @@ const buttons: ButtonItem[] = [
     { label: '首页', url: '/',value:'index', handler: () => routerTo('/') },
     { label: '阅读', url: '/read',value:'read',  handler: () => routerTo('/read') },
     { label: '分享', url: undefined,value:'share',  handler: () => copyUrl() },
-    { label: '投稿或建议', url: undefined,value:'advice',  handler: () => openLink('https://docs.qq.com/form/page/DSUZ1Wk1LR0hicmdu') },
     { label: 'Github', url: undefined,value:'Github',  handler: () => openLink('https://github.com/SugrSertraline/neu-wiki') }
 
 ]
