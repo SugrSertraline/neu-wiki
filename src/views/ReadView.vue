@@ -1,25 +1,18 @@
 <template>
-
-  <!-- sm,md,lg,xl,2xl 为断点的不同大小-->
-
-  <!-- 侧边导航栏，当页面小于lg时，用来展示的drawer -->
   <n-drawer :default-width="300" v-model:show="configuration.if_drawer" placement="left">
     <n-drawer-content title="目录">
-      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange"
-        :data="configuration.menu_data" />
+      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </n-drawer-content>
   </n-drawer>
 
   <div
     class="w-64 hidden bg-gray-50 lg:block xl:w-100 shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
-      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange"
-        :data="configuration.menu_data" />
+      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </div>
   </div>
 
   <div class="flex-1 overflow-hidden px-4 md:px-8 lg:px-12 pt-8 lg:ml-64 xl:ml-100 2xl:mx-100">
-    <!-- 当页面变为lg以下时的头部菜单按钮 -->
     <div class="w-full z-10 bg-white lg:hidden flex fixed top-16 left-0 h-12 border-y">
       <div class="h-full flex items-center ml-8 cursor-pointer" @click="configuration.if_drawer = true">
         <n-button type="quaternary"><template #icon>
@@ -46,7 +39,6 @@
     </div>
 
 
-    <!-- 页面的标题和内容 -->
     <div class="mt-8 lg:mt-0">
       <div class="flex flex-col lg:flex-row items-center">
         <div class="text-4xl font-bold text-gray-800 mx-4 ">
@@ -64,7 +56,7 @@
 
       </n-result>
 
-      <div v-else class="xl:px-8 2xl:px-20 pb-2">
+      <div v-else class="px-2 pb-2">
         <component v-if="configuration.page_data?.description" :is="dynamicComponent({
           type: NWComponent.NWDescription,
           text: configuration.page_data.description
@@ -83,7 +75,6 @@
           :id="'section' + configuration.page_data.sections.length"
           :title="calPageSection('关键内容贡献者', 1, configuration.page_data.sections.length)">
 
-          <!-- 内容贡献者组件 -->
           <div class="w-full flex flex-col md:flex-row justify-start flex-wrap my-4 ">
             <div v-for="(contributor, index) in configuration.page_data.contributors" :key="index"
               class="h-48 w-full md:w-1/2 p-2 box-border">
@@ -105,55 +96,37 @@
 
         <div class="flex items-center justify-between w-full max-w-4xl  mx-auto px-4 py-6">
           <n-button type="success" class="w-1/2  md:w-1/3 mr-2" @click="changePageByButton('pre')" icon-placement="left"
-            secondary strong :disabled="findAdjacentPageInGroups(configuration.current_page) == 'start'">
+            secondary strong :disabled="configuration.prevPageInfo === 'start'">
             <template #icon>
               <n-icon>
                 <ChevronLeft />
               </n-icon>
             </template>
             {{
-              findAdjacentPageInGroups(configuration.current_page) == 'start' ? "当前是第一页" :
-                getPageByName(findAdjacentPageInGroups(configuration.current_page))?.title
+              configuration.prevPageInfo === 'start' ? "当前是第一页" :
+              (configuration.prevPageInfo as PageMeta)?.title
             }}
           </n-button>
 
           <div class="hidden lg:block">
-            {{ getPageByName(configuration.current_page)?.title }}
+            {{ configuration.page_data?.title }}
           </div>
           <n-button type="info" class="w-1/2  md:w-1/3" @click="changePageByButton('next')" icon-placement="right"
-            secondary strong :disabled="findAdjacentPageInGroups(configuration.current_page, 'next') == 'end'">
+            secondary strong :disabled="configuration.nextPageInfo === 'end'">
             <template #icon>
               <n-icon>
                 <ChevronRight />
               </n-icon>
             </template>
             {{
-              findAdjacentPageInGroups(configuration.current_page, 'next') == 'end' ? "当前是最后页" :
-                getPageByName(findAdjacentPageInGroups(configuration.current_page, 'next'))?.title
+              configuration.nextPageInfo === 'end' ? "当前是最后页" :
+              (configuration.nextPageInfo as PageMeta)?.title
             }}
           </n-button>
         </div>
 
+
         <div class="w-full flex flex-col justify-center items-center">
-          <!-- <div class="w-full px-8 text-base flex justify-center items-center">
-            您认为此篇文章的内容如何？
-            <n-button secondary type="success" class="mx-2 w-32">
-              <template #icon>
-                <n-icon>
-                  <ThumbsUpRegular />
-                </n-icon>
-              </template>
-              推荐
-            </n-button>
-            <n-button secondary type="warning" class="mx-2 w-32">
-              <template #icon>
-                <n-icon>
-                  <ThumbsDownRegular />
-                </n-icon>
-              </template>
-              不推荐
-            </n-button>
-          </div> -->
           <NWCommit :commits="commits" v-model="commit_content" @buttonClick="handleAddCommit" />
         </div>
         <div class="flex justify-center">
@@ -177,24 +150,30 @@
       </n-anchor>
     </div>
   </div>
-
-
-
-
-
 </template>
 
 <script lang="ts" setup>
-import { ref, inject, type Ref, onMounted, h, watch, computed, nextTick } from 'vue';
+import { ref, inject, type Ref, onMounted, h, watch, nextTick } from 'vue';
 import { MenuOutline, ChevronUpOutline } from '@vicons/ionicons5';
-import { ThumbsUpRegular, ThumbsDownRegular, ChevronLeft, ChevronRight } from '@vicons/fa';
+import { ChevronLeft, ChevronRight } from '@vicons/fa';
 
+// 导入页面服务
+import {
+  buildMenuConfig,
+  getPageByName,
+  findAdjacentPage,
+  getPageInfo,
+  preloadAdjacentPages,
+  getAllPageURLs
+} from '@/services/pageService';
+import type { Content, Page, Section, PageMeta } from '@/types/interface';
 
-import { getPageByName, PAGE_CONFIG, findAdjacentPageInGroups } from '@/config/PageConfig';
-import type { Content, Page, Section, SubSection } from '@/types/interface';
-
-
-import { NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips, NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank, NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro, NWPhotoAlbum, NWEquation, NWTable } from '@/components';
+import {
+  NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips,
+  NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank,
+  NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro,
+  NWPhotoAlbum, NWEquation, NWTable
+} from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
 import { NWComponent } from '@/types/enum';
@@ -205,16 +184,18 @@ import type { Commit } from '@/components/NWCommit/NWCommitComponent.vue';
 
 const message = useMessage();
 const route = useRoute();
-
-// 获取滚动轴所在的容器
 const contentRef: any = inject('contentRef');
 
-
+// 配置状态接口
 interface Configuration {
-  if_drawer: boolean,
-  current_page: string | undefined,
-  page_data: Page,
-  menu_data: any[],
+  if_drawer: boolean;
+  current_page: string | undefined;
+  page_data: Page;
+  menu_data: any[];
+  prevPageInfo: PageMeta | null | 'start';
+  nextPageInfo: PageMeta | null | 'end';
+  linkListData: Array<{ text: string; link: string }>;
+  linkListLoading: boolean;
 }
 
 const configuration: Ref<Configuration> = ref({
@@ -229,132 +210,199 @@ const configuration: Ref<Configuration> = ref({
     contributors: []
   },
   menu_data: [],
+  prevPageInfo: null,
+  nextPageInfo: null,
+  linkListData: [],
+  linkListLoading: false
 });
+
+const commit_content = ref('');
+const commits = ref<any[]>([]);
+
+// ==================== 菜单相关 ====================
 
 const handleMenuChange = (key: string, item: MenuOption) => {
   configuration.value.if_drawer = false;
   setCookie('page', key, 7);
   configuration.value.current_page = key;
-}
+};
 
+const loadMenuConfig = async () => {
+  configuration.value.menu_data = await buildMenuConfig();
+};
 
+// ==================== 链接列表相关 ====================
 
-
-const loadMenuConfig = () => {
-  configuration.value.menu_data.splice(0, configuration.value.menu_data.length);
-  PAGE_CONFIG.forEach((group) => {
-    let pages: any = [];
-    group.pages.forEach((page) => {
-      pages.push({
-        label: page.title,
-        key: page.name
-      })
-    })
-    configuration.value.menu_data.push({
-      type: 'group',
-      label: group.title,
-      key: group.name,
-      children: pages
-    })
-  })
-}
-const commit_content = ref('');  // 评论的内容
-
-const commits = ref<any[]>([]);
-
-const loadCommits = async () => {
-  if (!configuration.value.current_page)
-    return;
-  const temp_commits: Commit[] = await readApi.getCommit(configuration.value.current_page);
-  commits.value.splice(0, commits.value.length);
-  temp_commits.forEach(temp_commit => commits.value.push({
-    id: temp_commit.id,
-    content: temp_commit.content,
-    time: temp_commit.time
-  }))
-}
-const loadPageConfig = async (name?: string) => {
-
-  const page = getPageByName(name);
-  if (!name) {
-    return
-  }
-  if (page) {
-    configuration.value.current_page = page ? name : undefined;
-    configuration.value.page_data = page;
-    await loadCommits();
-
-    // 获取当前路由的 fullPath
-    const fullPath = route.fullPath;
-
-    // 检查 fullPath 是否以 /read/ 开头
-    if (fullPath.startsWith('/read/')) {
-      // 如果已经以 /read/ 开头，检查是否符合 /read/name 的格式
-      const readPathRegex = /\/read\/([^\/]+)$/;
-      const match = fullPath.match(readPathRegex);
-
-      if (match && match[1] === name) {
-        // 如果 URL 已经符合 /read/name 的格式，不执行 window.history.replaceState
-        console.log('URL already matches the /read/name pattern, skipping history.replaceState');
-      } else {
-        // 如果 URL 不符合 /read/name 的格式，更新为符合格式的 URL
-        if (name) {
-          window.history.replaceState(null, '', `/${name.startsWith('read/') ? name : 'read/' + name}`);
-        }
-        console.log('URL did not match the /read/name pattern, updated URL');
-      }
-    } else {
-      // 如果不以 /read/ 开头，直接更新为符合格式的 URL
-      window.history.replaceState(null, '', `/read/${name}`);
-      console.log('URL did not start with /read/, updated URL');
-    }
+/**
+ * 加载所有页面链接（用于链接汇总页面）
+ */
+const loadLinkListData = async () => {
+  try {
+    configuration.value.linkListLoading = true;
+    configuration.value.linkListData = await getAllPageURLs();
+  } catch (error) {
+    console.error('Failed to load link list:', error);
+    message.error('链接列表加载失败');
+  } finally {
+    configuration.value.linkListLoading = false;
   }
 };
 
+// ==================== 评论相关 ====================
+
+const loadCommits = async () => {
+  if (!configuration.value.current_page) return;
+
+  try {
+    const temp_commits: Commit[] = await readApi.getCommit(configuration.value.current_page);
+    commits.value.splice(0, commits.value.length);
+    temp_commits.forEach(temp_commit => commits.value.push({
+      id: temp_commit.id,
+      content: temp_commit.content,
+      time: temp_commit.time
+    }));
+  } catch (error) {
+    console.error('Failed to load commits:', error);
+  }
+};
+
+const handleAddCommit = () => {
+  if (!configuration.value.current_page) return;
+
+  readApi.addCommit(configuration.value.current_page, commit_content.value);
+  commit_content.value = '';
+  message.success('评论将在审核结束后展示！');
+  loadCommits();
+};
+
+// ==================== 页面导航相关 ====================
+
+/**
+ * 更新相邻页面信息
+ */
+const updateAdjacentPageInfo = async (pageName: string | undefined) => {
+  if (!pageName) {
+    configuration.value.prevPageInfo = 'start';
+    configuration.value.nextPageInfo = 'end';
+    return;
+  }
+
+  const prevPageName = await findAdjacentPage(pageName, 'pre');
+  if (prevPageName === 'start') {
+    configuration.value.prevPageInfo = 'start';
+  } else {
+    configuration.value.prevPageInfo = await getPageInfo(prevPageName);
+  }
+
+  const nextPageName = await findAdjacentPage(pageName, 'next');
+  if (nextPageName === 'end') {
+    configuration.value.nextPageInfo = 'end';
+  } else {
+    configuration.value.nextPageInfo = await getPageInfo(nextPageName);
+  }
+};
+
+/**
+ * 检查页面是否包含链接列表组件
+ */
+const pageHasLinkList = (page: Page): boolean => {
+  for (const section of page.sections) {
+    for (const subsection of section.subsections) {
+      for (const content of subsection.contents) {
+        if (content.type === 'NWLinkList') {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+};
+
+/**
+ * 加载页面配置
+ */
+const loadPageConfig = async (name?: string) => {
+  if (!name) {
+    configuration.value.current_page = undefined;
+    return;
+  }
+
+  const page = await getPageByName(name);
+  if (page) {
+    configuration.value.current_page = name;
+    configuration.value.page_data = page;
+
+    // 异步加载评论和相邻页面信息
+    await loadCommits();
+    await updateAdjacentPageInfo(name);
+
+    // 如果页面包含链接列表组件，加载链接数据
+    if (pageHasLinkList(page)) {
+      await loadLinkListData();
+    }
+
+    // 预加载相邻页面（不阻塞主流程）
+    preloadAdjacentPages(name);
+
+    // 更新 URL
+    const fullPath = route.fullPath;
+    if (fullPath.startsWith('/read/')) {
+      const readPathRegex = /\/read\/([^\/]+)$/;
+      const match = fullPath.match(readPathRegex);
+      if (!(match && match[1] === name)) {
+        window.history.replaceState(null, '', `/read/${name}`);
+      }
+    } else {
+      window.history.replaceState(null, '', `/read/${name}`);
+    }
+  } else {
+    configuration.value.current_page = undefined;
+  }
+};
+
+const changePageByButton = (direction: 'pre' | 'next'): void => {
+  if (direction === 'pre' && configuration.value.prevPageInfo && configuration.value.prevPageInfo !== 'start') {
+    configuration.value.current_page = configuration.value.prevPageInfo.name;
+  } else if (direction === 'next' && configuration.value.nextPageInfo && configuration.value.nextPageInfo !== 'end') {
+    configuration.value.current_page = configuration.value.nextPageInfo.name;
+  }
+};
+
+// ==================== 页面渲染辅助 ====================
 
 const calUntitleSubsection = (section: Section, index: number): number => {
-  let sum: number = 0;
+  let sum = 0;
   for (let i = 0; i < index; i++) {
-    if (section.subsections[i].title == undefined) {
+    if (section.subsections[i].title === undefined) {
       sum++;
     }
   }
   return sum;
-}
+};
 
 const calPageSection = (title: string | undefined, level: number, index: number): string | undefined => {
-  if (level == 1) {
-    return title == undefined ? undefined : numberToChinese(index + 1) + '、' + title;
+  if (!title) return undefined;
+
+  if (level === 1) {
+    return `${numberToChinese(index + 1)}、${title}`;
+  } else {
+    return `${index + 1}. ${title}`;
   }
-  else {
-    return title == undefined ? undefined : index + 1 + '. ' + title;
-  }
-}
+};
 
-
-
+/**
+ * 动态组件渲染
+ */
 const dynamicComponent = (content: Content) => {
   switch (content.type) {
     case 'NWDescription':
-      return h(NWDescription, {
-        text: content.text
-      });
+      return h(NWDescription, { text: content.text });
     case 'NWImage':
-      return h(NWImage, {
-        width: content.width,
-        src: content.src
-      })
+      return h(NWImage, { width: content.width, src: content.src });
     case 'NWList':
-      return h(NWList, {
-        order: content.order,
-        data: content.data
-      })
+      return h(NWList, { order: content.order, data: content.data });
     case 'NWTips':
-      return h(NWTips, {
-        title: content.title,
-        case: content.case,
-        data: content.data
-      })
+      return h(NWTips, { title: content.title, case: content.case, data: content.data });
     case 'NWPersonalIntro':
       return h(NWPersonalIntro, {
         user: {
@@ -371,68 +419,32 @@ const dynamicComponent = (content: Content) => {
           github: content.github,
           email: content.email
         }
-      })
+      });
     case 'NWDialogue':
-      return h(NWDialogue, {
-        q: content.q,
-        a: content.a
-      })
+      return h(NWDialogue, { q: content.q, a: content.a });
     case 'NWMotto':
-      return h(NWMotto, {
-        message: content.message,
-        author: content.author
-      })
+      return h(NWMotto, { message: content.message, author: content.author });
     case 'NWProblemsRank':
-      return h(NWProblemsRank, {
-        problems: content.problems
-      })
+      return h(NWProblemsRank, { problems: content.problems });
     case 'NWSiteContributors':
-      return h(NWSiteContributors, {
-        site_contributors: content.site_sitecontributors
-      })
+      return h(NWSiteContributors, { site_contributors: content.site_sitecontributors });
     case 'NWCompetition':
-      return h(NWCompetition, {
-        competition: content.competition
-      })
+      return h(NWCompetition, { competition: content.competition });
     case 'NWLinkList':
-      return h(NWLinkList)
-
+      return h(NWLinkList, {
+        items: configuration.value.linkListData,
+        loading: configuration.value.linkListLoading
+      });
     case 'NWClubIntro':
-      return h(NWClubIntro, {
-        ClubProps: content.club
-      })
-
+      return h(NWClubIntro, { ClubProps: content.club });
     case 'NWPhotoAlbum':
-      return h(NWPhotoAlbum, {
-        photos: content.photos
-      })
-    case NWComponent.NWEquation:
-      return h(NWEquation, {
-        equation: content.equation
-      })
-    case NWComponent.NWTable:
-      return h(NWTable, {
-        title:content.title,
-        data:content.data
-      })
+      return h(NWPhotoAlbum, { photos: content.photos });
+    case 'NWEquation':
+      return h(NWEquation, { equation: content.equation });
+    case 'NWTable':
+      return h(NWTable, { title: content.title, data: content.data });
   }
-
-}
-
-
-
-watch(() => configuration.value.current_page, (newValue, oldValue) => {
-  // 获取当前路由的完整路径
-  const fullPath = router.currentRoute.value.fullPath;
-  // 使用正则表达式移除URL中的hash部分
-  const newPath = fullPath.replace(/#.*$/, '');
-  // 使用replace方法更新路由，不添加历史记录
-  router.replace({ path: newPath });
-  scrollTo(0);
-  // 加载页面配置
-  loadPageConfig(newValue);
-}, { deep: true });
-
+};
 
 const scrollTo = (distance: number) => {
   nextTick(() => {
@@ -442,45 +454,32 @@ const scrollTo = (distance: number) => {
   });
 };
 
-const handleAddCommit = () => {
-  if (!configuration.value.current_page)
-    return;
-  const mes = readApi.addCommit(configuration.value.current_page, commit_content.value);
-  commit_content.value = '';
-  message.success('评论将在审核结束后展示！');
-  loadCommits();
-}
+// ==================== 生命周期 ====================
 
-const changePageByButton = (direction: string): void => {
-  if (configuration.value.current_page == undefined)
-    return;
-  if (direction == 'pre') {
-    if (findAdjacentPageInGroups(configuration.value.current_page) == 'start') {
-      message.success('当前是第一页！');
-    }
-    configuration.value.current_page = findAdjacentPageInGroups(configuration.value.current_page);
-  } else {
-    if (findAdjacentPageInGroups(configuration.value.current_page) == 'end') {
-      message.success('当前是最后一页！');
-    }
-    configuration.value.current_page = findAdjacentPageInGroups(configuration.value.current_page, "next");
-  }
-}
+watch(() => configuration.value.current_page, async (newValue, oldValue) => {
+  if (newValue === oldValue) return;
 
-onMounted(() => {
-  loadMenuConfig();
+  const fullPath = router.currentRoute.value.fullPath;
+  const newPath = fullPath.replace(/#.*$/, '');
+  router.replace({ path: newPath });
+
+  scrollTo(0);
+  await loadPageConfig(newValue);
+}, { deep: true });
+
+onMounted(async () => {
+  await loadMenuConfig();
+
+  let initialPage = 'DeveloperGreeting';
+
   if (route.params.page) {
-    let page = Array.isArray(route.params.page) ? route.params.id[0] : route.params.page;
-    loadPageConfig(page);
-  } else {
-    if (getCookie('page')) {
-      configuration.value.current_page = getCookie('page');
-    } else {
-      configuration.value.current_page = 'DeveloperGreeting';
-    }
+    const pageParam = Array.isArray(route.params.page) ? route.params.page[0] : route.params.page;
+    initialPage = pageParam;
+  } else if (getCookie('page')) {
+    initialPage = getCookie('page')!;
   }
-}
-)
 
-
+  configuration.value.current_page = initialPage;
+  await loadPageConfig(initialPage);
+});
 </script>

@@ -384,291 +384,291 @@ export const PAGE_CONFIG: Group[] = [
                 {
                     title: "社团简介",
                     subsections: [
-                     {
-                         title: undefined,
-                         contents: [{
-                            type:NWComponent.NWClubIntro,
-                            club:{
-                                name: "东北大学非官方说唱团队NEU.P",
-                                logo: "/NEUP-LOGO.png",
-                                description: "东北大学NEU.P说唱团队，2019年成立，由在校学生组成。荣获全国季军、沈阳冠军等奖项，发行两张专辑，举办大型演出。团队每年9-11月招新，欢迎热爱HipHop的你加入，不限专业年级性别。",
-                                qqGroup: "914863257",
-                                imageUrl: "/NEUP-QRCODE.png"
-                            }
-                         }]
-                     }
+                        {
+                            title: undefined,
+                            contents: [{
+                                type: NWComponent.NWClubIntro,
+                                club: {
+                                    name: "东北大学非官方说唱团队NEU.P",
+                                    logo: "/NEUP-LOGO.png",
+                                    description: "东北大学NEU.P说唱团队，2019年成立，由在校学生组成。荣获全国季军、沈阳冠军等奖项，发行两张专辑，举办大型演出。团队每年9-11月招新，欢迎热爱HipHop的你加入，不限专业年级性别。",
+                                    qqGroup: "914863257",
+                                    imageUrl: "/NEUP-QRCODE.png"
+                                }
+                            }]
+                        }
                     ]
-                },{
+                }, {
                     title: "关于我们",
                     subsections: [
-                    {
-                        title: undefined,
-                        contents: [
-                            {
-                                type:NWComponent.NWDescription,
-                                text:'东北大学**非官方**说唱团队，成立于2019年，成员均为东北大学在校学生。团队主理人梨果橙于2023年带领团队获大学说唱联赛全国并列季军、沈阳站冠军，并于同年获得地下8英里北部决赛冠军。\\团队自成立以来发布两张团队专辑《艮骨烁金》、《岳护百川》，曾独立举办“黑怕不怕冷”NEU.P四周年专场说唱演出、地下8英里官方授权“大学说唱联赛IV”辽宁赛区说唱赛事等大型活动，流媒体上的团队词条“#NEU.P”也已获得超千万播放。NEU.P正逐渐成为沈阳乃至东北说唱圈不可忽视的新血力量。\\NEU.P团队固定于每年9-11月面向全校同学开展招新活动，届时将在以上招新群中发布招新详细信息，并开放招新通道。无论你想成为一个原创rapper在舞台上释放自己的能量，还是想作为一个编曲混音制作人在兄弟们背后提供支撑，又或者你有视觉制作、文案编辑、新媒体运营、摄像摄影等方面的特长与爱好，只要你热爱HipHop，不限专业、不限年级、不限性别、不限取向，都欢迎你来联系我们，成为我们的一员！'
-                            }
-                        ]
-                    }
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWDescription,
+                                    text: '东北大学**非官方**说唱团队，成立于2019年，成员均为东北大学在校学生。团队主理人梨果橙于2023年带领团队获大学说唱联赛全国并列季军、沈阳站冠军，并于同年获得地下8英里北部决赛冠军。\\团队自成立以来发布两张团队专辑《艮骨烁金》、《岳护百川》，曾独立举办“黑怕不怕冷”NEU.P四周年专场说唱演出、地下8英里官方授权“大学说唱联赛IV”辽宁赛区说唱赛事等大型活动，流媒体上的团队词条“#NEU.P”也已获得超千万播放。NEU.P正逐渐成为沈阳乃至东北说唱圈不可忽视的新血力量。\\NEU.P团队固定于每年9-11月面向全校同学开展招新活动，届时将在以上招新群中发布招新详细信息，并开放招新通道。无论你想成为一个原创rapper在舞台上释放自己的能量，还是想作为一个编曲混音制作人在兄弟们背后提供支撑，又或者你有视觉制作、文案编辑、新媒体运营、摄像摄影等方面的特长与爱好，只要你热爱HipHop，不限专业、不限年级、不限性别、不限取向，都欢迎你来联系我们，成为我们的一员！'
+                                }
+                            ]
+                        }
                     ]
-                },{
+                }, {
                     title: "活动承办经历",
                     subsections: [
-                    {
-                        title: undefined,
-                        contents: [
-                            {
-                                type:NWComponent.NWList,
-                                order:false,
-                                data:['“能造”2024年NEU.P五周年专场演出主办','“岳护百川”团队四周年专场演出主办','“燎原”环沈阳高校联合说唱巡演协办','“大学说唱联赛IV”沈阳站合作承办','“鸡架游戏”说唱派对主办','“醒春”冬日说唱派对主办','2021年“青春正当时”草地音乐节”协办','2022年昌宁县建团100周年晚会策划','……']
-                               
-                            }
-                        ]
-                    }
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: ['“能造”2024年NEU.P五周年专场演出主办', '“岳护百川”团队四周年专场演出主办', '“燎原”环沈阳高校联合说唱巡演协办', '“大学说唱联赛IV”沈阳站合作承办', '“鸡架游戏”说唱派对主办', '“醒春”冬日说唱派对主办', '2021年“青春正当时”草地音乐节”协办', '2022年昌宁县建团100周年晚会策划', '……']
+
+                                }
+                            ]
+                        }
                     ]
-                },{
+                }, {
                     title: "成员获奖",
                     subsections: [
-                    {
-                        title: undefined,
-                        contents: [
-                            {
-                                type:NWComponent.NWList,
-                                order:false,
-                                data:['2024年快手好声音全国总冠军','2024年地下8英里全国八强','2024年地下8英里沈阳站冠军','2023年地下8英里北部决赛及沈阳站冠军','2022年地下8英里沈阳站四强','2022年大学说唱联赛III全国八强','2021年大学说唱联赛II沈阳站四强','……']
-                               
-                            }
-                        ]
-                    }
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: ['2024年快手好声音全国总冠军', '2024年地下8英里全国八强', '2024年地下8英里沈阳站冠军', '2023年地下8英里北部决赛及沈阳站冠军', '2022年地下8英里沈阳站四强', '2022年大学说唱联赛III全国八强', '2021年大学说唱联赛II沈阳站四强', '……']
+
+                                }
+                            ]
+                        }
                     ]
-                },{
+                }, {
                     title: "社团风采",
                     subsections: [
-                    {
-                        title: undefined,
-                        contents: [
-                            {
-                                type:NWComponent.NWPhotoAlbum,
-                                photos:[{
-                                    url: "/NEUP-photo1.png",
-                                    alt: ""
-                                },{
-                                    url: "/NEUP-photo2.png",
-                                    alt: ""
-                                },{
-                                    url: "/NEUP-photo3.png",
-                                    alt: ""
-                                },{
-                                    url: "/NEUP-photo4.png",
-                                    alt: ""
-                                },{
-                                    url: "/NEUP-photo5.png",
-                                    alt: ""
-                                }]
-                               
-                            }
-                        ]
-                    }
+                        {
+                            title: undefined,
+                            contents: [
+                                {
+                                    type: NWComponent.NWPhotoAlbum,
+                                    photos: [{
+                                        url: "/NEUP-photo1.png",
+                                        alt: ""
+                                    }, {
+                                        url: "/NEUP-photo2.png",
+                                        alt: ""
+                                    }, {
+                                        url: "/NEUP-photo3.png",
+                                        alt: ""
+                                    }, {
+                                        url: "/NEUP-photo4.png",
+                                        alt: ""
+                                    }, {
+                                        url: "/NEUP-photo5.png",
+                                        alt: ""
+                                    }]
+
+                                }
+                            ]
+                        }
                     ]
                 }
             ],
             contributors: []
-        },            {
-                title: "轮舞轮滑社",
-                last_update: "2024年11月23日",
-                name: "LunWuLunHua",
-                description: undefined,
-                sections: [{
-                    title: '社团简介',
-                    subsections: [
-                        {
-                            title: undefined,
-                            contents: [{
-                                type: NWComponent.NWClubIntro,
-                                club: {
-                                    name: '东北大学轮舞轮滑社（浑南）',
-                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
-                                    description: '本群为东北大学轮舞轮滑社浑南群,浑南的同学请加入此群聊。',
-                                    qqGroup: '336861220',
-                                    imageUrl: 'https://image.neuwiki.top/image/lunwu_hunnan.jpg'
-                                }
-                            }]
-                        }, {
-                            title: undefined,
-                            contents: [{
-                                type: NWComponent.NWClubIntro,
-                                club: {
-                                    name: '东北大学轮舞轮滑社（南湖）',
-                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
-                                    description: '本群为东北大学轮舞轮滑社南湖，南湖的同学请加入此群聊',
-                                    qqGroup: '773733890',
-                                    imageUrl: 'https://image.neuwiki.top/image/lunwu_nanhu.jpg'
-                                }
-                            }]
-                        },
-                    ]
-                }, {
-                    title: '社团介绍',
-                    subsections: [{
-                        title: undefined,
-                        contents: [
-                            {
-                                type: NWComponent.NWDescription,
-                                text: '我们是一个热爱轮滑和轮舞的团体，定期举办各种活动，包括平滑教学、刷街等。我们的活动不仅局限于日常的练习，还包括大型的刷街活动，如五一北戴河、端午世博园毕业生送别、国庆鸟岛等。这些活动不仅让我们享受轮滑的乐趣，也是我们社交和增进友谊的好机会。\\平时私下约着玩的活动较多，兴趣至上（你甚至可以玩轮滑，bushi），i人天堂，大团体全是熟人氛围超棒，**脱单率极高**（目前已脱单四对）\\无加入条件，也不是必须要有轮滑鞋，兴趣至上，要的是想跟大家一起玩，一起聚餐、熬夜、自由的心境。'
-                            }
-                        ]
-                    }]
-                }],
-                contributors: []
-            }, {
-                title: "东大飞鸟",
-                last_update: "2024年11月25日",
-                name: "FeiNiao",
-                description: undefined,
-                sections: [
+        }, {
+            title: "轮舞轮滑社",
+            last_update: "2024年11月23日",
+            name: "LunWuLunHua",
+            description: undefined,
+            sections: [{
+                title: '社团简介',
+                subsections: [
                     {
-                        title: '社团简介',
-                        subsections: [
-                            {
-                                title: undefined,
-                                contents: [
-                                    {
-                                        type: NWComponent.NWClubIntro,
-                                        club: {
-                                            name: "东大飞鸟",
-                                            logo: "https://image.neuwiki.top/image/neulogo.jpeg",
-                                            description: "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。校内同学均可，进群需备注专业学号。",
-                                            qqGroup: "589721067",
-                                            imageUrl: "https://image.neuwiki.top/image/dongdafeiniao.jpg"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                contributors: []
-            }
-            , {
-                title: "剑道社",
-                last_update: "2024年11月20日",
-                name: "JianDao",
-                description: undefined,
-                sections: [{
-                    title: '社团简介',
-                    subsections: [
-                        {
-                            title: undefined,
-                            contents: [{
-                                type: NWComponent.NWClubIntro,
-                                club: {
-                                    name: '东北大学剑道社',
-                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
-                                    description: '本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
-                                    qqGroup: '964473553',
-                                    imageUrl: 'https://image.neuwiki.top/image/jiandao_qq.jpg'
-                                }
-                            }]
-                        },
-                    ]
-                }, {
-                    title: '社团风采',
-                    subsections: [{
                         title: undefined,
-                        contents: [
-                            {
-                                type: NWComponent.NWPhotoAlbum,
-                                photos: [
-                                    {
-                                        url: "https://image.neuwiki.top/image/jiandao1.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/jiandao2.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/jiandao3.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/jiandao4.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/jiandao5.jpg",
-                                        alt: ""
-                                    }
-                                ]
+                        contents: [{
+                            type: NWComponent.NWClubIntro,
+                            club: {
+                                name: '东北大学轮舞轮滑社（浑南）',
+                                logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
+                                description: '本群为东北大学轮舞轮滑社浑南群,浑南的同学请加入此群聊。',
+                                qqGroup: '336861220',
+                                imageUrl: 'https://image.neuwiki.top/image/lunwu_hunnan.jpg'
                             }
-                        ]
-                    }]
-                }],
-                contributors: []
+                        }]
+                    }, {
+                        title: undefined,
+                        contents: [{
+                            type: NWComponent.NWClubIntro,
+                            club: {
+                                name: '东北大学轮舞轮滑社（南湖）',
+                                logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
+                                description: '本群为东北大学轮舞轮滑社南湖，南湖的同学请加入此群聊',
+                                qqGroup: '773733890',
+                                imageUrl: 'https://image.neuwiki.top/image/lunwu_nanhu.jpg'
+                            }
+                        }]
+                    },
+                ]
             }, {
-                title: "国际标准舞团",
-                last_update: "2024年11月20日",
-                name: "GuoJiBiaoZhunWu",
-                description: undefined,
-                sections: [{
+                title: '社团介绍',
+                subsections: [{
+                    title: undefined,
+                    contents: [
+                        {
+                            type: NWComponent.NWDescription,
+                            text: '我们是一个热爱轮滑和轮舞的团体，定期举办各种活动，包括平滑教学、刷街等。我们的活动不仅局限于日常的练习，还包括大型的刷街活动，如五一北戴河、端午世博园毕业生送别、国庆鸟岛等。这些活动不仅让我们享受轮滑的乐趣，也是我们社交和增进友谊的好机会。\\平时私下约着玩的活动较多，兴趣至上（你甚至可以玩轮滑，bushi），i人天堂，大团体全是熟人氛围超棒，**脱单率极高**（目前已脱单四对）\\无加入条件，也不是必须要有轮滑鞋，兴趣至上，要的是想跟大家一起玩，一起聚餐、熬夜、自由的心境。'
+                        }
+                    ]
+                }]
+            }],
+            contributors: []
+        }, {
+            title: "东大飞鸟",
+            last_update: "2024年11月25日",
+            name: "FeiNiao",
+            description: undefined,
+            sections: [
+                {
                     title: '社团简介',
                     subsections: [
                         {
                             title: undefined,
-                            contents: [{
-                                type: NWComponent.NWClubIntro,
-                                club: {
-                                    name: '东北大学国际标准舞团',
-                                    logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
-                                    description: '东北大学国际标准舞团属于东北大学团委文化艺术中心的优秀团体，参与东北大学百年校庆文艺晚会、“龙腾新百年”东北大学2024年新年联欢会、东北大学2024年“廿廿不忘，舞影流光”毕业舞会、第二届沈阳时尚体育节暨首届“金叶杯”体育舞蹈国际标准舞公开赛等各类校级、院级活动以及专业国标舞赛事，是一支团结友爱、经验成熟、热爱舞蹈的队伍。',
-                                    qqGroup: '964473553',
-                                    imageUrl: 'https://image.neuwiki.top/image/guobiaowu.jpg'
-                                }
-                            }]
-                        },
-                    ]
-                }, {
-                    title: '社团风采',
-                    subsections: [{
-                        title: undefined,
-                        contents: [
-                            {
-                                type: NWComponent.NWPhotoAlbum,
-                                photos: [
-                                    {
-                                        url: "https://image.neuwiki.top/image/guobiao1.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao2.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao3.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao4.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao5.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao6.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao7.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao8.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao9.jpg",
-                                        alt: ""
-                                    }, {
-                                        url: "https://image.neuwiki.top/image/guobiao10.jpg",
-                                        alt: ""
+                            contents: [
+                                {
+                                    type: NWComponent.NWClubIntro,
+                                    club: {
+                                        name: "东大飞鸟",
+                                        logo: "https://image.neuwiki.top/image/neulogo.jpeg",
+                                        description: "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。校内同学均可，进群需备注专业学号。",
+                                        qqGroup: "589721067",
+                                        imageUrl: "https://image.neuwiki.top/image/dongdafeiniao.jpg"
                                     }
-                                ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            contributors: []
+        }
+            , {
+            title: "剑道社",
+            last_update: "2024年11月20日",
+            name: "JianDao",
+            description: undefined,
+            sections: [{
+                title: '社团简介',
+                subsections: [
+                    {
+                        title: undefined,
+                        contents: [{
+                            type: NWComponent.NWClubIntro,
+                            club: {
+                                name: '东北大学剑道社',
+                                logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
+                                description: '本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。',
+                                qqGroup: '964473553',
+                                imageUrl: 'https://image.neuwiki.top/image/jiandao_qq.jpg'
                             }
-                        ]
-                    }]
-                }],
-                contributors: []
-            }
+                        }]
+                    },
+                ]
+            }, {
+                title: '社团风采',
+                subsections: [{
+                    title: undefined,
+                    contents: [
+                        {
+                            type: NWComponent.NWPhotoAlbum,
+                            photos: [
+                                {
+                                    url: "https://image.neuwiki.top/image/jiandao1.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/jiandao2.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/jiandao3.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/jiandao4.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/jiandao5.jpg",
+                                    alt: ""
+                                }
+                            ]
+                        }
+                    ]
+                }]
+            }],
+            contributors: []
+        }, {
+            title: "国际标准舞团",
+            last_update: "2024年11月20日",
+            name: "GuoJiBiaoZhunWu",
+            description: undefined,
+            sections: [{
+                title: '社团简介',
+                subsections: [
+                    {
+                        title: undefined,
+                        contents: [{
+                            type: NWComponent.NWClubIntro,
+                            club: {
+                                name: '东北大学国际标准舞团',
+                                logo: 'https://image.neuwiki.top/image/neulogo.jpeg',
+                                description: '东北大学国际标准舞团属于东北大学团委文化艺术中心的优秀团体，参与东北大学百年校庆文艺晚会、“龙腾新百年”东北大学2024年新年联欢会、东北大学2024年“廿廿不忘，舞影流光”毕业舞会、第二届沈阳时尚体育节暨首届“金叶杯”体育舞蹈国际标准舞公开赛等各类校级、院级活动以及专业国标舞赛事，是一支团结友爱、经验成熟、热爱舞蹈的队伍。',
+                                qqGroup: '964473553',
+                                imageUrl: 'https://image.neuwiki.top/image/guobiaowu.jpg'
+                            }
+                        }]
+                    },
+                ]
+            }, {
+                title: '社团风采',
+                subsections: [{
+                    title: undefined,
+                    contents: [
+                        {
+                            type: NWComponent.NWPhotoAlbum,
+                            photos: [
+                                {
+                                    url: "https://image.neuwiki.top/image/guobiao1.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao2.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao3.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao4.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao5.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao6.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao7.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao8.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao9.jpg",
+                                    alt: ""
+                                }, {
+                                    url: "https://image.neuwiki.top/image/guobiao10.jpg",
+                                    alt: ""
+                                }
+                            ]
+                        }
+                    ]
+                }]
+            }],
+            contributors: []
+        }
 
         ]
     }
@@ -749,7 +749,7 @@ export const PAGE_CONFIG: Group[] = [
                     }
                 ],
                 contributors: []
-            },{
+            }, {
                 title: "23届崔中健同学",
                 last_update: "2024年12月24日",
                 name: "CuiZhongJian",
@@ -774,38 +774,38 @@ export const PAGE_CONFIG: Group[] = [
                                         qq: '404801399',
                                         wechat: '15222287388',
                                         email: 'timcui666@gmail.com'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'你为什么选择保研，而不是就业/留学等其他毕业去向？',
-                                        a:'首先，有保研名额，不用白不用（但不是最重要原因）。其次，自己也没有想好之后要干什么（所以最好提早做好职业规划，可以避免老学长走过的弯路）。然后，自己也有一个科研梦，想看看自己究竟能在学术上走多远。最后，感觉学历越高选择可能也就越多（但是这并不是绝对的，老学长的错误见解）。不出国的主要原因是自己的英语太差（研究生6级飘过的菜鸡一枚）。'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'对于保研，你有哪些注意事项想要提醒同学们？',
-                                        a:'保研之前最好还是先想好自己究竟该干什么，毕竟只会越来越卷，如果打算去大厂开发，真没必要卷保研，一个硕士学历不如三年工作经验。\\对于保研，GPA和科研都很重要，需要全面提升自己。而且跟你竞争的并不是你身边的同学，而是来自于全国各地各大院校的同一年级的人，所以要有大局观。而且要注意时间节点，有机会就报，不要妄自菲薄，机会是自己争取来的，万一馅饼真砸头上了呢（bushi）！'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'你从事了哪些科研经历？对你用什么帮助？',
-                                        a:'主要参加的还是郭军老师的项目组，当时参与到了好几个组当中，总的来说各种竞赛的奖还是拿了很多的，对于自己自身实力的提升还是毋庸置疑的，而且对于保研还是就业只能说百利无一害。只不过可能本科过得很累，但是也还是让自己的本科过得很充实，而不是浑浑噩噩混过去。'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'你觉得保研应该如何挑选导师、院校以及地区？',
-                                        a:'首先，择校一个好的title肯定重要，不要傻呵呵的因为学硕而去选择差一级的学校。在就业来看真没啥区别，唯一的区别就在考公的专业代码上。当然可能有的学校专硕不提供宿舍或者学费贵，但是相比以后的工资来说不过洒洒水了。其次，选组也尤为重要，特别做算法的，有的学校可能不算顶尖，但是组里有关系，而且组强的话，在就业就有得天独厚的优势。然后，导师也特别特别重要（划重点），毕竟你之后毕业与否，研究生2-3年的生活就跟他朝夕相处了。遇见一个坑导真的要命，屁事多还不能实习也不能出成果（狗头保命）；遇到羊导你就可以快速出去实习，积累经验，但是可能真没指导；遇到科研导可以快速积累成果，在之后不论升学还是就业都是有优势的。当然，导师的研究方向也很重要，选一个冷门研究方向，升学和就业都有可能G。具体如何选择还是得自己根据自身情况综合考虑。'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'你参与过哪些学生工作？你觉得有什么特殊的收获？',
-                                        a:'我最开始的学生工作是班长。这个职位的下限很低，但是做一个好班长却是很难的。就我看来，这个职位纯凭良心。在我认识的这么多人中，有些就仅仅落实转发的责任，但是这却不是同学们真正需要的，那么如何针对不同的同学有着不同的交流方式尤为重要，这就很好的锻炼了我的人际交往能力。\\另外一个让我印象深刻的就是智能基座奇点俱乐部主席，在这个俱乐部中认识了很多各个专业的同学，在与他们的交流中，让我看待事物有了更多更深层的角度。而且在这个俱乐部中，让我对于大型活动的策划、举办等方面的能力也有很好的提升。'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'对于目前的就业环境，你有什么看法或者说是对大一同学的建议？',
-                                        a:'大一，学好专业课的同时，想一想自己之后究竟想干什么，最重要的就是多多享受大学生活，毕竟累了那么多年。\\如果打算走大厂开发的道路的话，就想好自己想去做哪一块，明晰自己之后需要学哪些技术栈，大二和大三上在保证不挂科的同时，多多提升自己的专业能力，掌握好相应的技术栈，提升自己的竞争力。\\如果想做算法的话，学历都是硕士起步了，但不排除等你们毕业都得博士学历了。在这一块儿基本上就得考虑升学的问题了，那么最好在大一就想好自己对什么感兴趣，多多了解有哪些方向，然后之后保证成绩的同时多多专研，看看领域的研究。\\国企真不是计算机的主战场，现在很卷，大家慎重考虑。\\如果想进体制的话，最好还是走大厂开发的流程给自己一个保底，总不能一直gap考公考编吧，在平时没事儿的时候可以了解一下行测，多做积累吧。'
-                                    },{
-                                        type:NWComponent.NWDialogue,
-                                        q:'你觉得大学生活应该是什么样子的？',
-                                        a:'我感觉大学生活应该是充满活力的，作为一个大一到大四基本上一直被困着的老学长，属实没有体会到大学的快乐，不是被困在家，就是被困到学校，现在还是很向往自由的生活的。有机会就多出去看看，毕竟以后这样的时间还是很少的。\\另外，我认为在大学的生活是真正提升自己的开始，当你离开父母的束缚，以及高中班主任的唠叨之后，而在这个无人管控的环境中，各种各样的诱惑有很多。但是如何在众多诱惑中，合理安排自己的时间，不会导致自己沉迷是大学教给我们的一堂课。'
-                                    },{
-                                        type:NWComponent.NWMotto,
-                                        message:'追逐梦想，坚持努力，成就自己的传奇！（bushi）',
-                                        author:'崔中健'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '你为什么选择保研，而不是就业/留学等其他毕业去向？',
+                                        a: '首先，有保研名额，不用白不用（但不是最重要原因）。其次，自己也没有想好之后要干什么（所以最好提早做好职业规划，可以避免老学长走过的弯路）。然后，自己也有一个科研梦，想看看自己究竟能在学术上走多远。最后，感觉学历越高选择可能也就越多（但是这并不是绝对的，老学长的错误见解）。不出国的主要原因是自己的英语太差（研究生6级飘过的菜鸡一枚）。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '对于保研，你有哪些注意事项想要提醒同学们？',
+                                        a: '保研之前最好还是先想好自己究竟该干什么，毕竟只会越来越卷，如果打算去大厂开发，真没必要卷保研，一个硕士学历不如三年工作经验。\\对于保研，GPA和科研都很重要，需要全面提升自己。而且跟你竞争的并不是你身边的同学，而是来自于全国各地各大院校的同一年级的人，所以要有大局观。而且要注意时间节点，有机会就报，不要妄自菲薄，机会是自己争取来的，万一馅饼真砸头上了呢（bushi）！'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '你从事了哪些科研经历？对你用什么帮助？',
+                                        a: '主要参加的还是郭军老师的项目组，当时参与到了好几个组当中，总的来说各种竞赛的奖还是拿了很多的，对于自己自身实力的提升还是毋庸置疑的，而且对于保研还是就业只能说百利无一害。只不过可能本科过得很累，但是也还是让自己的本科过得很充实，而不是浑浑噩噩混过去。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '你觉得保研应该如何挑选导师、院校以及地区？',
+                                        a: '首先，择校一个好的title肯定重要，不要傻呵呵的因为学硕而去选择差一级的学校。在就业来看真没啥区别，唯一的区别就在考公的专业代码上。当然可能有的学校专硕不提供宿舍或者学费贵，但是相比以后的工资来说不过洒洒水了。其次，选组也尤为重要，特别做算法的，有的学校可能不算顶尖，但是组里有关系，而且组强的话，在就业就有得天独厚的优势。然后，导师也特别特别重要（划重点），毕竟你之后毕业与否，研究生2-3年的生活就跟他朝夕相处了。遇见一个坑导真的要命，屁事多还不能实习也不能出成果（狗头保命）；遇到羊导你就可以快速出去实习，积累经验，但是可能真没指导；遇到科研导可以快速积累成果，在之后不论升学还是就业都是有优势的。当然，导师的研究方向也很重要，选一个冷门研究方向，升学和就业都有可能G。具体如何选择还是得自己根据自身情况综合考虑。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '你参与过哪些学生工作？你觉得有什么特殊的收获？',
+                                        a: '我最开始的学生工作是班长。这个职位的下限很低，但是做一个好班长却是很难的。就我看来，这个职位纯凭良心。在我认识的这么多人中，有些就仅仅落实转发的责任，但是这却不是同学们真正需要的，那么如何针对不同的同学有着不同的交流方式尤为重要，这就很好的锻炼了我的人际交往能力。\\另外一个让我印象深刻的就是智能基座奇点俱乐部主席，在这个俱乐部中认识了很多各个专业的同学，在与他们的交流中，让我看待事物有了更多更深层的角度。而且在这个俱乐部中，让我对于大型活动的策划、举办等方面的能力也有很好的提升。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '对于目前的就业环境，你有什么看法或者说是对大一同学的建议？',
+                                        a: '大一，学好专业课的同时，想一想自己之后究竟想干什么，最重要的就是多多享受大学生活，毕竟累了那么多年。\\如果打算走大厂开发的道路的话，就想好自己想去做哪一块，明晰自己之后需要学哪些技术栈，大二和大三上在保证不挂科的同时，多多提升自己的专业能力，掌握好相应的技术栈，提升自己的竞争力。\\如果想做算法的话，学历都是硕士起步了，但不排除等你们毕业都得博士学历了。在这一块儿基本上就得考虑升学的问题了，那么最好在大一就想好自己对什么感兴趣，多多了解有哪些方向，然后之后保证成绩的同时多多专研，看看领域的研究。\\国企真不是计算机的主战场，现在很卷，大家慎重考虑。\\如果想进体制的话，最好还是走大厂开发的流程给自己一个保底，总不能一直gap考公考编吧，在平时没事儿的时候可以了解一下行测，多做积累吧。'
+                                    }, {
+                                        type: NWComponent.NWDialogue,
+                                        q: '你觉得大学生活应该是什么样子的？',
+                                        a: '我感觉大学生活应该是充满活力的，作为一个大一到大四基本上一直被困着的老学长，属实没有体会到大学的快乐，不是被困在家，就是被困到学校，现在还是很向往自由的生活的。有机会就多出去看看，毕竟以后这样的时间还是很少的。\\另外，我认为在大学的生活是真正提升自己的开始，当你离开父母的束缚，以及高中班主任的唠叨之后，而在这个无人管控的环境中，各种各样的诱惑有很多。但是如何在众多诱惑中，合理安排自己的时间，不会导致自己沉迷是大学教给我们的一堂课。'
+                                    }, {
+                                        type: NWComponent.NWMotto,
+                                        message: '追逐梦想，坚持努力，成就自己的传奇！（bushi）',
+                                        author: '崔中健'
                                     }
                                 ]
                             }
@@ -873,7 +873,7 @@ export const PAGE_CONFIG: Group[] = [
                     }
                 ],
                 contributors: []
-            },{
+            }, {
                 title: "24届刘志钊同学",
                 last_update: "2024年12月18日",
                 name: "LiuZhiZhao",
@@ -894,30 +894,30 @@ export const PAGE_CONFIG: Group[] = [
                                         major: '软件工程',
                                         graduation: '国防科技大学',
                                         introduction: '东北大学2020级软件学院毕业生，现于国防科技大学计算机学院计算机科学与技术专业直博。',
-                                        achievements: ['数学建模美赛特等奖提名','奖学金多次','自然语言处理方向','开源软件构建与社区建设'],
+                                        achievements: ['数学建模美赛特等奖提名', '奖学金多次', '自然语言处理方向', '开源软件构建与社区建设'],
                                         github: 'https://lzz335.github.io/profile/',
-                                        email:'liuzhizhao@nudt.edu.cn'
-                                    },{
+                                        email: 'liuzhizhao@nudt.edu.cn'
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '你为什么选择从机械学院转到软件学院？',
                                         a: '一方面是从小接触计算机，对电脑这些东西有兴趣，一方面，家里穷，想搞钱。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '你是如何确定自己的科研方向和兴趣的？',
                                         a: '我的本科阶段进行了很多的尝试，从给别人做仿真，到写一些计算数学上的算子，再到做深度学习，搞NLP，广泛的尝试下才确定了我的兴趣，但是我认为我的经历是难以复制的，实际上，因为我这样的“爱玩”，让我差点没保上研。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '在选择科研方向时，哪些因素你认为最重要？',
                                         a: '首先是兴趣，其次是有了兴趣后，我认为你需要对你即将想要从事的方向有一个大致的认知，包括但不限于：读综述了解行业的大致情况，参加一些沙龙与报告，了解一下这个领域发生了什么，以NLP为例，形如量子位、机器之心这些公众号可以为还没入行的小白们提供一些前沿的视角。科研，尤其是准备读博或者已经直博的，有一个需要关注的地方是，你从事的这个方向在几年后依旧有意义吗？虽然从小方向上说可以等到读了博，有了全面的了解，再选择自己需要深入的小分支，但是大方向上至少不能歪。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '你觉得科研工作适合哪些同学？',
                                         a: '首先，你的家庭条件不能特别差，此处的差我个人的想法是，至少你的本科阶段的学习不是贷款的，你的家庭对你需要挣钱养家这件事情并不是特别的迫切，当然，如果你是这样，也不代表你一定不能从事科研工作，你也可以和我一样选择国防科大的无军籍，至少在这里免学费，助研津贴算是国内很高的档次了(5000/月(普通直博)，7000-10000/月（大工程直博）)，经济问题不会成为你接下来的阻碍。其次是，你能扛得住压力，这种压力有点难以描述，也有可能是在某一刻，你感觉全世界都不支持你了，但是你需要说服全世界相信你是对的，当然，这可能也和我的导师对我的严格有关，我不了解其他人是什么情况。还有就是最好有一颗想要探索的心，如果选择直博的话，我个人不推荐单身狗选择(bushi)，从我这里来看，大概率你的未来五年都是单身狗了。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '对于想要入门科研工作的同学，你有什么建议和意见？',
                                         a: '不是所有人都适合做研究，一个最简单的尝试就是，你尝试尽善尽美的完成你的任何一门开放性的学科大作业，再按学术写作的要求把他写出来，看看能做成什么样子，以我为例，打开我深度学习大门的就是深度学习技术这门课，相比于大家很多人，我算是起步很晚很晚的，我就是在这门课上自己发现了一个问题，然后自己调研了现有的技术栈，设计了一套解决方案，然后发现这个东西很有意思才决定入坑了这一行。我也建议大家试一试，真实的科研和这个当然差的很远，但是如果这个都坚持不下来或者做不到，我建议慎重考虑一下入行科研工作这件事。'
-                                    },{
+                                    }, {
                                         type: NWComponent.NWDialogue,
                                         q: '对于保研，你有什么建议？有什么需要注意的因素？',
                                         a: '没啥建议，我至今觉得我的保研经历很离谱，先是被一堆学校拒绝，然后国防科大的面试的四个问题恰好全部问到了我之前“整活”时的一些经验（但是这些经验并没有体现在我的简历里），然后拿了一个很高的面试分被一堆老师打电话后就开摆了。'
@@ -1921,14 +1921,14 @@ export const PAGE_CONFIG: Group[] = [
                                 ]
                             }
                         ]
-                    },{
+                    }, {
                         title: '国防科工补偿计划',
                         subsections: [{
-                            title:'简介',
-                            contents:[
+                            title: '简介',
+                            contents: [
                                 {
-                                    type:NWComponent.NWDescription,
-                                    text:'需要满足推荐基本条件，且符合国防科技大学接收“国防科工单位补偿计划”推免生的要求条件。满足推荐基本条件，且符合国防科技大学接收“国防科工单位补偿计划”推免生的要求条件。'
+                                    type: NWComponent.NWDescription,
+                                    text: '需要满足推荐基本条件，且符合国防科技大学接收“国防科工单位补偿计划”推免生的要求条件。满足推荐基本条件，且符合国防科技大学接收“国防科工单位补偿计划”推免生的要求条件。'
                                 }
                             ]
                         }]
@@ -1939,345 +1939,345 @@ export const PAGE_CONFIG: Group[] = [
                                 title: '简介',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'创新特长类推免，俗称竞赛保研，是一种颇具东大特色的保研形式。\\教育部下发推免名额后，学校会将一部分名额分给创新创业学院，供各学院同学进行申请。若能成功拿到创新特长类推免的名额，则不占所在学院的普通类推免名额，并且与普通类推免一样可以推免外校，适合有丰富竞赛成果、大创成果的同学。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'创新特长类推免主要分为以下几个阶段。'
-                                    },{
-                                        type:NWComponent.NWList,
-                                        order:true,
-                                        data:[
-                                            '预报名','正式报名&成果申报','资格审核','综合考核（若不具备资格，那么终止）','名单公布'
+                                        type: NWComponent.NWDescription,
+                                        text: '创新特长类推免，俗称竞赛保研，是一种颇具东大特色的保研形式。\\教育部下发推免名额后，学校会将一部分名额分给创新创业学院，供各学院同学进行申请。若能成功拿到创新特长类推免的名额，则不占所在学院的普通类推免名额，并且与普通类推免一样可以推免外校，适合有丰富竞赛成果、大创成果的同学。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '创新特长类推免主要分为以下几个阶段。'
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: true,
+                                        data: [
+                                            '预报名', '正式报名&成果申报', '资格审核', '综合考核（若不具备资格，那么终止）', '名单公布'
                                         ]
                                     }
                                 ]
-                            },{
+                            }, {
                                 title: '预报名',
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'9月初，创新创业学院发布**《创新创业学院关于开展推荐xx届创新特长类优秀应届本科毕业生免试攻读研究生工作预报名的通知》**，所有有计划参与创新特长类推免的同学可以提交预报名材料。\\如果你具有一定的竞赛成果，那么可以考虑报名。'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'**注意**，如有竞赛明确可能在预报名通知与正式报名通知之间公布获奖成绩时，也可以参与预报名。'
-                                },{
-                                    type:NWComponent.NWList,
-                                    order:false,
-                                    data:['正式报名截止时间前，该竞赛仍未公布成绩，则该竞赛不予认定。','正式报名截止时间前，该竞赛成绩公布，则以该竞赛实际获奖情况进行资格审核。']
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'也就是说，如果正式报名截止前，你有希望拿到一个五星级及以上竞赛的一等奖，那么是可以参与预报名（正式报名时会审核获奖情况是否符合要求）。'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'同理，如预报名时，学生成绩单GPA未达到专业前50%，但仍有课程成绩未出，且该成绩能够在正式报名截止时间前公布，同时能够有充分可能改变其“是否GPA专业前50%”报名条件的，需由学生所在学院教学办出具详细情况说明，允许其参与预报名。\\类似的，如果在正式报名前有机会进入专业排名前50%，那么也是可以参与的。这两条附加条件旨在鼓励同学们参与预报名。'
-                                },{
-                                    type:NWComponent.NWTips,
-                                    title:'注意',
-                                    case:'error',
-                                    data:'不参加预报名，无法参加正式报名！'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'预报名材料按往年情况是由各学院统一报送创院，相关通知一般也都会由相关负责老师在大群中发布，如果有这方面考虑的同学请注意**年级群或者学生群内消息**。\\此外，还可以重点关注创新创业学院网站：[东大创新网](http://cxzx.neu.edu.cn/)，关注网站中的**东大创新网 - 通知公告**，。'
+                                    type: NWComponent.NWDescription,
+                                    text: '9月初，创新创业学院发布**《创新创业学院关于开展推荐xx届创新特长类优秀应届本科毕业生免试攻读研究生工作预报名的通知》**，所有有计划参与创新特长类推免的同学可以提交预报名材料。\\如果你具有一定的竞赛成果，那么可以考虑报名。'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '**注意**，如有竞赛明确可能在预报名通知与正式报名通知之间公布获奖成绩时，也可以参与预报名。'
+                                }, {
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: ['正式报名截止时间前，该竞赛仍未公布成绩，则该竞赛不予认定。', '正式报名截止时间前，该竞赛成绩公布，则以该竞赛实际获奖情况进行资格审核。']
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '也就是说，如果正式报名截止前，你有希望拿到一个五星级及以上竞赛的一等奖，那么是可以参与预报名（正式报名时会审核获奖情况是否符合要求）。'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '同理，如预报名时，学生成绩单GPA未达到专业前50%，但仍有课程成绩未出，且该成绩能够在正式报名截止时间前公布，同时能够有充分可能改变其“是否GPA专业前50%”报名条件的，需由学生所在学院教学办出具详细情况说明，允许其参与预报名。\\类似的，如果在正式报名前有机会进入专业排名前50%，那么也是可以参与的。这两条附加条件旨在鼓励同学们参与预报名。'
+                                }, {
+                                    type: NWComponent.NWTips,
+                                    title: '注意',
+                                    case: 'error',
+                                    data: '不参加预报名，无法参加正式报名！'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '预报名材料按往年情况是由各学院统一报送创院，相关通知一般也都会由相关负责老师在大群中发布，如果有这方面考虑的同学请注意**年级群或者学生群内消息**。\\此外，还可以重点关注创新创业学院网站：[东大创新网](http://cxzx.neu.edu.cn/)，关注网站中的**东大创新网 - 通知公告**，。'
                                 }
-                            ]
-                            },{
+                                ]
+                            }, {
                                 title: '正式报名  & 成果申报',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'9月上中旬，创新创业学院发布《**创新创业学院关于开展推荐xx届创新特长类优秀应届本科毕业生免试攻读研究生工作的通知**》。\\通常来说，正式报名需要**本人**持申请材料到南湖校区科学馆线下提交材料，并且**逾期不再接受**。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'需要提交的材料根据当年的要求可能有所不同，大致包括：'
-                                    },{
-                                        type:NWComponent.NWList,
-                                        order:false,
-                                        data:['学生本人签字、学院教学办老师签字、盖章的申请表纸质版原件','学生本人最新盖章版成绩单纸质版一份','德育成绩加分证明材料（证书等）纸质版一份','竞赛（项目）获奖证书复印件一份','学生本人签字的《推免志愿及承诺书》纸质版一份']
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'值得注意的是，申请材料中的**第五项“学生本人签字的推免志愿及承诺书”**中明确要求承诺自愿选择创新特长类方式，按照学校规定申请推荐免试攻读研究生资格，选择后不再更改。\\也就是说，当上交材料时，已经**自动放弃了普通类方式的推免资格**。有些学院还会统一开会要求签署自愿放弃普通类推免承诺书。'
-                                    },{
-                                        type:NWComponent.NWTips,
-                                        case:'info',
-                                        title:'提示',
-                                        data:'在后续阶段需要的所有材料，务必在正式报名阶段提交完整。'
+                                        type: NWComponent.NWDescription,
+                                        text: '9月上中旬，创新创业学院发布《**创新创业学院关于开展推荐xx届创新特长类优秀应届本科毕业生免试攻读研究生工作的通知**》。\\通常来说，正式报名需要**本人**持申请材料到南湖校区科学馆线下提交材料，并且**逾期不再接受**。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '需要提交的材料根据当年的要求可能有所不同，大致包括：'
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['学生本人签字、学院教学办老师签字、盖章的申请表纸质版原件', '学生本人最新盖章版成绩单纸质版一份', '德育成绩加分证明材料（证书等）纸质版一份', '竞赛（项目）获奖证书复印件一份', '学生本人签字的《推免志愿及承诺书》纸质版一份']
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '值得注意的是，申请材料中的**第五项“学生本人签字的推免志愿及承诺书”**中明确要求承诺自愿选择创新特长类方式，按照学校规定申请推荐免试攻读研究生资格，选择后不再更改。\\也就是说，当上交材料时，已经**自动放弃了普通类方式的推免资格**。有些学院还会统一开会要求签署自愿放弃普通类推免承诺书。'
+                                    }, {
+                                        type: NWComponent.NWTips,
+                                        case: 'info',
+                                        title: '提示',
+                                        data: '在后续阶段需要的所有材料，务必在正式报名阶段提交完整。'
                                     }
                                 ]
                             },
                             {
                                 title: '资格审查',
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'正式报名提交结束后，创新创业学院会对正式报名中提交的所有材料进行审核。\\具体条件包括基本条件以及相关竞赛成果的要求。'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'**基本条件要求：**'
-                                },{
-                                    type:NWComponent.NWList,
-                                    order:false,
-                                    data:['拥护中国共产党的领导，具有高尚的爱国主义情操和集体主义精神，理想信念坚定，社会责任感强，积极向上，身心健康','勤奋学习，刻苦钻研，成绩优秀，有较强的创新意识、创新能力和专业能力','学风端正，诚实守信','品行优良，遵纪守法','无处分记录（含已解除）','无不及格和无成绩课程','国家四级外语考试成绩达到国家规定报考六级要求分数（社会体育指导与管理专业要求达到380 分、音乐表演专业要求达到385 分）']
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'**竞赛成果要求：**'
-                                },{
-                                    type:NWComponent.NWList,
-                                    order:false,
-                                    data:['符合学校认定的**国家级（含）以上**的大学生各类科技创新竞赛**一等奖（冠军）的获奖个人或代表队主力队员**，或“国家级大学生创新创业训练计划”**优秀**创新训练项目的**核心成员**','学习成绩GPA（总平均学分绩点）排名专业前50%（不超过）']
-                                },{
-                                    type:NWComponent.NWTips,
-                                    title:'提示',
-                                    case:'info',
-                                    data:'资格要求两项需要同时满足，并且第一点要求必须是主力队员或个人。'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'关于**主力队员**的人数：根据组委会颁发的获奖证书或参赛证明，竞赛团队队员人数为7人及以下取前3名，7人以上取团队总人数前50%且最多不超过7人。'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'若在资格审查过程中发现不合任何一项硬性要求，则无法继续参加后续的综合考核，且无法反悔选择普通类推免。\\资格审查后，创新创业学院会公示通过资格审查的名单。'
+                                    type: NWComponent.NWDescription,
+                                    text: '正式报名提交结束后，创新创业学院会对正式报名中提交的所有材料进行审核。\\具体条件包括基本条件以及相关竞赛成果的要求。'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '**基本条件要求：**'
+                                }, {
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: ['拥护中国共产党的领导，具有高尚的爱国主义情操和集体主义精神，理想信念坚定，社会责任感强，积极向上，身心健康', '勤奋学习，刻苦钻研，成绩优秀，有较强的创新意识、创新能力和专业能力', '学风端正，诚实守信', '品行优良，遵纪守法', '无处分记录（含已解除）', '无不及格和无成绩课程', '国家四级外语考试成绩达到国家规定报考六级要求分数（社会体育指导与管理专业要求达到380 分、音乐表演专业要求达到385 分）']
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '**竞赛成果要求：**'
+                                }, {
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: ['符合学校认定的**国家级（含）以上**的大学生各类科技创新竞赛**一等奖（冠军）的获奖个人或代表队主力队员**，或“国家级大学生创新创业训练计划”**优秀**创新训练项目的**核心成员**', '学习成绩GPA（总平均学分绩点）排名专业前50%（不超过）']
+                                }, {
+                                    type: NWComponent.NWTips,
+                                    title: '提示',
+                                    case: 'info',
+                                    data: '资格要求两项需要同时满足，并且第一点要求必须是主力队员或个人。'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '关于**主力队员**的人数：根据组委会颁发的获奖证书或参赛证明，竞赛团队队员人数为7人及以下取前3名，7人以上取团队总人数前50%且最多不超过7人。'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '若在资格审查过程中发现不合任何一项硬性要求，则无法继续参加后续的综合考核，且无法反悔选择普通类推免。\\资格审查后，创新创业学院会公示通过资格审查的名单。'
                                 }
-                            ]
-                            },{
+                                ]
+                            }, {
                                 title: '综合考核',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'在公示最终前，创新创业学院会组织进行综合考核，根据综合考核成绩和专业成绩（与排名和绩点相关）计算综合排名。综合排名成绩的计算方式为：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'\\text{综合排名成绩} = \\text{专业成绩（满分70分）} +\\text{综合考核成绩（满分30分）}'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'如出现最终“综合排名成绩”相同的情况，则优先考察相应学生“创新能力”，其次考察“专业成绩”，并以此为依据进行排名。\\接下来，分别介绍专业成绩和综合考核成绩的计算方式。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**专业成绩**'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'由于创新特长类推免是全校范围竞争，创新创业学院为了避免不同学院之间人数、给分等因素差距过大，设计了一套算法来计算专业成绩。'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'\\text{专业成绩} = M + \\frac{\\text{本人绩点} - \\text{专业第50\\%学生绩点} }{\\text{专业第1学生绩点} - \\text{专业第50\\%学生绩点}} × j'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'M 为成绩基础分，为当年所有参加创新特长生推免考核学生中的绩点成绩的最低分（70 分制）。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'j 为加权系数，当年参加创新特长生推免考核的学生涉及N个专业，我们假设：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'N个专业分别为： A_1，A_2，……，A_N'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'每个专业报名人数为： a_i（i=1，2，……，n）'
+                                        type: NWComponent.NWDescription,
+                                        text: '在公示最终前，创新创业学院会组织进行综合考核，根据综合考核成绩和专业成绩（与排名和绩点相关）计算综合排名。综合排名成绩的计算方式为：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '\\text{综合排名成绩} = \\text{专业成绩（满分70分）} +\\text{综合考核成绩（满分30分）}'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '如出现最终“综合排名成绩”相同的情况，则优先考察相应学生“创新能力”，其次考察“专业成绩”，并以此为依据进行排名。\\接下来，分别介绍专业成绩和综合考核成绩的计算方式。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**专业成绩**'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '由于创新特长类推免是全校范围竞争，创新创业学院为了避免不同学院之间人数、给分等因素差距过大，设计了一套算法来计算专业成绩。'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '\\text{专业成绩} = M + \\frac{\\text{本人绩点} - \\text{专业第50\\%学生绩点} }{\\text{专业第1学生绩点} - \\text{专业第50\\%学生绩点}} × j'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: 'M 为成绩基础分，为当年所有参加创新特长生推免考核学生中的绩点成绩的最低分（70 分制）。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: 'j 为加权系数，当年参加创新特长生推免考核的学生涉及N个专业，我们假设：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: 'N个专业分别为： A_1，A_2，……，A_N'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '每个专业报名人数为： a_i（i=1，2，……，n）'
                                     },
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'参加创新特长生推免考核的学生绩点采用70分制，我们现在以第N个专业为例，那么该专业中：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'参加创新特长生推免考核学生的绩点成绩最高分为：P_N'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'参加创新特长生推免考核学生的绩点成绩最低分为：Q_N'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'该专业分数的极差为：R_N=P_N-Q_N'
+                                        type: NWComponent.NWDescription,
+                                        text: '参加创新特长生推免考核的学生绩点采用70分制，我们现在以第N个专业为例，那么该专业中：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '参加创新特长生推免考核学生的绩点成绩最高分为：P_N'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '参加创新特长生推免考核学生的绩点成绩最低分为：Q_N'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '该专业分数的极差为：R_N=P_N-Q_N'
                                     },
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'那么j表示当年所有参加创新特长生推免考核学生专业成绩换算中的一个加权求和的系数，具体公式如下：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'j = \\frac{\\sum_{i=1}^{N}(R_i × a_i)}{\\sum_{i=1}^{N} a_i}'
+                                        type: NWComponent.NWDescription,
+                                        text: '那么j表示当年所有参加创新特长生推免考核学生专业成绩换算中的一个加权求和的系数，具体公式如下：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: 'j = \\frac{\\sum_{i=1}^{N}(R_i × a_i)}{\\sum_{i=1}^{N} a_i}'
                                     }
-                                    ,{
-                                        type:NWComponent.NWDescription,
-                                        text:'以上“专业成绩计算办法”中的各项绩点及“专业成绩”最终计算结果均为小数点后按四舍五入保留四位小数。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**综合考核成绩**'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'综合考核成绩包括三个部分：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'综合考核成绩 = 面试成绩（满分10分）+创新能力成绩（满分15分）+德育成绩（满分5分）'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**面试成绩**主要内容如下：'
-                                    },{
-                                        type:NWComponent.NWList,
-                                        order:false,
-                                        data:['创新创业学院统一组织面试，并分组进行考核，每组对应5-10名专家考核。','考核内容主要对学生掌握的知识、学术研究能力、创新创业经历等方面进行评价。','参考往年经验，面试考核需要准备ppt。ppt内容主要为自己的创新经历和个人介绍等。']
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**创新能力成绩**主要内容如下：'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'可以提交1~2项创新创业竞赛、项目国家级（含）以上获奖证明。具体计算方式如下：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'创新能力成绩 = (a+b - a \\times b) \\times 15'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'其中，a、b 为提交的创新创业类竞赛、项目获奖系数（只提交1项证明时，b=0）。具体系数参考下列各表。'
-                                    },{
-                                        type:NWComponent.NWTable,
-                                        title:'七星级竞赛国家级（国际级）',
-                                        data:[
-                                            ['奖项','系数'],
-                                            ['金、一等奖及以上','1'],
-                                            ['银、二等奖','0.6'],
-                                            ['铜、三等奖','0.5']
+                                    , {
+                                        type: NWComponent.NWDescription,
+                                        text: '以上“专业成绩计算办法”中的各项绩点及“专业成绩”最终计算结果均为小数点后按四舍五入保留四位小数。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**综合考核成绩**'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '综合考核成绩包括三个部分：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '综合考核成绩 = 面试成绩（满分10分）+创新能力成绩（满分15分）+德育成绩（满分5分）'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**面试成绩**主要内容如下：'
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['创新创业学院统一组织面试，并分组进行考核，每组对应5-10名专家考核。', '考核内容主要对学生掌握的知识、学术研究能力、创新创业经历等方面进行评价。', '参考往年经验，面试考核需要准备ppt。ppt内容主要为自己的创新经历和个人介绍等。']
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**创新能力成绩**主要内容如下：'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '可以提交1~2项创新创业竞赛、项目国家级（含）以上获奖证明。具体计算方式如下：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '创新能力成绩 = (a+b - a \\times b) \\times 15'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '其中，a、b 为提交的创新创业类竞赛、项目获奖系数（只提交1项证明时，b=0）。具体系数参考下列各表。'
+                                    }, {
+                                        type: NWComponent.NWTable,
+                                        title: '七星级竞赛国家级（国际级）',
+                                        data: [
+                                            ['奖项', '系数'],
+                                            ['金、一等奖及以上', '1'],
+                                            ['银、二等奖', '0.6'],
+                                            ['铜、三等奖', '0.5']
                                         ]
-                                    },{
-                                        type:NWComponent.NWTable,
-                                        title:'六星级竞赛国家级（国际级）',
-                                        data:[
-                                            ['奖项','系数'],
-                                            ['金、一等奖及以上','0.9'],
-                                            ['银、二等奖','0.5'],
-                                            ['铜、三等奖','0.4']
+                                    }, {
+                                        type: NWComponent.NWTable,
+                                        title: '六星级竞赛国家级（国际级）',
+                                        data: [
+                                            ['奖项', '系数'],
+                                            ['金、一等奖及以上', '0.9'],
+                                            ['银、二等奖', '0.5'],
+                                            ['铜、三等奖', '0.4']
                                         ]
-                                    },{
-                                        type:NWComponent.NWTable,
-                                        title:'五星级竞赛国家级（国际级）',
-                                        data:[
-                                            ['奖项','系数'],
-                                            ['金、一等奖及以上','0.6'],
-                                            ['银、二等奖','0.4'],
-                                            ['铜、三等奖','0.3']
+                                    }, {
+                                        type: NWComponent.NWTable,
+                                        title: '五星级竞赛国家级（国际级）',
+                                        data: [
+                                            ['奖项', '系数'],
+                                            ['金、一等奖及以上', '0.6'],
+                                            ['银、二等奖', '0.4'],
+                                            ['铜、三等奖', '0.3']
                                         ]
-                                    },{
-                                        type:NWComponent.NWTable,
-                                        title:'四星级竞赛国家级（国际级）',
-                                        data:[
-                                            ['奖项','系数'],
-                                            ['金、一等奖及以上','0.3'],
-                                            ['银、二等奖','0.2'],
-                                            ['铜、三等奖','0.1']
+                                    }, {
+                                        type: NWComponent.NWTable,
+                                        title: '四星级竞赛国家级（国际级）',
+                                        data: [
+                                            ['奖项', '系数'],
+                                            ['金、一等奖及以上', '0.3'],
+                                            ['银、二等奖', '0.2'],
+                                            ['铜、三等奖', '0.1']
                                         ]
-                                    },{
-                                        type:NWComponent.NWTable,
-                                        title:'三星级竞赛国家级',
-                                        data:[
-                                            ['奖项','系数'],
-                                            ['特等奖','0.5'],
-                                            ['一等奖','0.3']
+                                    }, {
+                                        type: NWComponent.NWTable,
+                                        title: '三星级竞赛国家级',
+                                        data: [
+                                            ['奖项', '系数'],
+                                            ['特等奖', '0.5'],
+                                            ['一等奖', '0.3']
                                         ]
-                                    },{
-                                        type:NWComponent.NWTable,
-                                        title:'国家大学生创新创业训练项目',
-                                        data:[
-                                            ['奖项','系数'],
-                                            ['优秀','0.7'],
-                                            ['良好','0.3']
+                                    }, {
+                                        type: NWComponent.NWTable,
+                                        title: '国家大学生创新创业训练项目',
+                                        data: [
+                                            ['奖项', '系数'],
+                                            ['优秀', '0.7'],
+                                            ['良好', '0.3']
                                         ]
-                                    },{
-                                        type:NWComponent.NWTips,
-                                        title:'提示',
-                                        case:'info',
-                                        data:'特别的，这里的竞赛可以提交以非主力队员身份参赛的获奖证明，但计分时系数减半。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'我们来举个例子，假如凭借优秀大创项目参与创新特长类推免（系数0.7），又额外提交了一个不是主力队员的七星级竞赛的二等奖（系数 0.6 / 2），那么创新能力成绩就是：'
-                                    },{
-                                        type:NWComponent.NWEquation,
-                                        equation:'分数  = ( 0.7 + (0.6 / 2) - 0.7 \\times (0.6 / 2)) \\times 15 = 0.79 \\times 15 = 11.85'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**德育成绩**主要内容如下：'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'德育考察重点基于创新创业教育相关荣誉、校级创新创业校园文化和实践活动奖励进行评价。\\所有具备遴选资格的学生**均可获得**德育**基础分4分**，各项德育加分总和上限为1分。具体加分规则如下：'
-                                    },{
-                                        type:NWComponent.NWList,
-                                        order:false,
-                                        data:['中国青少年创新奖获得者：基础分+1 分','学生创新创业“校长奖章”获得者：基础分+0.7 分','创新创业优秀学生干部获得者：基础分+0.3 分','创新创业校园文化和实践活动校级一等奖为基础分+0.2、校级二等奖为基础分+0.15、校级三等奖为基础分+0.1']
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'其中，创新创业校园文化和实践活动主要包括**大学生创意节、大学生科普节、大学生创业节和“责任、立德、成才”素质拓展训练营中的校级活动**。\\校级创新创业校园文化和实践活动的奖励**最多申报3项**。\\同一作品或同一活动**只能取高计算1次，不得重复计算**；校级创新创业校园文化和实践活动申报的作品或活动不与其它（“创新能力成绩”等）申报内容重复计算；“创新创业优秀学生干部”荣誉只能计算1 次。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'如果在创新创业教育过程出现如下情况，将实施相应处罚制度：'
-                                    },{
-                                        type:NWComponent.NWList,
-                                        order:false,
-                                        data:['在参加创新创业实践活动过程中发生作弊、抄袭等学术不端或造成重大负面影响者，直接取消学生创新特长生推免考核资格','在创新创业教育过程中造成安全事故者，直接取消学生创新特长生推免考核资格','在创新创业教育过程中被安全检查通报（未达到安全事故）者，依据后果严重程度，基础分减0.2~1分']
+                                    }, {
+                                        type: NWComponent.NWTips,
+                                        title: '提示',
+                                        case: 'info',
+                                        data: '特别的，这里的竞赛可以提交以非主力队员身份参赛的获奖证明，但计分时系数减半。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '我们来举个例子，假如凭借优秀大创项目参与创新特长类推免（系数0.7），又额外提交了一个不是主力队员的七星级竞赛的二等奖（系数 0.6 / 2），那么创新能力成绩就是：'
+                                    }, {
+                                        type: NWComponent.NWEquation,
+                                        equation: '分数  = ( 0.7 + (0.6 / 2) - 0.7 \\times (0.6 / 2)) \\times 15 = 0.79 \\times 15 = 11.85'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**德育成绩**主要内容如下：'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '德育考察重点基于创新创业教育相关荣誉、校级创新创业校园文化和实践活动奖励进行评价。\\所有具备遴选资格的学生**均可获得**德育**基础分4分**，各项德育加分总和上限为1分。具体加分规则如下：'
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['中国青少年创新奖获得者：基础分+1 分', '学生创新创业“校长奖章”获得者：基础分+0.7 分', '创新创业优秀学生干部获得者：基础分+0.3 分', '创新创业校园文化和实践活动校级一等奖为基础分+0.2、校级二等奖为基础分+0.15、校级三等奖为基础分+0.1']
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '其中，创新创业校园文化和实践活动主要包括**大学生创意节、大学生科普节、大学生创业节和“责任、立德、成才”素质拓展训练营中的校级活动**。\\校级创新创业校园文化和实践活动的奖励**最多申报3项**。\\同一作品或同一活动**只能取高计算1次，不得重复计算**；校级创新创业校园文化和实践活动申报的作品或活动不与其它（“创新能力成绩”等）申报内容重复计算；“创新创业优秀学生干部”荣誉只能计算1 次。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '如果在创新创业教育过程出现如下情况，将实施相应处罚制度：'
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['在参加创新创业实践活动过程中发生作弊、抄袭等学术不端或造成重大负面影响者，直接取消学生创新特长生推免考核资格', '在创新创业教育过程中造成安全事故者，直接取消学生创新特长生推免考核资格', '在创新创业教育过程中被安全检查通报（未达到安全事故）者，依据后果严重程度，基础分减0.2~1分']
                                     }
                                 ]
-                            },{
+                            }, {
                                 title: '名单公布',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'在考核结束后的一段时间内，创新创业学院会在官网公示综合排名名单，此时处于名额范围内的同学就可以稳稳拿到名额了。\\在边缘的同学也不要灰心，按照往年经验，出现过学校其他类别名额剩余返给创新特长类的情形，这样会按照名单排序往后递增。\\最后，祝各位学弟学妹们保研之路顺利！'
+                                        type: NWComponent.NWDescription,
+                                        text: '在考核结束后的一段时间内，创新创业学院会在官网公示综合排名名单，此时处于名额范围内的同学就可以稳稳拿到名额了。\\在边缘的同学也不要灰心，按照往年经验，出现过学校其他类别名额剩余返给创新特长类的情形，这样会按照名单排序往后递增。\\最后，祝各位学弟学妹们保研之路顺利！'
                                     }
                                 ]
-                            },{
+                            }, {
                                 title: '东北大学2025届创新特长保研形式分析',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'**预报名情况**'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'2025年创新特长预报名114人，其中a项竞赛为七星级2人、六星59人、国优13人、五星40人，申请保研名额预估60个。'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**实际报名情况**'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'由于实报名59人，退还约12个保研名额，实保研48人。\\其中a项竞赛为七星级2人、六星37人（实际为41人）、国优5人、五星15人（实际为11人，原因：其中三人将六星级竞赛放在B类中，一人更改为双六星级国一）。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154654864.png'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'实报名59人的学院分布如下，12个学院中，排名前三的是机械工程与自动化学院、信息科学与工程学院、计算机科学与工程学院，分别为21、8、6，占总体35%、13%、10%。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154728276.png'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'各竞赛人数分布如下。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154748231.png'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'按照学院分类如下。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154810115.png'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'各专业报名等级与竞赛等级分布如下。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154815417.png'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'**结果分析**'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'未保研11人，其中六星国一3人（其中2人主动放弃名额，另外1人绩点排名44%,面试成绩较低，德育加分0.1）。双五星1人，其他均为双五星以下。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154823190.png'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'没有六星国家一等奖保研成功的人中2位为双五星并有0.35、0.5的德育加分。双五星以下保研成功（名额递补）2人。'
-                                    },{
-                                        type:NWComponent.NWImage,
-                                        width:600,
-                                        src:'/https://image.neuwiki.top/image/image-20240917154827133.png'
+                                        type: NWComponent.NWDescription,
+                                        text: '**预报名情况**'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '2025年创新特长预报名114人，其中a项竞赛为七星级2人、六星59人、国优13人、五星40人，申请保研名额预估60个。'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**实际报名情况**'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '由于实报名59人，退还约12个保研名额，实保研48人。\\其中a项竞赛为七星级2人、六星37人（实际为41人）、国优5人、五星15人（实际为11人，原因：其中三人将六星级竞赛放在B类中，一人更改为双六星级国一）。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154654864.png'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '实报名59人的学院分布如下，12个学院中，排名前三的是机械工程与自动化学院、信息科学与工程学院、计算机科学与工程学院，分别为21、8、6，占总体35%、13%、10%。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154728276.png'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '各竞赛人数分布如下。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154748231.png'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '按照学院分类如下。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154810115.png'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '各专业报名等级与竞赛等级分布如下。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154815417.png'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '**结果分析**'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '未保研11人，其中六星国一3人（其中2人主动放弃名额，另外1人绩点排名44%,面试成绩较低，德育加分0.1）。双五星1人，其他均为双五星以下。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154823190.png'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '没有六星国家一等奖保研成功的人中2位为双五星并有0.35、0.5的德育加分。双五星以下保研成功（名额递补）2人。'
+                                    }, {
+                                        type: NWComponent.NWImage,
+                                        width: 600,
+                                        src: '/https://image.neuwiki.top/image/image-20240917154827133.png'
                                     }
                                 ]
                             }
@@ -2332,10 +2332,10 @@ export const PAGE_CONFIG: Group[] = [
                     {
                         name: "小明",
                         avatar_url: "https://image.neuwiki.top/image/xiaoming.jpg"
-                    },{
+                    }, {
                         name: "Denglin",
                         avatar_url: "https://image.neuwiki.top/image/linke.jpg"
-                    },{
+                    }, {
                         name: "逍遥飘雪",
                         avatar_url: "https://image.neuwiki.top/image/xiaoyaopiaoxue.jpg"
                     }
@@ -2548,7 +2548,7 @@ export const PAGE_CONFIG: Group[] = [
                     ]
                 }],
                 contributors: []
-            },{
+            }, {
                 title: "机械工程与自动化学院",
                 last_update: "2024年11月30日",
                 name: "JiXieXueYuan",
@@ -2560,160 +2560,160 @@ export const PAGE_CONFIG: Group[] = [
                             title: '机械工程',
                             contents: [
                                 {
-                                    type:NWComponent.NWDescription,
-                                    text:'机械工程专业自1951年创建以来，已经成为国家特色专业，并通过中国工程教育认证，是卓越工程师教育培养计划的一部分。该专业隶属于机械工程学科，拥有强大的教学力量和先进的实验设备。专业提供学士、硕士、博士学位授予权，并设有博士后流动站。专业发展以学科建设为引领，以教学为核心，科研为支撑，专业建设为依托，课程建设为起点，教学质量为关键。2007年，该专业被评为辽宁省示范性专业；2008年，被评为国家级特色专业；2013年，通过了全国工程教育认证。此外，专业还拥有国家“机械装备虚拟仿真实验教学中心”和8个省部级重点实验室。2017年，被评为辽宁省创新创业改革试点专业；2020年，入选国家级一流本科专业建设点。'
+                                    type: NWComponent.NWDescription,
+                                    text: '机械工程专业自1951年创建以来，已经成为国家特色专业，并通过中国工程教育认证，是卓越工程师教育培养计划的一部分。该专业隶属于机械工程学科，拥有强大的教学力量和先进的实验设备。专业提供学士、硕士、博士学位授予权，并设有博士后流动站。专业发展以学科建设为引领，以教学为核心，科研为支撑，专业建设为依托，课程建设为起点，教学质量为关键。2007年，该专业被评为辽宁省示范性专业；2008年，被评为国家级特色专业；2013年，通过了全国工程教育认证。此外，专业还拥有国家“机械装备虚拟仿真实验教学中心”和8个省部级重点实验室。2017年，被评为辽宁省创新创业改革试点专业；2020年，入选国家级一流本科专业建设点。'
                                 }
                             ]
-                        },{
+                        }, {
                             title: '工业设计',
                             contents: [
                                 {
-                                    type:NWComponent.NWDescription,
-                                    text:'工业设计专业自1999年经教育部批准设立，并于2000年开始招收学生。2006年，该专业被认定为“辽宁省艺术类工业产品设计人才培养基地”。作为一个综合性学科，它融合了科学、美学、工程、人文和管理等多个领域。主要研究方向包括基础理论研究和前沿设计方法。该专业硕士研究生可获得机械设计及理论学科的工学学位。毕业生因其专业技能而受到社会的高度需求，拥有广阔的就业前景。'
+                                    type: NWComponent.NWDescription,
+                                    text: '工业设计专业自1999年经教育部批准设立，并于2000年开始招收学生。2006年，该专业被认定为“辽宁省艺术类工业产品设计人才培养基地”。作为一个综合性学科，它融合了科学、美学、工程、人文和管理等多个领域。主要研究方向包括基础理论研究和前沿设计方法。该专业硕士研究生可获得机械设计及理论学科的工学学位。毕业生因其专业技能而受到社会的高度需求，拥有广阔的就业前景。'
                                 }
                             ]
-                        },{
+                        }, {
                             title: '过程装备与控制工程',
                             contents: [
                                 {
-                                    type:NWComponent.NWDescription,
-                                    text:'过程装备与控制工程专业起源于1958年创建的“真空技术及设备”专业，具有理工结合和多学科交叉的真空方向专业特色。毕业生具备强大的适应能力，能够在传统工业和尖端科技领域满足需求，并在国内外真空等相关行业和领域获得广泛认可。该专业是国家一流本科专业建设点、国家工程教育认证专业及辽宁省一流本科专业。'
+                                    type: NWComponent.NWDescription,
+                                    text: '过程装备与控制工程专业起源于1958年创建的“真空技术及设备”专业，具有理工结合和多学科交叉的真空方向专业特色。毕业生具备强大的适应能力，能够在传统工业和尖端科技领域满足需求，并在国内外真空等相关行业和领域获得广泛认可。该专业是国家一流本科专业建设点、国家工程教育认证专业及辽宁省一流本科专业。'
                                 }
                             ]
-                        },{
+                        }, {
                             title: '车辆工程',
                             contents: [
                                 {
-                                    type:NWComponent.NWDescription,
-                                    text:'车辆工程专业设立于1998年，2008年成为辽宁省重点学科。2009年开始招收本科生，是辽宁省最早具有博士、硕士学位授予权的专业之一。该专业侧重于前沿科学和交叉学科的新理论新技术在车辆工程领域的研究和应用，研究方向包括现代车辆动力学和现代车辆设计技术等。专业构建了特色教学模块，特别注重汽车电子信息技术和新能源汽车技术方向的人才培养。'
+                                    type: NWComponent.NWDescription,
+                                    text: '车辆工程专业设立于1998年，2008年成为辽宁省重点学科。2009年开始招收本科生，是辽宁省最早具有博士、硕士学位授予权的专业之一。该专业侧重于前沿科学和交叉学科的新理论新技术在车辆工程领域的研究和应用，研究方向包括现代车辆动力学和现代车辆设计技术等。专业构建了特色教学模块，特别注重汽车电子信息技术和新能源汽车技术方向的人才培养。'
                                 }
                             ]
-                        },{
+                        }, {
                             title: '智能制造工程',
                             contents: [
                                 {
-                                    type:NWComponent.NWDescription,
-                                    text:'智能制造工程专业于2020年获批成立，隶属于机械工程学科。该专业拥有雄厚的教学力量和先进的实验设备，教学理念创新。培养模式以“厚基础、精专业、强能力、重实践、高素质”为核心，旨在培养智能制造工程领域内智能装备、智能工厂和工业应用软件的理论设计、技术开发、科学研究和生产组织管理等方面的专业技术人才。'
+                                    type: NWComponent.NWDescription,
+                                    text: '智能制造工程专业于2020年获批成立，隶属于机械工程学科。该专业拥有雄厚的教学力量和先进的实验设备，教学理念创新。培养模式以“厚基础、精专业、强能力、重实践、高素质”为核心，旨在培养智能制造工程领域内智能装备、智能工厂和工业应用软件的理论设计、技术开发、科学研究和生产组织管理等方面的专业技术人才。'
                                 }
                             ]
                         }]
-                    },{
+                    }, {
                         title: '专业分流、转专业与新工科试验班遴选（以2023级为例）',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'在大一学年结束后，进行专业分流、转专业与新工科试验班选拔工作。'
+                                    type: NWComponent.NWDescription,
+                                    text: '在大一学年结束后，进行专业分流、转专业与新工科试验班选拔工作。'
                                 }]
-                            },{
+                            }, {
                                 title: '专业分流',
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'以机械类专业进入机械工程与自动化学院的学生涉及分流，智能制造专业无需分流，具体分流请参考[机械工程与自动化学院2023级大类招生学生专业分流方案](http://www.me.neu.edu.cn/2024/0731/c3402a266929/page.htm)'
-                                },{
-                                    type:NWComponent.NWDescription,
-                                    text:'**分流原则**为第一学年结束后，根据学生志愿和学分绩点进行专业分流。\\学生将分流至机械工程、过程装备与控制工程、车辆工程、工业设计四个专业，每个专业有具体的班数和人数范围。\\学生自由申请，学院根据学分绩点排序录取，未按时填报志愿的学生由学院统一调配。'
+                                    type: NWComponent.NWDescription,
+                                    text: '以机械类专业进入机械工程与自动化学院的学生涉及分流，智能制造专业无需分流，具体分流请参考[机械工程与自动化学院2023级大类招生学生专业分流方案](http://www.me.neu.edu.cn/2024/0731/c3402a266929/page.htm)'
+                                }, {
+                                    type: NWComponent.NWDescription,
+                                    text: '**分流原则**为第一学年结束后，根据学生志愿和学分绩点进行专业分流。\\学生将分流至机械工程、过程装备与控制工程、车辆工程、工业设计四个专业，每个专业有具体的班数和人数范围。\\学生自由申请，学院根据学分绩点排序录取，未按时填报志愿的学生由学院统一调配。'
                                 }]
-                            },{
+                            }, {
                                 title: '转专业',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'机械工程与自动化学院各专业均可参与，具体可以参考 [机械工程与自动化学院2023级转专业实施方案](http://www.me.neu.edu.cn/2024/0731/c3402a266930/page.htm)'
-                                    },{
-                                        type:NWComponent.NWDescription,
-                                        text:'学院严格控制转专业学生比例，具体人数分配至各专业，2023级允许转入转出比例为5%。\\转出机制主要分为学业优秀类（绩点排名）、学科专长类（论文、竞赛、专利等）和学业困难类。'
-                                    },{
-                                        type:NWComponent.NWList,
-                                        order:false,
-                                        data:['**学业优秀类**:主要学生学年的成绩，具体可以参考文件内容。','**学科专长类**：主要包括论文（第一作者身份、核心期刊）、竞赛（以团队第一负责人的身份在省级及省级以上科技竞赛获得一等奖以上奖项）、专利（以第一负责人身份获得授权发明专利）','**学业困难类**：学习该专业有一定困难。']
-                                    },{
+                                        type: NWComponent.NWDescription,
+                                        text: '机械工程与自动化学院各专业均可参与，具体可以参考 [机械工程与自动化学院2023级转专业实施方案](http://www.me.neu.edu.cn/2024/0731/c3402a266930/page.htm)'
+                                    }, {
+                                        type: NWComponent.NWDescription,
+                                        text: '学院严格控制转专业学生比例，具体人数分配至各专业，2023级允许转入转出比例为5%。\\转出机制主要分为学业优秀类（绩点排名）、学科专长类（论文、竞赛、专利等）和学业困难类。'
+                                    }, {
+                                        type: NWComponent.NWList,
+                                        order: false,
+                                        data: ['**学业优秀类**:主要学生学年的成绩，具体可以参考文件内容。', '**学科专长类**：主要包括论文（第一作者身份、核心期刊）、竞赛（以团队第一负责人的身份在省级及省级以上科技竞赛获得一等奖以上奖项）、专利（以第一负责人身份获得授权发明专利）', '**学业困难类**：学习该专业有一定困难。']
+                                    }, {
 
-                                        type:NWComponent.NWTips,
-                                        title:'提示',
-                                        case:'info',
-                                        data:'获得转出名额后，仍需获得拟转入学院专业的转入名额，也就是我们俗称的双选，你不仅要确保你能从学院转出，也要确定你想要去的学院同意接收你。'
+                                        type: NWComponent.NWTips,
+                                        title: '提示',
+                                        case: 'info',
+                                        data: '获得转出名额后，仍需获得拟转入学院专业的转入名额，也就是我们俗称的双选，你不仅要确保你能从学院转出，也要确定你想要去的学院同意接收你。'
                                     }
                                 ]
-                            },{
+                            }, {
                                 title: '新工科试验班',
                                 contents: [
                                     {
-                                        type:NWComponent.NWDescription,
-                                        text:'具体实施办法可以参考文件**[机械工程与自动化学院机械工程专业新工科实验班实施办法](http://www.me.neu.edu.cn/2024/0731/c3402a266931/page.htm)**。\\以机械类专业进入机械工程与自动化学院的学生涉及新工科试验班遴选，智能制造专业不参与（可在获得智能制造转专业转出名额并获得机械工程专业转入名额转入机械工程专业后参与遴选）。\\大二专业分流时进行新工科实验班的遴选，大一学习成绩绩点排名前40%的学生可申请，将会从申请的学生中择优遴选25人，组建实验班。\\实验班学生享有推荐免试研究生资格**（推免进入东北大学，通过CET6后可获得直博资格）**、配备导师、专业课程单独授课等特权。\\实验班施行动态管理，每学期末进行淘汰和补选，班级人数控制在25人以内。\\不得主动申请退出班级，否则退班进入普通班级后**不再具有推荐免试研究生资格**。'
+                                        type: NWComponent.NWDescription,
+                                        text: '具体实施办法可以参考文件**[机械工程与自动化学院机械工程专业新工科实验班实施办法](http://www.me.neu.edu.cn/2024/0731/c3402a266931/page.htm)**。\\以机械类专业进入机械工程与自动化学院的学生涉及新工科试验班遴选，智能制造专业不参与（可在获得智能制造转专业转出名额并获得机械工程专业转入名额转入机械工程专业后参与遴选）。\\大二专业分流时进行新工科实验班的遴选，大一学习成绩绩点排名前40%的学生可申请，将会从申请的学生中择优遴选25人，组建实验班。\\实验班学生享有推荐免试研究生资格**（推免进入东北大学，通过CET6后可获得直博资格）**、配备导师、专业课程单独授课等特权。\\实验班施行动态管理，每学期末进行淘汰和补选，班级人数控制在25人以内。\\不得主动申请退出班级，否则退班进入普通班级后**不再具有推荐免试研究生资格**。'
                                     }
                                 ]
                             }
                         ]
-                    },{
+                    }, {
                         title: '推免（以2021级为例）',
                         subsections: [
                             {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'推免文件可以参考[机械工程与自动化学院推荐 2021 级优秀应届本科毕业生免试攻读研究生工作实施细则](https://image.neuwiki.top/file/da4defb8-d84c-bf01-830f-d07629397c52.pdf)。\\推荐使用[机械学院保研计算器](https://www.momofish.top/app/JXBY/)。整体共分加权平均学生成绩、创新能力、综合素质测评、面试四项。'
-                                },{
-                                    type:NWComponent.NWTable,
-                                    title:'分数占比',
-                                    data:[
-                                        ['名称','占比'],
-                                        ['加权平均学生成绩','80%'],
-                                        ['创新能力','6%'],
-                                        ['综合素质测评','6%'],
-                                        ['面试','8%']
+                                    type: NWComponent.NWDescription,
+                                    text: '推免文件可以参考[机械工程与自动化学院推荐 2021 级优秀应届本科毕业生免试攻读研究生工作实施细则](https://image.neuwiki.top/file/da4defb8-d84c-bf01-830f-d07629397c52.pdf)。\\推荐使用[机械学院保研计算器](https://www.momofish.top/app/JXBY/)。整体共分加权平均学生成绩、创新能力、综合素质测评、面试四项。'
+                                }, {
+                                    type: NWComponent.NWTable,
+                                    title: '分数占比',
+                                    data: [
+                                        ['名称', '占比'],
+                                        ['加权平均学生成绩', '80%'],
+                                        ['创新能力', '6%'],
+                                        ['综合素质测评', '6%'],
+                                        ['面试', '8%']
                                     ]
                                 }]
-                            },{
+                            }, {
                                 title: '加权平均学分成绩（80%）',
                                 contents: [{
-                                    type:NWComponent.NWEquation,
-                                    equation:'加权平均学生成绩 = (GPA + 5) \\times 10'
+                                    type: NWComponent.NWEquation,
+                                    equation: '加权平均学生成绩 = (GPA + 5) \\times 10'
                                 }
-                            ]
-                            },{
+                                ]
+                            }, {
                                 title: '创新能力（6%）',
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'主要是根据学业期间的竞赛成果计算。'
-                                },{
-                                    type:NWComponent.NWList,
-                                    order:false,
-                                    data:['非主力队员成绩按70%计算','同一赛事获奖按照最高获奖级别计算分值','各星级竞赛优秀奖参考下一星级竞赛的三等奖赋分','大学生创新创业训练计划以过程考核与结果考核相结合的方式进行赋分']
+                                    type: NWComponent.NWDescription,
+                                    text: '主要是根据学业期间的竞赛成果计算。'
+                                }, {
+                                    type: NWComponent.NWList,
+                                    order: false,
+                                    data: ['非主力队员成绩按70%计算', '同一赛事获奖按照最高获奖级别计算分值', '各星级竞赛优秀奖参考下一星级竞赛的三等奖赋分', '大学生创新创业训练计划以过程考核与结果考核相结合的方式进行赋分']
                                 }
-                            ]
-                            },{
+                                ]
+                            }, {
                                 title: '综合素质测评（6%）',
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'由基础分（25分）、思想品德A（20分）、社会工作B（20分）、文体活动C（15分）、集体建设D（20分）组成，各项分数由三年综合测评平均值确定，但是**其中科研竞赛的25分变成了基础分**。'
+                                    type: NWComponent.NWDescription,
+                                    text: '由基础分（25分）、思想品德A（20分）、社会工作B（20分）、文体活动C（15分）、集体建设D（20分）组成，各项分数由三年综合测评平均值确定，但是**其中科研竞赛的25分变成了基础分**。'
                                 }
-                            ]
-                            },{
+                                ]
+                            }, {
                                 title: '面试（8%）',
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'由学生掌握的知识和学术研究能力两部分组成，每部分100满分'
+                                    type: NWComponent.NWDescription,
+                                    text: '由学生掌握的知识和学术研究能力两部分组成，每部分100满分'
                                 }
-                            ]
-                            },{
+                                ]
+                            }, {
                                 title: undefined,
                                 contents: [{
-                                    type:NWComponent.NWDescription,
-                                    text:'2021级名额共94个，实验班22个，其余专业72个（保研率14.4%），具体根据分流方向人数比例分配。'
-                                },{
-                                    type:NWComponent.NWTable,
-                                    title:'保研名额分配情况',
-                                    data:[
-                                        ['专业','总人数','保研人数','保研率'],
-                                        ['新工科试验班','25','22','88%'],
-                                        ['机械工程','236','34','14.4%'],
-                                        ['车辆工程','63','9','14.2%'],
-                                        ['工业设计','27','4','14.8%'],
-                                        ['过程控制','66','10','15.1%'],
-                                        ['智能制造','107','15','14.0%'],
-                                        ['合计','524','94','17.9%'],
+                                    type: NWComponent.NWDescription,
+                                    text: '2021级名额共94个，实验班22个，其余专业72个（保研率14.4%），具体根据分流方向人数比例分配。'
+                                }, {
+                                    type: NWComponent.NWTable,
+                                    title: '保研名额分配情况',
+                                    data: [
+                                        ['专业', '总人数', '保研人数', '保研率'],
+                                        ['新工科试验班', '25', '22', '88%'],
+                                        ['机械工程', '236', '34', '14.4%'],
+                                        ['车辆工程', '63', '9', '14.2%'],
+                                        ['工业设计', '27', '4', '14.8%'],
+                                        ['过程控制', '66', '10', '15.1%'],
+                                        ['智能制造', '107', '15', '14.0%'],
+                                        ['合计', '524', '94', '17.9%'],
                                     ]
                                 }]
                             }
@@ -2731,215 +2731,215 @@ export const PAGE_CONFIG: Group[] = [
 
 
 
-export const getPageByName = (name: string = "DeveloperGreeting"): Page | undefined => {
-    const foundGroup = PAGE_CONFIG.find(group => group.pages.some(page => page.name === name));
-    return foundGroup?.pages.find(page => page.name === name) || undefined;
+// export const getPageByName = (name: string = "DeveloperGreeting"): Page | undefined => {
+//     const foundGroup = PAGE_CONFIG.find(group => group.pages.some(page => page.name === name));
+//     return foundGroup?.pages.find(page => page.name === name) || undefined;
 
-}
-export const getPageURLs = (): LinkListItem[] => {
-    // 创建一个数组来存储格式化后的URL
-    const pageURLs: LinkListItem[] = [];
-    // 遍历group中的pages数组
-    PAGE_CONFIG.forEach((item) => {
-        item.pages.forEach((page) => {
-            // 检查page对象是否有title和name属性
-            if (page.title && page.name) {
-                console.log(page.title);
-                // 格式化URL并添加到数组中
-                pageURLs.push({
-                    text: page.title,
-                    link: `https://neuwiki.top/read/${page.name}`
-                });
+// }
+// export const getPageURLs = (): LinkListItem[] => {
+//     // 创建一个数组来存储格式化后的URL
+//     const pageURLs: LinkListItem[] = [];
+//     // 遍历group中的pages数组
+//     PAGE_CONFIG.forEach((item) => {
+//         item.pages.forEach((page) => {
+//             // 检查page对象是否有title和name属性
+//             if (page.title && page.name) {
+//                 console.log(page.title);
+//                 // 格式化URL并添加到数组中
+//                 pageURLs.push({
+//                     text: page.title,
+//                     link: `https://neuwiki.top/read/${page.name}`
+//                 });
 
-            }
-        });
-    })
+//             }
+//         });
+//     })
 
-    // 返回包含所有格式化URL的数组
-    return pageURLs;
-}
-export function findAdjacentPageInGroups(currentPageName: string, direction: 'next' | 'prev' = 'prev'): string | 'start' | 'end' {
-    let groups: Group[] = PAGE_CONFIG;
+//     // 返回包含所有格式化URL的数组
+//     return pageURLs;
+// }
+// export function findAdjacentPageInGroups(currentPageName: string, direction: 'next' | 'prev' = 'prev'): string | 'start' | 'end' {
+//     let groups: Group[] = PAGE_CONFIG;
 
-    // 辅助函数，用于在单个group内查找相邻页面的name
-    function findAdjacentInGroup(group: Group, pageName: string, dir: 'next' | 'prev'): string | 'start' | 'end' {
-        const pageIndex = group.pages.findIndex(page => page.name === pageName);
-        if (pageIndex === -1) return 'end';
+//     // 辅助函数，用于在单个group内查找相邻页面的name
+//     function findAdjacentInGroup(group: Group, pageName: string, dir: 'next' | 'prev'): string | 'start' | 'end' {
+//         const pageIndex = group.pages.findIndex(page => page.name === pageName);
+//         if (pageIndex === -1) return 'end';
 
-        const pages = group.pages;
-        if (dir === 'next') {
-            if (pageIndex + 1 < pages.length) return pages[pageIndex + 1].name;
-            return 'end';
-        } else {
-            if (pageIndex > 0) return pages[pageIndex - 1].name;
-            return 'start';
-        }
-    }
+//         const pages = group.pages;
+//         if (dir === 'next') {
+//             if (pageIndex + 1 < pages.length) return pages[pageIndex + 1].name;
+//             return 'end';
+//         } else {
+//             if (pageIndex > 0) return pages[pageIndex - 1].name;
+//             return 'start';
+//         }
+//     }
 
-    let currentIndex = -1;
-    let currentGroupIndex = -1;
+//     let currentIndex = -1;
+//     let currentGroupIndex = -1;
 
-    // 找到当前页面及其所在组的索引
-    for (let i = 0; i < groups.length; i++) {
-        const group = groups[i];
-        currentIndex = group.pages.findIndex(page => page.name === currentPageName);
-        if (currentIndex !== -1) {
-            currentGroupIndex = i;
-            break;
-        }
-    }
+//     // 找到当前页面及其所在组的索引
+//     for (let i = 0; i < groups.length; i++) {
+//         const group = groups[i];
+//         currentIndex = group.pages.findIndex(page => page.name === currentPageName);
+//         if (currentIndex !== -1) {
+//             currentGroupIndex = i;
+//             break;
+//         }
+//     }
 
-    // 如果没有找到页面，返回'end'
-    if (currentGroupIndex === -1) return 'end';
+//     // 如果没有找到页面，返回'end'
+//     if (currentGroupIndex === -1) return 'end';
 
-    // 查找当前组内的相邻页面
-    let adjacentPageName = findAdjacentInGroup(groups[currentGroupIndex], currentPageName, direction);
+//     // 查找当前组内的相邻页面
+//     let adjacentPageName = findAdjacentInGroup(groups[currentGroupIndex], currentPageName, direction);
 
-    // 如果direction是'next'且当前页面是组内最后一个，或者direction是'prev'且当前页面是组内第一个
-    if ((direction === 'next' && currentIndex === groups[currentGroupIndex].pages.length - 1) ||
-        (direction === 'prev' && currentIndex === 0)) {
-        // 检查是否有下一个组或上一个组
-        if (direction === 'next' && currentGroupIndex < groups.length - 1) {
-            // 返回下一个组的第一个页面的name
-            adjacentPageName = groups[currentGroupIndex + 1].pages[0].name;
-        } else if (direction === 'prev' && currentGroupIndex > 0) {
-            // 返回上一个组的最后一个页面的name
-            adjacentPageName = groups[currentGroupIndex - 1].pages[groups[currentGroupIndex - 1].pages.length - 1].name;
-        }
-    }
+//     // 如果direction是'next'且当前页面是组内最后一个，或者direction是'prev'且当前页面是组内第一个
+//     if ((direction === 'next' && currentIndex === groups[currentGroupIndex].pages.length - 1) ||
+//         (direction === 'prev' && currentIndex === 0)) {
+//         // 检查是否有下一个组或上一个组
+//         if (direction === 'next' && currentGroupIndex < groups.length - 1) {
+//             // 返回下一个组的第一个页面的name
+//             adjacentPageName = groups[currentGroupIndex + 1].pages[0].name;
+//         } else if (direction === 'prev' && currentGroupIndex > 0) {
+//             // 返回上一个组的最后一个页面的name
+//             adjacentPageName = groups[currentGroupIndex - 1].pages[groups[currentGroupIndex - 1].pages.length - 1].name;
+//         }
+//     }
 
-    return adjacentPageName;
-}
-/**
- * 在 Group[] 中搜索所有字符串字段，返回匹配结果及其上下文
- * @param groups 要搜索的 group 数组
- * @param keyword 搜索关键词
- * @returns 匹配结果数组
- */
-export function searchInGroups(groups: any[], keyword: string) {
-    const results: any[] = [];
-    const regex = new RegExp(keyword, 'i'); // 忽略大小写模糊搜索
+//     return adjacentPageName;
+// }
+// /**
+//  * 在 Group[] 中搜索所有字符串字段，返回匹配结果及其上下文
+//  * @param groups 要搜索的 group 数组
+//  * @param keyword 搜索关键词
+//  * @returns 匹配结果数组
+//  */
+// export function searchInGroups(groups: any[], keyword: string) {
+//     const results: any[] = [];
+//     const regex = new RegExp(keyword, 'i'); // 忽略大小写模糊搜索
 
-    // 遍历所有 Group
-    groups.forEach(group => {
-        group.pages.forEach((page: any) => {
-            // 搜索 Page 层级
-            searchInPage(page, regex, results);
-        });
-    });
+//     // 遍历所有 Group
+//     groups.forEach(group => {
+//         group.pages.forEach((page: any) => {
+//             // 搜索 Page 层级
+//             searchInPage(page, regex, results);
+//         });
+//     });
 
-    return results;
-}
+//     return results;
+// }
 
-/**
- * 搜索 Page
- */
-function searchInPage(page: any, regex: RegExp, results: any[]) {
-    // 搜索 Page 的 title 和 description
-    searchInString(page.title, 'Page Title', page, regex, results);
-    searchInString(page.description, 'Page Description', page, regex, results);
+// /**
+//  * 搜索 Page
+//  */
+// function searchInPage(page: any, regex: RegExp, results: any[]) {
+//     // 搜索 Page 的 title 和 description
+//     searchInString(page.title, 'Page Title', page, regex, results);
+//     searchInString(page.description, 'Page Description', page, regex, results);
 
-    page.sections.forEach((section: any) => {
-        // 搜索 Section
-        searchInString(section.title, 'Section Title', page, regex, results);
+//     page.sections.forEach((section: any) => {
+//         // 搜索 Section
+//         searchInString(section.title, 'Section Title', page, regex, results);
 
-        section.subsections.forEach((subsection: any) => {
-            // 搜索 SubSection
-            searchInString(subsection.title, 'SubSection Title', page, regex, results);
+//         section.subsections.forEach((subsection: any) => {
+//             // 搜索 SubSection
+//             searchInString(subsection.title, 'SubSection Title', page, regex, results);
 
-            subsection.contents.forEach((content: any) => {
-                searchInContent(content, page, section, subsection, regex, results);
-            });
-        });
-    });
-}
+//             subsection.contents.forEach((content: any) => {
+//                 searchInContent(content, page, section, subsection, regex, results);
+//             });
+//         });
+//     });
+// }
 
-/**
- * 搜索 Content
- */
-function searchInContent(
-    content: any,
-    page: any,
-    section: any,
-    subsection: any,
-    regex: RegExp,
-    results: any[]
-) {
-    switch (content.type) {
-        case 'NWDescription':
-            searchInString(content.text, 'NWDescription', page, regex, results, section, subsection);
-            break;
-        case 'NWImage':
-            searchInString(content.src, 'NWImage src', page, regex, results, section, subsection);
-            break;
-        case 'NWList':
-            content.data.forEach((item: string) => {
-                searchInString(item, 'NWList Item', page, regex, results, section, subsection);
-            });
-            break;
-        case 'NWTips':
-            searchInString(content.title, 'NWTips Title', page, regex, results, section, subsection);
-            searchInString(content.data, 'NWTips Data', page, regex, results, section, subsection);
-            break;
-        case 'NWDialogue':
-            searchInString(content.q, 'NWDialogue Question', page, regex, results, section, subsection);
-            searchInString(content.a, 'NWDialogue Answer', page, regex, results, section, subsection);
-            break;
-        case 'NWPersonalIntro':
-            searchInString(content.name, 'NWPersonalIntro Name', page, regex, results, section, subsection);
-            searchInString(content.introduction, 'NWPersonalIntro Introduction', page, regex, results, section, subsection);
-            (content.achievements || []).forEach((achievement: string) => {
-                searchInString(achievement, 'NWPersonalIntro Achievement', page, regex, results, section, subsection);
-            });
-            break;
-        case 'NWMotto':
-            searchInString(content.message, 'NWMotto Message', page, regex, results, section, subsection);
-            break;
-        case 'NWProblemsRank':
-            content.problems.forEach((problem: any) => {
-                searchInString(problem.description, 'NWProblemsRank Problem Description', page, regex, results, section, subsection);
-            });
-            break;
-        case 'NWSiteContributors':
-            content.site_sitecontributors.forEach((contributor: any) => {
-                searchInString(contributor.username, 'NWSiteContributors Username', page, regex, results, section, subsection);
-                searchInString(contributor.bio, 'NWSiteContributors Bio', page, regex, results, section, subsection);
-            });
-            break;
-        default:
-            break;
-    }
-}
+// /**
+//  * 搜索 Content
+//  */
+// function searchInContent(
+//     content: any,
+//     page: any,
+//     section: any,
+//     subsection: any,
+//     regex: RegExp,
+//     results: any[]
+// ) {
+//     switch (content.type) {
+//         case 'NWDescription':
+//             searchInString(content.text, 'NWDescription', page, regex, results, section, subsection);
+//             break;
+//         case 'NWImage':
+//             searchInString(content.src, 'NWImage src', page, regex, results, section, subsection);
+//             break;
+//         case 'NWList':
+//             content.data.forEach((item: string) => {
+//                 searchInString(item, 'NWList Item', page, regex, results, section, subsection);
+//             });
+//             break;
+//         case 'NWTips':
+//             searchInString(content.title, 'NWTips Title', page, regex, results, section, subsection);
+//             searchInString(content.data, 'NWTips Data', page, regex, results, section, subsection);
+//             break;
+//         case 'NWDialogue':
+//             searchInString(content.q, 'NWDialogue Question', page, regex, results, section, subsection);
+//             searchInString(content.a, 'NWDialogue Answer', page, regex, results, section, subsection);
+//             break;
+//         case 'NWPersonalIntro':
+//             searchInString(content.name, 'NWPersonalIntro Name', page, regex, results, section, subsection);
+//             searchInString(content.introduction, 'NWPersonalIntro Introduction', page, regex, results, section, subsection);
+//             (content.achievements || []).forEach((achievement: string) => {
+//                 searchInString(achievement, 'NWPersonalIntro Achievement', page, regex, results, section, subsection);
+//             });
+//             break;
+//         case 'NWMotto':
+//             searchInString(content.message, 'NWMotto Message', page, regex, results, section, subsection);
+//             break;
+//         case 'NWProblemsRank':
+//             content.problems.forEach((problem: any) => {
+//                 searchInString(problem.description, 'NWProblemsRank Problem Description', page, regex, results, section, subsection);
+//             });
+//             break;
+//         case 'NWSiteContributors':
+//             content.site_sitecontributors.forEach((contributor: any) => {
+//                 searchInString(contributor.username, 'NWSiteContributors Username', page, regex, results, section, subsection);
+//                 searchInString(contributor.bio, 'NWSiteContributors Bio', page, regex, results, section, subsection);
+//             });
+//             break;
+//         default:
+//             break;
+//     }
+// }
 
-/**
- * 搜索字符串并保存结果
- */
-function searchInString(
-    text: string | undefined,
-    foundInType: string,
-    page: any,
-    regex: RegExp,
-    results: any[],
-    section?: any,
-    subsection?: any
-) {
-    if (!text) return;
+// /**
+//  * 搜索字符串并保存结果
+//  */
+// function searchInString(
+//     text: string | undefined,
+//     foundInType: string,
+//     page: any,
+//     regex: RegExp,
+//     results: any[],
+//     section?: any,
+//     subsection?: any
+// ) {
+//     if (!text) return;
 
-    const match = text.match(regex);
-    if (match) {
-        const startIdx = Math.max(0, match.index! - 20);
-        const endIdx = Math.min(text.length, match.index! + match[0].length + 20);
-        const snippet = `...${text.slice(startIdx, endIdx)}...`;
+//     const match = text.match(regex);
+//     if (match) {
+//         const startIdx = Math.max(0, match.index! - 20);
+//         const endIdx = Math.min(text.length, match.index! + match[0].length + 20);
+//         const snippet = `...${text.slice(startIdx, endIdx)}...`;
 
-        results.push({
-            pageTitle: page.title,
-            pageName: page.name,
-            sectionTitle: section?.title,
-            subSectionTitle: subsection?.title,
-            foundInType,
-            snippet
-        });
-    }
-}
+//         results.push({
+//             pageTitle: page.title,
+//             pageName: page.name,
+//             sectionTitle: section?.title,
+//             subSectionTitle: subsection?.title,
+//             foundInType,
+//             snippet
+//         });
+//     }
+// }
 
 

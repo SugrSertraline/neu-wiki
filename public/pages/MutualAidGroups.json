@@ -1,0 +1,89 @@
+{
+  "title": "互助群",
+  "name": "MutualAidGroups",
+  "last_update": "2024年11月23日",
+  "description": "这里汇总了校内的学习、生活、出行等互助群聊。",
+  "sections": [
+    {
+      "title": "生活互助",
+      "subsections": [
+        {
+          "title": null,
+          "contents": [
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "NEU·租房er互助群",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "809396718",
+                "imageUrl": null
+              }
+            },
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "NEU·(仅可)拼车/失物招领①",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "642261754",
+                "imageUrl": null
+              }
+            },
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "NEU·(仅可)拼车/失物招领②",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "608580708",
+                "imageUrl": null
+              }
+            },
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "NEU·健康互助群",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "364610094",
+                "imageUrl": null
+              }
+            },
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "东大2023级交流互助群（勿代课）",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "654165985",
+                "imageUrl": null
+              }
+            },
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "东大2024级交流互助群",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "280912500",
+                "imageUrl": null
+              }
+            },
+            {
+              "type": "NWClubIntro",
+              "club": {
+                "name": "NEU·考研er",
+                "description": "",
+                "logo": "https://image.neuwiki.top/image/jiaoyouqiang.jpg",
+                "qqGroup": "296343321",
+                "imageUrl": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contributors": []
+}

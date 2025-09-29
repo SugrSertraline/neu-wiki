@@ -28,7 +28,11 @@ const router = createRouter({
       name:'changeCommit',
       component:()=>import('@/views/ChangeCommitView.vue')
 
-    }
+    },{
+      path:'/editor',
+      name:'JsonPageEditor',
+      component:()=>import('@/views/JsonPageEditor.vue')
+    },
   ]
 })
 

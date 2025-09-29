@@ -16,8 +16,6 @@ declare global {
 
 </script>
 
-
-
 <template>
   <n-notification-provider>
     <n-message-provider>
@@ -27,7 +25,6 @@ declare global {
             <NWHeader />
           </div>
         </n-layout-header>
-
         <n-layout position="absolute" style="top: 64px;" ref="contentRef" :native-scrollbar="false">
           <router-view />
         </n-layout>

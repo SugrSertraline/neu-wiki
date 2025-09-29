@@ -1,0 +1,22 @@
+{
+            "title": "链接汇总",
+            "last_update": "2024年11月17日",
+            "name": "AllLink",
+            "description": "这里收录了网站的所有链接，大家可以快速查看并且分享。",
+            "sections": [
+                {
+                    "title": null,
+                    "subsections": [
+                        {
+                            "title": null,
+                            "contents": [
+                                {
+                                    "type": "NWLinkList"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "contributors": []
+        }

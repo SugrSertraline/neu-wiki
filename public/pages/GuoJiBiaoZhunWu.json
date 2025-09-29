@@ -1,0 +1,68 @@
+{
+                "title": "国际标准舞团",
+                "last_update": "2024年11月20日",
+                "name": "GuoJiBiaoZhunWu",
+                "description": null,
+                "sections": [{
+                    "title": "社团简介",
+                    "subsections": [
+                        {
+                            "title": null,
+                            "contents": [{
+                                "type": "NWClubIntro",
+                                "club": {
+                                    "name": "东北大学国际标准舞团",
+                                    "logo": "https://image.neuwiki.top/image/neulogo.jpeg",
+                                    "description": "东北大学国际标准舞团属于东北大学团委文化艺术中心的优秀团体，参与东北大学百年校庆文艺晚会、“龙腾新百年”东北大学2024年新年联欢会、东北大学2024年“廿廿不忘，舞影流光”毕业舞会、第二届沈阳时尚体育节暨首届“金叶杯”体育舞蹈国际标准舞公开赛等各类校级、院级活动以及专业国标舞赛事，是一支团结友爱、经验成熟、热爱舞蹈的队伍。",
+                                    "qqGroup": "964473553",
+                                    "imageUrl": "https://image.neuwiki.top/image/guobiaowu.jpg"
+                                }
+                            }]
+                        }
+                    ]
+                }, {
+                    "title": "社团风采",
+                    "subsections": [{
+                        "title": null,
+                        "contents": [
+                            {
+                                "type": "NWPhotoAlbum",
+                                "photos": [
+                                    {
+                                        "url": "https://image.neuwiki.top/image/guobiao1.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao2.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao3.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao4.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao5.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao6.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao7.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao8.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao9.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/guobiao10.jpg",
+                                        "alt": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }]
+                }],
+                "contributors": []
+            }

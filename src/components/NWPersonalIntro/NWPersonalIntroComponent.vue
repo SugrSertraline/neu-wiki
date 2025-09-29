@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 sm:px-6 md:px-8 py-6">
+  <div class=" py-6">
     <n-card class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <div class="flex flex-col lg:flex-row items-center p-4">
         <div class="flex flex-col sm:flex-row items-center lg:w-2/3">

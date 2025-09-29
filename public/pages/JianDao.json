@@ -1,0 +1,53 @@
+{
+                "title": "剑道社",
+                "last_update": "2024年11月20日",
+                "name": "JianDao",
+                "description": null,
+                "sections": [{
+                    "title": "社团简介",
+                    "subsections": [
+                        {
+                            "title": null,
+                            "contents": [{
+                                "type": "NWClubIntro",
+                                "club": {
+                                    "name": "东北大学剑道社",
+                                    "logo": "https://image.neuwiki.top/image/neulogo.jpeg",
+                                    "description": "本群为东北大学南湖和浑南校区剑道社共同的招新群，进群后负责人会发送浑南或南湖QQ群的二维码邀请进入对应校区社团群。进相应群后会定时发布训练时间场地信息，也可进行剑道相关知识的讨论。群规则：文明交流，和谐共处，欢迎共同讨论学习剑道知识。",
+                                    "qqGroup": "964473553",
+                                    "imageUrl": "https://image.neuwiki.top/image/jiandao_qq.jpg"
+                                }
+                            }]
+                        }
+                    ]
+                }, {
+                    "title": "社团风采",
+                    "subsections": [{
+                        "title": null,
+                        "contents": [
+                            {
+                                "type": "NWPhotoAlbum",
+                                "photos": [
+                                    {
+                                        "url": "https://image.neuwiki.top/image/jiandao1.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/jiandao2.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/jiandao3.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/jiandao4.jpg",
+                                        "alt": ""
+                                    }, {
+                                        "url": "https://image.neuwiki.top/image/jiandao5.jpg",
+                                        "alt": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }]
+                }],
+                "contributors": []
+            }

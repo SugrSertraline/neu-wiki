@@ -1,0 +1,27 @@
+{
+            "title": "待补充内容",
+            "last_update": "2024年11月16日",
+            "name": "ProblemsRank",
+            "description": "这里展示目前网站急缺的内容，如果大家有能力可以动动小手贡献一下！",
+            "sections": [
+                {
+                    "title": null,
+                    "subsections": [
+                        {
+                            "title": null,
+                            "contents": [
+                                {
+                                    "type": "NWProblemsRank",
+                                    "problems": [
+                                        { "description": "各个学院攻略", "urgency": 5 },
+                                        { "description": "医疗报销等日常", "urgency": 2 },
+                                        { "description": "贡献者功能", "urgency": 2 }                                    ]
+
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "contributors": []
+        }

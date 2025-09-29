@@ -1,0 +1,29 @@
+{
+                "title": "东大飞鸟",
+                "last_update": "2024年11月25日",
+                "name": "FeiNiao",
+                "description": null,
+                "sections": [
+                    {
+                        "title": "社团简介",
+                        "subsections": [
+                            {
+                                "title": null,
+                                "contents": [
+                                    {
+                                        "type": "NWClubIntro",
+                                        "club": {
+                                            "name": "东大飞鸟",
+                                            "logo": "https://image.neuwiki.top/image/neulogo.jpeg",
+                                            "description": "校内民间户外爱好组织，不定期（周末）组织省内徒步活动，具体活动形式与内容进群查看群文件与群相册，欢迎所有户外爱好者加入交流。校内同学均可，进群需备注专业学号。",
+                                            "qqGroup": "589721067",
+                                            "imageUrl": "https://image.neuwiki.top/image/dongdafeiniao.jpg"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "contributors": []
+            }

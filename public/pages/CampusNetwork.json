@@ -1,0 +1,83 @@
+ {
+                "title": "校园网",
+                "last_update": "2024年9月22日",
+                "name": "CampusNetwork",
+                "description": "本页内容基于学校信网办[信息化与网络服务指南](http://xwb.neu.edu.cn/2019/0909/c6133a141936/page.htm)、[IP控制网关](http://ipgw.neu.edu.cn/)和自身经验完成。 东北大学为中国教育和科研计算机网（CERNET）东北地区骨干节点，网络条件相对来说还是很不错的。学校的公网出口服务由中国移动提供，游戏加速器可以参考设置。",
+                "sections": [
+                    {
+                        "title": "连接方式",
+                        "subsections": [
+                            {
+                                "title": "有线连接",
+                                "contents": [{
+                                    "type": "NWDescription",
+                                    "text": "在宿舍、实验室等地可以直接使用网线连接墙上的网络接口连接网络，普通的为百兆，有四个接口的方形盒子为**1000M网络**，在选择网线时可以尽量选择超五类以上的线缆以充分发挥网络性能。"
+                                }]
+                            }, {
+                                "title": "无线连接",
+                                "contents": [{
+                                    "type": "NWDescription",
+                                    "text": "在校园内任何地方都可以使用支持的设备连接Wlan无线网络使用校园网。学校提供的Wlan网络有“NEU”“NEU-2.4G”和“NEU-Mobile”，均为WiFi6标准，可以根据需求选择连接。 “NEU”为2.4G/5G双频信号，无密码，可以直接连接使用。访问校外资源（即使为免流资源）需要登录IP控制网关。 “NEU-2.4G”为2.4G单频信号，无密码，可以直接连接使用。访问校外资源（即使为免流资源）需要登录IP控制网关。 “NEU-Mobile”为2.4G/5G双频信号，首次连接需要输入学号和校园网密码，第二次直接连接可以直接使用，全程不需要登录IP控制网关。"
+                                }]
+                            }, {
+                                "title": null,
+                                "contents": [{
+                                    "type": "NWTips",
+                                    "title": "提示",
+                                    "case": "info",
+                                    "data": "对于想用智能家居的同学，智能家居产品（包括学校新装的空调）只能接入家里那种只要密码的网络，无法接入学校校园网（无密码或者同时需要用户名和密码），需要自备无线网卡给智能家居设备配网。"
+                                }, {
+                                    "type": "NWDescription",
+                                    "text": "在运营商网络或在学校外需要访问校园网内资源时，可以使用VPN连接。对于常用网址，可以直接使用浏览器登录[WebVPN](https://webvpn.neu.edu.cn/)连接；对于WebVPN中没有收录的网站，可以安装OpenVPN等软件进行连接，具体请看信网办[OpenVPN使用手册](http://xwb.neu.edu.cn/2023/0716/c6133a233647/page.htm)"
+                                }]
+                            }
+                        ]
+
+                    }, {
+                        "title": "收费标准",
+                        "subsections": [
+                            {
+                                "title": null,
+                                "contents": [
+                                    {
+                                        "type": "NWList",
+                                        "order": false,
+                                        "data": [
+                                            "总量0～10G，免费；", "总量10～25G，超出10G的部分1元/G；", "总量25～40G，15元/月；", "总量40～45G，超出40G的部分15元基础上额外收取流量费用1元/G；", "总量45～80G，20元/月；", "总量80G以上，超出80G部分20元基础上额外收取流量费用1元/G。"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+
+                    }, {
+                        "title": "进阶使用",
+                        "subsections": [
+                            {
+                                "title": "在线电视",
+                                "contents": [{
+                                    "type": "NWDescription",
+                                    "text": "校园网环境下可以在线观看有线电视节目直播，直播网站[HDTV](https://hdtv.neu6.edu.cn/)，观看免流量。"
+                                }]
+                            }, {
+                                "title": "PT下载",
+                                "contents": [{
+                                    "type": "NWDescription",
+                                    "text": "PT下载是BT下载的特例，为特定用户才可使用的私有BT下载。CERNET上有很多学校或学生运营的PT服务器，一般限制高校用户才能注册使用，里面资源较公网BT站点更丰富且支持免流下载。常用的PT站点有东北大学[六维空间](http://bt.neu6.edu.cn/)、天津大学[北洋园PT](https://www.tjupt.org/)、西安交通大学[南洋](https://ipv6.njtech.edu.cn/links.html)等，可以凭学校邮箱直接注册使用。使用PT需要遵守站点考核规定，尽量满足上传量/做种时间要求，避免账号停用。"
+                                }]
+                            }, {
+                                "title": "免流方法",
+                                "contents": [{
+                                    "type": "NWDescription",
+                                    "text": "由于特殊原因，此处仅作技术交流和启发，具体实现请自己动手。内容包括：设置程序下载节点为支持IPv6的节点、使用IPv6服务器转发、伪装DNS服务器，使用53端口转发"
+                                }]
+                            }
+                        ]
+                    }
+                ], "contributors": [
+                    {
+                        "name": "Techy-Wu",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/73032687"
+                    }
+                ]
+            }
