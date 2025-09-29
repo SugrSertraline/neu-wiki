@@ -1,7 +1,5 @@
 <template>
   <div class="bg-gray-50 sm:p-2 md:p-8 rounded-lg m-8">
-
-
     <n-modal v-model:show="isPreviewVisible" :mask-closable="true" preset="card"
       style="width: auto; max-width: 90vw; max-height: 90vh;">
       <img :src="ClubProps.imageUrl" alt="Preview Image" class="max-w-full max-h-[80vh] object-contain" @click.stop />
@@ -9,9 +7,9 @@
     <div
       class="flex flex-col sm:flex-row items-center justify-center p-2 sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
       <div class="flex flex-col justify-center items-center">
-        <n-avatar :src="ClubProps.logo" :alt="ClubProps.name" :size="100" class="flex-shrink-0 bg-white" round  />
-        <n-button v-if="ClubProps.imageUrl" type="primary" @click="showPreview"
-          class="mt-2 rounded-md transition-colors duration-300">
+        <n-avatar :src="ClubProps.logo && ClubProps.logo.trim() !== '' ? ClubProps.logo : '/neulogo.png'"
+          :alt="ClubProps.name" :size="100" class="flex-shrink-0 bg-white" round /> <n-button v-if="ClubProps.imageUrl"
+          type="primary" @click="showPreview" class="mt-2 rounded-md transition-colors duration-300">
           二维码
           <template #icon>
             <n-icon>
@@ -25,16 +23,15 @@
           {{ ClubProps.name }}
         </h2>
 
-        <p  class="text-gray-600 mb-2 text-center sm:text-left">
-         
-          <div v-if="ClubProps.description.length!=0">
-            {{ ClubProps.description }}
-          </div>
-          <div v-else>
-            简介正在来的路上
-          </div>
+        <p class="text-gray-600 mb-2 text-center sm:text-left">
+
+        <div v-if="ClubProps.description.length != 0">
+          {{ ClubProps.description }}
+        </div>
+        <div v-else>
+          简介正在来的路上
+        </div>
         </p>
-       
         <div class="flex justify-center sm:justify-start items-center space-x-2">
           <n-button tertiary type="default" @click="copyText(ClubProps.qqGroup)">
             <template #icon>

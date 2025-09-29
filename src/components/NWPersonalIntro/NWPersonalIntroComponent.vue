@@ -1,10 +1,9 @@
 <template>
-  <div class=" py-6">
+  <div class="py-6">
     <n-card class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <div class="flex flex-col lg:flex-row items-center p-4">
         <div class="flex flex-col sm:flex-row items-center lg:w-2/3">
-          <n-avatar object-fit="cover" :src="user.avatarUrl" :fallback-src="defaultAvatarUrl" :size="80"
-            class="rounded-full mb-4 sm:mb-0" />
+          <n-avatar object-fit="cover" :src="user?.avatarUrl ?? defaultAvatarUrl" :fallback-src="defaultAvatarUrl" :size="80" class="rounded-full mb-4 sm:mb-0" />
           <div class="ml-0 sm:ml-6 text-center sm:text-left">
             <h2 class="text-2xl font-bold text-gray-800">{{ user.name }}</h2>
             <p class="text-gray-600">{{ user.college }} - {{ user.grade }}</p>
@@ -85,5 +84,5 @@ const props = defineProps<{
   user: UserProfile
 }>()
 
-const defaultAvatarUrl = '/placeholder.svg?height=80&width=80'
+ const defaultAvatarUrl = 'https://q8.itc.cn/q_70/images03/20240113/49890c994f1b4e1b90ed902f1cb838f3.jpeg'
 </script>

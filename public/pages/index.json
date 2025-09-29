@@ -3,36 +3,48 @@
     {
       "title": "写在前面",
       "name": "Preface",
-      "pages": [
+      "subgroups": [
         {
-          "title": "开发者寄语",
-          "name": "DeveloperGreeting",
-          "last_update": "2024年9月22日"
+          "title": "项目概览",
+          "name": "ProjectOverview",
+          "pages": [
+            {
+              "title": "开发者寄语",
+              "name": "DeveloperGreeting",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "我们的贡献者",
+              "name": "SiteContributors",
+              "last_update": "2024年11月16日"
+            }
+          ]
         },
         {
-          "title": "待补充内容",
-          "name": "ProblemsRank",
-          "last_update": "2024年11月16日"
-        },
-        {
-          "title": "我们的贡献者",
-          "name": "SiteContributors",
-          "last_update": "2024年11月16日"
-        },
-        {
-          "title": "链接汇总",
-          "name": "AllLink",
-          "last_update": "2024年11月17日"
+          "title": "维护与资源",
+          "name": "MaintenanceAndLinks",
+          "pages": [
+            {
+              "title": "待补充内容",
+              "name": "ProblemsRank",
+              "last_update": "2024年11月16日"
+            },
+            {
+              "title": "链接汇总",
+              "name": "AllLink",
+              "last_update": "2024年11月17日"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "群聊汇总",
-      "name": "Groups",
+      "title": "校园交流与组织",
+      "name": "CampusCommunicationAndOrganizations",
       "subgroups": [
         {
-          "title": "校园生活",
-          "name": "CampusLifeGroups",
+          "title": "群聊与信息",
+          "name": "GroupsSummary",
           "pages": [
             {
               "title": "二手群",
@@ -53,47 +65,105 @@
               "path": "lifeGroups.json"
             }
           ]
+        },
+        {
+          "title": "社团与活动",
+          "name": "ClubsAndActivities",
+          "pages": [
+            {
+              "title": "NEU.P",
+              "name": "NEU-P",
+              "last_update": "2024年12月16日"
+            },
+            {
+              "title": "剑道社",
+              "name": "JianDao",
+              "last_update": "2024年11月20日"
+            },
+            {
+              "title": "国际标准舞团",
+              "name": "GuoJiBiaoZhunWu",
+              "last_update": "2024年11月20日"
+            },
+            {
+              "title": "东大飞鸟",
+              "name": "FeiNiao",
+              "last_update": "2024年11月25日"
+            },
+            {
+              "title": "轮舞轮滑社",
+              "name": "LunWuLunHua",
+              "last_update": "2024年11月23日"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "社团信息",
-      "name": "Club",
-      "pages": [
+      "title": "学业与成长",
+      "name": "StudyAndDevelopment",
+      "subgroups": [
         {
-          "title": "NEU.P",
-          "name": "NEU-P",
-          "last_update": "2024年12月16日"
+          "title": "学业指南",
+          "name": "AcademicGuide",
+          "pages": [
+            {
+              "title": "基础学业信息",
+              "name": "BasicAcademicInfo",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "机考指南",
+              "name": "GuideToComputerizedExams",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "推免（保研）",
+              "name": "RecommendedPostgraduateAdmission",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "公共课",
+              "name": "PublicCourse",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "竞赛",
+              "name": "Competition",
+              "last_update": "2024年11月17日"
+            },
+            {
+              "title": "选调",
+              "name": "SelectedAssignment",
+              "last_update": "2024年9月22日"
+            }
+          ]
         },
         {
-          "title": "剑道社",
-          "name": "JianDao",
-          "last_update": "2024年11月20日"
-        },
-        {
-          "title": "国际标准舞团",
-          "name": "GuoJiBiaoZhunWu",
-          "last_update": "2024年11月20日"
-        },
-        {
-          "title": "东大飞鸟",
-          "name": "FeiNiao",
-          "last_update": "2024年11月25日"
-        },
-        {
-          "title": "轮舞轮滑社",
-          "name": "LunWuLunHua",
-          "last_update": "2024年11月23日"
+          "title": "学院攻略",
+          "name": "CollegeGuide",
+          "pages": [
+            {
+              "title": "软件学院",
+              "name": "Software",
+              "last_update": "2024年3月15日"
+            },
+            {
+              "title": "机械工程与自动化学院",
+              "name": "JiXieXueYuan",
+              "last_update": "2024年11月30日"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "访谈",
-      "name": "Interview",
+      "title": "经验与访谈",
+      "name": "ExperienceAndInterview",
       "subgroups": [
         {
           "title": "保研访谈",
-          "name": "BaoYanFangTan",
+          "name": "BaoYan",
           "pages": [
             {
               "title": "23届崔中健同学",
@@ -129,7 +199,7 @@
         },
         {
           "title": "考研访谈",
-          "name": "KaoYanFangTan",
+          "name": "KaoYan",
           "pages": [
             {
               "title": "24届陈柏锦同学",
@@ -140,7 +210,7 @@
         },
         {
           "title": "留学访谈",
-          "name": "LiuXueFangTan",
+          "name": "LiuXue",
           "pages": [
             {
               "title": "24届宋经纬同学",
@@ -152,85 +222,45 @@
       ]
     },
     {
-      "title": "生活出行",
+      "title": "生活与出行",
       "name": "DailyLife",
-      "pages": [
+      "subgroups": [
         {
-          "title": "医疗与报销",
-          "name": "MedicalAndReimbursement",
-          "last_update": "2024年9月22日"
+          "title": "校园办事",
+          "name": "CampusServices",
+          "pages": [
+            {
+              "title": "医疗与报销",
+              "name": "MedicalAndReimbursement",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "校园卡业务",
+              "name": "CampusCard",
+              "last_update": "2024年9月22日"
+            },
+            {
+              "title": "校园网",
+              "name": "CampusNetwork",
+              "last_update": "2024年9月22日"
+            }
+          ]
         },
         {
-          "title": "校园卡业务",
-          "name": "CampusCard",
-          "last_update": "2024年9月22日"
-        },
-        {
-          "title": "校园网",
-          "name": "CampusNetwork",
-          "last_update": "2024年9月22日"
-        },
-        {
-          "title": "出行方式",
-          "name": "ToOut",
-          "last_update": "2024年3月15日"
-        },
-        {
-          "title": "校车",
-          "name": "SchoolBus",
-          "last_update": "2024年11月16日"
-        }
-      ]
-    },
-    {
-      "title": "学在东大",
-      "name": "LearningInNEU",
-      "pages": [
-        {
-          "title": "基础学业信息",
-          "name": "BasicAcademicInfo",
-          "last_update": "2024年9月22日"
-        },
-        {
-          "title": "机考指南",
-          "name": "GuideToComputerizedExams",
-          "last_update": "2024年9月22日"
-        },
-        {
-          "title": "推免（保研）",
-          "name": "RecommendedPostgraduateAdmission",
-          "last_update": "2024年9月22日"
-        },
-        {
-          "title": "公共课",
-          "name": "PublicCourse",
-          "last_update": "2024年9月22日"
-        },
-        {
-          "title": "竞赛",
-          "name": "Competition",
-          "last_update": "2024年11月17日"
-        },
-        {
-          "title": "选调",
-          "name": "SelectedAssignment",
-          "last_update": "2024年9月22日"
-        }
-      ]
-    },
-    {
-      "title": "学院攻略",
-      "name": "CollegeGuide",
-      "pages": [
-        {
-          "title": "软件学院",
-          "name": "Software",
-          "last_update": "2024年3月15日"
-        },
-        {
-          "title": "机械工程与自动化学院",
-          "name": "JiXieXueYuan",
-          "last_update": "2024年11月30日"
+          "title": "出行交通",
+          "name": "Transportation",
+          "pages": [
+            {
+              "title": "出行方式",
+              "name": "ToOut",
+              "last_update": "2024年3月15日"
+            },
+            {
+              "title": "校车",
+              "name": "SchoolBus",
+              "last_update": "2024年11月16日"
+            }
+          ]
         }
       ]
     }

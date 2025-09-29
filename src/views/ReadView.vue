@@ -1,14 +1,14 @@
 <template>
   <n-drawer :default-width="300" v-model:show="configuration.if_drawer" placement="left">
     <n-drawer-content title="目录">
-      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
+      <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </n-drawer-content>
   </n-drawer>
 
   <div
     class="w-64 hidden bg-gray-50 lg:block xl:w-100 shadow-sm fixed left-0 top-16 bottom-0 overflow-y-auto z-10 transition-transform duration-300 ease-in-out md:translate-x-0">
     <div class="p-4 pl-20 w-80 h-full overflow-y-auto float-right">
-      <NWSideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
+      <SideMenu :value="configuration.current_page" @update:value="handleMenuChange" :data="configuration.menu_data" />
     </div>
   </div>
 
@@ -169,7 +169,7 @@ import {
 import type { Content, Page, Section, PageMeta } from '@/types/interface';
 
 import {
-  NWSideMenu, NWDescription, NWSection, NWImage, NWList, NWTips,
+  SideMenu, NWDescription, NWSection, NWImage, NWList, NWTips,
   NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank,
   NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro,
   NWPhotoAlbum, NWEquation, NWTable

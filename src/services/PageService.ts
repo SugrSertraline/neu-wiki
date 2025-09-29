@@ -113,11 +113,7 @@ export async function getPageByName(pageName?: string): Promise<Page | null> {
   }
 }
 
-/**
- * 🔄 修改：构建菜单配置数据，支持二级菜单
- * 一级菜单可折叠，二级分类作为分组标题（不可折叠）
- * @returns 菜单配置数组
- */
+
 export async function buildMenuConfig(): Promise<MenuConfig[]> {
   try {
     const indexData = await loadPageIndex();

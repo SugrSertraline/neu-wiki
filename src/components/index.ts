@@ -1,5 +1,4 @@
 export * from './NWHeader';
-export * from './NWSideMenu';
 export * from './NWDescription';
 export * from './NWSection';
 export * from './NWImage';
@@ -17,3 +16,7 @@ export * from './NWLinkList';
 export * from './NWPhotoAlbum';
 export * from './NWEquation';
 export * from './NWTable';
+
+
+
+export * from './SideMenu';
