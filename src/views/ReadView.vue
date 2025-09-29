@@ -165,7 +165,7 @@ import {
   getPageInfo,
   preloadAdjacentPages,
   getAllPageURLs
-} from '@/services/pageService';
+} from '@/services/PageService';
 import type { Content, Page, Section, PageMeta } from '@/types/interface';
 
 import {
