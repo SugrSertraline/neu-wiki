@@ -30,8 +30,8 @@ const router = createRouter({
 
     },{
       path:'/editor',
-      name:'JsonPageEditor',
-      component:()=>import('@/views/JsonPageEditor.vue')
+      name:'PageEditor',
+      component:()=>import('@/views/PageEditor.vue')
     },
   ]
 })

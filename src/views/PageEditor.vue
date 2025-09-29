@@ -1,9 +1,18 @@
 <template>
   <div class="h-screen flex flex-col bg-gray-50">
     <!-- 顶部工具栏 -->
-    <div class="bg-white border-b px-4 py-3 flex items-center justify-between shadow-sm">
-      <h1 class="text-xl font-bold text-gray-800">页面JSON编辑器</h1>
+    <div class="bg-white border-b px-6 py-3 flex items-center justify-between shadow-sm">
+      <h1 class="text-lg font-bold text-gray-800">页面JSON编辑器</h1>
       <n-space>
+        <n-button @click="isEditorCollapsed = !isEditorCollapsed">
+          <template #icon>
+            <n-icon>
+              <ChevronBackOutline v-if="!isEditorCollapsed" />
+              <ChevronForwardOutline v-else />
+            </n-icon>
+          </template>
+          {{ isEditorCollapsed ? '展开编辑' : '收起编辑' }}
+        </n-button>
         <n-upload
           :show-file-list="false"
           accept=".json"
@@ -28,58 +37,39 @@
     <!-- 主体区域 -->
     <div class="flex-1 flex overflow-hidden">
       <!-- 左侧编辑区 -->
-      <div class="w-1/2 border-r bg-white overflow-y-auto">
-        <div class="p-6 space-y-6">
-          <!-- 基本信息 -->
-          <n-card title="页面基本信息" size="small">
-            <n-space vertical>
-              <n-form-item label="页面标题">
-                <n-input v-model:value="pageData.title" placeholder="输入页面标题" />
-              </n-form-item>
-              <n-form-item label="页面名称（英文）">
-                <n-input v-model:value="pageData.name" placeholder="输入页面名称" />
-              </n-form-item>
-              <n-form-item label="更新日期">
-                <n-input v-model:value="pageData.last_update" placeholder="输入更新日期" />
-              </n-form-item>
-              <n-form-item label="页面描述（可选）">
-                <n-input
-                  v-model:value="pageData.description"
-                  type="textarea"
-                  :rows="3"
-                  placeholder="输入页面描述"
-                />
-              </n-form-item>
-            </n-space>
-          </n-card>
-
-          <!-- 贡献者 -->
-          <n-card size="small">
-            <template #header>
-              <div class="flex justify-between items-center">
-                <span>贡献者</span>
-                <n-button size="small" type="success" @click="addContributor">
-                  <template #icon><n-icon><AddOutline /></n-icon></template>
-                  添加
-                </n-button>
-              </div>
-            </template>
-            <n-space vertical>
-              <div v-for="(contributor, i) in pageData.contributors" :key="i" class="flex gap-2">
-                <n-input v-model:value="contributor.name" placeholder="姓名" size="small" />
-                <n-input v-model:value="contributor.avatar_url" placeholder="头像URL" size="small" />
-                <n-button size="small" type="error" @click="deleteContributor(i)">
-                  <template #icon><n-icon><TrashOutline /></n-icon></template>
-                </n-button>
-              </div>
-            </n-space>
-          </n-card>
+      <div v-if="!isEditorCollapsed" class="w-1/2 border-r bg-white overflow-y-auto">
+        <div class="p-8 space-y-6 max-w-4xl mx-auto">
+          <!-- 基本信息 - 可折叠 -->
+          <n-collapse default-expanded-names="basic">
+            <n-collapse-item title="页面基本信息" name="basic">
+              <n-space vertical>
+                <n-form-item label="页面标题" size="small">
+                  <n-input v-model:value="pageData.title" placeholder="输入页面标题" size="small" />
+                </n-form-item>
+                <n-form-item label="页面名称（英文）" size="small">
+                  <n-input v-model:value="pageData.name" placeholder="输入页面名称" size="small" />
+                </n-form-item>
+                <n-form-item label="更新日期" size="small">
+                  <n-input v-model:value="pageData.last_update" placeholder="输入更新日期" size="small" />
+                </n-form-item>
+                <n-form-item label="页面描述（可选）" size="small">
+                  <n-input
+                    v-model:value="pageData.description"
+                    type="textarea"
+                    :rows="2"
+                    placeholder="输入页面描述"
+                    size="small"
+                  />
+                </n-form-item>
+              </n-space>
+            </n-collapse-item>
+          </n-collapse>
 
           <!-- 内容结构 -->
           <n-card size="small">
             <template #header>
               <div class="flex justify-between items-center">
-                <span>内容结构</span>
+                <span class="font-semibold">内容结构</span>
                 <n-button size="small" type="primary" @click="addSection">
                   <template #icon><n-icon><AddOutline /></n-icon></template>
                   添加章节
@@ -91,7 +81,7 @@
               <n-card size="small">
                 <template #header>
                   <div class="flex gap-2 items-center">
-                    <n-tag type="info">第{{sIdx + 1}}章</n-tag>
+                    <n-tag type="info" size="small">第{{sIdx + 1}}章</n-tag>
                     <n-input
                       v-model:value="section.title"
                       placeholder="章节标题"
@@ -160,61 +150,85 @@
               </n-card>
             </div>
           </n-card>
+
+          <!-- 贡献者 - 可折叠 -->
+          <n-collapse>
+            <n-collapse-item name="contributors">
+              <template #header>
+                <div class="flex justify-between items-center w-full pr-4">
+                  <span class="font-semibold">贡献者</span>
+                  <n-button size="small" type="success" @click.stop="addContributor">
+                    <template #icon><n-icon><AddOutline /></n-icon></template>
+                    添加
+                  </n-button>
+                </div>
+              </template>
+              <n-space vertical>
+                <div v-for="(contributor, i) in pageData.contributors" :key="i" class="flex gap-2">
+                  <n-input v-model:value="contributor.name" placeholder="姓名" size="small" />
+                  <n-input v-model:value="contributor.avatar_url" placeholder="头像URL" size="small" />
+                  <n-button size="small" type="error" @click="deleteContributor(i)">
+                    <template #icon><n-icon><TrashOutline /></n-icon></template>
+                  </n-button>
+                </div>
+              </n-space>
+            </n-collapse-item>
+          </n-collapse>
         </div>
       </div>
 
       <!-- 右侧预览区 -->
-      <div class="w-1/2 bg-white overflow-y-auto">
-        <div class="p-6">
-          <n-alert type="info" class="mb-4">
+      <div :class="[isEditorCollapsed ? 'w-full' : 'w-1/2', 'bg-white overflow-y-auto transition-all duration-300']">
+        <div class="p-8">
+          <n-alert type="info" class="mb-6">
             <template #icon><n-icon><EyeOutline /></n-icon></template>
             实时预览
           </n-alert>
 
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-5xl mx-auto px-6">
             <!-- 页面标题 -->
             <h1 class="text-4xl font-bold text-gray-800 mb-2">{{ pageData.title }}</h1>
-            <p class="text-gray-500 text-sm mb-4">更新截止于 {{ pageData.last_update }}</p>
+            <p class="text-gray-500 text-sm mb-6">更新截止于 {{ pageData.last_update }}</p>
             <n-divider />
 
             <!-- 页面描述 -->
-            <div v-if="pageData.description" class="mb-6 text-gray-700 leading-relaxed">
+            <div v-if="pageData.description" class="mb-8 text-gray-700 leading-relaxed">
               {{ pageData.description }}
             </div>
 
             <!-- 内容预览 -->
-            <div v-for="(section, sIdx) in pageData.sections" :key="sIdx" class="mb-8">
-              <h2 v-if="section.title" class="text-2xl font-bold text-gray-800 mb-4">
+            <div v-for="(section, sIdx) in pageData.sections" :key="sIdx" class="mb-12">
+              <h2 v-if="section.title" class="text-3xl font-bold text-gray-800 mb-6">
                 {{ numberToChinese(sIdx + 1) }}、{{ section.title }}
               </h2>
 
-              <div v-for="(subsection, ssIdx) in section.subsections" :key="ssIdx" class="mb-6">
-                <h3 v-if="subsection.title" class="text-xl font-semibold text-gray-700 mb-3">
+              <div v-for="(subsection, ssIdx) in section.subsections" :key="ssIdx" class="mb-8">
+                <h3 v-if="subsection.title" class="text-2xl font-semibold text-gray-700 mb-4">
                   {{ ssIdx + 1 }}. {{ subsection.title }}
                 </h3>
 
-                <div class="space-y-4">
+                <div class="space-y-6">
                   <component
                     v-for="(content, cIdx) in subsection.contents"
                     :key="cIdx"
-                    :is="getPreviewComponent(content)"
-                    :content="content"
+                    :is="getPreviewComponent(content.type)"
+                    v-bind="getComponentProps(content)"
                   />
                 </div>
               </div>
             </div>
 
             <!-- 贡献者 -->
-            <div v-if="pageData.contributors.length > 0" class="mt-12 pt-6 border-t">
-              <h2 class="text-2xl font-bold text-gray-800 mb-4">关键内容贡献者</h2>
-              <div class="grid grid-cols-2 gap-4">
+            <div v-if="pageData.contributors.length > 0" class="mt-16 pt-8 border-t">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">关键内容贡献者</h2>
+              <div class="grid grid-cols-2 gap-6">
                 <div
                   v-for="(contributor, i) in pageData.contributors"
                   :key="i"
-                  class="bg-gray-100 rounded-lg p-4 flex flex-col items-center"
+                  class="bg-gray-50 rounded-lg p-6 flex flex-col items-center hover:shadow-md transition-shadow"
                 >
-                  <n-avatar :src="contributor.avatar_url" :size="60" round class="mb-2" />
-                  <p class="font-bold">{{ contributor.name }}</p>
+                  <n-avatar :src="contributor.avatar_url" :size="80" round class="mb-3" />
+                  <p class="font-bold text-lg">{{ contributor.name }}</p>
                   <p class="text-sm text-gray-600">本页内容贡献者</p>
                 </div>
               </div>
@@ -230,12 +244,21 @@
 import { ref, h, defineComponent } from 'vue';
 import {
   NButton, NInput, NInputNumber, NSelect, NCheckbox, NSpace, NCard,
-  NDivider, NAlert, NUpload, NTag, NIcon, NAvatar, NFormItem,
+  NDivider, NAlert, NUpload, NTag, NIcon, NAvatar, NFormItem, NCollapse, NCollapseItem,
   useMessage, type UploadFileInfo
 } from 'naive-ui';
 import {
-  AddOutline, TrashOutline, CloudUploadOutline, DownloadOutline, EyeOutline
+  AddOutline, TrashOutline, CloudUploadOutline, DownloadOutline, 
+  EyeOutline, ChevronBackOutline, ChevronForwardOutline
 } from '@vicons/ionicons5';
+
+// 导入真实组件
+import {
+  NWDescription, NWImage, NWList, NWTips, NWDialogue,
+  NWPersonalIntro, NWMotto, NWProblemsRank, NWSiteContributors,
+  NWCompetition, NWLinkList, NWClubIntro, NWPhotoAlbum,
+  NWEquation, NWTable
+} from '@/components';
 
 // 类型定义
 type ComponentType = 'NWDescription' | 'NWImage' | 'NWList' | 'NWTips' | 'NWDialogue' |
@@ -267,6 +290,7 @@ interface PageData {
 }
 
 const message = useMessage();
+const isEditorCollapsed = ref(false);
 
 const READONLY_COMPONENTS = ['NWLinkList', 'NWSiteContributors'];
 
@@ -641,75 +665,34 @@ const getContentEditor = (content: Content) => {
   }
 };
 
-// 预览组件工厂
-const getPreviewComponent = (content: Content) => {
-  return defineComponent({
-    setup() {
-      switch (content.type) {
-        case 'NWDescription':
-          return () => h('p', { class: 'text-gray-700 leading-relaxed' }, content.text);
+// 获取预览组件 - 使用真实组件
+const getPreviewComponent = (type: ComponentType) => {
+  const componentMap: Record<ComponentType, any> = {
+    NWDescription,
+    NWImage,
+    NWList,
+    NWTips,
+    NWDialogue,
+    NWPersonalIntro,
+    NWMotto,
+    NWProblemsRank,
+    NWSiteContributors,
+    NWCompetition,
+    NWLinkList,
+    NWClubIntro,
+    NWPhotoAlbum,
+    NWEquation,
+    NWTable
+  };
+  
+  return componentMap[type] || 'div';
+};
 
-        case 'NWImage':
-          return () => h('img', {
-            src: content.src,
-            style: { width: `${content.width}px` },
-            class: 'rounded shadow'
-          });
-
-        case 'NWEquation':
-          return () => h('div', { class: 'bg-gray-50 p-4 rounded text-center' }, [
-            h('div', { class: 'font-mono text-lg' }, content.equation)
-          ]);
-
-        case 'NWTable':
-          return () => h('div', { class: 'overflow-x-auto' }, [
-            h('p', { class: 'font-bold mb-2' }, content.title),
-            h('table', { class: 'min-w-full border-collapse border border-gray-300' }, [
-              h('thead', {}, [
-                h('tr', { class: 'bg-gray-100' },
-                  content.data[0]?.map((header: string) =>
-                    h('th', { class: 'border border-gray-300 px-4 py-2 text-left font-semibold' }, header)
-                  )
-                )
-              ]),
-              h('tbody', {},
-                content.data.slice(1).map((row: string[], i: number) =>
-                  h('tr', { class: i % 2 === 0 ? 'bg-white' : 'bg-gray-50' },
-                    row.map((cell: string) =>
-                      h('td', { class: 'border border-gray-300 px-4 py-2' }, cell)
-                    )
-                  )
-                )
-              )
-            ])
-          ]);
-
-        case 'NWCompetition':
-          return () => h('div', { class: 'border border-blue-300 rounded-lg p-4 bg-blue-50' }, [
-            h('div', { class: 'flex justify-between items-start mb-2' }, [
-              h('h3', { class: 'text-xl font-bold text-blue-900' }, content.competition.name),
-              h('span', { class: 'px-2 py-1 bg-blue-200 text-blue-800 rounded text-sm' }, content.competition.period)
-            ]),
-            h('p', { class: 'text-gray-700 mb-3' }, content.competition.description),
-            h('div', { class: 'mb-2' }, [
-              h('span', { class: 'font-semibold text-sm' }, '适合学院: '),
-              h('span', { class: 'text-sm text-gray-600' }, content.competition.suitableColleges.join(', '))
-            ]),
-            h('div', { class: 'flex flex-wrap gap-2' },
-              content.competition.tags.map((tag: string) =>
-                h('span', { class: 'px-2 py-1 bg-blue-200 text-blue-800 rounded text-xs' }, tag)
-              )
-            )
-          ]);
-
-        default:
-          return () => h('div', { class: 'bg-gray-100 p-3 rounded text-sm' }, [
-            h('p', { class: 'font-bold' }, content.type),
-            h('pre', { class: 'mt-2 text-xs overflow-auto' }, JSON.stringify(content, null, 2))
-          ]);
-      }
-    }
-  });
+// 获取组件 props
+const getComponentProps = (content: Content) => {
+  const props = { ...content };
+  delete props.type;
+  return props;
 };
 </script>
 
