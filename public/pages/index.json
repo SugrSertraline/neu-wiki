@@ -10,13 +10,11 @@
           "pages": [
             {
               "title": "开发者寄语",
-              "name": "DeveloperGreeting",
-              "last_update": "2024年9月22日"
+              "name": "DeveloperGreeting"
             },
             {
               "title": "我们的贡献者",
-              "name": "SiteContributors",
-              "last_update": "2024年11月16日"
+              "name": "SiteContributors"
             }
           ]
         },
@@ -26,13 +24,11 @@
           "pages": [
             {
               "title": "待补充内容",
-              "name": "ProblemsRank",
-              "last_update": "2024年11月16日"
+              "name": "ProblemsRank"
             },
             {
               "title": "链接汇总",
-              "name": "AllLink",
-              "last_update": "2024年11月17日"
+              "name": "AllLink"
             }
           ]
         }
@@ -48,18 +44,15 @@
           "pages": [
             {
               "title": "学习互助",
-              "name": "LearningPageGroup",
-              "last_update": "2025年10月1日"
+              "name": "LearningPageGroup"
             },
             {
               "title": "学科竞赛/专业发展",
-              "name": "CompetitionPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "CompetitionPageGroup"
             },
             {
               "title": "考研/研究",
-              "name": "PostgraduatePageGroup",
-              "last_update": "2025年10月01日"
+              "name": "PostgraduatePageGroup"
             }
           ]
         },
@@ -69,18 +62,15 @@
           "pages": [
             {
               "title": "新生群",
-              "name": "NewStudentsPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "NewStudentsPageGroup"
             },
             {
               "title": "年级互助",
-              "name": "GradeHelpPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "GradeHelpPageGroup"
             },
             {
               "title": "综合交流",
-              "name": "GeneralCommunicationPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "GeneralCommunicationPageGroup"
             }
           ]
         },
@@ -90,13 +80,11 @@
           "pages": [
             {
               "title": "租房互助",
-              "name": "RentPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "RentPageGroup"
             },
             {
               "title": "二手市场",
-              "name": "SecondHandPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "SecondHandPageGroup"
             }
           ]
         },
@@ -106,8 +94,7 @@
           "pages": [
             {
               "title": "拼车 / 失物招领",
-              "name": "CarpoolLostfoundPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "CarpoolLostfoundPageGroup"
             }
           ]
         },
@@ -117,8 +104,7 @@
           "pages": [
             {
               "title": "留校 / 校园生活",
-              "name": "StayCampusPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "StayCampusPageGroup"
             }
           ]
         },
@@ -128,29 +114,25 @@
           "pages": [
             {
               "title": "兴趣娱乐",
-              "name": "EntertainmentPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "EntertainmentPageGroup"
             },
             {
               "title": "游戏 / 数码",
-              "name": "GamingPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "GamingPageGroup"
             },
             {
               "title": "运动 / 户外 / 猫猫狗狗",
-              "name": "SportsOutdoorPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "SportsOutdoorPageGroup"
             }
           ]
         },
         {
           "title": "老乡群",
-          "name": "CampusLifeGroup",
+          "name": "HometownGroup",
           "pages": [
             {
               "title": "家乡群",
-              "name": "HometownPageGroup",
-              "last_update": "2025年10月01日"
+              "name": "HometownPageGroup"
             }
           ]
         },
@@ -160,28 +142,23 @@
           "pages": [
             {
               "title": "NEU.P",
-              "name": "NEU-P",
-              "last_update": "2024年12月16日"
+              "name": "NEU-P"
             },
             {
               "title": "剑道社",
-              "name": "JianDao",
-              "last_update": "2024年11月20日"
+              "name": "JianDao"
             },
             {
               "title": "国际标准舞团",
-              "name": "GuoJiBiaoZhunWu",
-              "last_update": "2024年11月20日"
+              "name": "GuoJiBiaoZhunWu"
             },
             {
               "title": "东大飞鸟",
-              "name": "FeiNiao",
-              "last_update": "2024年11月25日"
+              "name": "FeiNiao"
             },
             {
               "title": "轮舞轮滑社",
-              "name": "LunWuLunHua",
-              "last_update": "2024年11月23日"
+              "name": "LunWuLunHua"
             }
           ]
         }
@@ -197,33 +174,27 @@
           "pages": [
             {
               "title": "基础学业信息",
-              "name": "BasicAcademicInfo",
-              "last_update": "2024年9月22日"
+              "name": "BasicAcademicInfo"
             },
             {
               "title": "机考指南",
-              "name": "GuideToComputerizedExams",
-              "last_update": "2024年9月22日"
+              "name": "GuideToComputerizedExams"
             },
             {
               "title": "推免（保研）",
-              "name": "RecommendedPostgraduateAdmission",
-              "last_update": "2024年9月22日"
+              "name": "RecommendedPostgraduateAdmission"
             },
             {
               "title": "公共课",
-              "name": "PublicCourse",
-              "last_update": "2024年9月22日"
+              "name": "PublicCourse"
             },
             {
               "title": "竞赛",
-              "name": "Competition",
-              "last_update": "2024年11月17日"
+              "name": "Competition"
             },
             {
               "title": "选调",
-              "name": "SelectedAssignment",
-              "last_update": "2024年9月22日"
+              "name": "SelectedAssignment"
             }
           ]
         },
@@ -233,13 +204,11 @@
           "pages": [
             {
               "title": "软件学院",
-              "name": "Software",
-              "last_update": "2024年3月15日"
+              "name": "Software"
             },
             {
               "title": "机械工程与自动化学院",
-              "name": "JiXieXueYuan",
-              "last_update": "2024年11月30日"
+              "name": "JiXieXueYuan"
             }
           ]
         }
@@ -255,33 +224,27 @@
           "pages": [
             {
               "title": "23届崔中健同学",
-              "name": "CuiZhongJian",
-              "last_update": "2024年12月24日"
+              "name": "CuiZhongJian"
             },
             {
               "title": "24届刘嘉伟同学",
-              "name": "LiuJiaWei",
-              "last_update": "2024年10月17日"
+              "name": "LiuJiaWei"
             },
             {
               "title": "24届刘志钊同学",
-              "name": "LiuZhiZhao",
-              "last_update": "2024年12月18日"
+              "name": "LiuZhiZhao"
             },
             {
               "title": "24届邱俊翔同学",
-              "name": "QiuJunXiang",
-              "last_update": "2024年10月22日"
+              "name": "QiuJunXiang"
             },
             {
               "title": "24届刘函睿同学",
-              "name": "LiuHanRui",
-              "last_update": "2024年10月23日"
+              "name": "LiuHanRui"
             },
             {
               "title": "24届王汉彬同学",
-              "name": "WangHanBin",
-              "last_update": "2024年11月16日"
+              "name": "WangHanBin"
             }
           ]
         },
@@ -291,8 +254,7 @@
           "pages": [
             {
               "title": "24届陈柏锦同学",
-              "name": "ChenBoJin",
-              "last_update": "2024年10月25日"
+              "name": "ChenBoJin"
             }
           ]
         },
@@ -302,8 +264,7 @@
           "pages": [
             {
               "title": "24届宋经纬同学",
-              "name": "SongJingWei",
-              "last_update": "2024年10月17日"
+              "name": "SongJingWei"
             }
           ]
         }
@@ -319,18 +280,15 @@
           "pages": [
             {
               "title": "医疗与报销",
-              "name": "MedicalAndReimbursement",
-              "last_update": "2024年9月22日"
+              "name": "MedicalAndReimbursement"
             },
             {
               "title": "校园卡业务",
-              "name": "CampusCard",
-              "last_update": "2024年9月22日"
+              "name": "CampusCard"
             },
             {
               "title": "校园网",
-              "name": "CampusNetwork",
-              "last_update": "2024年9月22日"
+              "name": "CampusNetwork"
             }
           ]
         },
@@ -340,13 +298,11 @@
           "pages": [
             {
               "title": "出行方式",
-              "name": "ToOut",
-              "last_update": "2024年3月15日"
+              "name": "ToOut"
             },
             {
               "title": "校车",
-              "name": "SchoolBus",
-              "last_update": "2024年11月16日"
+              "name": "SchoolBus"
             }
           ]
         }

@@ -157,12 +157,12 @@ interface PageContributor {
 
 /**
  * 页面元数据/基本信息 (用于 index.json)
- * 这将替代服务文件中的 PageInfo
+ * 🔄 修改：移除 last_update，只保留索引必需的信息
  */
 export interface PageMeta {
   title: string;
   name: string;
-  last_update: string;
+  // last_update 已移除 - 该信息只在完整页面数据(Page)中保留
 }
 
 /**
@@ -196,9 +196,13 @@ export interface IndexData {
   groups: IndexGroup[];
 }
 
+/**
+ * 完整的页面数据结构
+ * 包含 last_update 等完整信息
+ */
 export interface Page {
   title: string,
-  last_update: string,
+  last_update: string,      // ✅ 保留在完整页面数据中
   name: string,
   description: string | undefined
   sections: Section[],

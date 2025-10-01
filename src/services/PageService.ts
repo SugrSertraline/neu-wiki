@@ -3,7 +3,7 @@ import type { Page, IndexData, PageMeta, MenuConfig } from '@/types/interface';
 /**
  * 页面数据服务
  * 负责从JSON文件加载和缓存页面数据
- * 🔄 修改：支持二级菜单结构
+ * 🔄 修改：支持二级菜单结构 + 按 group 分文件夹存储
  */
 
 // ==================== 缓存管理 ====================
@@ -11,6 +11,8 @@ import type { Page, IndexData, PageMeta, MenuConfig } from '@/types/interface';
 class PageCache {
   private indexCache: IndexData | null = null;
   private pageCache: Map<string, Page> = new Map();
+  // 🆕 缓存页面所属的 group，避免重复查找
+  private pageGroupCache: Map<string, string> = new Map();
 
   getIndex(): IndexData | null {
     return this.indexCache;
@@ -28,13 +30,23 @@ class PageCache {
     this.pageCache.set(name, data);
   }
 
+  getPageGroup(pageName: string): string | undefined {
+    return this.pageGroupCache.get(pageName);
+  }
+
+  setPageGroup(pageName: string, groupName: string): void {
+    this.pageGroupCache.set(pageName, groupName);
+  }
+
   clear(): void {
     this.indexCache = null;
     this.pageCache.clear();
+    this.pageGroupCache.clear();
   }
 
   clearPage(name: string): void {
     this.pageCache.delete(name);
+    this.pageGroupCache.delete(name);
   }
 }
 
@@ -68,7 +80,50 @@ export async function loadPageIndex(): Promise<IndexData> {
 }
 
 /**
- * 加载单个页面数据
+ * 🆕 查找页面所属的分组
+ * @param pageName 页面名称
+ * @returns 分组名称，如果找不到则返回 null
+ */
+async function findPageGroup(pageName: string): Promise<string | null> {
+  // 先查缓存
+  const cachedGroup = cache.getPageGroup(pageName);
+  if (cachedGroup) {
+    return cachedGroup;
+  }
+
+  try {
+    const indexData = await loadPageIndex();
+    
+    for (const group of indexData.groups) {
+      // 检查一级菜单中的页面
+      if (group.pages) {
+        const page = group.pages.find(p => p.name === pageName);
+        if (page) {
+          cache.setPageGroup(pageName, group.name);
+          return group.name;
+        }
+      }
+      
+      // 检查二级菜单中的页面
+      if (group.subgroups) {
+        for (const subgroup of group.subgroups) {
+          const page = subgroup.pages.find(p => p.name === pageName);
+          if (page) {
+            cache.setPageGroup(pageName, group.name);
+            return group.name; // 返回一级分组名
+          }
+        }
+      }
+    }
+    return null;
+  } catch (error) {
+    console.error(`Failed to find group for page ${pageName}:`, error);
+    return null;
+  }
+}
+
+/**
+ * 🔄 加载单个页面数据（支持按 group 分文件夹）
  * @param pageName 页面名称
  * @returns 页面数据
  * @throws 如果加载失败则抛出错误
@@ -80,7 +135,14 @@ export async function loadPageData(pageName: string): Promise<Page> {
   }
 
   try {
-    const response = await fetch(`/pages/${pageName}.json`);
+    // 查找页面所属的 group
+    const groupName = await findPageGroup(pageName);
+    if (!groupName) {
+      throw new Error(`Cannot find group for page: ${pageName}`);
+    }
+
+    // 使用分组路径加载页面
+    const response = await fetch(`/pages/${groupName}/${pageName}.json`);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
@@ -113,7 +175,10 @@ export async function getPageByName(pageName?: string): Promise<Page | null> {
   }
 }
 
-
+/**
+ * 构建菜单配置
+ * @returns 菜单配置数组
+ */
 export async function buildMenuConfig(): Promise<MenuConfig[]> {
   try {
     const indexData = await loadPageIndex();
@@ -174,6 +239,8 @@ export async function buildMenuConfig(): Promise<MenuConfig[]> {
 
 /**
  * 🔄 修改：获取页面基本信息（支持二级菜单）
+ * 注意：这里返回的是 PageMeta，不包含 last_update
+ * 如需 last_update，请使用 getPageByName 获取完整 Page 数据
  * @param pageName 页面名称
  * @returns 页面基本信息，如果不存在则返回null
  */
