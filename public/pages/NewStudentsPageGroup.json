@@ -1,0 +1,46 @@
+{
+    "title": "新生群",
+    "name": "NewStudentsPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "新生报到、校园生活咨询",
+    "sections": [
+      {
+        "title": "新生交流",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学2025新生群",
+                  "description": "",
+                  "qqGroup": "924164364",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "2025东北大学新生群",
+                  "description": "",
+                  "qqGroup": "819075475",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "2025东北大学新生群",
+                  "description": "",
+                  "qqGroup": "582163622",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

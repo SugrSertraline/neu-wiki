@@ -1,0 +1,54 @@
+{
+    "title": "年级互助",
+    "name": "GradeHelpPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "年级内互助、课程交流",
+    "sections": [
+      {
+        "title": "年级交流",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东大2023级交流互助群（勿代课）",
+                  "description": "",
+                  "qqGroup": "654165985",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东大2024级交流互助群",
+                  "description": "",
+                  "qqGroup": "280912500",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学2025新互助群",
+                  "description": "",
+                  "qqGroup": "972965056",
+                  "imageUrl": null
+                }
+              },{
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学互助群",
+                  "description": "",
+                  "qqGroup": "159809555",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

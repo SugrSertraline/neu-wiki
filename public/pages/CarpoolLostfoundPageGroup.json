@@ -1,0 +1,37 @@
+{
+    "title": "拼车 / 失物招领",
+    "name": "CarpoolLostfoundPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "拼车、失物招领信息汇总",
+    "sections": [
+      {
+        "title": "拼车与失物招领",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·(仅可)拼车/失物招领①",
+                  "description": "",
+                  "qqGroup": "642261754",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·(仅可)拼车/失物招领②",
+                  "description": "",
+                  "qqGroup": "608580708",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

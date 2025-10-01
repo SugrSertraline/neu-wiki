@@ -1,0 +1,38 @@
+{
+    "title": "综合交流",
+    "name": "GeneralCommunicationPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "校园综合交流、贴吧群、兴趣小组",
+    "sections": [
+      {
+        "title": "综合交流",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学贴吧群",
+                  "description": "",
+                  "qqGroup": "568052727",
+                  "imageUrl": null
+                }
+              },
+              
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学万物交流群",
+                  "description": "",
+                  "qqGroup": "245071414",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

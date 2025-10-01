@@ -1,0 +1,37 @@
+{
+    "title": "考研/研究",
+    "name": "PostgraduatePageGroup",
+    "last_update": "2025年10月01日",
+    "description": "考研经验分享、研究方向讨论",
+    "sections": [
+      {
+        "title": "考研互助",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·考研er",
+                  "description": "",
+                  "qqGroup": "296343321",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU考研互助群",
+                  "description": "",
+                  "qqGroup": "296343321",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

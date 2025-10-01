@@ -1,0 +1,37 @@
+{
+    "title": "学习互助",
+    "name": "LearningPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "学习资源共享、本科生互助群、跨学科学习交流",
+    "sections": [
+      {
+        "title": "学习互助群",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东大学习互助（本科生24级）",
+                  "description": "",
+                  "qqGroup": "551804945",
+                  "imageUrl": null
+                }
+              },
+                            {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "2024级数学基石（互助版）",
+                  "description": "",
+                  "qqGroup": "752838400",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

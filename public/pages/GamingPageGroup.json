@@ -1,0 +1,28 @@
+{
+    "title": "游戏 / 数码",
+    "name": "GamingPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "游戏社团、数码娱乐",
+    "sections": [
+      {
+        "title": "游戏与数码",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东大P社游戏社团",
+                  "description": "",
+                  "qqGroup": "680890824",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

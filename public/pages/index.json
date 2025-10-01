@@ -39,35 +39,123 @@
       ]
     },
     {
-      "title": "校园交流与组织",
+      "title": "校园群聊与社团",
       "name": "CampusCommunicationAndOrganizations",
       "subgroups": [
         {
-          "title": "群聊与信息",
-          "name": "GroupsSummary",
+          "title": "学习/考研/学术",
+          "name": "StudyGroup",
           "pages": [
             {
-              "title": "二手群",
-              "name": "SecondHandGroups",
-              "last_update": "2024年11月23日",
-              "path": "secondHandGroups.json"
+              "title": "学习互助",
+              "name": "LearningPageGroup",
+              "last_update": "2025年10月1日"
             },
             {
-              "title": "互助群",
-              "name": "MutualAidGroups",
-              "last_update": "2024年11月23日",
-              "path": "mutualAidGroups.json"
+              "title": "学科竞赛/专业发展",
+              "name": "CompetitionPageGroup",
+              "last_update": "2025年10月01日"
             },
             {
-              "title": "生活群",
-              "name": "LifeGroups",
-              "last_update": "2024年11月23日",
-              "path": "lifeGroups.json"
+              "title": "考研/研究",
+              "name": "PostgraduatePageGroup",
+              "last_update": "2025年10月01日"
             }
           ]
         },
         {
-          "title": "社团与活动",
+          "title": "新生/交流互助",
+          "name": "FreshmenGroup",
+          "pages": [
+            {
+              "title": "新生群",
+              "name": "NewStudentsPageGroup",
+              "last_update": "2025年10月01日"
+            },
+            {
+              "title": "年级互助",
+              "name": "GradeHelpPageGroup",
+              "last_update": "2025年10月01日"
+            },
+            {
+              "title": "综合交流",
+              "name": "GeneralCommunicationPageGroup",
+              "last_update": "2025年10月01日"
+            }
+          ]
+        },
+        {
+          "title": "租房/二手/闲置",
+          "name": "HousingGroup",
+          "pages": [
+            {
+              "title": "租房互助",
+              "name": "RentPageGroup",
+              "last_update": "2025年10月01日"
+            },
+            {
+              "title": "二手市场",
+              "name": "SecondHandPageGroup",
+              "last_update": "2025年10月01日"
+            }
+          ]
+        },
+        {
+          "title": "拼车/校园服务",
+          "name": "CarpoolGroup",
+          "pages": [
+            {
+              "title": "拼车 / 失物招领",
+              "name": "CarpoolLostfoundPageGroup",
+              "last_update": "2025年10月01日"
+            }
+          ]
+        },
+        {
+          "title": "校园生活互助",
+          "name": "CampusLifeGroup",
+          "pages": [
+            {
+              "title": "留校 / 校园生活",
+              "name": "StayCampusPageGroup",
+              "last_update": "2025年10月01日"
+            }
+          ]
+        },
+        {
+          "title": "同好",
+          "name": "HobbyGroup",
+          "pages": [
+            {
+              "title": "兴趣娱乐",
+              "name": "EntertainmentPageGroup",
+              "last_update": "2025年10月01日"
+            },
+            {
+              "title": "游戏 / 数码",
+              "name": "GamingPageGroup",
+              "last_update": "2025年10月01日"
+            },
+            {
+              "title": "运动 / 户外 / 猫猫狗狗",
+              "name": "SportsOutdoorPageGroup",
+              "last_update": "2025年10月01日"
+            }
+          ]
+        },
+        {
+          "title": "老乡群",
+          "name": "CampusLifeGroup",
+          "pages": [
+            {
+              "title": "家乡群",
+              "name": "HometownPageGroup",
+              "last_update": "2025年10月01日"
+            }
+          ]
+        },
+        {
+          "title": "社团",
           "name": "ClubsAndActivities",
           "pages": [
             {

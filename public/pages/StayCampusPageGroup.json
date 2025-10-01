@@ -1,0 +1,37 @@
+{
+    "title": "留校 / 校园生活",
+    "name": "StayCampusPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "留校生活信息交流、日常健康讨论",
+    "sections": [
+      {
+        "title": "留校与生活",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·留校er(勿代课)",
+                  "description": "",
+                  "qqGroup": "600956042",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·健康互助群",
+                  "description": "",
+                  "qqGroup": "364610094",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

@@ -1,0 +1,46 @@
+{
+    "title": "运动 / 户外 / 猫猫狗狗",
+    "name": "SportsOutdoorPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "校园运动、社团活动、户外出行、猫猫狗狗",
+    "sections": [
+      {
+        "title": "运动与户外",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学羽毛球社南湖",
+                  "description": "",
+                  "qqGroup": "609160874",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东大飞鸟户外",
+                  "description": "",
+                  "qqGroup": "589721067",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU With Animals（南湖）",
+                  "description": "",
+                  "qqGroup": "859134819",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

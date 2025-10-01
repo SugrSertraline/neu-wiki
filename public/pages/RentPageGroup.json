@@ -1,0 +1,28 @@
+{
+    "title": "租房互助",
+    "name": "RentPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "校内外租房信息交流",
+    "sections": [
+      {
+        "title": "租房信息",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·租房er互助群",
+                  "description": "",
+                  "qqGroup": "809396718",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

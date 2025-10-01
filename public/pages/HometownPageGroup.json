@@ -1,0 +1,28 @@
+{
+    "title": "家乡群",
+    "name": "HometownPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "按地域聚集的老乡群",
+    "sections": [
+      {
+        "title": "家乡交流",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU河南家族",
+                  "description": "",
+                  "qqGroup": "863737769",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

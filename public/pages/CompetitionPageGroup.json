@@ -1,0 +1,37 @@
+{
+    "title": "学科竞赛/专业发展",
+    "name": "CompetitionPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "数学、专业竞赛，转专业交流",
+    "sections": [
+      {
+        "title": "竞赛与发展",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "2024NEU数学竞赛群",
+                  "description": "",
+                  "qqGroup": "686129665",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "转专业交流群",
+                  "description": "",
+                  "qqGroup": "749869628",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

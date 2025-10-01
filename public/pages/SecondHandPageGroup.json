@@ -1,0 +1,136 @@
+{
+    "title": "二手市场",
+    "name": "SecondHandPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "闲置物品转让、二手交易",
+    "sections": [
+      {
+        "title": "二手交易",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·闲易(勿代课)",
+                  "description": "",
+                  "qqGroup": "748582637",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·闲易②(勿代课)",
+                  "description": "",
+                  "qqGroup": "796471371",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·闲易③(勿代课)",
+                  "description": "",
+                  "qqGroup": "213647985",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·闲易④(勿代课)",
+                  "description": "",
+                  "qqGroup": "658497316",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·闲易⑤(勿代课)",
+                  "description": "",
+                  "qqGroup": "674052870",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·闲易⑥(勿代课)",
+                  "description": "",
+                  "qqGroup": "672096362",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "闲易(浑南一舍限定)",
+                  "description": "",
+                  "qqGroup": "726429983",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "闲易(八九十新二舍)",
+                  "description": "",
+                  "qqGroup": "760703712",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU ❤️闲置⑥",
+                  "description": "",
+                  "qqGroup": "1032836302",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "闲易群",
+                  "description": "",
+                  "qqGroup": "674052870",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "东北大学南湖二手物品信息群I",
+                  "description": "",
+                  "qqGroup": "933455050",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "25东北大学二手物品群",
+                  "description": "",
+                  "qqGroup": "778550692",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "25东北大学跳蚤市场",
+                  "description": "",
+                  "qqGroup": "780991826",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }

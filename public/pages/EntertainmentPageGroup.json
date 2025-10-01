@@ -1,0 +1,46 @@
+{
+    "title": "兴趣娱乐",
+    "name": "EntertainmentPageGroup",
+    "last_update": "2025年10月01日",
+    "description": "影视剧、娱乐推荐",
+    "sections": [
+      {
+        "title": "娱乐推荐",
+        "subsections": [
+          {
+            "title": null,
+            "contents": [
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·好剧推荐",
+                  "description": "",
+                  "qqGroup": "768316750",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·逛吃沈阳",
+                  "description": "",
+                  "qqGroup": "365298908",
+                  "imageUrl": null
+                }
+              },
+              {
+                "type": "NWClubIntro",
+                "club": {
+                  "name": "NEU·旅游搭子",
+                  "description": "",
+                  "qqGroup": "660130891",
+                  "imageUrl": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contributors": []
+  }
