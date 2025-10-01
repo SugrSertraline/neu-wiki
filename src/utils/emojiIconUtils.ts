@@ -4,17 +4,15 @@
  */
 
 // 导入所有 emoji icon SVG 文件
-const emojiIconModules = import.meta.glob('@/assets/icons/emjioIcon/*.svg', {
-  eager: true,
-  import: 'default'
-})
-
-// 获取所有 SVG 文件路径数组
-const emojiIconPaths = Object.keys(emojiIconModules).map(path => {
-  // 将路径转换为可用的资源路径
-  return path.replace('@/assets', '/src/assets')
-})
-
+// 我们需要的是模块的默认导出值（即处理后的 URL），而不是模块的键（源文件路径）
+const emojiIconModules = import.meta.glob<string>('@/assets/icons/emjioIcon/*.svg', {
+    eager: true,
+    import: 'default'
+  })
+  
+  // 直接获取所有处理好的 SVG 资源路径
+  // Object.values() 会返回一个包含所有图标最终 URL 的数组
+  const emojiIconPaths = Object.values(emojiIconModules)
 /**
  * 根据字符串生成稳定的哈希值（用于确保相同输入得到相同结果）
  * @param str 输入字符串
