@@ -70,7 +70,6 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { BubbleTeaIcon, HotDogIcon, ColaIcon } from '@/assets/icons';
-import {  PAGE_CONFIG, searchInGroups } from '@/config/PageConfig';
 
 
 
