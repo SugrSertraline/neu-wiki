@@ -19,7 +19,7 @@
         />
         <!-- 没有自定义logo时显示随机SVG图标 -->
         <div v-else class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center shadow-sm overflow-hidden">
-          <img :src="defaultIcon" :alt="ClubProps.name" class="w-10 h-10 object-contain" />
+          <EmojiIcon :seed="ClubProps.name" class="w-10 h-10" />
         </div>
       </div>
 
@@ -78,7 +78,7 @@ import { NAvatar, NIcon, useMessage, NButton, NModal } from 'naive-ui'
 import { QrCode, Copy } from '@vicons/ionicons5'
 import type { ClubProps } from '@/types/interface'
 import { ref, computed } from 'vue'
-import { getRandomEmojiIcon } from '@/utils/emojiIconUtils'
+import EmojiIcon from '@/assets/icons/EmjioIcon/EmojiIcon.vue'
 
 const message = useMessage()
 
@@ -95,11 +95,6 @@ const hasCustomLogo = computed(() => {
          props.ClubProps.logo !== '/neulogo.png'
 })
 
-// 计算属性：获取默认图标（基于社团名称生成稳定的随机图标）
-const defaultIcon = computed(() => {
-  return getRandomEmojiIcon(props.ClubProps.name)
-})
-
 const showPreview = () => {
   isPreviewVisible.value = true
 }
@@ -107,7 +102,7 @@ const showPreview = () => {
 const copyText = async (text: string) => {
   try {
     await navigator.clipboard.writeText(text)
-    message.success('链接已复制到剪贴板!')
+    message.success('已复制到剪贴板!')
   } catch (err) {
     message.error('复制失败!')
   }
