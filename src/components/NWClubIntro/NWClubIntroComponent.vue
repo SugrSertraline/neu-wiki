@@ -6,9 +6,10 @@
       <img :src="ClubProps.imageUrl" alt="Preview Image" class="max-w-full max-h-[80vh] object-contain" @click.stop />
     </n-modal>
 
-    <div class="flex items-start gap-4">
+    <!-- 响应式布局：小屏垂直，大屏水平 -->
+    <div class="flex flex-col md:flex-row md:items-start gap-4">
       <!-- 左侧：Logo -->
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 self-start md:self-auto">
         <n-avatar 
           v-if="hasCustomLogo"
           :src="ClubProps.logo" 
@@ -24,16 +25,17 @@
       </div>
 
       <!-- 中间：名称和群号 -->
-      <div class="flex flex-col justify-center min-w-0">
+      <div class="flex flex-col justify-center min-w-0 flex-shrink-0 md:w-auto w-full">
         <h2 class="text-lg font-bold text-gray-800 mb-2 break-words">
           {{ ClubProps.name }}
         </h2>
         
-        <div class="flex flex-col gap-1.5 min-w-[200px]">
+        <div class="flex flex-col gap-1.5 w-full md:min-w-[200px]">
           <n-button 
             tertiary 
             type="default" 
             size="small"
+            class="justify-start"
             @click="copyText(ClubProps.qqGroup)">
             <template #icon>
               <n-icon>
@@ -47,6 +49,7 @@
             v-if="ClubProps.imageUrl"
             type="primary" 
             size="small"
+            class="justify-start"
             @click="showPreview">
             <template #icon>
               <n-icon>
@@ -59,7 +62,7 @@
       </div>
 
       <!-- 右侧：介绍 -->
-      <div class="flex-1 min-w-0 pl-4 border-l border-gray-200">
+      <div class="flex-1 min-w-0 md:pl-4 md:border-l border-gray-200 pt-2 md:pt-0">
         <div class="text-gray-600 text-sm leading-relaxed break-words">
           <span v-if="ClubProps.description && ClubProps.description.trim()">
             {{ ClubProps.description }}
