@@ -15,5 +15,6 @@ export enum NWComponent{
     NWClubIntro='NWClubIntro',
     NWPhotoAlbum='NWPhotoAlbum',
     NWEquation='NWEquation',
-    NWTable='NWTable'
+    NWTable='NWTable',
+    NWDownload='NWDownload'
 }

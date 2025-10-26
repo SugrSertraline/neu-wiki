@@ -136,7 +136,16 @@ interface NWTable {
   data: String[][]
 }
 
-export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto | NWSiteContributors | NWCompetition | NWLinkList | NWClubIntro | NWPhotoAlbum | NWEquation | NWTable;
+export interface NWDownload {
+  type: NWComponent.NWDownload,
+  iconUrl: string,
+  title: string,
+  description: string,
+  downloadUrl: string,
+  fileName?: string
+}
+
+export type Content = NWDescription | NWImage | NWList | NWTips | NWPersonalIntro | NWDialogue | NWProblemsRank | NWMotto | NWSiteContributors | NWCompetition | NWLinkList | NWClubIntro | NWPhotoAlbum | NWEquation | NWTable | NWDownload;
 
 // ==================== 页面结构定义 ====================
 

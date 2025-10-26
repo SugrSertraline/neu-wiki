@@ -172,7 +172,7 @@ import {
   SideMenu, NWDescription, NWSection, NWImage, NWList, NWTips,
   NWCommit, NWPersonalIntro, NWDialogue, NWMotto, NWProblemsRank,
   NWSiteContributors, NWCompetition, NWLinkList, NWClubIntro,
-  NWPhotoAlbum, NWEquation, NWTable
+  NWPhotoAlbum, NWEquation, NWTable, NWDownload
 } from '@/components';
 import { getCookie, numberToChinese, setCookie } from '@/utils/utils';
 import { useMessage, type MenuOption } from 'naive-ui';
@@ -443,6 +443,8 @@ const dynamicComponent = (content: Content) => {
       return h(NWEquation, { equation: content.equation });
     case 'NWTable':
       return h(NWTable, { title: content.title, data: content.data });
+    case 'NWDownload':
+      return h(NWDownload, { downloadProps: content });
   }
 };
 

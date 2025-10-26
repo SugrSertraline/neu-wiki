@@ -1,0 +1,74 @@
+{
+  "title": "电费查询工具",
+  "name": "ElectricityFeeQuery",
+  "last_update": "2025年10月26日",
+  "description": "东北大学为学生提供了便捷的电费查询和重置服务，学生可以通过一号通或专用工具快速查询宿舍电费余额和使用情况。",
+  "sections": [
+    {
+      "title": "官方查询方式",
+      "subsections": [
+        {
+          "title": null,
+          "contents": [
+            {
+              "type": "NWDescription",
+              "text": "东北大学学生电费价格为 **0.51 元/度电**。\n\n**电脑端查询路径：**\n一号通 → 应用 → 缴费服务大厅 → 电费查询与重置\n\n通过官方渠道可以查询电费余额、用电明细，并进行电费充值和重置操作。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "快速查询工具",
+      "subsections": [
+        {
+          "title": null,
+          "contents": [
+            {
+              "type": "NWDownload",
+              "iconUrl": "https://image.neuwiki.top/image/%E7%94%B5%E6%BA%90.png",
+              "title": "东北大学电费快速查询工具",
+              "description": "由本站作者开发的电费快速查询工具，可在校园网环境下直接查询宿舍电费余额，无需登录一号通",
+              "downloadUrl": "https://image.neuwiki.top/file/%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E7%94%B5%E8%B4%B9%E6%9F%A5%E8%AF%A2.exe",
+              "fileName": "东北大学电费快速查询工具.exe"
+            },
+            {
+              "type": "NWList",
+              "order": true,
+              "data": [
+                "确保已连接校园网环境",
+                "下载并运行电费查询工具",
+                "输入学号和密码（仅用于校园网认证，不会保存任何信息）",
+                "输入对应的宿舍号",
+                "点击查询按钮获取电费余额"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "注意事项",
+      "subsections": [
+        {
+          "title": "安全提醒",
+          "contents": [
+            {
+              "type": "NWList",
+              "order": true,
+              "data": [
+                "校园网环境：使用快速查询工具必须连接校园网或使用校园网认证，否则由于需要验证码会导致无法登陆",
+                "账号安全：学号和密码仅用于通过校园网认证，工具不会保存或传输任何个人信息，如果需要源代码可以联系网站作者",
+                "官方渠道：如需重置电费或进行充值，请通过一号通官方渠道操作"
+              ]
+            }
+          ]
+        }
+        
+      ]
+    }
+  ],
+  "contributors": [
+    
+  ]
+}

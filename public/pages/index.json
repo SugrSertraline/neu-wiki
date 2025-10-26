@@ -289,6 +289,10 @@
             {
               "title": "校园网",
               "name": "CampusNetwork"
+            },
+            {
+              "title": "电费",
+              "name": "ElectricityFeeQuery"
             }
           ]
         },
